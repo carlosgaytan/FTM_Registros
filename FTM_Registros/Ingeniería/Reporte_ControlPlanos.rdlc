@@ -684,7 +684,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LaserCHBX.Value</Value>
+                              <Value>=IIf(Fields!LaserCHBX.Value=false,"","X")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                               </Style>
@@ -706,7 +706,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -718,7 +717,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!WJCHBX.Value</Value>
+                              <Value>=IIf(Fields!WJCHBX.Value=false,"","X")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                               </Style>
@@ -751,7 +750,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!SierraCHBX.Value</Value>
+                              <Value>=IIf(Fields!SierraCHBX.Value=false,"","X")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                               </Style>
@@ -784,7 +783,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PinturaCHBX.Value</Value>
+                              <Value>=IIf(Fields!PinturaCHBX.Value=false,"","X")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                               </Style>
@@ -850,7 +849,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MaquinadoCHBX.Value</Value>
+                              <Value>=IIf(Fields!MaquinadoCHBX.Value=false,"","X")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                               </Style>
@@ -883,7 +882,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!SoldaduraCHBX.Value</Value>
+                              <Value>=IIf(Fields!SoldaduraCHBX.Value=false,"","X")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                               </Style>
@@ -956,7 +955,7 @@
   <Width>9.70583in</Width>
   <Page>
     <PageHeader>
-      <Height>4.85083cm</Height>
+      <Height>4.98312cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1023,7 +1022,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox63</rd:DefaultName>
-          <Top>2.65278cm</Top>
+          <Top>2.6175cm</Top>
           <Left>20.1285cm</Left>
           <Height>0.38833cm</Height>
           <Width>4.24625cm</Width>
@@ -1104,7 +1103,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox63</rd:DefaultName>
-          <Top>3.46563cm</Top>
+          <Top>3.64111cm</Top>
           <Left>9.88579cm</Left>
           <Height>0.54708cm</Height>
           <Width>5.74542cm</Width>
@@ -1168,7 +1167,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox63</rd:DefaultName>
-          <Top>4.33021cm</Top>
+          <Top>4.4625cm</Top>
           <Left>4.31364cm</Left>
           <Height>0.52062cm</Height>
           <Width>6.03597cm</Width>

@@ -53,7 +53,7 @@ Partial Class Ingenieria
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(175, 611)
+        Me.Panel1.Size = New System.Drawing.Size(175, 642)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -98,7 +98,7 @@ Partial Class Ingenieria
         Me.TabControl1.Location = New System.Drawing.Point(183, 9)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(829, 593)
+        Me.TabControl1.Size = New System.Drawing.Size(973, 622)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
@@ -109,7 +109,7 @@ Partial Class Ingenieria
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(821, 567)
+        Me.TabPage1.Size = New System.Drawing.Size(965, 596)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Generar control de planos"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -122,7 +122,7 @@ Partial Class Ingenieria
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.Reporte_ControlPlanos.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(6, 33)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(809, 531)
+        Me.ReportViewer1.Size = New System.Drawing.Size(956, 560)
         Me.ReportViewer1.TabIndex = 4
         '
         'BuscarBTN
@@ -154,11 +154,12 @@ Partial Class Ingenieria
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1022, 611)
+        Me.ClientSize = New System.Drawing.Size(1168, 643)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Ingenieria"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingeniería"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
