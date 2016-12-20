@@ -38,6 +38,7 @@ Partial Class Ingenieria
         Me.DescarcarNumCor = New FTM_Registros.DescarcarNumCor()
         Me.NumCotBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NumCotTableAdapter = New FTM_Registros.DescarcarNumCorTableAdapters.NumCotTableAdapter()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.Control_Planos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BuscarCotBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +84,8 @@ Partial Class Ingenieria
         '
         'BuscCotCNBX
         '
+        Me.BuscCotCNBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.BuscCotCNBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.BuscCotCNBX.BackColor = System.Drawing.SystemColors.Control
         Me.BuscCotCNBX.DataSource = Me.NumCotBindingSource
         Me.BuscCotCNBX.DisplayMember = "no_cotización"
@@ -132,6 +135,7 @@ Partial Class Ingenieria
         Me.BuscarBTN.Size = New System.Drawing.Size(75, 23)
         Me.BuscarBTN.TabIndex = 5
         Me.BuscarBTN.Text = "Generar"
+        Me.ToolTip1.SetToolTip(Me.BuscarBTN, "Genera el control de planos según No. de Cotización")
         Me.BuscarBTN.UseVisualStyleBackColor = True
         '
         'DescarcarNumCor
@@ -158,6 +162,8 @@ Partial Class Ingenieria
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1184, 681)
         Me.Name = "Ingenieria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingeniería"
@@ -186,4 +192,5 @@ Partial Class Ingenieria
     Friend WithEvents DescarcarNumCor As DescarcarNumCor
     Friend WithEvents NumCotBindingSource As BindingSource
     Friend WithEvents NumCotTableAdapter As DescarcarNumCorTableAdapters.NumCotTableAdapter
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
