@@ -3,14 +3,13 @@
     Private Sub ClienteTextBox1_TextChanged(sender As Object, e As EventArgs) Handles ClienteTextBox1.TextChanged
         'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Costos' Puede moverla o quitarla según sea necesario.
         Me.CostosTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Costos)
-        Me.CostosTableAdapter1.BuscaClaveFTM(Me.AgregarClaveFTM.Costos, ClienteTextBox1.Text)
 
+        'Busca las piezas según cliente
+        Me.CostosTableAdapter1.BuscaClaveFTM(Me.AgregarClaveFTM.Costos, ClienteTextBox1.Text)
 
     End Sub
 
     Private Sub Cotizaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Control_planos' Puede moverla o quitarla según sea necesario.
-        Me.Control_planosTableAdapter.ControlPlanos(Me._Cotizaciones_1_4DataSet.Control_planos)
         'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Ventas' Puede moverla o quitarla según sea necesario.
         Me.VentasTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Ventas)
         ''TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Costos' Puede moverla o quitarla según sea necesario.

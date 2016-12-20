@@ -131,7 +131,6 @@ Partial Class Cotizaciones
         Me._Cotizaciones_1_4DataSet = New FTM_Registros._Cotizaciones_1_4DataSet()
         Me.ClienteTextBox1 = New System.Windows.Forms.TextBox()
         Me.Clave_FTMComboBox = New System.Windows.Forms.ComboBox()
-        Me.CostosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.P1TextBox = New System.Windows.Forms.TextBox()
         Me.P2TextBox = New System.Windows.Forms.TextBox()
         Me.X1TextBox = New System.Windows.Forms.TextBox()
@@ -155,6 +154,7 @@ Partial Class Cotizaciones
         Me.U_mTextBox = New System.Windows.Forms.TextBox()
         Me.Nombre_quien_cotizaComboBox = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CostosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
         Me.CotizacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CotizacionesTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.CotizacionesTableAdapter()
@@ -177,12 +177,9 @@ Partial Class Cotizaciones
         Me.CostosTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.CostosTableAdapter()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.VentasTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter()
-        Me.CostosControlplanosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Control_planosTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.Control_planosTableAdapter()
         Me.AgregarClaveFTM = New FTM_Registros.AgregarClaveFTM()
         Me.CostosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CostosTableAdapter1 = New FTM_Registros.AgregarClaveFTMTableAdapters.CostosTableAdapter()
-        Me.AgregarClaveFTMBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         __de_orden_a_cotizarLabel1 = New System.Windows.Forms.Label()
         ClienteLabel1 = New System.Windows.Forms.Label()
         Clave_FTMLabel = New System.Windows.Forms.Label()
@@ -234,10 +231,8 @@ Partial Class Cotizaciones
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CotizacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Costos_VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CostosControlplanosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AgregarClaveFTM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CostosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AgregarClaveFTMBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         '__de_orden_a_cotizarLabel1
@@ -1344,17 +1339,12 @@ Partial Class Cotizaciones
         Me.Clave_FTMComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.Clave_FTMComboBox.BackColor = System.Drawing.SystemColors.Control
         Me.Clave_FTMComboBox.DataSource = Me.CostosBindingSource1
+        Me.Clave_FTMComboBox.DisplayMember = "Clave_FTM"
         Me.Clave_FTMComboBox.FormattingEnabled = True
         Me.Clave_FTMComboBox.Location = New System.Drawing.Point(84, 93)
         Me.Clave_FTMComboBox.Name = "Clave_FTMComboBox"
         Me.Clave_FTMComboBox.Size = New System.Drawing.Size(121, 21)
         Me.Clave_FTMComboBox.TabIndex = 4
-        Me.Clave_FTMComboBox.Text = "System.Data.DataViewManagerListItemTypeDescriptor"
-        '
-        'CostosBindingSource
-        '
-        Me.CostosBindingSource.DataMember = "Costos"
-        Me.CostosBindingSource.DataSource = Me._Cotizaciones_1_4DataSet
         '
         'P1TextBox
         '
@@ -1561,6 +1551,11 @@ Partial Class Cotizaciones
         Me.TextBox1.Size = New System.Drawing.Size(259, 299)
         Me.TextBox1.TabIndex = 0
         '
+        'CostosBindingSource
+        '
+        Me.CostosBindingSource.DataMember = "Costos"
+        Me.CostosBindingSource.DataSource = Me._Cotizaciones_1_4DataSet
+        '
         '_Base_de_datos_1_4_beDataSet
         '
         Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
@@ -1712,15 +1707,6 @@ Partial Class Cotizaciones
         '
         Me.VentasTableAdapter.ClearBeforeFill = True
         '
-        'CostosControlplanosBindingSource
-        '
-        Me.CostosControlplanosBindingSource.DataMember = "CostosControl_planos"
-        Me.CostosControlplanosBindingSource.DataSource = Me.CostosBindingSource
-        '
-        'Control_planosTableAdapter
-        '
-        Me.Control_planosTableAdapter.ClearBeforeFill = True
-        '
         'AgregarClaveFTM
         '
         Me.AgregarClaveFTM.DataSetName = "AgregarClaveFTM"
@@ -1734,11 +1720,6 @@ Partial Class Cotizaciones
         'CostosTableAdapter1
         '
         Me.CostosTableAdapter1.ClearBeforeFill = True
-        '
-        'AgregarClaveFTMBindingSource
-        '
-        Me.AgregarClaveFTMBindingSource.DataSource = Me.AgregarClaveFTM
-        Me.AgregarClaveFTMBindingSource.Position = 0
         '
         'Cotizaciones
         '
@@ -1762,10 +1743,8 @@ Partial Class Cotizaciones
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CotizacionesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Costos_VentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CostosControlplanosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AgregarClaveFTM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CostosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AgregarClaveFTMBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1880,10 +1859,7 @@ Partial Class Cotizaciones
     Friend WithEvents VentasBindingSource As BindingSource
     Friend WithEvents VentasTableAdapter As _Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter
     Friend WithEvents EspRepTXT As TextBox
-    Friend WithEvents CostosControlplanosBindingSource As BindingSource
-    Friend WithEvents Control_planosTableAdapter As _Cotizaciones_1_4DataSetTableAdapters.Control_planosTableAdapter
     Friend WithEvents CostosBindingSource1 As BindingSource
     Friend WithEvents AgregarClaveFTM As AgregarClaveFTM
     Friend WithEvents CostosTableAdapter1 As AgregarClaveFTMTableAdapters.CostosTableAdapter
-    Friend WithEvents AgregarClaveFTMBindingSource As BindingSource
 End Class
