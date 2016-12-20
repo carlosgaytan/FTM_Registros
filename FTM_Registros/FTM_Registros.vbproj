@@ -131,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Control_Planos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Ingeniería\DescarcarNumCor.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ingeniería\Ingenieria.Designer.vb">
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </Compile>
@@ -304,6 +309,7 @@
     <EmbeddedResource Include="Ingeniería\Ingenieria.resx">
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ingeniería\Reporte_ControlPlanos.rdlc" />
     <EmbeddedResource Include="Ventas\Buscar_Cotizacion.resx">
       <DependentUpon>Buscar_Cotizacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -376,6 +382,17 @@
     </None>
     <None Include="Ingeniería\Control_Planos.xss">
       <DependentUpon>Control_Planos.xsd</DependentUpon>
+    </None>
+    <None Include="Ingeniería\DescarcarNumCor.xsc">
+      <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
+    </None>
+    <None Include="Ingeniería\DescarcarNumCor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DescarcarNumCor.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Ingeniería\DescarcarNumCor.xss">
+      <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
     </None>
     <None Include="Ventas\BuscaOrden.xsc">
       <DependentUpon>BuscaOrden.xsd</DependentUpon>
