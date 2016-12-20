@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Ingeniería\Control_Planos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Control_Planos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ingeniería\Ingenieria.Designer.vb">
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </Compile>
@@ -360,6 +365,17 @@
     </None>
     <None Include="Bases_Datos\AgregarClaveFTM.xss">
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </None>
+    <None Include="Ingeniería\Control_Planos.xsc">
+      <DependentUpon>Control_Planos.xsd</DependentUpon>
+    </None>
+    <None Include="Ingeniería\Control_Planos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Control_Planos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Ingeniería\Control_Planos.xss">
+      <DependentUpon>Control_Planos.xsd</DependentUpon>
     </None>
     <None Include="Ventas\BuscaOrden.xsc">
       <DependentUpon>BuscaOrden.xsd</DependentUpon>

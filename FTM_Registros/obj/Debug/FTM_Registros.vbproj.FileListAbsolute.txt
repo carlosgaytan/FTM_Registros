@@ -2,7 +2,6 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Resour
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.vbproj.GenerateResource.Cache
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Cotizaciones.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Gerencia.resources
-S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Manufactura.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Ventas.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Planeacion.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Registros.resources
@@ -32,3 +31,4 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Regist
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Reg_NoCot.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Orden_Compra.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.TrustInfo.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Ingenieria.resources

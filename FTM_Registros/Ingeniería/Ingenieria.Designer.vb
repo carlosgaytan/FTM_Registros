@@ -30,17 +30,18 @@ Partial Class Ingenieria
         '
         'Panel1
         '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 611)
+        Me.Panel1.Size = New System.Drawing.Size(175, 611)
         Me.Panel1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(39, 9)
+        Me.Label1.Location = New System.Drawing.Point(26, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(117, 54)
         Me.Label1.TabIndex = 0
