@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D490352E-E73E-46E6-B00D-C7380D28659F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FTM_Registros.My.MyApplication</StartupObject>
+    <RootNamespace>FTM_Registros</RootNamespace>
+    <AssemblyName>FTM Registros</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>S:\Base de datos\Base\FTM_Registros\Actualizaciones\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\SERVER\2012 LASER\Base de datos\Base\FTM_Registros\Actualizaciones\</UpdateUrl>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.5.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>\\SERVER\2012 LASER\Base de datos\Base\FTM_Registros\Actualizaciones\</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FTM Registros.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FTM Registros.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>77BA96792B48342F8B9CB11B601B68F8B508A0C6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FTM_Registros_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TRANSFORMACIONES_003_.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Bases_Datos\AgregarClaveFTM.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\BuscaOrden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuscaOrden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\BuscaOrden.vb">
+      <DependentUpon>BuscaOrden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCBX.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuscarCBX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Buscar_Cotizacion.Designer.vb">
+      <DependentUpon>Buscar_Cotizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Buscar_Cotizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Busqueda.Designer.vb">
+      <DependentUpon>Busqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Busqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Corregir_costos.Designer.vb">
+      <DependentUpon>Corregir_costos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Corregir_costos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Cotizaciones.Designer.vb">
+      <DependentUpon>Cotizaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Cotizaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Cotizador.Designer.vb">
+      <DependentUpon>Cotizador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Cotizador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planeacion.Designer.vb">
+      <DependentUpon>Planeacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planeacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros.Designer.vb">
+      <DependentUpon>Registros.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerencia.Designer.vb">
+      <DependentUpon>Gerencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gerencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manufactura.Designer.vb">
+      <DependentUpon>Manufactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manufactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Ventas\Orden_compra.Designer.vb">
+      <DependentUpon>Orden_compra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Orden_compra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Registro_Cot.Designer.vb">
+      <DependentUpon>Registro_Cot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Registro_Cot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Reg_NoCot.Designer.vb">
+      <DependentUpon>Reg_NoCot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Reg_NoCot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\ReporteCotizar.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCotizar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\ReporteCotizar.vb">
+      <DependentUpon>ReporteCotizar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\ReporteCotizar1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCotizar1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\ReporteCotizar2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCotizar2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Reporte_Cotizar.Designer.vb">
+      <DependentUpon>Reporte_Cotizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Reporte_Cotizar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Ventas.Designer.vb">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases_Datos\_Base_de_datos_1_4_beDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Base_de_datos_1_4_beDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Cotizaciones_1_4DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Cotizaciones_1_4DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Cotizaciones_1_4DataSet.vb">
+      <DependentUpon>_Cotizaciones_1_4DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Cotizaciones_1_4DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Cotizaciones_1_4DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Manufactura_1_5DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Manufactura_1_5DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Manufactura_1_5DataSet.vb">
+      <DependentUpon>_Manufactura_1_5DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Ventas_1_5DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Ventas_1_5DataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ventas\Buscar_Cotizacion.resx">
+      <DependentUpon>Buscar_Cotizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Busqueda.resx">
+      <DependentUpon>Busqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Corregir_costos.resx">
+      <DependentUpon>Corregir_costos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Cotizaciones.resx">
+      <DependentUpon>Cotizaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Cotizador.resx">
+      <DependentUpon>Cotizador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planeacion.resx">
+      <DependentUpon>Planeacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros.resx">
+      <DependentUpon>Registros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerencia.resx">
+      <DependentUpon>Gerencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manufactura.resx">
+      <DependentUpon>Manufactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Orden_compra.resx">
+      <DependentUpon>Orden_compra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Registro_Cot.resx">
+      <DependentUpon>Registro_Cot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Reg_NoCot.resx">
+      <DependentUpon>Reg_NoCot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Reporte_Cotizar.rdlc" />
+    <EmbeddedResource Include="Ventas\Reporte_Cotizar.resx">
+      <DependentUpon>Reporte_Cotizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Ventas.resx">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bases_Datos\AgregarClaveFTM.xsc">
+      <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\AgregarClaveFTM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AgregarClaveFTM.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Bases_Datos\AgregarClaveFTM.xss">
+      <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\BuscaOrden.xsc">
+      <DependentUpon>BuscaOrden.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\BuscaOrden.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BuscaOrden.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Ventas\BuscaOrden.xss">
+      <DependentUpon>BuscaOrden.xsd</DependentUpon>
+    </None>
+    <None Include="BuscarCBX.xsc">
+      <DependentUpon>BuscarCBX.xsd</DependentUpon>
+    </None>
+    <None Include="BuscarCBX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BuscarCBX.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BuscarCBX.xss">
+      <DependentUpon>BuscarCBX.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Ventas\ReporteCotizar.xsc">
+      <DependentUpon>ReporteCotizar.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ReporteCotizar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteCotizar.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Ventas\ReporteCotizar.xss">
+      <DependentUpon>ReporteCotizar.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ReporteCotizar1.xsc">
+      <DependentUpon>ReporteCotizar1.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ReporteCotizar1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteCotizar1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Ventas\ReporteCotizar1.xss">
+      <DependentUpon>ReporteCotizar1.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ReporteCotizar2.xsc">
+      <DependentUpon>ReporteCotizar2.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas\ReporteCotizar2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteCotizar2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Ventas\ReporteCotizar2.xss">
+      <DependentUpon>ReporteCotizar2.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Base_de_datos_1_4_beDataSet.xsc">
+      <DependentUpon>_Base_de_datos_1_4_beDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Base_de_datos_1_4_beDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Base_de_datos_1_4_beDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bases_Datos\_Base_de_datos_1_4_beDataSet.xss">
+      <DependentUpon>_Base_de_datos_1_4_beDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Cotizaciones_1_4DataSet.xsc">
+      <DependentUpon>_Cotizaciones_1_4DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Cotizaciones_1_4DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Cotizaciones_1_4DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bases_Datos\_Cotizaciones_1_4DataSet.xss">
+      <DependentUpon>_Cotizaciones_1_4DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Cotizaciones_1_4DataSet1.xsc">
+      <DependentUpon>_Cotizaciones_1_4DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Cotizaciones_1_4DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Cotizaciones_1_4DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bases_Datos\_Cotizaciones_1_4DataSet1.xss">
+      <DependentUpon>_Cotizaciones_1_4DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Manufactura_1_5DataSet.xsc">
+      <DependentUpon>_Manufactura_1_5DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Manufactura_1_5DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Manufactura_1_5DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bases_Datos\_Manufactura_1_5DataSet.xss">
+      <DependentUpon>_Manufactura_1_5DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Ventas_1_5DataSet.xsc">
+      <DependentUpon>_Ventas_1_5DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bases_Datos\_Ventas_1_5DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Ventas_1_5DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bases_Datos\_Ventas_1_5DataSet.xss">
+      <DependentUpon>_Ventas_1_5DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world-stat-icon_31859.ico" />
+    <None Include="Resources\website-optimization-icon_icon-icons.com_55720.ico" />
+    <None Include="Resources\website-lock_46869.ico" />
+    <None Include="Resources\Web-Analytics_icon-icons.com_53763.ico" />
+    <None Include="Resources\wallet_46876.ico" />
+    <None Include="Resources\Viral-Marketing_icon-icons.com_53764.ico" />
+    <None Include="Resources\User-Experience_icon-icons.com_53765.ico" />
+    <None Include="Resources\user_icon-icons.com_66546.ico" />
+    <None Include="Resources\user_22110.ico" />
+    <None Include="Resources\Usability_icon-icons.com_53759.ico" />
+    <None Include="Resources\URL_icon-icons.com_53760.ico" />
+    <None Include="Resources\URL_icon-icons.com_53760 %281%29.ico" />
+    <None Include="Resources\unlock-icon_31861.ico" />
+    <None Include="Resources\unlock_icon-icons.com_66526.ico" />
+    <None Include="Resources\Unique-Visitor_icon-icons.com_53761.ico" />
+    <None Include="Resources\trash_22111.ico" />
+    <None Include="Resources\tools_icon-icons.com_66544.ico" />
+    <None Include="Resources\TLD_icon-icons.com_53762.ico" />
+    <None Include="Resources\target2-icon_icon-icons.com_55724.ico" />
+    <None Include="Resources\Target_icon-icons.com_53757.ico" />
+    <None Include="Resources\store_22115.ico" />
+    <None Include="Resources\stopwatch_46861.ico" />
+    <None Include="Resources\stock_market_22116.ico" />
+    <None Include="Resources\stack_icon-icons.com_66542.ico" />
+    <None Include="Resources\Squeeze-Page_icon-icons.com_53758.ico" />
+    <None Include="Resources\Spam_icon-icons.com_53752.ico" />
+    <None Include="Resources\Social-Media_icon-icons.com_53753.ico" />
+    <None Include="Resources\Snippet_icon-icons.com_53754.ico" />
+    <None Include="Resources\SiteMap_icon-icons.com_53755.ico" />
+    <None Include="Resources\shipping_products_22121.ico" />
+    <None Include="Resources\settings-icon_31843.ico" />
+    <None Include="Resources\services-portfolio-icon_icon-icons.com_55726.ico" />
+    <None Include="Resources\Server_icon-icons.com_53749.ico" />
+    <None Include="Resources\security-icon_icon-icons.com_55727.ico" />
+    <None Include="Resources\security_lock_22122.ico" />
+    <None Include="Resources\search_icon-icons.com_66523.ico" />
+    <None Include="Resources\search_binoculars_22123.ico" />
+    <None Include="Resources\save_disk_22124.ico" />
+    <None Include="Resources\safe_46874.ico" />
+    <None Include="Resources\safe_22126.ico" />
+    <None Include="Resources\ROI_icon-icons.com_53750.ico" />
+    <None Include="Resources\research_books_22128.ico" />
+    <None Include="Resources\Redirect_icon-icons.com_53751.ico" />
+    <None Include="Resources\rank-icon_icon-icons.com_55731.ico" />
+    <None Include="Resources\Query_icon-icons.com_53746.ico" />
+    <None Include="Resources\project_plan_22131.ico" />
+    <None Include="Resources\production_22132.ico" />
+    <None Include="Resources\power_icon-icons.com_66527.ico" />
+    <None Include="Resources\Positioning_icon-icons.com_53747.ico" />
+    <None Include="Resources\piggy_bank_22136.ico" />
+    <None Include="Resources\pie_chart_22137.ico" />
+    <None Include="Resources\person-icon_31846.ico" />
+    <None Include="Resources\pencil_icon-icons.com_66521.ico" />
+    <None Include="Resources\Penalty_icon-icons.com_53748.ico" />
+    <None Include="Resources\Penalty_icon-icons.com_53748 %281%29.ico" />
+    <None Include="Resources\pay-per-click-icon_icon-icons.com_55734.ico" />
+    <None Include="Resources\Pay-per-Click-%28PPC%29_icon-icons.com_53742.ico" />
+    <None Include="Resources\paper-plane_46860.ico" />
+    <None Include="Resources\PageRank_icon-icons.com_53743.ico" />
+    <None Include="Resources\packaging_22140.ico" />
+    <None Include="Resources\Optimization_icon-icons.com_53744.ico" />
+    <None Include="Resources\notes_22141.ico" />
+    <None Include="Resources\news_22142.ico" />
+    <None Include="Resources\networking-icon_icon-icons.com_55735.ico" />
+    <None Include="Resources\network_icon-icons.com_66538.ico" />
+    <None Include="Resources\name-card-icon_31834.ico" />
+    <None Include="Resources\money_22144.ico" />
+    <None Include="Resources\mobile_icon-icons.com_66545.ico" />
+    <None Include="Resources\Meta-Tags_icon-icons.com_53745.ico" />
+    <None Include="Resources\medal_46864.ico" />
+    <None Include="Resources\master_card_22146.ico" />
+    <None Include="Resources\maps_22147.ico" />
+    <None Include="Resources\mail_icon-icons.com_66535.ico" />
+    <None Include="Resources\magnifier-target_46870.ico" />
+    <None Include="Resources\magic-wand_46867.ico" />
+    <None Include="Resources\lock-icon_31851.ico" />
+    <None Include="Resources\location-icon_icon-icons.com_55737.ico" />
+    <None Include="Resources\Link-Building_icon-icons.com_53739.ico" />
+    <None Include="Resources\like-icon_31852.ico" />
+    <None Include="Resources\light-bulb_46866.ico" />
+    <None Include="Resources\laptop_icon-icons.com_66540.ico" />
+    <None Include="Resources\Landing-Page_icon-icons.com_53740.ico" />
+    <None Include="Resources\Keywords_icon-icons.com_53741.ico" />
+    <None Include="Resources\Keyword-Density_icon-icons.com_53771.ico" />
+    <None Include="Resources\keys-icon_31867.ico" />
+    <None Include="Resources\invoice_22150.ico" />
+    <None Include="Resources\Invisible-Web_icon-icons.com_53736.ico" />
+    <None Include="Resources\Indexing_icon-icons.com_53737.ico" />
+    <None Include="Resources\Inbound-Link_icon-icons.com_53738.ico" />
+    <None Include="Resources\Impression_icon-icons.com_53733.ico" />
+    <None Include="Resources\idea_bulb_22152.ico" />
+    <None Include="Resources\Html_icon-icons.com_53734.ico" />
+    <None Include="Resources\Heading-Tag_icon-icons.com_53735.ico" />
+    <None Include="Resources\hand-shopping-bag_46878.ico" />
+    <None Include="Resources\growth-statistics-icon_icon-icons.com_55739.ico" />
+    <None Include="Resources\graphs_46879.ico" />
+    <None Include="Resources\globe_icon-icons.com_66543.ico" />
+    <None Include="Resources\gift_present_22158.ico" />
+    <None Include="Resources\Geo-Targeting_icon-icons.com_53767.ico" />
+    <None Include="Resources\gear_icon-icons.com_66520.ico" />
+    <None Include="Resources\folder_icon-icons.com_66529.ico" />
+    <None Include="Resources\Filter_icon-icons.com_53730.ico" />
+    <None Include="Resources\file_cabinet_22160.ico" />
+    <None Include="Resources\Eye-Tracking_icon-icons.com_53731.ico" />
+    <None Include="Resources\Exit-Page_icon-icons.com_53732.ico" />
+    <None Include="Resources\Everflux_icon-icons.com_53727.ico" />
+    <None Include="Resources\euro_22162.ico" />
+    <None Include="Resources\eraser_46865.ico" />
+    <None Include="Resources\Entry-Page_icon-icons.com_53728.ico" />
+    <None Include="Resources\email_icon-icons.com_66532.ico" />
+    <None Include="Resources\email_22163.ico" />
+    <None Include="Resources\edit_22164.ico" />
+    <None Include="Resources\ecommerce-icons_icon-icons.com_55741.ico" />
+    <None Include="Resources\E-Commerce_icon-icons.com_53729.ico" />
+    <None Include="Resources\Dynamic-Content_icon-icons.com_53724.ico" />
+    <None Include="Resources\Duplicate-Content_icon-icons.com_53725.ico" />
+    <None Include="Resources\dollar-icon_31870.ico" />
+    <None Include="Resources\dollar-icon_31870 %281%29.ico" />
+    <None Include="Resources\dollar_22165.ico" />
+    <None Include="Resources\document_icon-icons.com_66534.ico" />
+    <None Include="Resources\Directory_icon-icons.com_53726.ico" />
+    <None Include="Resources\desktop_icon-icons.com_66537.ico" />
+    <None Include="Resources\Deep-Crawl_icon-icons.com_53720.ico" />
+    <None Include="Resources\cursor_icon-icons.com_66530.ico" />
+    <None Include="Resources\Crowler-Spider-01_icon-icons.com_53770.ico" />
+    <None Include="Resources\credit_card_22167.ico" />
+    <None Include="Resources\CPT_icon-icons.com_53722.ico" />
+    <None Include="Resources\Cost-per-Click-%28CPC%29_icon-icons.com_53723.ico" />
+    <None Include="Resources\Cost-per-Click-%28CPC%29_icon-icons.com_53723 %281%29.ico" />
+    <None Include="Resources\Conversion-Rate_icon-icons.com_53717.ico" />
+    <None Include="Resources\conversion-icon_icon-icons.com_55743.ico" />
+    <None Include="Resources\Contextual-Ads_icon-icons.com_53718.ico" />
+    <None Include="Resources\content-icon_icon-icons.com_55744.ico" />
+    <None Include="Resources\Content_icon-icons.com_53719.ico" />
+    <None Include="Resources\company_22169.ico" />
+    <None Include="Resources\coins-icon_31839.ico" />
+    <None Include="Resources\Clustering_icon-icons.com_53714.ico" />
+    <None Include="Resources\cloud_icon-icons.com_66525.ico" />
+    <None Include="Resources\Cloacking_icon-icons.com_53715.ico" />
+    <None Include="Resources\Click-Fraud_icon-icons.com_53716.ico" />
+    <None Include="Resources\chat_conversation_22172.ico" />
+    <None Include="Resources\chart_icon-icons.com_66528.ico" />
+    <None Include="Resources\cash_46875.ico" />
+    <None Include="Resources\calendar_icon-icons.com_66541.ico" />
+    <None Include="Resources\calendar_22174.ico" />
+    <None Include="Resources\calculator_46872.ico" />
+    <None Include="Resources\calculator_22175.ico" />
+    <None Include="Resources\browser_icon-icons.com_66536.ico" />
+    <None Include="Resources\briefcase_22176.ico" />
+    <None Include="Resources\Bounce-Rate_icon-icons.com_53712.ico" />
+    <None Include="Resources\Bookmarking_icon-icons.com_53713.ico" />
+    <None Include="Resources\Blog_icon-icons.com_53707.ico" />
+    <None Include="Resources\Black-Hat_icon-icons.com_53708.ico" />
+    <None Include="Resources\Bid_icon-icons.com_53709.ico" />
+    <None Include="Resources\bar_code_22177.ico" />
+    <None Include="Resources\bar_chart_22178.ico" />
+    <None Include="Resources\bank-icon_31875.ico" />
+    <None Include="Resources\bank_22179.ico" />
+    <None Include="Resources\Ban_icon-icons.com_53710.ico" />
+    <None Include="Resources\Back-Link_icon-icons.com_53704.ico" />
+    <None Include="Resources\auction-hammer_46873.ico" />
+    <None Include="Resources\Article-Marketing_icon-icons.com_53705.ico" />
+    <None Include="Resources\approve_22181.ico" />
+    <None Include="Resources\API_icon-icons.com_53706.ico" />
+    <None Include="Resources\Alt-Text_icon-icons.com_53703.ico" />
+    <None Include="Resources\alert_alarm_22185.ico" />
+    <None Include="Resources\Affiliate-Marketing_icon-icons.com_53702.ico" />
+    <None Include="Resources\admin_user_man_22187.ico" />
+    <None Include="Resources\ab-testing_icon-icons.com_53768.ico" />
+    <None Include="Resources\1FTM.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Add.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Close.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Fast-Forward %281%29.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Fast-Forward.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-First.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Help.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Info.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Last.ico" />
+    <None Include="Resources\Hopstarter-Button-Button-Rewind.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Address-books.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Advanced.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Applications.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Archive.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Back-alt.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Calculator.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Cash.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Copy-doc.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Delete-archive.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Down-alt.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Edit.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Exclamation.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Exit.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Folder.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Folder-smart.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Forward.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Forward-all.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Forward-alt.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Forward-button.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Forward-button-white.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Globe.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Help.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-IChat.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Info.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Install.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Library-bookmarked.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Lock.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Minus.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Minus-white.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-New-archive.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-New-doc.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-New-mail.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Notebook.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Open-alt.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Play.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Plus.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Refresh.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Remove.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Rewind-button.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Rewind-button-white.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Search.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Send.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Splash-green.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Stop.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Stop-2.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Stop-alt.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Trash.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Unarchive.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Unread-mail.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Zoom-in.ico" />
+    <None Include="Resources\Jonas-Rask-Danish-Royalty-Free-Zoom-out.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Clean3d-blue-015.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-delete.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-fontsize.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-heart.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-hourglass.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-i.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-037.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-040.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-041.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-042.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-043.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-044.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-045.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-049.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-051.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-052.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-053.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-055.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-056.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-057.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-058.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-060.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-063.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-068.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-072.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-075.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-076.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-079.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-080.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-082.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-083.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-087.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-092.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-094.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-095.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-096.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-099.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-103.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-104.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-107.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-118.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-119.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-120.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-121.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-124.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-125.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-126.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-127.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-128.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-129.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-133.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-orbs2-137.ico" />
+    <None Include="Resources\Mysitemyway-Clean-3d-Glossy-3d-blue-shield.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Address.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Block.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Briefcase.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Bubble.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Buy.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Calendar.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Delete.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Diagram.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Down.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Folder.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Gear.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Info.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Left.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Letter.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Plus.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Print.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Right.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Save.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Search.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Statistics.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Tick.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Trash.ico" />
+    <None Include="Resources\Pixelmixer-Basic-Warning.ico" />
+    <Content Include="TRANSFORMACIONES_003_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2771 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FTM Registros
+</name>
+</assembly>
+<members>
+<member name="T:FTM_Registros.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources._1FTM">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.ab_testing_icon_icons_com_53768">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.admin_user_man_22187">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Affiliate_Marketing_icon_icons_com_53702">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.alert_alarm_22185">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Alt_Text_icon_icons_com_53703">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.API_icon_icons_com_53706">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.approve_22181">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Article_Marketing_icon_icons_com_53705">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.auction_hammer_46873">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Back_Link_icon_icons_com_53704">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Ban_icon_icons_com_53710">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.bank_22179">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.bank_icon_31875">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.bar_chart_22178">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.bar_code_22177">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Bid_icon_icons_com_53709">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Black_Hat_icon_icons_com_53708">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Blog_icon_icons_com_53707">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Bookmarking_icon_icons_com_53713">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Bounce_Rate_icon_icons_com_53712">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.briefcase_22176">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.browser_icon_icons_com_66536">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.calculator_22175">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.calculator_46872">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.calendar_22174">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.calendar_icon_icons_com_66541">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.cash_46875">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.chart_icon_icons_com_66528">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.chat_conversation_22172">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Click_Fraud_icon_icons_com_53716">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Cloacking_icon_icons_com_53715">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.cloud_icon_icons_com_66525">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Clustering_icon_icons_com_53714">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.coins_icon_31839">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.company_22169">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.content_icon_icon_icons_com_55744">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Content_icon_icons_com_53719">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Contextual_Ads_icon_icons_com_53718">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.conversion_icon_icon_icons_com_55743">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Conversion_Rate_icon_icons_com_53717">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Cost_per_Click__CPC__icon_icons_com_53723">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Cost_per_Click__CPC__icon_icons_com_53723__1_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.CPT_icon_icons_com_53722">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.credit_card_22167">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Crowler_Spider_01_icon_icons_com_53770">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.cursor_icon_icons_com_66530">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Deep_Crawl_icon_icons_com_53720">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.desktop_icon_icons_com_66537">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Directory_icon_icons_com_53726">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.document_icon_icons_com_66534">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.dollar_22165">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.dollar_icon_31870">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.dollar_icon_31870__1_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Duplicate_Content_icon_icons_com_53725">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Dynamic_Content_icon_icons_com_53724">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.E_Commerce_icon_icons_com_53729">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.ecommerce_icons_icon_icons_com_55741">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.edit_22164">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.email_22163">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.email_icon_icons_com_66532">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Entry_Page_icon_icons_com_53728">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.eraser_46865">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.euro_22162">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Everflux_icon_icons_com_53727">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Exit_Page_icon_icons_com_53732">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Eye_Tracking_icon_icons_com_53731">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.file_cabinet_22160">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Filter_icon_icons_com_53730">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.folder_icon_icons_com_66529">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.gear_icon_icons_com_66520">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Geo_Targeting_icon_icons_com_53767">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.gift_present_22158">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.globe_icon_icons_com_66543">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.graphs_46879">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.growth_statistics_icon_icon_icons_com_55739">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.hand_shopping_bag_46878">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Heading_Tag_icon_icons_com_53735">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Add">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Close">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Fast_Forward">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Fast_Forward__1_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_First">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Help">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Info">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Last">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Hopstarter_Button_Button_Rewind">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Html_icon_icons_com_53734">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.idea_bulb_22152">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Impression_icon_icons_com_53733">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Inbound_Link_icon_icons_com_53738">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Indexing_icon_icons_com_53737">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Invisible_Web_icon_icons_com_53736">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.invoice_22150">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Address_books">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Advanced">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Applications">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Archive">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Back_alt">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Calculator">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Cash">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Copy_doc">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Delete_archive">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Down_alt">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Edit">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Exclamation">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Exit">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Folder">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Folder_smart">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Forward">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Forward_all">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Forward_alt">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Forward_button">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Forward_button_white">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Globe">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Help">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_IChat">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Info">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Install">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Library_bookmarked">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Lock">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Minus">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Minus_white">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_archive">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_doc">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_mail">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Notebook">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Open_alt">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Play">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Plus">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Refresh">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Remove">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Rewind_button">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Rewind_button_white">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Search">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Send">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Splash_green">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Stop">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Stop_2">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Stop_alt">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Trash">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Unarchive">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Unread_mail">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Zoom_in">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Zoom_out">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.keys_icon_31867">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Keyword_Density_icon_icons_com_53771">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Keywords_icon_icons_com_53741">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Landing_Page_icon_icons_com_53740">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.laptop_icon_icons_com_66540">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.light_bulb_46866">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.like_icon_31852">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Link_Building_icon_icons_com_53739">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.location_icon_icon_icons_com_55737">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.lock_icon_31851">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.magic_wand_46867">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.magnifier_target_46870">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.mail_icon_icons_com_66535">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.maps_22147">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.master_card_22146">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.medal_46864">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Meta_Tags_icon_icons_com_53745">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.mobile_icon_icons_com_66545">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.money_22144">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Clean3d_blue_015">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_delete">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_fontsize">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_heart">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_hourglass">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_i">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_037">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_040">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_041">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_042">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_043">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_044">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_045">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_049">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_051">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_052">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_053">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_055">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_056">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_057">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_058">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_060">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_063">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_068">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_072">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_075">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_076">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_079">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_080">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_082">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_083">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_087">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_092">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_094">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_095">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_096">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_099">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_103">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_104">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_107">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_118">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_119">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_120">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_121">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_124">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_125">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_126">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_127">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_128">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_129">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_133">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_orbs2_137">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Mysitemyway_Clean_3d_Glossy_3d_blue_shield">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.name_card_icon_31834">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.network_icon_icons_com_66538">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.networking_icon_icon_icons_com_55735">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.news_22142">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.notes_22141">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Optimization_icon_icons_com_53744">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.packaging_22140">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.PageRank_icon_icons_com_53743">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.paper_plane_46860">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pay_per_Click__PPC__icon_icons_com_53742">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.pay_per_click_icon_icon_icons_com_55734">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Penalty_icon_icons_com_53748">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Penalty_icon_icons_com_53748__1_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.pencil_icon_icons_com_66521">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.person_icon_31846">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.pie_chart_22137">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.piggy_bank_22136">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Address">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Block">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Briefcase">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Bubble">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Buy">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Calendar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Delete">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Diagram">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Down">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Folder">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Gear">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Info">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Left">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Letter">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Plus">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Print">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Right">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Save">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Search">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Statistics">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Tick">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Trash">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Warning">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Positioning_icon_icons_com_53747">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.power_icon_icons_com_66527">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.production_22132">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.project_plan_22131">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Query_icon_icons_com_53746">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.rank_icon_icon_icons_com_55731">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Redirect_icon_icons_com_53751">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.research_books_22128">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.ROI_icon_icons_com_53750">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.safe_22126">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.safe_46874">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.save_disk_22124">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.search_binoculars_22123">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.search_icon_icons_com_66523">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.security_icon_icon_icons_com_55727">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.security_lock_22122">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Server_icon_icons_com_53749">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.services_portfolio_icon_icon_icons_com_55726">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.settings_icon_31843">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.shipping_products_22121">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.SiteMap_icon_icons_com_53755">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Snippet_icon_icons_com_53754">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Social_Media_icon_icons_com_53753">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Spam_icon_icons_com_53752">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Squeeze_Page_icon_icons_com_53758">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.stack_icon_icons_com_66542">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.stock_market_22116">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.stopwatch_46861">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.store_22115">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Target_icon_icons_com_53757">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.target2_icon_icon_icons_com_55724">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.TLD_icon_icons_com_53762">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.tools_icon_icons_com_66544">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.trash_22111">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Unique_Visitor_icon_icons_com_53761">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.unlock_icon_31861">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.unlock_icon_icons_com_66526">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.URL_icon_icons_com_53760">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.URL_icon_icons_com_53760__1_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Usability_icon_icons_com_53759">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.user_22110">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.User_Experience_icon_icons_com_53765">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.user_icon_icons_com_66546">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Viral_Marketing_icon_icons_com_53764">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.wallet_46876">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.Web_Analytics_icon_icons_com_53763">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.website_lock_46869">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.website_optimization_icon_icon_icons_com_55720">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FTM_Registros.My.Resources.Resources.world_stat_icon_31859">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTM">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTM.CostosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTM.CostosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTM.CostosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTMTableAdapters.CostosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.AgregarClaveFTM,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.AgregarClaveFTM,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.AgregarClaveFTM,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.AgregarClaveFTM)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.AgregarClaveFTMTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrden">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrden.BuscandoOrdenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrden.BuscandoOrdenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrden.BuscandoOrdenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrdenTableAdapters.BuscandoOrdenTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.BuscaOrden,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.BuscaOrden,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.BuscaOrden,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.BuscaOrden)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscaOrdenTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBX">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBX.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBX.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBX.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBXTableAdapters.BuscarVentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.BuscarCBX,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.BuscarCBX,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.BuscarCBX,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.BuscarCBX)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.BuscarCBXTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.CotizacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.CostosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.Control_planosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.CotizacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.CostosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.Control_planosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.CotizacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.CostosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar.Control_planosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.CotizacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.CostosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.Control_planosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReporteCotizar,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReporteCotizar,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReporteCotizar,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReporteCotizar)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizarTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1.CostosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1.CostosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1.CostosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1TableAdapters.CostosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReporteCotizar1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReporteCotizar1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReporteCotizar1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReporteCotizar1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2.VentaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2.VentaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2.VentaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2TableAdapters.VentaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReporteCotizar2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReporteCotizar2,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReporteCotizar2,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReporteCotizar2)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.CotizacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ManufacturaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblAdministradorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuariosPermisosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Base_de_datos_1_4_beDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Costos_VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.CotizacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuarioActivoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Pza_Control_de_planosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuariosPermisosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.CostosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Control_planosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Costos_VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.CotizacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuarioActivoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Pza_Control_de_planosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuariosPermisosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.CostosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Control_planosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Costos_VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.CotizacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuarioActivoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Pza_Control_de_planosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.tblUsuariosPermisosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.CostosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet.Control_planosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.Costos_VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.CotizacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.tblUsuarioActivoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.Pza_Control_de_planosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.tblUsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.tblUsuariosPermisosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.CostosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.Control_planosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Cotizaciones_1_4DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Cotizaciones_1_4DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Cotizaciones_1_4DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Cotizaciones_1_4DataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1.CostosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1.CostosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1.CostosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.CostosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Cotizaciones_1_4DataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Cotizaciones_1_4DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Cotizaciones_1_4DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Cotizaciones_1_4DataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros._Cotizaciones_1_4DataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Cotrol_de_planosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.ManufacturaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Pza_Control_de_planosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuarioActivoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuariosPermisosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Control_planosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Cotrol_de_planosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.ManufacturaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Pza_Control_de_planosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuarioActivoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuariosPermisosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Control_planosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Cotrol_de_planosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.ManufacturaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Pza_Control_de_planosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuarioActivoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.tblUsuariosPermisosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSet.Control_planosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.Cotrol_de_planosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.ManufacturaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.Pza_Control_de_planosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.tblUsuarioActivoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.tblUsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.tblUsuariosPermisosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.Control_planosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Manufactura_1_5DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Manufactura_1_5DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Manufactura_1_5DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Manufactura_1_5DataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros._Manufactura_1_5DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSet.tblUsuarioActivoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSet.tblUsuarioActivoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSet.tblUsuarioActivoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSetTableAdapters.tblUsuarioActivoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Ventas_1_5DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Ventas_1_5DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Ventas_1_5DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Ventas_1_5DataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros._Ventas_1_5DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

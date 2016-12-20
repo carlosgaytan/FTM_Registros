@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BuscaOrden" targetNamespace="http://tempuri.org/BuscaOrden.xsd" xmlns:mstns="http://tempuri.org/BuscaOrden.xsd" xmlns="http://tempuri.org/BuscaOrden.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Cotizaciones_1_4ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Cotizaciones_1_4ConnectionString (MySettings)" PropertyReference="ApplicationSettings.FTM_Registros.My.MySettings.GlobalReference.Default.Cotizaciones_1_4ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BuscandoOrdenTableAdapter" GeneratorDataComponentClassName="BuscandoOrdenTableAdapter" Name="BuscandoOrden" UserDataComponentName="BuscandoOrdenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cotizaciones_1_4ConnectionString (MySettings)" DbObjectName="Costos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Recolecta" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Recolecta" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Recolecta">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        no_orden, Cliente, Clave_FTM, Dibujo, Descripción, P1, X, Y, P2, X1, Y1, Valor_material, Peso_Bruto, Factor, Costo_MP, Precio_MP, Material, Esp_1, Esp_2, 
+                         Esp_cal, Milímetros, Espesor, Pulgada, Calibre, Doblez, Costo_doblez, Precio_doblez, Costo_pintura, Pintura, Soldadura, Maquinado, Costo_galvanizado, 
+                         Galvanizado, Costo_Tropicalizado, Tropicalizado, Tiempo_corte, Costo_hr_corte, Precio_corte, Cantidades, um, Precio_final, Precio_Total, Cotizador, Llave
+FROM            Costos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="no_orden" DataSetColumn="no_orden" />
+              <Mapping SourceColumn="Clave_FTM" DataSetColumn="Clave_FTM" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Dibujo" DataSetColumn="Dibujo" />
+              <Mapping SourceColumn="Descripción" DataSetColumn="Descripción" />
+              <Mapping SourceColumn="P1" DataSetColumn="P1" />
+              <Mapping SourceColumn="X" DataSetColumn="X" />
+              <Mapping SourceColumn="Y" DataSetColumn="Y" />
+              <Mapping SourceColumn="P2" DataSetColumn="P2" />
+              <Mapping SourceColumn="X1" DataSetColumn="X1" />
+              <Mapping SourceColumn="Y1" DataSetColumn="Y1" />
+              <Mapping SourceColumn="Valor_material" DataSetColumn="Valor_material" />
+              <Mapping SourceColumn="Peso_Bruto" DataSetColumn="Peso_Bruto" />
+              <Mapping SourceColumn="Factor" DataSetColumn="Factor" />
+              <Mapping SourceColumn="Costo_MP" DataSetColumn="Costo_MP" />
+              <Mapping SourceColumn="Precio_MP" DataSetColumn="Precio_MP" />
+              <Mapping SourceColumn="Material" DataSetColumn="Material" />
+              <Mapping SourceColumn="Doblez" DataSetColumn="Doblez" />
+              <Mapping SourceColumn="Costo_doblez" DataSetColumn="Costo_doblez" />
+              <Mapping SourceColumn="Precio_doblez" DataSetColumn="Precio_doblez" />
+              <Mapping SourceColumn="Costo_pintura" DataSetColumn="Costo_pintura" />
+              <Mapping SourceColumn="Pintura" DataSetColumn="Pintura" />
+              <Mapping SourceColumn="Soldadura" DataSetColumn="Soldadura" />
+              <Mapping SourceColumn="Maquinado" DataSetColumn="Maquinado" />
+              <Mapping SourceColumn="Costo_galvanizado" DataSetColumn="Costo_galvanizado" />
+              <Mapping SourceColumn="Galvanizado" DataSetColumn="Galvanizado" />
+              <Mapping SourceColumn="Costo_Tropicalizado" DataSetColumn="Costo_Tropicalizado" />
+              <Mapping SourceColumn="Tropicalizado" DataSetColumn="Tropicalizado" />
+              <Mapping SourceColumn="Tiempo_corte" DataSetColumn="Tiempo_corte" />
+              <Mapping SourceColumn="Costo_hr_corte" DataSetColumn="Costo_hr_corte" />
+              <Mapping SourceColumn="Precio_corte" DataSetColumn="Precio_corte" />
+              <Mapping SourceColumn="Cantidades" DataSetColumn="Cantidades" />
+              <Mapping SourceColumn="um" DataSetColumn="um" />
+              <Mapping SourceColumn="Precio_final" DataSetColumn="Precio_final" />
+              <Mapping SourceColumn="Precio_Total" DataSetColumn="Precio_Total" />
+              <Mapping SourceColumn="Cotizador" DataSetColumn="Cotizador" />
+              <Mapping SourceColumn="Esp_1" DataSetColumn="Esp_1" />
+              <Mapping SourceColumn="Esp_2" DataSetColumn="Esp_2" />
+              <Mapping SourceColumn="Esp_cal" DataSetColumn="Esp_cal" />
+              <Mapping SourceColumn="Milímetros" DataSetColumn="Milímetros" />
+              <Mapping SourceColumn="Espesor" DataSetColumn="Espesor1" />
+              <Mapping SourceColumn="Pulgada" DataSetColumn="Pulgada" />
+              <Mapping SourceColumn="Calibre" DataSetColumn="Calibre" />
+              <Mapping SourceColumn="Llave" DataSetColumn="Llave" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Cotizaciones_1_4ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="BuscaOrd" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="BuscaOrd" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BuscaOrd">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT 
+                         Costos.no_orden, derivedtbl_1.Clave_FTM, derivedtbl_1.Cliente, derivedtbl_1.Dibujo, derivedtbl_1.Descripción, derivedtbl_1.P1, derivedtbl_1.X, derivedtbl_1.Y, 
+                         derivedtbl_1.P2, derivedtbl_1.X1, derivedtbl_1.Y1, derivedtbl_1.Valor_material, derivedtbl_1.Peso_Bruto, derivedtbl_1.Factor, derivedtbl_1.Costo_MP, 
+                         derivedtbl_1.Precio_MP, derivedtbl_1.Material, derivedtbl_1.Espesor, derivedtbl_1.Doblez, derivedtbl_1.Costo_doblez, derivedtbl_1.Precio_doblez, 
+                         derivedtbl_1.Costo_pintura, derivedtbl_1.Pintura, derivedtbl_1.Soldadura, derivedtbl_1.Maquinado, derivedtbl_1.Costo_galvanizado, derivedtbl_1.Galvanizado, 
+                         derivedtbl_1.Costo_Tropicalizado, derivedtbl_1.Tropicalizado, derivedtbl_1.Tiempo_corte, derivedtbl_1.Costo_hr_corte, derivedtbl_1.Precio_corte, 
+                         derivedtbl_1.Cantidades, derivedtbl_1.um, derivedtbl_1.Precio_final, derivedtbl_1.Precio_Total, derivedtbl_1.Cotizador, derivedtbl_1.Esp_1, derivedtbl_1.Esp_2, 
+                         derivedtbl_1.Milímetros, derivedtbl_1.Pulgada, derivedtbl_1.Calibre, derivedtbl_1.Esp_cal, derivedtbl_1.Llave
+FROM            (Costos INNER JOIN
+                             (SELECT        no_orden, Cliente, Clave_FTM, Dibujo, Descripción, P1, X, Y, P2, X1, Y1, Valor_material, Peso_Bruto, Factor, Costo_MP, Precio_MP, Material, 
+                                                         Espesor, Milímetros, Pulgada, Esp_1, Esp_2, Esp_cal, Calibre, Doblez, Costo_doblez, Precio_doblez, Costo_pintura, Pintura, Soldadura, Maquinado, 
+                                                         Costo_galvanizado, Galvanizado, Costo_Tropicalizado, Tropicalizado, Tiempo_corte, Costo_hr_corte, Precio_corte, Cantidades, um, Precio_final, 
+                                                         Precio_Total, Llave, Cotizador
+                               FROM            Costos Costos_1) derivedtbl_1 ON Costos.no_orden = derivedtbl_1.no_orden)
+WHERE        (Costos.no_orden = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="no_orden" DataSourceName="Costos" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="no_orden" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="no_orden" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BuscaOrden" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BuscaOrden" msprop:Generator_UserDSName="BuscaOrden">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BuscandoOrden" msprop:Generator_TableClassName="BuscandoOrdenDataTable" msprop:Generator_TableVarName="tableBuscandoOrden" msprop:Generator_TablePropName="BuscandoOrden" msprop:Generator_RowDeletingName="BuscandoOrdenRowDeleting" msprop:Generator_RowChangingName="BuscandoOrdenRowChanging" msprop:Generator_RowEvHandlerName="BuscandoOrdenRowChangeEventHandler" msprop:Generator_RowDeletedName="BuscandoOrdenRowDeleted" msprop:Generator_UserTableName="BuscandoOrden" msprop:Generator_RowChangedName="BuscandoOrdenRowChanged" msprop:Generator_RowEvArgName="BuscandoOrdenRowChangeEvent" msprop:Generator_RowClassName="BuscandoOrdenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_orden" msprop:Generator_ColumnVarNameInTable="columnno_orden" msprop:Generator_ColumnPropNameInRow="no_orden" msprop:Generator_ColumnPropNameInTable="no_ordenColumn" msprop:Generator_UserColumnName="no_orden" type="xs:int" minOccurs="0" />
+              <xs:element name="Clave_FTM" msprop:Generator_ColumnVarNameInTable="columnClave_FTM" msprop:Generator_ColumnPropNameInRow="Clave_FTM" msprop:Generator_ColumnPropNameInTable="Clave_FTMColumn" msprop:Generator_UserColumnName="Clave_FTM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dibujo" msprop:Generator_ColumnVarNameInTable="columnDibujo" msprop:Generator_ColumnPropNameInRow="Dibujo" msprop:Generator_ColumnPropNameInTable="DibujoColumn" msprop:Generator_UserColumnName="Dibujo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripción" msprop:Generator_ColumnVarNameInTable="columnDescripción" msprop:Generator_ColumnPropNameInRow="Descripción" msprop:Generator_ColumnPropNameInTable="DescripciónColumn" msprop:Generator_UserColumnName="Descripción" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P1" msprop:Generator_ColumnVarNameInTable="columnP1" msprop:Generator_ColumnPropNameInRow="P1" msprop:Generator_ColumnPropNameInTable="P1Column" msprop:Generator_UserColumnName="P1" type="xs:float" minOccurs="0" />
+              <xs:element name="X" msprop:Generator_ColumnVarNameInTable="columnX" msprop:Generator_ColumnPropNameInRow="X" msprop:Generator_ColumnPropNameInTable="XColumn" msprop:Generator_UserColumnName="X" type="xs:float" minOccurs="0" />
+              <xs:element name="Y" msprop:Generator_ColumnVarNameInTable="columnY" msprop:Generator_ColumnPropNameInRow="Y" msprop:Generator_ColumnPropNameInTable="YColumn" msprop:Generator_UserColumnName="Y" type="xs:float" minOccurs="0" />
+              <xs:element name="P2" msprop:Generator_ColumnVarNameInTable="columnP2" msprop:Generator_ColumnPropNameInRow="P2" msprop:Generator_ColumnPropNameInTable="P2Column" msprop:Generator_UserColumnName="P2" type="xs:float" minOccurs="0" />
+              <xs:element name="X1" msprop:Generator_ColumnVarNameInTable="columnX1" msprop:Generator_ColumnPropNameInRow="X1" msprop:Generator_ColumnPropNameInTable="X1Column" msprop:Generator_UserColumnName="X1" type="xs:int" minOccurs="0" />
+              <xs:element name="Y1" msprop:Generator_ColumnVarNameInTable="columnY1" msprop:Generator_ColumnPropNameInRow="Y1" msprop:Generator_ColumnPropNameInTable="Y1Column" msprop:Generator_UserColumnName="Y1" type="xs:int" minOccurs="0" />
+              <xs:element name="Valor_material" msprop:Generator_ColumnVarNameInTable="columnValor_material" msprop:Generator_ColumnPropNameInRow="Valor_material" msprop:Generator_ColumnPropNameInTable="Valor_materialColumn" msprop:Generator_UserColumnName="Valor_material" type="xs:float" minOccurs="0" />
+              <xs:element name="Peso_Bruto" msprop:Generator_ColumnVarNameInTable="columnPeso_Bruto" msprop:Generator_ColumnPropNameInRow="Peso_Bruto" msprop:Generator_ColumnPropNameInTable="Peso_BrutoColumn" msprop:Generator_UserColumnName="Peso_Bruto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Factor" msprop:Generator_ColumnVarNameInTable="columnFactor" msprop:Generator_ColumnPropNameInRow="Factor" msprop:Generator_ColumnPropNameInTable="FactorColumn" msprop:Generator_UserColumnName="Factor" type="xs:float" minOccurs="0" />
+              <xs:element name="Costo_MP" msprop:Generator_ColumnVarNameInTable="columnCosto_MP" msprop:Generator_ColumnPropNameInRow="Costo_MP" msprop:Generator_ColumnPropNameInTable="Costo_MPColumn" msprop:Generator_UserColumnName="Costo_MP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Precio_MP" msprop:Generator_ColumnVarNameInTable="columnPrecio_MP" msprop:Generator_ColumnPropNameInRow="Precio_MP" msprop:Generator_ColumnPropNameInTable="Precio_MPColumn" msprop:Generator_UserColumnName="Precio_MP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Material" msprop:Generator_ColumnVarNameInTable="columnMaterial" msprop:Generator_ColumnPropNameInRow="Material" msprop:Generator_ColumnPropNameInTable="MaterialColumn" msprop:Generator_UserColumnName="Material" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Espesor" msprop:Generator_ColumnVarNameInTable="columnEspesor" msprop:Generator_ColumnPropNameInRow="Espesor" msprop:Generator_ColumnPropNameInTable="EspesorColumn" msprop:Generator_UserColumnName="Espesor" type="xs:int" minOccurs="0" />
+              <xs:element name="Espesor_IN" msprop:Generator_ColumnVarNameInTable="columnEspesor_IN" msprop:Generator_ColumnPropNameInRow="Espesor_IN" msprop:Generator_ColumnPropNameInTable="Espesor_INColumn" msprop:Generator_UserColumnName="Espesor_IN" type="xs:int" minOccurs="0" />
+              <xs:element name="Doblez" msprop:Generator_ColumnVarNameInTable="columnDoblez" msprop:Generator_ColumnPropNameInRow="Doblez" msprop:Generator_ColumnPropNameInTable="DoblezColumn" msprop:Generator_UserColumnName="Doblez" type="xs:float" minOccurs="0" />
+              <xs:element name="Costo_doblez" msprop:Generator_ColumnVarNameInTable="columnCosto_doblez" msprop:Generator_ColumnPropNameInRow="Costo_doblez" msprop:Generator_ColumnPropNameInTable="Costo_doblezColumn" msprop:Generator_UserColumnName="Costo_doblez" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Precio_doblez" msprop:Generator_ColumnVarNameInTable="columnPrecio_doblez" msprop:Generator_ColumnPropNameInRow="Precio_doblez" msprop:Generator_ColumnPropNameInTable="Precio_doblezColumn" msprop:Generator_UserColumnName="Precio_doblez" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Costo_pintura" msprop:Generator_ColumnVarNameInTable="columnCosto_pintura" msprop:Generator_ColumnPropNameInRow="Costo_pintura" msprop:Generator_ColumnPropNameInTable="Costo_pinturaColumn" msprop:Generator_UserColumnName="Costo_pintura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pintura" msprop:Generator_ColumnVarNameInTable="columnPintura" msprop:Generator_ColumnPropNameInRow="Pintura" msprop:Generator_ColumnPropNameInTable="PinturaColumn" msprop:Generator_UserColumnName="Pintura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Soldadura" msprop:Generator_ColumnVarNameInTable="columnSoldadura" msprop:Generator_ColumnPropNameInRow="Soldadura" msprop:Generator_ColumnPropNameInTable="SoldaduraColumn" msprop:Generator_UserColumnName="Soldadura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Maquinado" msprop:Generator_ColumnVarNameInTable="columnMaquinado" msprop:Generator_ColumnPropNameInRow="Maquinado" msprop:Generator_ColumnPropNameInTable="MaquinadoColumn" msprop:Generator_UserColumnName="Maquinado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Costo_galvanizado" msprop:Generator_ColumnVarNameInTable="columnCosto_galvanizado" msprop:Generator_ColumnPropNameInRow="Costo_galvanizado" msprop:Generator_ColumnPropNameInTable="Costo_galvanizadoColumn" msprop:Generator_UserColumnName="Costo_galvanizado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Galvanizado" msprop:Generator_ColumnVarNameInTable="columnGalvanizado" msprop:Generator_ColumnPropNameInRow="Galvanizado" msprop:Generator_ColumnPropNameInTable="GalvanizadoColumn" msprop:Generator_UserColumnName="Galvanizado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Costo_Tropicalizado" msprop:Generator_ColumnVarNameInTable="columnCosto_Tropicalizado" msprop:Generator_ColumnPropNameInRow="Costo_Tropicalizado" msprop:Generator_ColumnPropNameInTable="Costo_TropicalizadoColumn" msprop:Generator_UserColumnName="Costo_Tropicalizado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tropicalizado" msprop:Generator_ColumnVarNameInTable="columnTropicalizado" msprop:Generator_ColumnPropNameInRow="Tropicalizado" msprop:Generator_ColumnPropNameInTable="TropicalizadoColumn" msprop:Generator_UserColumnName="Tropicalizado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tiempo_corte" msprop:Generator_ColumnVarNameInTable="columnTiempo_corte" msprop:Generator_ColumnPropNameInRow="Tiempo_corte" msprop:Generator_ColumnPropNameInTable="Tiempo_corteColumn" msprop:Generator_UserColumnName="Tiempo_corte" type="xs:float" minOccurs="0" />
+              <xs:element name="Costo_hr_corte" msprop:Generator_ColumnVarNameInTable="columnCosto_hr_corte" msprop:Generator_ColumnPropNameInRow="Costo_hr_corte" msprop:Generator_ColumnPropNameInTable="Costo_hr_corteColumn" msprop:Generator_UserColumnName="Costo_hr_corte" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Precio_corte" msprop:Generator_ColumnVarNameInTable="columnPrecio_corte" msprop:Generator_ColumnPropNameInRow="Precio_corte" msprop:Generator_ColumnPropNameInTable="Precio_corteColumn" msprop:Generator_UserColumnName="Precio_corte" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cantidades" msprop:Generator_ColumnVarNameInTable="columnCantidades" msprop:Generator_ColumnPropNameInRow="Cantidades" msprop:Generator_ColumnPropNameInTable="CantidadesColumn" msprop:Generator_UserColumnName="Cantidades" type="xs:float" minOccurs="0" />
+              <xs:element name="um" msprop:Generator_ColumnVarNameInTable="columnum" msprop:Generator_ColumnPropNameInRow="um" msprop:Generator_ColumnPropNameInTable="umColumn" msprop:Generator_UserColumnName="um" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio_final" msprop:Generator_ColumnVarNameInTable="columnPrecio_final" msprop:Generator_ColumnPropNameInRow="Precio_final" msprop:Generator_ColumnPropNameInTable="Precio_finalColumn" msprop:Generator_UserColumnName="Precio_final" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Precio_Total" msprop:Generator_ColumnVarNameInTable="columnPrecio_Total" msprop:Generator_ColumnPropNameInRow="Precio_Total" msprop:Generator_ColumnPropNameInTable="Precio_TotalColumn" msprop:Generator_UserColumnName="Precio_Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cotizador" msprop:Generator_ColumnVarNameInTable="columnCotizador" msprop:Generator_ColumnPropNameInRow="Cotizador" msprop:Generator_ColumnPropNameInTable="CotizadorColumn" msprop:Generator_UserColumnName="Cotizador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Esp_1" msprop:Generator_ColumnVarNameInTable="columnEsp_1" msprop:Generator_ColumnPropNameInRow="Esp_1" msprop:Generator_ColumnPropNameInTable="Esp_1Column" msprop:Generator_UserColumnName="Esp_1" type="xs:int" minOccurs="0" />
+              <xs:element name="Esp_2" msprop:Generator_ColumnVarNameInTable="columnEsp_2" msprop:Generator_ColumnPropNameInRow="Esp_2" msprop:Generator_ColumnPropNameInTable="Esp_2Column" msprop:Generator_UserColumnName="Esp_2" type="xs:int" minOccurs="0" />
+              <xs:element name="Esp_cal" msprop:Generator_ColumnVarNameInTable="columnEsp_cal" msprop:Generator_ColumnPropNameInRow="Esp_cal" msprop:Generator_ColumnPropNameInTable="Esp_calColumn" msprop:Generator_UserColumnName="Esp_cal" type="xs:int" minOccurs="0" />
+              <xs:element name="Milímetros" msprop:Generator_ColumnVarNameInTable="columnMilímetros" msprop:Generator_ColumnPropNameInRow="Milímetros" msprop:Generator_ColumnPropNameInTable="MilímetrosColumn" msprop:Generator_UserColumnName="Milímetros" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Espesor1" msdata:Caption="Espesor" msprop:Generator_ColumnVarNameInTable="columnEspesor1" msprop:Generator_ColumnPropNameInRow="Espesor1" msprop:Generator_ColumnPropNameInTable="Espesor1Column" msprop:Generator_UserColumnName="Espesor1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pulgada" msprop:Generator_ColumnVarNameInTable="columnPulgada" msprop:Generator_ColumnPropNameInRow="Pulgada" msprop:Generator_ColumnPropNameInTable="PulgadaColumn" msprop:Generator_UserColumnName="Pulgada" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Calibre" msprop:Generator_ColumnVarNameInTable="columnCalibre" msprop:Generator_ColumnPropNameInRow="Calibre" msprop:Generator_ColumnPropNameInTable="CalibreColumn" msprop:Generator_UserColumnName="Calibre" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Llave" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLlave" msprop:Generator_ColumnPropNameInRow="Llave" msprop:Generator_ColumnPropNameInTable="LlaveColumn" msprop:Generator_UserColumnName="Llave" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

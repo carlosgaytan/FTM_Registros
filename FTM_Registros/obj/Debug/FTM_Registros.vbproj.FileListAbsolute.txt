@@ -1,0 +1,34 @@
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Resources.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.vbproj.GenerateResource.Cache
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Cotizaciones.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Gerencia.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Manufactura.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Ventas.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Planeacion.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Registros.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Inicio.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.vbprojResolveAssemblyReference.cache
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Busqueda.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\FTM Registros.exe.config
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\FTM Registros.exe.manifest
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\FTM Registros.application
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\FTM Registros.exe
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\FTM Registros.pdb
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\FTM Registros.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.exe.manifest
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.application
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.exe
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.pdb
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\RdlCompile.cache
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\RdlCompile.compiled
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Reporte_Cotizar.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Cotizador.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Buscar_Cotizacion.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Corregir_costos.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Registro_Cot.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Reg_NoCot.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Orden_Compra.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.TrustInfo.xml
