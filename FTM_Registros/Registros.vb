@@ -9,7 +9,7 @@
         Cotizaciones.Show()
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Manufactura.Show()
+        Ingenieria.Show()
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Planeacion.Show()
@@ -19,7 +19,7 @@
         Gerencia.Hide()
         Ventas.Hide()
         Cotizaciones.Hide()
-        Manufactura.Hide()
+        Ingenieria.Hide()
         Planeacion.Hide()
         Me.Hide()
 
@@ -34,7 +34,7 @@
         Gerencia.Close()
         Ventas.Close()
         Cotizaciones.Close()
-        Manufactura.Close()
+        Ingenieria.Close()
         Planeacion.Close()
 
         If MessageBox.Show("¿Seguro que desea salir?", "Salida",
@@ -43,7 +43,7 @@
             Gerencia.Close()
             Ventas.Close()
             Cotizaciones.Close()
-            Manufactura.Close()
+            Ingenieria.Close()
             Planeacion.Close()
             End
         Else

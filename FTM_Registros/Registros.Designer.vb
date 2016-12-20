@@ -39,6 +39,7 @@ Partial Class Registros
         Me.Iniciobtn = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,6 +55,7 @@ Partial Class Registros
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Gerencia"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.Button1, "Información Gerencia")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -67,6 +69,7 @@ Partial Class Registros
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Ventas"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.Button2, "Herramientas de Ventas")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -99,8 +102,9 @@ Partial Class Registros
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(107, 107)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Manufactura"
+        Me.Button4.Text = "Ingeniería"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.Button4, "Herramientas de Ingeniería")
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -114,6 +118,7 @@ Partial Class Registros
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Planeación"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.Button5, "Herramientas de Planeación")
         Me.Button5.UseVisualStyleBackColor = True
         '
         'RichTextBox1
@@ -252,4 +257,5 @@ Partial Class Registros
     Friend WithEvents Iniciobtn As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

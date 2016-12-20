@@ -126,6 +126,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Ingeniería\Ingenieria.Designer.vb">
+      <DependentUpon>Ingenieria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ingeniería\Ingenieria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\BuscaOrden.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,12 +198,6 @@
       <DependentUpon>Gerencia.vb</DependentUpon>
     </Compile>
     <Compile Include="Gerencia.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manufactura.Designer.vb">
-      <DependentUpon>Manufactura.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Manufactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -296,6 +296,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ingeniería\Ingenieria.resx">
+      <DependentUpon>Ingenieria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Buscar_Cotizacion.resx">
       <DependentUpon>Buscar_Cotizacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -322,9 +325,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerencia.resx">
       <DependentUpon>Gerencia.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manufactura.resx">
-      <DependentUpon>Manufactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
