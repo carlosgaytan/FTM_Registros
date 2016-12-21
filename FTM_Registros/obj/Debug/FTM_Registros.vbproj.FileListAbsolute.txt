@@ -32,3 +32,16 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Reg_No
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Orden_Compra.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM Registros.TrustInfo.xml
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Ingenieria.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Security.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Newtonsoft.Json.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Owin.dll
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Security.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Newtonsoft.Json.xml
