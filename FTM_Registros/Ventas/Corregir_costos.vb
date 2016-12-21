@@ -59,6 +59,10 @@
         Me.TableAdapterManager1.UpdateAll(Me._Cotizaciones_1_4DataSet)
 
         MsgBox("Cambios realizados")
+
+        'Muestra notificación de cambio realizado
+        Notificacion.ShowBalloonTip(50000, "¡AVISO!", "Nuevo registro generado", ToolTipIcon.Info)
+
     End Sub
 
     Private Sub Y1TextBox_TextChanged(sender As Object, e As EventArgs) Handles Y1TextBox.TextChanged, X1TextBox.TextChanged, ValorMaterial.TextChanged, EspesorTextBox.TextChanged, CostoPintura.TextChanged, CostoGalvanizado.TextChanged, CostoTropicalizado.TextChanged, Solda.TextChanged, Maquina.TextChanged, TiempoCorte.TextChanged, CostoHR.TextChanged, CantidadesTextBox.TextChanged, FactorComboBox.TextChanged, EspesorTextBox.TextChanged, ValorMaterial.TextChanged

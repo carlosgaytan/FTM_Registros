@@ -161,6 +161,7 @@ Partial Class Corregir_costos
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Nombre_quien_cotizaComboBox = New System.Windows.Forms.TextBox()
+        Me.Notificacion = New System.Windows.Forms.NotifyIcon(Me.components)
         DescripciónLabel = New System.Windows.Forms.Label()
         DibujoLabel = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
@@ -1580,6 +1581,12 @@ Partial Class Corregir_costos
         Me.Nombre_quien_cotizaComboBox.TabIndex = 359
         Me.Nombre_quien_cotizaComboBox.Visible = False
         '
+        'Notificacion
+        '
+        Me.Notificacion.Icon = CType(resources.GetObject("Notificacion.Icon"), System.Drawing.Icon)
+        Me.Notificacion.Text = "FTM Registros"
+        Me.Notificacion.Visible = True
+        '
         'Corregir_costos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1820,4 +1827,5 @@ Partial Class Corregir_costos
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Nombre_quien_cotizaComboBox As TextBox
+    Friend WithEvents Notificacion As NotifyIcon
 End Class
