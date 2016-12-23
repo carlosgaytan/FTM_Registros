@@ -45,3 +45,4 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.xml
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Security.xml
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Newtonsoft.Json.xml
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Prog_Ventas.resources
