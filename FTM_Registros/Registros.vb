@@ -5,7 +5,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Ventas.Show()
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Cotizaciones.Show()
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -25,7 +25,7 @@
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
         Busqueda.Show()
 
     End Sub
@@ -52,7 +52,4 @@
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-
-    End Sub
 End Class

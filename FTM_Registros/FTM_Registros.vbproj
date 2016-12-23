@@ -148,11 +148,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Bases_Datos\AgregarClaveFTM.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Gerencia\Gerencia.Designer.vb">
+      <DependentUpon>Gerencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gerencia\Gerencia.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ingeniería\Control_Planos.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -230,12 +235,6 @@
     </Compile>
     <Compile Include="Registros.Designer.vb">
       <DependentUpon>Registros.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerencia.Designer.vb">
-      <DependentUpon>Gerencia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gerencia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -334,6 +333,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Gerencia\Gerencia.resx">
+      <DependentUpon>Gerencia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingeniería\Ingenieria.resx">
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </EmbeddedResource>
@@ -361,9 +363,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros.resx">
       <DependentUpon>Registros.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gerencia.resx">
-      <DependentUpon>Gerencia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -26,7 +26,6 @@ Partial Class Registros
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registros))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -37,8 +36,6 @@ Partial Class Registros
         Me.TblUsuarioActivoTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter()
         Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
         Me.Iniciobtn = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,26 +68,6 @@ Partial Class Registros
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Button2, "Herramientas de Ventas")
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.AccessibleDescription = "Permite elaborar cotizaciones por pieza"
-        Me.Button3.AccessibleName = "Cotizaciones"
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Affiliate_Marketing_icon_icons_com_53702
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button3.Location = New System.Drawing.Point(180, 290)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(107, 107)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Tag = ""
-        Me.Button3.Text = "Cotizaciones"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button3.UseVisualStyleBackColor = False
-        Me.Button3.Visible = False
         '
         'Button4
         '
@@ -180,37 +157,14 @@ Partial Class Registros
         Me.Iniciobtn.BackgroundImage = CType(resources.GetObject("Iniciobtn.BackgroundImage"), System.Drawing.Image)
         Me.Iniciobtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Iniciobtn.Image = CType(resources.GetObject("Iniciobtn.Image"), System.Drawing.Image)
-        Me.Iniciobtn.Location = New System.Drawing.Point(1023, 4)
+        Me.Iniciobtn.Location = New System.Drawing.Point(1023, 12)
         Me.Iniciobtn.Name = "Iniciobtn"
         Me.Iniciobtn.Size = New System.Drawing.Size(67, 55)
         Me.Iniciobtn.TabIndex = 10
         Me.Iniciobtn.Text = "Cambiar Usuario"
         Me.Iniciobtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.Iniciobtn, "Cambiar de usuario")
         Me.Iniciobtn.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(180, 403)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(107, 107)
-        Me.Button7.TabIndex = 11
-        Me.Button7.Text = "Manufactura"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button7.UseVisualStyleBackColor = True
-        Me.Button7.Visible = False
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(376, 189)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 12
-        Me.Button8.Text = "Button8"
-        Me.Button8.UseVisualStyleBackColor = True
-        Me.Button8.Visible = False
         '
         'Registros
         '
@@ -219,15 +173,12 @@ Partial Class Registros
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1110, 661)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Iniciobtn)
         Me.Controls.Add(Me.Publicar)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
@@ -244,7 +195,6 @@ Partial Class Registros
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
@@ -255,7 +205,5 @@ Partial Class Registros
     Friend WithEvents TblUsuarioActivoTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter
     Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Iniciobtn As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
     Friend WithEvents ToolTip1 As ToolTip
 End Class
