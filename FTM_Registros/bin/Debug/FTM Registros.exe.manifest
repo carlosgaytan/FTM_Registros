@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTM Registros.exe" size="8893952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTM Registros.exe" size="8960512">
       <assemblyIdentity name="FTM Registros" version="1.4.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GjYWEl6VefPXIHtrhrDpW4xdFvgYiNkRKg0cOFJaaMY=</dsig:DigestValue>
+        <dsig:DigestValue>DummDo7dOYv0bwK+9F76e6I42Rnd26XoGJ/raUWm6jA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -209,31 +209,31 @@
       <dsig:DigestValue>19UYIDTcfqKXnEp/KVu8eWXal0U8/faYxBwrdE5ODa0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\jquery-1.6.4.js" size="238159">
+  <file name="Scripts\jquery-1.6.4.js" size="247205">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>VJZPi1gK15WpYvsnBmcV0yga4a0Toov4rt1diFnrrjc=</dsig:DigestValue>
+      <dsig:DigestValue>FKGVJdhVP5zIREyDz81T0bym1w38OcYN5Wmd74FOva4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\jquery-1.6.4.min.js" size="91669">
+  <file name="Scripts\jquery-1.6.4.min.js" size="91672">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lR1rrjnrFy9XqIvWhvepIc8GD9IfWWSPDSC2qPmPxaU=</dsig:DigestValue>
+      <dsig:DigestValue>llsXwr9hHS8jn9nbXTath8wuMbeJ/5h7t6mqLN+XRNE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\jquery-1.6.4-vsdoc.js" size="214129">
+  <file name="Scripts\jquery-1.6.4-vsdoc.js" size="221152">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ngpkHa1wVtrLP4BNw53VX7SlLUZhzu6NLytExZ9xxeE=</dsig:DigestValue>
+      <dsig:DigestValue>u5kavfcUeEjARV4xEq0xyIFY7ZKu9Xc9p7ldJLMZZBE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TRANSFORMACIONES_003_.ico" size="67646">

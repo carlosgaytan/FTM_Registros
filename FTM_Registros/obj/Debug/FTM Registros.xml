@@ -1617,6 +1617,11 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:FTM_Registros.ProgresoVentas">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
 <member name="T:FTM_Registros.Control_Planos">
 <summary>
 Represents a strongly typed in-memory cache of data.

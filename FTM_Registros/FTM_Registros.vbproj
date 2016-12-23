@@ -159,6 +159,11 @@
     <Compile Include="Gerencia\Gerencia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gerencia\ProgresoVentas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgresoVentas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ingeniería\Control_Planos.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -398,6 +403,17 @@
     </None>
     <None Include="Bases_Datos\AgregarClaveFTM.xss">
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </None>
+    <None Include="Gerencia\ProgresoVentas.xsc">
+      <DependentUpon>ProgresoVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Gerencia\ProgresoVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProgresoVentas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Gerencia\ProgresoVentas.xss">
+      <DependentUpon>ProgresoVentas.xsd</DependentUpon>
     </None>
     <None Include="Ingeniería\Control_Planos.xsc">
       <DependentUpon>Control_Planos.xsd</DependentUpon>

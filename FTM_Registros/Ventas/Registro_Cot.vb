@@ -68,6 +68,7 @@
         Material_3TextBox.Clear()
         Espesor_3TextBox.Clear()
         Otro_procesoTextBox.Clear()
+        MesTextBox.Clear()
         Corte_LáserCheckBox.CheckState = CheckState.Unchecked
         DoblezCheckBox.CheckState = CheckState.Unchecked
         MaquinadoCheckBox.CheckState = CheckState.Unchecked
@@ -78,5 +79,11 @@
         Item_soldadoCheckBox.CheckState = CheckState.Unchecked
         Suministro_del_materialCheckBox.CheckState = CheckState.Unchecked
 
+    End Sub
+
+    Private Sub Fecha_requeridaDateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles Fecha_requeridaDateTimePicker.ValueChanged
+        Dim fecha As String
+        fecha = DateAndTime.Now
+        MesTextBox.Text = MonthName(Month(fecha))
     End Sub
 End Class

@@ -179,11 +179,12 @@ Partial Class Registro_Cot
         '
         Fecha_de_solicitudLabel.AutoSize = True
         Fecha_de_solicitudLabel.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Fecha_de_solicitudLabel.Location = New System.Drawing.Point(9, 190)
+        Fecha_de_solicitudLabel.Location = New System.Drawing.Point(384, 463)
         Fecha_de_solicitudLabel.Name = "Fecha_de_solicitudLabel"
         Fecha_de_solicitudLabel.Size = New System.Drawing.Size(110, 14)
         Fecha_de_solicitudLabel.TabIndex = 83
         Fecha_de_solicitudLabel.Text = "Fecha de solicitud:"
+        Fecha_de_solicitudLabel.Visible = False
         '
         'MesLabel
         '
@@ -729,10 +730,11 @@ Partial Class Registro_Cot
         'Fecha_solicitudDateTimePicker
         '
         Me.Fecha_solicitudDateTimePicker.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fecha_solicitudDateTimePicker.Location = New System.Drawing.Point(131, 186)
+        Me.Fecha_solicitudDateTimePicker.Location = New System.Drawing.Point(506, 459)
         Me.Fecha_solicitudDateTimePicker.Name = "Fecha_solicitudDateTimePicker"
         Me.Fecha_solicitudDateTimePicker.Size = New System.Drawing.Size(190, 22)
         Me.Fecha_solicitudDateTimePicker.TabIndex = 84
+        Me.Fecha_solicitudDateTimePicker.Visible = False
         '
         'Fecha_requeridaDateTimePicker
         '
