@@ -347,6 +347,7 @@
     <EmbeddedResource Include="Gerencia\Gerencia.resx">
       <DependentUpon>Gerencia.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gerencia\ProgVentas.rdlc" />
     <EmbeddedResource Include="Gerencia\Prog_Ventas.resx">
       <DependentUpon>Prog_Ventas.vb</DependentUpon>
     </EmbeddedResource>

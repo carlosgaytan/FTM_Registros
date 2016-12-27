@@ -1,10 +1,10 @@
 ﻿Public Class Prog_Ventas
-    Private Sub BuscaVentasBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles BuscaVentasBindingNavigatorSaveItem.Click
-        Me.Validate()
-        Me.BuscaVentasBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.ProgresoVentas)
+    'Private Sub BuscaVentasBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+    '    Me.Validate()
+    '    Me.BuscaVentasBindingSource.EndEdit()
+    '    Me.TableAdapterManager.UpdateAll(Me.ProgresoVentas)
 
-    End Sub
+    'End Sub
 
     Private Sub BuscaMesToolStripButton_Click(sender As Object, e As EventArgs) Handles BuscarBTN.Click
         Try
