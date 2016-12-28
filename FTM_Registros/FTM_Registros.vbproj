@@ -235,10 +235,10 @@
     <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Planeacion.Designer.vb">
+    <Compile Include="Planeacion\Planeacion.Designer.vb">
       <DependentUpon>Planeacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Planeacion.vb">
+    <Compile Include="Planeacion\Planeacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros.vb">
@@ -373,7 +373,7 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Planeacion.resx">
+    <EmbeddedResource Include="Planeacion\Planeacion.resx">
       <DependentUpon>Planeacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros.resx">
