@@ -23,7 +23,7 @@ Partial Class Gerencia
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Gerencia))
         Me.BuscaVentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProgresoVentas = New FTM_Registros.ProgresoVentas()
@@ -87,7 +87,7 @@ Partial Class Gerencia
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(148, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(149, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(967, 594)
@@ -109,9 +109,9 @@ Partial Class Gerencia
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "ProgVentas"
-        ReportDataSource1.Value = Me.BuscaVentasBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource3.Name = "ProgVentas"
+        ReportDataSource3.Value = Me.BuscaVentasBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.ProgVentas.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(6, 33)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -134,6 +134,7 @@ Partial Class Gerencia
         Me.BuscarBTN.Size = New System.Drawing.Size(75, 23)
         Me.BuscarBTN.TabIndex = 6
         Me.BuscarBTN.Text = "Buscar"
+        Me.ToolTip1.SetToolTip(Me.BuscarBTN, "Busca registros según mes seleccionado")
         Me.BuscarBTN.UseVisualStyleBackColor = True
         '
         'TabPage2
@@ -239,7 +240,7 @@ Partial Class Gerencia
         '
         Me.XventasBTN.BackgroundImage = CType(resources.GetObject("XventasBTN.BackgroundImage"), System.Drawing.Image)
         Me.XventasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.XventasBTN.Location = New System.Drawing.Point(928, 6)
+        Me.XventasBTN.Location = New System.Drawing.Point(931, 3)
         Me.XventasBTN.Name = "XventasBTN"
         Me.XventasBTN.Size = New System.Drawing.Size(25, 25)
         Me.XventasBTN.TabIndex = 8
@@ -289,6 +290,9 @@ Partial Class Gerencia
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1143, 656)
+        Me.MinimumSize = New System.Drawing.Size(1143, 656)
         Me.Name = "Gerencia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gerencia"
