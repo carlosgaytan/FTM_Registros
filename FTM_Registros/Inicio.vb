@@ -20,25 +20,23 @@
     'Ingreso usuario/contraseña
     Private Sub Entrar_Click(sender As Object, e As EventArgs) Handles Entrar.Click
 
-        If UsuarioTextBox.Text = IdUsuarioListBox.Text And txtContraseña.Text = ContraseñaListBox.Text Then
+        If UsuarioTextBox.Text = IdUsuarioListBox.Text And txtContraseña.Text = PasswordTXT.Text Then
             GUARDARCHBX.CheckState = CheckState.Checked
 
-            MsgBox("Bienvenido, puede ingresar al sistema", Title:="FTM Registros")
+            MsgBox("Bienvenid@ " & NameTXT.Text & ", puede ingresar al sistema", Title:="FTM Registros")
             LblIncorrecto.Hide()
             txtContraseña.Clear()
             TxtIdUsuario.Clear()
+            Control_Accesos.Usuario = NameTXT.Text
+            Dim F2 As New Registros()
             Registros.Show()
             Me.Hide()
 
-        ElseIf UsuarioTextBox.Text <> IdUsuarioListBox.Text Or txtContraseña.Text <> ContraseñaListBox.Text Then
+        ElseIf UsuarioTextBox.Text <> IdUsuarioListBox.Text Or txtContraseña.Text <> PasswordTXT.Text Then
             LblIncorrecto.Show()
             LblIncorrecto.Text = "Usuario y/o contraseña incorrectos"
         End If
 
-    End Sub
-    Private Sub txtContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtContraseña.TextChanged
-        ContraseñaListBox.Text = txtContraseña.Text
-        ContraseñaListBox.Refresh()
     End Sub
     Private Sub TxtIdUsuario_TextChanged(sender As Object, e As EventArgs) Handles UsuarioTextBox.TextChanged
         IdUsuarioListBox.Text = UsuarioTextBox.Text

@@ -27,16 +27,12 @@ Partial Class Registros
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Publicar = New System.Windows.Forms.Button()
-        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
-        Me.TblUsuarioActivoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblUsuarioActivoTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter()
-        Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
         Me.Iniciobtn = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GerenciaBTN = New System.Windows.Forms.Button()
+        Me.VentasBTN = New System.Windows.Forms.Button()
+        Me.IngenieriaBTN = New System.Windows.Forms.Button()
+        Me.PlaneacionBTN = New System.Windows.Forms.Button()
         Me.ContProyectBTN = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -48,8 +44,19 @@ Partial Class Registros
         Me.InfoIngenieria = New System.Windows.Forms.TextBox()
         Me.InfoPlaneacion = New System.Windows.Forms.TextBox()
         Me.InfoControl = New System.Windows.Forms.TextBox()
+        Me.GerenciaCHBX = New System.Windows.Forms.CheckBox()
+        Me.VentasCHBX = New System.Windows.Forms.CheckBox()
+        Me.IngenieriaCHBX = New System.Windows.Forms.CheckBox()
+        Me.ControlCHBX = New System.Windows.Forms.CheckBox()
+        Me.PlaneacionCHBX = New System.Windows.Forms.CheckBox()
+        Me.RegistrosCHBX = New System.Windows.Forms.CheckBox()
+        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
+        Me.UsuariosPermisosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsuariosPermisosTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter()
+        Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -79,33 +86,6 @@ Partial Class Registros
         Me.Publicar.Text = "Publicar"
         Me.Publicar.UseVisualStyleBackColor = True
         '
-        '_Base_de_datos_1_4_beDataSet
-        '
-        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
-        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblUsuarioActivoBindingSource
-        '
-        Me.TblUsuarioActivoBindingSource.DataMember = "tblUsuarioActivo"
-        Me.TblUsuarioActivoBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
-        '
-        'TblUsuarioActivoTableAdapter
-        '
-        Me.TblUsuarioActivoTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ClientesTableAdapter = Nothing
-        Me.TableAdapterManager.CotizacionesTableAdapter = Nothing
-        Me.TableAdapterManager.ManufacturaTableAdapter = Nothing
-        Me.TableAdapterManager.tblAdministradorTableAdapter = Nothing
-        Me.TableAdapterManager.tblUsuarioActivoTableAdapter = Me.TblUsuarioActivoTableAdapter
-        Me.TableAdapterManager.tblUsuariosPermisosTableAdapter = Nothing
-        Me.TableAdapterManager.tblUsuariosTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.VentasTableAdapter = Nothing
-        '
         'Iniciobtn
         '
         Me.Iniciobtn.BackgroundImage = CType(resources.GetObject("Iniciobtn.BackgroundImage"), System.Drawing.Image)
@@ -120,58 +100,58 @@ Partial Class Registros
         Me.ToolTip1.SetToolTip(Me.Iniciobtn, "Cambiar de usuario")
         Me.Iniciobtn.UseVisualStyleBackColor = True
         '
-        'Button1
+        'GerenciaBTN
         '
-        Me.Button1.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.company_22169
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(117, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 90)
-        Me.Button1.TabIndex = 0
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.Button1, "Información Gerencia")
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GerenciaBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.company_22169
+        Me.GerenciaBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GerenciaBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GerenciaBTN.Location = New System.Drawing.Point(117, 28)
+        Me.GerenciaBTN.Name = "GerenciaBTN"
+        Me.GerenciaBTN.Size = New System.Drawing.Size(90, 90)
+        Me.GerenciaBTN.TabIndex = 0
+        Me.GerenciaBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.GerenciaBTN, "Información Gerencia")
+        Me.GerenciaBTN.UseVisualStyleBackColor = True
         '
-        'Button2
+        'VentasBTN
         '
-        Me.Button2.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.coins_icon_31839
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(117, 148)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(90, 90)
-        Me.Button2.TabIndex = 1
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.Button2, "Ventas")
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.VentasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.coins_icon_31839
+        Me.VentasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.VentasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VentasBTN.Location = New System.Drawing.Point(117, 148)
+        Me.VentasBTN.Name = "VentasBTN"
+        Me.VentasBTN.Size = New System.Drawing.Size(90, 90)
+        Me.VentasBTN.TabIndex = 1
+        Me.VentasBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.VentasBTN, "Ventas")
+        Me.VentasBTN.UseVisualStyleBackColor = True
         '
-        'Button4
+        'IngenieriaBTN
         '
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(117, 270)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(90, 90)
-        Me.Button4.TabIndex = 3
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.Button4, "Ingeniería")
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.IngenieriaBTN.BackgroundImage = CType(resources.GetObject("IngenieriaBTN.BackgroundImage"), System.Drawing.Image)
+        Me.IngenieriaBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IngenieriaBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.IngenieriaBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IngenieriaBTN.Location = New System.Drawing.Point(117, 270)
+        Me.IngenieriaBTN.Name = "IngenieriaBTN"
+        Me.IngenieriaBTN.Size = New System.Drawing.Size(90, 90)
+        Me.IngenieriaBTN.TabIndex = 3
+        Me.IngenieriaBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.IngenieriaBTN, "Ingeniería")
+        Me.IngenieriaBTN.UseVisualStyleBackColor = True
         '
-        'Button5
+        'PlaneacionBTN
         '
-        Me.Button5.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Everflux_icon_icons_com_53727
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(117, 393)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(90, 90)
-        Me.Button5.TabIndex = 4
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.Button5, "Planeación")
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.PlaneacionBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Everflux_icon_icons_com_53727
+        Me.PlaneacionBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PlaneacionBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlaneacionBTN.Location = New System.Drawing.Point(117, 393)
+        Me.PlaneacionBTN.Name = "PlaneacionBTN"
+        Me.PlaneacionBTN.Size = New System.Drawing.Size(90, 90)
+        Me.PlaneacionBTN.TabIndex = 4
+        Me.PlaneacionBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.PlaneacionBTN, "Planeación")
+        Me.PlaneacionBTN.UseVisualStyleBackColor = True
         '
         'ContProyectBTN
         '
@@ -336,10 +316,115 @@ Partial Class Registros
         Me.InfoControl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.InfoControl.Visible = False
         '
+        'GerenciaCHBX
+        '
+        Me.GerenciaCHBX.AutoSize = True
+        Me.GerenciaCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Gerencia", True))
+        Me.GerenciaCHBX.Location = New System.Drawing.Point(1016, 315)
+        Me.GerenciaCHBX.Name = "GerenciaCHBX"
+        Me.GerenciaCHBX.Size = New System.Drawing.Size(69, 17)
+        Me.GerenciaCHBX.TabIndex = 23
+        Me.GerenciaCHBX.Text = "Gerencia"
+        Me.GerenciaCHBX.UseVisualStyleBackColor = True
+        '
+        'VentasCHBX
+        '
+        Me.VentasCHBX.AutoSize = True
+        Me.VentasCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Ventas", True))
+        Me.VentasCHBX.Location = New System.Drawing.Point(1016, 338)
+        Me.VentasCHBX.Name = "VentasCHBX"
+        Me.VentasCHBX.Size = New System.Drawing.Size(59, 17)
+        Me.VentasCHBX.TabIndex = 24
+        Me.VentasCHBX.Text = "Ventas"
+        Me.VentasCHBX.UseVisualStyleBackColor = True
+        '
+        'IngenieriaCHBX
+        '
+        Me.IngenieriaCHBX.AutoSize = True
+        Me.IngenieriaCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Ingenieria", True))
+        Me.IngenieriaCHBX.Location = New System.Drawing.Point(1016, 361)
+        Me.IngenieriaCHBX.Name = "IngenieriaCHBX"
+        Me.IngenieriaCHBX.Size = New System.Drawing.Size(74, 17)
+        Me.IngenieriaCHBX.TabIndex = 25
+        Me.IngenieriaCHBX.Text = "Ingeniería"
+        Me.IngenieriaCHBX.UseVisualStyleBackColor = True
+        '
+        'ControlCHBX
+        '
+        Me.ControlCHBX.AutoSize = True
+        Me.ControlCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "ContProyect", True))
+        Me.ControlCHBX.Location = New System.Drawing.Point(1016, 384)
+        Me.ControlCHBX.Name = "ControlCHBX"
+        Me.ControlCHBX.Size = New System.Drawing.Size(124, 17)
+        Me.ControlCHBX.TabIndex = 26
+        Me.ControlCHBX.Text = "Control de Proyectos"
+        Me.ControlCHBX.UseVisualStyleBackColor = True
+        '
+        'PlaneacionCHBX
+        '
+        Me.PlaneacionCHBX.AutoSize = True
+        Me.PlaneacionCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Planeacion", True))
+        Me.PlaneacionCHBX.Location = New System.Drawing.Point(1016, 407)
+        Me.PlaneacionCHBX.Name = "PlaneacionCHBX"
+        Me.PlaneacionCHBX.Size = New System.Drawing.Size(79, 17)
+        Me.PlaneacionCHBX.TabIndex = 27
+        Me.PlaneacionCHBX.Text = "Planeación"
+        Me.PlaneacionCHBX.UseVisualStyleBackColor = True
+        '
+        'RegistrosCHBX
+        '
+        Me.RegistrosCHBX.AutoSize = True
+        Me.RegistrosCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Registros", True))
+        Me.RegistrosCHBX.Location = New System.Drawing.Point(1016, 430)
+        Me.RegistrosCHBX.Name = "RegistrosCHBX"
+        Me.RegistrosCHBX.Size = New System.Drawing.Size(70, 17)
+        Me.RegistrosCHBX.TabIndex = 28
+        Me.RegistrosCHBX.Text = "Registros"
+        Me.RegistrosCHBX.UseVisualStyleBackColor = True
+        '
+        '_Base_de_datos_1_4_beDataSet
+        '
+        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
+        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UsuariosPermisosBindingSource
+        '
+        Me.UsuariosPermisosBindingSource.DataMember = "UsuariosPermisos"
+        Me.UsuariosPermisosBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
+        '
+        'UsuariosPermisosTableAdapter
+        '
+        Me.UsuariosPermisosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClientesTableAdapter = Nothing
+        Me.TableAdapterManager.CotizacionesTableAdapter = Nothing
+        Me.TableAdapterManager.ManufacturaTableAdapter = Nothing
+        Me.TableAdapterManager.tblAdministradorTableAdapter = Nothing
+        Me.TableAdapterManager.tblUsuarioActivoTableAdapter = Nothing
+        Me.TableAdapterManager.tblUsuariosPermisosTableAdapter = Nothing
+        Me.TableAdapterManager.tblUsuariosTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosPermisosTableAdapter = Me.UsuariosPermisosTableAdapter
+        Me.TableAdapterManager.VentasTableAdapter = Nothing
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataSource = Me.UsuariosPermisosBindingSource
+        Me.ComboBox1.DisplayMember = "Nombre"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(1016, 288)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 29
+        '
         'Registros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.AutoSize = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -359,10 +444,17 @@ Partial Class Registros
         Me.Controls.Add(Me.Publicar)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.PlaneacionBTN)
+        Me.Controls.Add(Me.IngenieriaBTN)
+        Me.Controls.Add(Me.VentasBTN)
+        Me.Controls.Add(Me.GerenciaBTN)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.RegistrosCHBX)
+        Me.Controls.Add(Me.PlaneacionCHBX)
+        Me.Controls.Add(Me.ControlCHBX)
+        Me.Controls.Add(Me.IngenieriaCHBX)
+        Me.Controls.Add(Me.VentasCHBX)
+        Me.Controls.Add(Me.GerenciaCHBX)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1598, 858)
@@ -371,7 +463,7 @@ Partial Class Registros
         Me.Text = "FTM Registros"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -379,16 +471,12 @@ Partial Class Registros
     Friend WithEvents RichTextBox1 As RichTextBox
     Public WithEvents ListBox1 As ListBox
     Friend WithEvents Publicar As Button
-    Friend WithEvents _Base_de_datos_1_4_beDataSet As _Base_de_datos_1_4_beDataSet
-    Friend WithEvents TblUsuarioActivoBindingSource As BindingSource
-    Friend WithEvents TblUsuarioActivoTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter
-    Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Iniciobtn As Button
     Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents GerenciaBTN As Button
+    Friend WithEvents VentasBTN As Button
+    Friend WithEvents IngenieriaBTN As Button
+    Friend WithEvents PlaneacionBTN As Button
     Friend WithEvents ContProyectBTN As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -400,4 +488,15 @@ Partial Class Registros
     Friend WithEvents InfoIngenieria As TextBox
     Friend WithEvents InfoPlaneacion As TextBox
     Friend WithEvents InfoControl As TextBox
+    Friend WithEvents GerenciaCHBX As CheckBox
+    Friend WithEvents VentasCHBX As CheckBox
+    Friend WithEvents IngenieriaCHBX As CheckBox
+    Friend WithEvents ControlCHBX As CheckBox
+    Friend WithEvents PlaneacionCHBX As CheckBox
+    Friend WithEvents RegistrosCHBX As CheckBox
+    Friend WithEvents _Base_de_datos_1_4_beDataSet As _Base_de_datos_1_4_beDataSet
+    Friend WithEvents UsuariosPermisosBindingSource As BindingSource
+    Friend WithEvents UsuariosPermisosTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter
+    Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

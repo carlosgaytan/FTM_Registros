@@ -50,21 +50,13 @@ Partial Class Inicio
         Me.IdUsuarioListBox = New System.Windows.Forms.ListBox()
         Me.TblUsuariosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblUsuariosBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NombreListBox = New System.Windows.Forms.ListBox()
-        Me.ContraseñaListBox = New System.Windows.Forms.ListBox()
         Me.TblUsuariosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ClientesTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter()
         Me.LblIncorrecto = New System.Windows.Forms.Label()
         Me.TblUsuarioActivoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HoraTextBox = New System.Windows.Forms.TextBox()
         Me.DiaTextBox = New System.Windows.Forms.TextBox()
         Me.Basededatos14beDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblUsuarioActivoTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter()
-        Me.TblUsuarioActivoDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem1 = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem1 = New System.Windows.Forms.ToolStripLabel()
@@ -79,6 +71,8 @@ Partial Class Inicio
         Me.BindingNavigatorSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.UsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.GUARDARCHBX = New System.Windows.Forms.CheckBox()
+        Me.NameTXT = New System.Windows.Forms.TextBox()
+        Me.PasswordTXT = New System.Windows.Forms.TextBox()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuariosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,10 +80,8 @@ Partial Class Inicio
         CType(Me.TblUsuariosBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuariosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuariosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Basededatos14beDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblUsuarioActivoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
@@ -110,7 +102,7 @@ Partial Class Inicio
         Me.TxtIdUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdUsuario.Cursor = System.Windows.Forms.Cursors.Default
         Me.TxtIdUsuario.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdUsuario.Location = New System.Drawing.Point(345, 313)
+        Me.TxtIdUsuario.Location = New System.Drawing.Point(345, 318)
         Me.TxtIdUsuario.Name = "TxtIdUsuario"
         Me.TxtIdUsuario.Size = New System.Drawing.Size(71, 20)
         Me.TxtIdUsuario.TabIndex = 0
@@ -304,7 +296,6 @@ Partial Class Inicio
         Me.IdUsuarioListBox.Name = "IdUsuarioListBox"
         Me.IdUsuarioListBox.Size = New System.Drawing.Size(74, 95)
         Me.IdUsuarioListBox.TabIndex = 8
-        Me.IdUsuarioListBox.Visible = False
         '
         'TblUsuariosBindingSource3
         '
@@ -316,44 +307,10 @@ Partial Class Inicio
         Me.TblUsuariosBindingSource2.DataMember = "tblUsuarios"
         Me.TblUsuariosBindingSource2.DataSource = Me._Base_de_datos_1_4_beDataSet
         '
-        'NombreListBox
-        '
-        Me.NombreListBox.BackColor = System.Drawing.SystemColors.Window
-        Me.NombreListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TblUsuariosBindingSource, "Nombre", True))
-        Me.NombreListBox.DataSource = Me.TblUsuariosBindingSource3
-        Me.NombreListBox.DisplayMember = "Nombre"
-        Me.NombreListBox.FormattingEnabled = True
-        Me.NombreListBox.Location = New System.Drawing.Point(12, 296)
-        Me.NombreListBox.Name = "NombreListBox"
-        Me.NombreListBox.Size = New System.Drawing.Size(74, 95)
-        Me.NombreListBox.TabIndex = 10
-        Me.NombreListBox.Visible = False
-        '
-        'ContraseñaListBox
-        '
-        Me.ContraseñaListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TblUsuariosBindingSource, "Contraseña", True))
-        Me.ContraseñaListBox.DataSource = Me.TblUsuariosBindingSource1
-        Me.ContraseñaListBox.DisplayMember = "Contraseña"
-        Me.ContraseñaListBox.FormattingEnabled = True
-        Me.ContraseñaListBox.Location = New System.Drawing.Point(12, 189)
-        Me.ContraseñaListBox.Name = "ContraseñaListBox"
-        Me.ContraseñaListBox.Size = New System.Drawing.Size(74, 95)
-        Me.ContraseñaListBox.TabIndex = 12
-        Me.ContraseñaListBox.Visible = False
-        '
         'TblUsuariosBindingSource1
         '
         Me.TblUsuariosBindingSource1.DataMember = "tblUsuarios"
         Me.TblUsuariosBindingSource1.DataSource = Me._Base_de_datos_1_4_beDataSet
-        '
-        'ClientesBindingSource
-        '
-        Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
-        '
-        'ClientesTableAdapter
-        '
-        Me.ClientesTableAdapter.ClearBeforeFill = True
         '
         'LblIncorrecto
         '
@@ -399,36 +356,6 @@ Partial Class Inicio
         'TblUsuarioActivoTableAdapter
         '
         Me.TblUsuarioActivoTableAdapter.ClearBeforeFill = True
-        '
-        'TblUsuarioActivoDataGridView
-        '
-        Me.TblUsuarioActivoDataGridView.AutoGenerateColumns = False
-        Me.TblUsuarioActivoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TblUsuarioActivoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.TblUsuarioActivoDataGridView.DataSource = Me.TblUsuarioActivoBindingSource
-        Me.TblUsuarioActivoDataGridView.Location = New System.Drawing.Point(96, 12)
-        Me.TblUsuarioActivoDataGridView.Name = "TblUsuarioActivoDataGridView"
-        Me.TblUsuarioActivoDataGridView.Size = New System.Drawing.Size(350, 151)
-        Me.TblUsuarioActivoDataGridView.TabIndex = 19
-        Me.TblUsuarioActivoDataGridView.Visible = False
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdUsuario"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdUsuario"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Hora"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Hora"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Día"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Día"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'BindingNavigator1
         '
@@ -555,6 +482,22 @@ Partial Class Inicio
         Me.GUARDARCHBX.UseVisualStyleBackColor = True
         Me.GUARDARCHBX.Visible = False
         '
+        'NameTXT
+        '
+        Me.NameTXT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblUsuariosBindingSource3, "Nombre", True))
+        Me.NameTXT.Location = New System.Drawing.Point(12, 175)
+        Me.NameTXT.Name = "NameTXT"
+        Me.NameTXT.Size = New System.Drawing.Size(100, 20)
+        Me.NameTXT.TabIndex = 23
+        '
+        'PasswordTXT
+        '
+        Me.PasswordTXT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblUsuariosBindingSource3, "Contraseña", True))
+        Me.PasswordTXT.Location = New System.Drawing.Point(12, 201)
+        Me.PasswordTXT.Name = "PasswordTXT"
+        Me.PasswordTXT.Size = New System.Drawing.Size(100, 20)
+        Me.PasswordTXT.TabIndex = 24
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -562,16 +505,15 @@ Partial Class Inicio
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(458, 436)
+        Me.Controls.Add(Me.PasswordTXT)
+        Me.Controls.Add(Me.NameTXT)
         Me.Controls.Add(Me.GUARDARCHBX)
         Me.Controls.Add(Me.UsuarioTextBox)
         Me.Controls.Add(Me.BindingNavigator1)
-        Me.Controls.Add(Me.TblUsuarioActivoDataGridView)
         Me.Controls.Add(Me.HoraTextBox)
         Me.Controls.Add(Me.DiaTextBox)
         Me.Controls.Add(Me.LblIncorrecto)
         Me.Controls.Add(Me.IdUsuarioListBox)
-        Me.Controls.Add(Me.NombreListBox)
-        Me.Controls.Add(Me.ContraseñaListBox)
         Me.Controls.Add(Me.TblUsuariosBindingNavigator)
         Me.Controls.Add(Me.Hora)
         Me.Controls.Add(Me.Fecha)
@@ -594,10 +536,8 @@ Partial Class Inicio
         CType(Me.TblUsuariosBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblUsuariosBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblUsuariosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Basededatos14beDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblUsuarioActivoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
@@ -630,10 +570,6 @@ Partial Class Inicio
     Friend WithEvents TblUsuariosBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents TblUsuariosBindingNavigator As BindingNavigator
     Friend WithEvents IdUsuarioListBox As ListBox
-    Friend WithEvents NombreListBox As ListBox
-    Friend WithEvents ContraseñaListBox As ListBox
-    Friend WithEvents ClientesBindingSource As BindingSource
-    Friend WithEvents ClientesTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter
     Friend WithEvents TblUsuariosBindingSource2 As BindingSource
     Friend WithEvents TblUsuariosBindingSource3 As BindingSource
     Friend WithEvents TblUsuariosBindingSource1 As BindingSource
@@ -643,10 +579,6 @@ Partial Class Inicio
     Friend WithEvents DiaTextBox As TextBox
     Friend WithEvents Basededatos14beDataSetBindingSource As BindingSource
     Friend WithEvents TblUsuarioActivoTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter
-    Friend WithEvents TblUsuarioActivoDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents BindingNavigator1 As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem1 As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem1 As ToolStripLabel
@@ -661,4 +593,6 @@ Partial Class Inicio
     Friend WithEvents BindingNavigatorSeparator5 As ToolStripSeparator
     Friend WithEvents UsuarioTextBox As TextBox
     Friend WithEvents GUARDARCHBX As CheckBox
+    Friend WithEvents NameTXT As TextBox
+    Friend WithEvents PasswordTXT As TextBox
 End Class

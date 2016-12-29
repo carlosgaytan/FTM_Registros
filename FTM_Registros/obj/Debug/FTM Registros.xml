@@ -2242,6 +2242,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRow">
 <summary>
 Represents strongly named DataRow class.
@@ -2278,6 +2283,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -2322,6 +2332,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -2358,6 +2373,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

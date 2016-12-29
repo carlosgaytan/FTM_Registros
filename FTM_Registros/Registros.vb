@@ -1,18 +1,48 @@
 ﻿Public Class Registros
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Gerencia.Show()
+    Private Sub Registros_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.VisibleChanged
+        'TODO: esta línea de código carga datos en la tabla '_Base_de_datos_1_4_beDataSet.UsuariosPermisos' Puede moverla o quitarla según sea necesario.
+        Me.UsuariosPermisosTableAdapter.PermisosUser(Me._Base_de_datos_1_4_beDataSet.UsuariosPermisos)
+        'Registra al usuario Logueado
+        ComboBox1.Text = Control_Accesos.Usuario
+
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Ventas.Show()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GerenciaBTN.Click
+
+        If GerenciaCHBX.CheckState = CheckState.Checked Then
+            Gerencia.Show()
+        ElseIf GerenciaCHBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Ingenieria.Show()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles VentasBTN.Click
+        If VentasCHBX.CheckState = CheckState.Checked Then
+            Ventas.Show()
+        ElseIf VentasCHBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Planeacion.Show()
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles IngenieriaBTN.Click
+        If IngenieriaCHBX.CheckState = CheckState.Checked Then
+            Ingenieria.Show()
+        ElseIf IngenieriaCHBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles PlaneacionBTN.Click
+        If PlaneacionCHBX.CheckState = CheckState.Checked Then
+            Planeacion.Show()
+        ElseIf PlaneacionCHBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
     Private Sub ContProyectBTN_Click(sender As Object, e As EventArgs) Handles ContProyectBTN.Click
-        Control_Proyectos.Show()
+        If ControlCHBX.CheckState = CheckState.Checked Then
+            Control_Proyectos.Show()
+        ElseIf ControlCHBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
     Private Sub Iniciobtn_Click(sender As Object, e As EventArgs) Handles Iniciobtn.Click
 
@@ -46,35 +76,35 @@
 
     End Sub
 
-    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles Button1.MouseHover
+    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles GerenciaBTN.MouseHover
         InfoGerencia.Visible = True
     End Sub
 
-    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles GerenciaBTN.MouseLeave
         InfoGerencia.Visible = False
     End Sub
 
-    Private Sub Button2_MouseHover(sender As Object, e As EventArgs) Handles Button2.MouseHover
+    Private Sub Button2_MouseHover(sender As Object, e As EventArgs) Handles VentasBTN.MouseHover
         InfoVentas.Visible = True
     End Sub
 
-    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button2.MouseLeave
+    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles VentasBTN.MouseLeave
         InfoVentas.Visible = False
     End Sub
 
-    Private Sub Button4_MouseHover(sender As Object, e As EventArgs) Handles Button4.MouseHover
+    Private Sub Button4_MouseHover(sender As Object, e As EventArgs) Handles IngenieriaBTN.MouseHover
         InfoIngenieria.Visible = True
     End Sub
 
-    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles Button4.MouseLeave
+    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles IngenieriaBTN.MouseLeave
         InfoIngenieria.Visible = False
     End Sub
 
-    Private Sub Button5_MouseHover(sender As Object, e As EventArgs) Handles Button5.MouseHover
+    Private Sub Button5_MouseHover(sender As Object, e As EventArgs) Handles PlaneacionBTN.MouseHover
         InfoPlaneacion.Visible = True
     End Sub
 
-    Private Sub Button5_MouseLeave(sender As Object, e As EventArgs) Handles Button5.MouseLeave
+    Private Sub Button5_MouseLeave(sender As Object, e As EventArgs) Handles PlaneacionBTN.MouseLeave
         InfoPlaneacion.Visible = False
     End Sub
 
@@ -85,4 +115,5 @@
     Private Sub ContProyectBTN_MouseLeave(sender As Object, e As EventArgs) Handles ContProyectBTN.MouseLeave
         InfoControl.Visible = False
     End Sub
+
 End Class
