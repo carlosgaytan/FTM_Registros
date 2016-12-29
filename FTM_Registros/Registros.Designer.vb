@@ -37,6 +37,12 @@ Partial Class Registros
         Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
         Me.Iniciobtn = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ContProyectBTN = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,7 +56,6 @@ Partial Class Registros
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 107)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Gerencia"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Button1, "Información Gerencia")
         Me.Button1.UseVisualStyleBackColor = True
@@ -60,11 +65,10 @@ Partial Class Registros
         Me.Button2.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.coins_icon_31839
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(51, 172)
+        Me.Button2.Location = New System.Drawing.Point(51, 147)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(107, 107)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Ventas"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Button2, "Herramientas de Ventas")
         Me.Button2.UseVisualStyleBackColor = True
@@ -75,11 +79,10 @@ Partial Class Registros
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(51, 344)
+        Me.Button4.Location = New System.Drawing.Point(51, 283)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(107, 107)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Ingeniería"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Button4, "Herramientas de Ingeniería")
         Me.Button4.UseVisualStyleBackColor = True
@@ -89,11 +92,10 @@ Partial Class Registros
         Me.Button5.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Everflux_icon_icons_com_53727
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(51, 530)
+        Me.Button5.Location = New System.Drawing.Point(51, 419)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(107, 107)
         Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Planeación"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Button5, "Herramientas de Planeación")
         Me.Button5.UseVisualStyleBackColor = True
@@ -166,13 +168,95 @@ Partial Class Registros
         Me.ToolTip1.SetToolTip(Me.Iniciobtn, "Cambiar de usuario")
         Me.Iniciobtn.UseVisualStyleBackColor = True
         '
+        'ContProyectBTN
+        '
+        Me.ContProyectBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Inbound_Link_icon_icons_com_53738
+        Me.ContProyectBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ContProyectBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContProyectBTN.Location = New System.Drawing.Point(51, 557)
+        Me.ContProyectBTN.Name = "ContProyectBTN"
+        Me.ContProyectBTN.Size = New System.Drawing.Size(107, 107)
+        Me.ContProyectBTN.TabIndex = 11
+        Me.ContProyectBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.ContProyectBTN, "Herramientas de Control de Proyectos")
+        Me.ContProyectBTN.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(66, 119)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 19)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Gerencia"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(76, 254)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(61, 19)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "Ventas"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(63, 393)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 19)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Ingeniería"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(57, 526)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(94, 19)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Planeación"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(61, 664)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(87, 38)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Contol" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proyectos"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Registros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1110, 661)
+        Me.ClientSize = New System.Drawing.Size(1110, 711)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ContProyectBTN)
         Me.Controls.Add(Me.Iniciobtn)
         Me.Controls.Add(Me.Publicar)
         Me.Controls.Add(Me.ListBox1)
@@ -190,6 +274,7 @@ Partial Class Registros
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblUsuarioActivoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -206,4 +291,10 @@ Partial Class Registros
     Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Iniciobtn As Button
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents ContProyectBTN As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

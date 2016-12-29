@@ -153,6 +153,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Control_Proyectos\Control_Proyectos.Designer.vb">
+      <DependentUpon>Control_Proyectos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control_Proyectos\Control_Proyectos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gerencia\Gerencia.Designer.vb">
       <DependentUpon>Gerencia.vb</DependentUpon>
     </Compile>
@@ -344,6 +350,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Control_Proyectos\Control_Proyectos.resx">
+      <DependentUpon>Control_Proyectos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gerencia\Gerencia.resx">
       <DependentUpon>Gerencia.vb</DependentUpon>
     </EmbeddedResource>
