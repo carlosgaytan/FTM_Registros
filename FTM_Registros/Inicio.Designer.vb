@@ -171,6 +171,7 @@ Partial Class Inicio
         Me.TableAdapterManager.tblUsuariosPermisosTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuariosTableAdapter = Me.TblUsuariosTableAdapter
         Me.TableAdapterManager.UpdateOrder = FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosPermisosTableAdapter = Nothing
         Me.TableAdapterManager.VentasTableAdapter = Nothing
         '
         'BindingNavigatorMoveFirstItem
@@ -296,6 +297,7 @@ Partial Class Inicio
         Me.IdUsuarioListBox.Name = "IdUsuarioListBox"
         Me.IdUsuarioListBox.Size = New System.Drawing.Size(74, 95)
         Me.IdUsuarioListBox.TabIndex = 8
+        Me.IdUsuarioListBox.Visible = False
         '
         'TblUsuariosBindingSource3
         '
@@ -489,6 +491,7 @@ Partial Class Inicio
         Me.NameTXT.Name = "NameTXT"
         Me.NameTXT.Size = New System.Drawing.Size(100, 20)
         Me.NameTXT.TabIndex = 23
+        Me.NameTXT.Visible = False
         '
         'PasswordTXT
         '
@@ -497,6 +500,7 @@ Partial Class Inicio
         Me.PasswordTXT.Name = "PasswordTXT"
         Me.PasswordTXT.Size = New System.Drawing.Size(100, 20)
         Me.PasswordTXT.TabIndex = 24
+        Me.PasswordTXT.Visible = False
         '
         'Inicio
         '
