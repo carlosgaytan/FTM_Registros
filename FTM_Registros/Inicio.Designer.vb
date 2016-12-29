@@ -487,20 +487,18 @@ Partial Class Inicio
         'NameTXT
         '
         Me.NameTXT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblUsuariosBindingSource3, "Nombre", True))
-        Me.NameTXT.Location = New System.Drawing.Point(12, 175)
+        Me.NameTXT.Location = New System.Drawing.Point(139, 218)
         Me.NameTXT.Name = "NameTXT"
-        Me.NameTXT.Size = New System.Drawing.Size(100, 20)
+        Me.NameTXT.Size = New System.Drawing.Size(114, 20)
         Me.NameTXT.TabIndex = 23
-        Me.NameTXT.Visible = False
         '
         'PasswordTXT
         '
         Me.PasswordTXT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblUsuariosBindingSource3, "Contraseña", True))
-        Me.PasswordTXT.Location = New System.Drawing.Point(12, 201)
+        Me.PasswordTXT.Location = New System.Drawing.Point(139, 270)
         Me.PasswordTXT.Name = "PasswordTXT"
-        Me.PasswordTXT.Size = New System.Drawing.Size(100, 20)
+        Me.PasswordTXT.Size = New System.Drawing.Size(88, 20)
         Me.PasswordTXT.TabIndex = 24
-        Me.PasswordTXT.Visible = False
         '
         'Inicio
         '
@@ -509,8 +507,6 @@ Partial Class Inicio
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(458, 436)
-        Me.Controls.Add(Me.PasswordTXT)
-        Me.Controls.Add(Me.NameTXT)
         Me.Controls.Add(Me.GUARDARCHBX)
         Me.Controls.Add(Me.UsuarioTextBox)
         Me.Controls.Add(Me.BindingNavigator1)
@@ -524,6 +520,8 @@ Partial Class Inicio
         Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.TxtIdUsuario)
         Me.Controls.Add(Me.Entrar)
+        Me.Controls.Add(Me.NameTXT)
+        Me.Controls.Add(Me.PasswordTXT)
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.SystemColors.Control
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
