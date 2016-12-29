@@ -11,10 +11,10 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("FTM Registros")>
 <Assembly: AssemblyDescription("Base de datos para el control de procesos en la empresa FGR Transformaciones Metalisa S.A. de C.V.")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("UNIQ Technologies")>
 <Assembly: AssemblyProduct("FTM Registros")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTrademark("UNIQ Technologies")>
 
 <Assembly: ComVisible(False)>
 
