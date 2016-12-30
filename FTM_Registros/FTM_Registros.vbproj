@@ -153,6 +153,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Chat\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat\IP.Designer.vb">
+      <DependentUpon>IP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\IP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control_Accesos.vb" />
     <Compile Include="Control_Proyectos\Control_Proyectos.Designer.vb">
       <DependentUpon>Control_Proyectos.vb</DependentUpon>
@@ -351,6 +363,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Chat\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat\IP.resx">
+      <DependentUpon>IP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control_Proyectos\Control_Proyectos.resx">
       <DependentUpon>Control_Proyectos.vb</DependentUpon>
     </EmbeddedResource>

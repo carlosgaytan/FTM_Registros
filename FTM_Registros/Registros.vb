@@ -116,4 +116,11 @@
         InfoControl.Visible = False
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Form1.Show()
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        IP.Show()
+    End Sub
 End Class

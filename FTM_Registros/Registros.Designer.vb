@@ -45,18 +45,20 @@ Partial Class Registros
         Me.InfoPlaneacion = New System.Windows.Forms.TextBox()
         Me.InfoControl = New System.Windows.Forms.TextBox()
         Me.GerenciaCHBX = New System.Windows.Forms.CheckBox()
+        Me.UsuariosPermisosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
         Me.VentasCHBX = New System.Windows.Forms.CheckBox()
         Me.IngenieriaCHBX = New System.Windows.Forms.CheckBox()
         Me.ControlCHBX = New System.Windows.Forms.CheckBox()
         Me.PlaneacionCHBX = New System.Windows.Forms.CheckBox()
         Me.RegistrosCHBX = New System.Windows.Forms.CheckBox()
-        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
-        Me.UsuariosPermisosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuariosPermisosTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter()
         Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -327,6 +329,16 @@ Partial Class Registros
         Me.GerenciaCHBX.Text = "Gerencia"
         Me.GerenciaCHBX.UseVisualStyleBackColor = True
         '
+        'UsuariosPermisosBindingSource
+        '
+        Me.UsuariosPermisosBindingSource.DataMember = "UsuariosPermisos"
+        Me.UsuariosPermisosBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
+        '
+        '_Base_de_datos_1_4_beDataSet
+        '
+        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
+        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'VentasCHBX
         '
         Me.VentasCHBX.AutoSize = True
@@ -382,16 +394,6 @@ Partial Class Registros
         Me.RegistrosCHBX.Text = "Registros"
         Me.RegistrosCHBX.UseVisualStyleBackColor = True
         '
-        '_Base_de_datos_1_4_beDataSet
-        '
-        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
-        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UsuariosPermisosBindingSource
-        '
-        Me.UsuariosPermisosBindingSource.DataMember = "UsuariosPermisos"
-        Me.UsuariosPermisosBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
-        '
         'UsuariosPermisosTableAdapter
         '
         Me.UsuariosPermisosTableAdapter.ClearBeforeFill = True
@@ -420,6 +422,24 @@ Partial Class Registros
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 29
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(520, 110)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "CHAT"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(520, 161)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 31
+        Me.Button2.Text = "IP"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Registros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -429,6 +449,8 @@ Partial Class Registros
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1604, 882)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.InfoControl)
         Me.Controls.Add(Me.InfoPlaneacion)
         Me.Controls.Add(Me.InfoIngenieria)
@@ -462,8 +484,8 @@ Partial Class Registros
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FTM Registros"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -499,4 +521,6 @@ Partial Class Registros
     Friend WithEvents UsuariosPermisosTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter
     Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

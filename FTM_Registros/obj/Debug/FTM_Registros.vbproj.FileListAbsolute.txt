@@ -47,3 +47,5 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Microsoft.Owin.Secur
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\bin\Debug\Newtonsoft.Json.xml
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Prog_Ventas.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Control_Proyectos.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Form1.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.IP.resources
