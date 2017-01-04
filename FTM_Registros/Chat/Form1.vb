@@ -6,6 +6,7 @@ Imports System.Threading
 Public Class Form1
 
     Dim Cliente As TcpClient
+    Dim Cliente1 As TcpClient
     Dim Servidor As TcpListener
     Dim Cadenas As String = Nothing
     Dim Getfile As String = Nothing
@@ -179,10 +180,15 @@ Public Class Form1
     Private Sub SendText(ByVal Texto As String)
         Try
             Cliente = New TcpClient(RemoteIP.Text, Remoteport.Text)
+            Cliente1 = New TcpClient(RemoteIP1.Text, Remoteport1.Text)
             Dim writer As New StreamWriter(Cliente.GetStream())
+            Dim writer1 As New StreamWriter(Cliente1.GetStream())
             writer.Write(Texto)
+            writer1.Write(Texto)
+            writer1.Flush()
             writer.Flush()
             Cliente.Close()
+            Cliente1.Close()
             TextBox1.Clear()
 
         Catch ex As Exception
@@ -206,9 +212,14 @@ Public Class Form1
                 If Servidor.Pending = True Then
                     Cadenas = ""
                     Cliente = Servidor.AcceptTcpClient()
+                    Cliente1 = Servidor.AcceptTcpClient()
                     Dim reader As New StreamReader(Cliente.GetStream)
+                    Dim reader1 As New StreamReader(Cliente1.GetStream)
                     While reader.Peek > -1
                         Cadenas = Cadenas + Convert.ToChar(reader.Read()).ToString
+                    End While
+                    While reader1.Peek > -1
+                        Cadenas = Cadenas + Convert.ToChar(reader1.Read()).ToString
                     End While
                     ProcesarCadena(Cadenas)
                 End If
@@ -218,7 +229,6 @@ Public Class Form1
 
         End Try
     End Sub
-
 
     Public Sub ProcesarCadena(ByVal Cadenas1 As String)
 

@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTM Registros.exe" size="9445376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTM Registros.exe" size="9446400">
       <assemblyIdentity name="FTM Registros" version="1.4.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wL0X+Cq53F4MBAE8qkaVRYL8PrQR+N7iiOVCxtGnFic=</dsig:DigestValue>
+        <dsig:DigestValue>MztbQvXIfHGMfeP9eyAlrTAPDPeyy2GnRtdcuiCKdU8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -49,6 +49,9 @@ Partial Class Form1
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Remoteport1 = New System.Windows.Forms.TextBox()
+        Me.RemoteIP1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -191,7 +194,7 @@ Partial Class Form1
         '
         Me.TextBox2.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(238, 22)
+        Me.TextBox2.Location = New System.Drawing.Point(238, 14)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(300, 27)
@@ -201,7 +204,7 @@ Partial Class Form1
         '
         Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(546, 22)
+        Me.TextBox3.Location = New System.Drawing.Point(546, 14)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 27)
@@ -213,7 +216,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(147, 26)
+        Me.Label2.Location = New System.Drawing.Point(147, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 19)
         Me.Label2.TabIndex = 4
@@ -223,18 +226,18 @@ Partial Class Form1
         '
         Me.RemoteIP.BackColor = System.Drawing.SystemColors.Control
         Me.RemoteIP.ForeColor = System.Drawing.Color.Black
-        Me.RemoteIP.Location = New System.Drawing.Point(238, 70)
+        Me.RemoteIP.Location = New System.Drawing.Point(238, 46)
         Me.RemoteIP.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RemoteIP.Name = "RemoteIP"
         Me.RemoteIP.Size = New System.Drawing.Size(300, 27)
         Me.RemoteIP.TabIndex = 5
-        Me.RemoteIP.Text = "192.168.1.116"
+        Me.RemoteIP.Text = "192.168.1.166"
         '
         'Remoteport
         '
         Me.Remoteport.BackColor = System.Drawing.SystemColors.Control
         Me.Remoteport.ForeColor = System.Drawing.Color.Black
-        Me.Remoteport.Location = New System.Drawing.Point(546, 70)
+        Me.Remoteport.Location = New System.Drawing.Point(546, 46)
         Me.Remoteport.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Remoteport.Name = "Remoteport"
         Me.Remoteport.Size = New System.Drawing.Size(100, 27)
@@ -246,7 +249,7 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(147, 74)
+        Me.Label3.Location = New System.Drawing.Point(147, 50)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 19)
         Me.Label3.TabIndex = 7
@@ -255,6 +258,9 @@ Partial Class Form1
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.White
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.Remoteport1)
+        Me.GroupBox3.Controls.Add(Me.RemoteIP1)
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.Remoteport)
         Me.GroupBox3.Controls.Add(Me.RemoteIP)
@@ -356,6 +362,39 @@ Partial Class Form1
         Me.NotifyIcon1.Text = "FTM Registros"
         Me.NotifyIcon1.Visible = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(147, 82)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(84, 19)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "IP Remoto"
+        '
+        'Remoteport1
+        '
+        Me.Remoteport1.BackColor = System.Drawing.SystemColors.Control
+        Me.Remoteport1.ForeColor = System.Drawing.Color.Black
+        Me.Remoteport1.Location = New System.Drawing.Point(546, 78)
+        Me.Remoteport1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Remoteport1.Name = "Remoteport1"
+        Me.Remoteport1.Size = New System.Drawing.Size(100, 27)
+        Me.Remoteport1.TabIndex = 9
+        Me.Remoteport1.Text = "2112"
+        '
+        'RemoteIP1
+        '
+        Me.RemoteIP1.BackColor = System.Drawing.SystemColors.Control
+        Me.RemoteIP1.ForeColor = System.Drawing.Color.Black
+        Me.RemoteIP1.Location = New System.Drawing.Point(238, 78)
+        Me.RemoteIP1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RemoteIP1.Name = "RemoteIP1"
+        Me.RemoteIP1.Size = New System.Drawing.Size(300, 27)
+        Me.RemoteIP1.TabIndex = 8
+        Me.RemoteIP1.Text = "192.168.1.82"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
@@ -409,4 +448,7 @@ Partial Class Form1
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Remoteport1 As TextBox
+    Friend WithEvents RemoteIP1 As TextBox
 End Class
