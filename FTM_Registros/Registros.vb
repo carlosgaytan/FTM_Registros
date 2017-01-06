@@ -1,4 +1,6 @@
-﻿Public Class Registros
+﻿Imports System.IO
+
+Public Class Registros
     Private Sub Registros_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.VisibleChanged
         'TODO: esta línea de código carga datos en la tabla '_Base_de_datos_1_4_beDataSet.UsuariosPermisos' Puede moverla o quitarla según sea necesario.
         Me.UsuariosPermisosTableAdapter.PermisosUser(Me._Base_de_datos_1_4_beDataSet.UsuariosPermisos)
@@ -116,4 +118,8 @@
         InfoControl.Visible = False
     End Sub
 
+    Private Sub FileSystemWatcher1_Changed(sender As Object, e As FileSystemEventArgs) Handles FileSystemWatcher1.Changed
+        NotifyIcon1.ShowBalloonTip(10000, "Aviso", "Se genero nuevo registro", ToolTipIcon.Info)
+
+    End Sub
 End Class

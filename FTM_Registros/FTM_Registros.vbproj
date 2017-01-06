@@ -165,6 +165,12 @@
     <Compile Include="Chat\IP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Chat\Revision_docs.Designer.vb">
+      <DependentUpon>Revision_docs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\Revision_docs.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control_Accesos.vb" />
     <Compile Include="Control_Proyectos\Control_Proyectos.Designer.vb">
       <DependentUpon>Control_Proyectos.vb</DependentUpon>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chat\IP.resx">
       <DependentUpon>IP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat\Revision_docs.resx">
+      <DependentUpon>Revision_docs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Proyectos\Control_Proyectos.resx">
       <DependentUpon>Control_Proyectos.vb</DependentUpon>

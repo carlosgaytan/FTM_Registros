@@ -45,18 +45,21 @@ Partial Class Registros
         Me.InfoPlaneacion = New System.Windows.Forms.TextBox()
         Me.InfoControl = New System.Windows.Forms.TextBox()
         Me.GerenciaCHBX = New System.Windows.Forms.CheckBox()
+        Me.UsuariosPermisosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
         Me.VentasCHBX = New System.Windows.Forms.CheckBox()
         Me.IngenieriaCHBX = New System.Windows.Forms.CheckBox()
         Me.ControlCHBX = New System.Windows.Forms.CheckBox()
         Me.PlaneacionCHBX = New System.Windows.Forms.CheckBox()
         Me.RegistrosCHBX = New System.Windows.Forms.CheckBox()
-        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
-        Me.UsuariosPermisosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuariosPermisosTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter()
         Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -327,6 +330,16 @@ Partial Class Registros
         Me.GerenciaCHBX.Text = "Gerencia"
         Me.GerenciaCHBX.UseVisualStyleBackColor = True
         '
+        'UsuariosPermisosBindingSource
+        '
+        Me.UsuariosPermisosBindingSource.DataMember = "UsuariosPermisos"
+        Me.UsuariosPermisosBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
+        '
+        '_Base_de_datos_1_4_beDataSet
+        '
+        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
+        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'VentasCHBX
         '
         Me.VentasCHBX.AutoSize = True
@@ -382,16 +395,6 @@ Partial Class Registros
         Me.RegistrosCHBX.Text = "Registros"
         Me.RegistrosCHBX.UseVisualStyleBackColor = True
         '
-        '_Base_de_datos_1_4_beDataSet
-        '
-        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
-        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UsuariosPermisosBindingSource
-        '
-        Me.UsuariosPermisosBindingSource.DataMember = "UsuariosPermisos"
-        Me.UsuariosPermisosBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
-        '
         'UsuariosPermisosTableAdapter
         '
         Me.UsuariosPermisosTableAdapter.ClearBeforeFill = True
@@ -419,6 +422,18 @@ Partial Class Registros
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 29
+        '
+        'FileSystemWatcher1
+        '
+        Me.FileSystemWatcher1.EnableRaisingEvents = True
+        Me.FileSystemWatcher1.Path = "C:\Users\KIOSKO\Desktop\COMENSA"
+        Me.FileSystemWatcher1.SynchronizingObject = Me
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
         '
         'Registros
         '
@@ -462,8 +477,9 @@ Partial Class Registros
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FTM Registros"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -499,4 +515,6 @@ Partial Class Registros
     Friend WithEvents UsuariosPermisosTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter
     Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class

@@ -34,5 +34,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source="S:\Base de datos\Manufactura\Manufactura 1.5.accdb"</Value>
     </Setting>
+    <Setting Name="CarpetaLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

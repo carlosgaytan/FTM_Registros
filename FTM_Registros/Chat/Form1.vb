@@ -31,7 +31,6 @@ Public Class Form1
                 End If
             End If
 
-
         Catch ex As Exception
             Write("ERROR:" & ex.Message & Environment.NewLine)
         End Try
