@@ -426,7 +426,7 @@ Partial Class Registros
         'FileSystemWatcher1
         '
         Me.FileSystemWatcher1.EnableRaisingEvents = True
-        Me.FileSystemWatcher1.Path = "C:\Users\KIOSKO\Desktop\COMENSA"
+        Me.FileSystemWatcher1.Path = "S:\Base de datos\Base"
         Me.FileSystemWatcher1.SynchronizingObject = Me
         '
         'NotifyIcon1
