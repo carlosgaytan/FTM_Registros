@@ -78,6 +78,7 @@ Public Class Registros
 
     End Sub
 
+#Region "Bloqueo de botones según permisos"
     Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles GerenciaBTN.MouseHover
         InfoGerencia.Visible = True
     End Sub
@@ -117,9 +118,22 @@ Public Class Registros
     Private Sub ContProyectBTN_MouseLeave(sender As Object, e As EventArgs) Handles ContProyectBTN.MouseLeave
         InfoControl.Visible = False
     End Sub
+#End Region
 
-    Private Sub FileSystemWatcher1_Changed(sender As Object, e As FileSystemEventArgs) Handles FileSystemWatcher1.Changed
+    Private Sub baseFSW_Changed(sender As Object, e As FileSystemEventArgs) Handles baseFSW.Changed
+
+        'Activa notificación al registrar cambios en archivo
         NotifyIcon1.ShowBalloonTip(10000, "Aviso", "Se genero nuevo registro", ToolTipIcon.Info)
+
+    End Sub
+
+    Private Sub CotizacionesFSW_Changed(sender As Object, e As FileSystemEventArgs) Handles CotizacionesFSW.Changed
+        'Activa notificación al registrar cambios en archivo
+        NotifyIcon1.ShowBalloonTip(10000, "Aviso", "Se genero nuevo registro", ToolTipIcon.Info)
+    End Sub
+
+    Private Sub CotizacionesFSW_Created(sender As Object, e As FileSystemEventArgs) Handles CotizacionesFSW.Created
+        NotifyIcon1.ShowBalloonTip(10000, "Aviso", "Nuevo archivo creado", ToolTipIcon.Info)
 
     End Sub
 End Class

@@ -55,11 +55,13 @@ Partial Class Registros
         Me.UsuariosPermisosTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter()
         Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
+        Me.baseFSW = New System.IO.FileSystemWatcher()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.CotizacionesFSW = New System.IO.FileSystemWatcher()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.baseFSW, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CotizacionesFSW, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -423,17 +425,27 @@ Partial Class Registros
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 29
         '
-        'FileSystemWatcher1
+        'baseFSW
         '
-        Me.FileSystemWatcher1.EnableRaisingEvents = True
-        Me.FileSystemWatcher1.Path = "S:\Base de datos\Base"
-        Me.FileSystemWatcher1.SynchronizingObject = Me
+        Me.baseFSW.EnableRaisingEvents = True
+        Me.baseFSW.Filter = "*.accdb"
+        Me.baseFSW.NotifyFilter = CType((((System.IO.NotifyFilters.FileName Or System.IO.NotifyFilters.DirectoryName) _
+            Or System.IO.NotifyFilters.Size) _
+            Or System.IO.NotifyFilters.LastWrite), System.IO.NotifyFilters)
+        Me.baseFSW.Path = "S:\Base de datos\Base"
+        Me.baseFSW.SynchronizingObject = Me
         '
         'NotifyIcon1
         '
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
         Me.NotifyIcon1.Text = "NotifyIcon1"
         Me.NotifyIcon1.Visible = True
+        '
+        'CotizacionesFSW
+        '
+        Me.CotizacionesFSW.EnableRaisingEvents = True
+        Me.CotizacionesFSW.Path = "S:\Base de datos\Cotizaciones"
+        Me.CotizacionesFSW.SynchronizingObject = Me
         '
         'Registros
         '
@@ -479,7 +491,8 @@ Partial Class Registros
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.baseFSW, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CotizacionesFSW, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -515,6 +528,7 @@ Partial Class Registros
     Friend WithEvents UsuariosPermisosTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter
     Friend WithEvents TableAdapterManager As _Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents baseFSW As IO.FileSystemWatcher
+    Friend WithEvents CotizacionesFSW As IO.FileSystemWatcher
 End Class
