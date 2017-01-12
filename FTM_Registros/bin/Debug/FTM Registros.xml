@@ -1552,6 +1552,171 @@ FTM Registros
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:FTM_Registros.AlmacenBD">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_de_EmpleadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_MaterialDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Entradas_de_MaterialDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.RACKSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Salidas_de_MaterialDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_de_EmpleadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_MaterialRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Entradas_de_MaterialRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.RACKSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Salidas_de_MaterialRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_de_EmpleadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_MaterialRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Entradas_de_MaterialRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.RACKSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBD.Salidas_de_MaterialRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_de_Datos_ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_de_Datos_de_EmpleadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_de_Datos_MaterialTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Entradas_de_MaterialTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.RACKSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Salidas_de_MaterialTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.AlmacenBD,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.AlmacenBD,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.AlmacenBD,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.AlmacenBD)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:FTM_Registros.AgregarClaveFTM">
 <summary>
 Represents a strongly typed in-memory cache of data.

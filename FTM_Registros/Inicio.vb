@@ -54,4 +54,25 @@
 
         End If
     End Sub
+
+    Private Sub txtContraseña_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContraseña.KeyPress
+        If Asc(e.KeyChar) = Keys.Enter Then
+            If UsuarioTextBox.Text = IdUsuarioListBox.Text And txtContraseña.Text = PasswordTXT.Text Then
+                GUARDARCHBX.CheckState = CheckState.Checked
+
+                MsgBox("Bienvenid@ " & NameTXT.Text & ", puede ingresar al sistema", Title:="FTM Registros")
+                LblIncorrecto.Hide()
+                txtContraseña.Clear()
+                TxtIdUsuario.Clear()
+                Control_Accesos.Usuario = NameTXT.Text
+                Dim F2 As New Registros()
+                Registros.Show()
+                Me.Hide()
+
+            ElseIf UsuarioTextBox.Text <> IdUsuarioListBox.Text Or txtContraseña.Text <> PasswordTXT.Text Then
+                LblIncorrecto.Show()
+                LblIncorrecto.Text = "Usuario y/o contraseña incorrectos"
+            End If
+        End If
+    End Sub
 End Class

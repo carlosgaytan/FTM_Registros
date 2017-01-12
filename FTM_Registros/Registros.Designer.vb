@@ -34,6 +34,7 @@ Partial Class Registros
         Me.IngenieriaBTN = New System.Windows.Forms.Button()
         Me.PlaneacionBTN = New System.Windows.Forms.Button()
         Me.ContProyectBTN = New System.Windows.Forms.Button()
+        Me.AlmacenBTN = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -58,6 +59,9 @@ Partial Class Registros
         Me.baseFSW = New System.IO.FileSystemWatcher()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CotizacionesFSW = New System.IO.FileSystemWatcher()
+        Me.InfoAlmacen = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.AlmacenCBX = New System.Windows.Forms.CheckBox()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.baseFSW, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +114,7 @@ Partial Class Registros
         Me.GerenciaBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.company_22169
         Me.GerenciaBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.GerenciaBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GerenciaBTN.Location = New System.Drawing.Point(117, 28)
+        Me.GerenciaBTN.Location = New System.Drawing.Point(26, 44)
         Me.GerenciaBTN.Name = "GerenciaBTN"
         Me.GerenciaBTN.Size = New System.Drawing.Size(90, 90)
         Me.GerenciaBTN.TabIndex = 0
@@ -123,7 +127,7 @@ Partial Class Registros
         Me.VentasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.coins_icon_31839
         Me.VentasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.VentasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VentasBTN.Location = New System.Drawing.Point(117, 148)
+        Me.VentasBTN.Location = New System.Drawing.Point(26, 164)
         Me.VentasBTN.Name = "VentasBTN"
         Me.VentasBTN.Size = New System.Drawing.Size(90, 90)
         Me.VentasBTN.TabIndex = 1
@@ -137,7 +141,7 @@ Partial Class Registros
         Me.IngenieriaBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.IngenieriaBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.IngenieriaBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IngenieriaBTN.Location = New System.Drawing.Point(117, 270)
+        Me.IngenieriaBTN.Location = New System.Drawing.Point(26, 286)
         Me.IngenieriaBTN.Name = "IngenieriaBTN"
         Me.IngenieriaBTN.Size = New System.Drawing.Size(90, 90)
         Me.IngenieriaBTN.TabIndex = 3
@@ -150,7 +154,7 @@ Partial Class Registros
         Me.PlaneacionBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Everflux_icon_icons_com_53727
         Me.PlaneacionBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PlaneacionBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PlaneacionBTN.Location = New System.Drawing.Point(117, 393)
+        Me.PlaneacionBTN.Location = New System.Drawing.Point(26, 409)
         Me.PlaneacionBTN.Name = "PlaneacionBTN"
         Me.PlaneacionBTN.Size = New System.Drawing.Size(90, 90)
         Me.PlaneacionBTN.TabIndex = 4
@@ -163,7 +167,7 @@ Partial Class Registros
         Me.ContProyectBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Inbound_Link_icon_icons_com_53738
         Me.ContProyectBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ContProyectBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContProyectBTN.Location = New System.Drawing.Point(117, 515)
+        Me.ContProyectBTN.Location = New System.Drawing.Point(26, 531)
         Me.ContProyectBTN.Name = "ContProyectBTN"
         Me.ContProyectBTN.Size = New System.Drawing.Size(90, 90)
         Me.ContProyectBTN.TabIndex = 11
@@ -171,13 +175,26 @@ Partial Class Registros
         Me.ToolTip1.SetToolTip(Me.ContProyectBTN, "Control de Proyectos")
         Me.ContProyectBTN.UseVisualStyleBackColor = True
         '
+        'AlmacenBTN
+        '
+        Me.AlmacenBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.shipping_products_22121
+        Me.AlmacenBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.AlmacenBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AlmacenBTN.Location = New System.Drawing.Point(368, 43)
+        Me.AlmacenBTN.Name = "AlmacenBTN"
+        Me.AlmacenBTN.Size = New System.Drawing.Size(90, 90)
+        Me.AlmacenBTN.TabIndex = 30
+        Me.AlmacenBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.AlmacenBTN, "Información Gerencia")
+        Me.AlmacenBTN.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(123, 119)
+        Me.Label1.Location = New System.Drawing.Point(32, 135)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 19)
         Me.Label1.TabIndex = 12
@@ -189,7 +206,7 @@ Partial Class Registros
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(133, 239)
+        Me.Label2.Location = New System.Drawing.Point(42, 255)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 19)
         Me.Label2.TabIndex = 13
@@ -201,7 +218,7 @@ Partial Class Registros
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(120, 361)
+        Me.Label3.Location = New System.Drawing.Point(29, 377)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 19)
         Me.Label3.TabIndex = 14
@@ -214,7 +231,7 @@ Partial Class Registros
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(115, 484)
+        Me.Label4.Location = New System.Drawing.Point(24, 500)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 19)
         Me.Label4.TabIndex = 15
@@ -227,7 +244,7 @@ Partial Class Registros
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(119, 606)
+        Me.Label5.Location = New System.Drawing.Point(28, 622)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(87, 38)
         Me.Label5.TabIndex = 16
@@ -241,7 +258,7 @@ Partial Class Registros
         Me.InfoGerencia.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InfoGerencia.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoGerencia.ForeColor = System.Drawing.Color.Black
-        Me.InfoGerencia.Location = New System.Drawing.Point(205, 29)
+        Me.InfoGerencia.Location = New System.Drawing.Point(114, 45)
         Me.InfoGerencia.Multiline = True
         Me.InfoGerencia.Name = "InfoGerencia"
         Me.InfoGerencia.ReadOnly = True
@@ -259,7 +276,7 @@ Partial Class Registros
         Me.InfoVentas.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InfoVentas.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoVentas.ForeColor = System.Drawing.Color.Black
-        Me.InfoVentas.Location = New System.Drawing.Point(205, 149)
+        Me.InfoVentas.Location = New System.Drawing.Point(114, 165)
         Me.InfoVentas.Multiline = True
         Me.InfoVentas.Name = "InfoVentas"
         Me.InfoVentas.ReadOnly = True
@@ -277,7 +294,7 @@ Partial Class Registros
         Me.InfoIngenieria.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InfoIngenieria.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoIngenieria.ForeColor = System.Drawing.Color.Black
-        Me.InfoIngenieria.Location = New System.Drawing.Point(205, 271)
+        Me.InfoIngenieria.Location = New System.Drawing.Point(114, 287)
         Me.InfoIngenieria.Multiline = True
         Me.InfoIngenieria.Name = "InfoIngenieria"
         Me.InfoIngenieria.ReadOnly = True
@@ -294,7 +311,7 @@ Partial Class Registros
         Me.InfoPlaneacion.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InfoPlaneacion.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoPlaneacion.ForeColor = System.Drawing.Color.Black
-        Me.InfoPlaneacion.Location = New System.Drawing.Point(205, 394)
+        Me.InfoPlaneacion.Location = New System.Drawing.Point(114, 410)
         Me.InfoPlaneacion.Multiline = True
         Me.InfoPlaneacion.Name = "InfoPlaneacion"
         Me.InfoPlaneacion.ReadOnly = True
@@ -311,7 +328,7 @@ Partial Class Registros
         Me.InfoControl.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InfoControl.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoControl.ForeColor = System.Drawing.Color.Black
-        Me.InfoControl.Location = New System.Drawing.Point(205, 516)
+        Me.InfoControl.Location = New System.Drawing.Point(114, 532)
         Me.InfoControl.Multiline = True
         Me.InfoControl.Name = "InfoControl"
         Me.InfoControl.ReadOnly = True
@@ -447,6 +464,46 @@ Partial Class Registros
         Me.CotizacionesFSW.Path = "S:\Base de datos\Cotizaciones"
         Me.CotizacionesFSW.SynchronizingObject = Me
         '
+        'InfoAlmacen
+        '
+        Me.InfoAlmacen.BackColor = System.Drawing.Color.Gainsboro
+        Me.InfoAlmacen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.InfoAlmacen.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.InfoAlmacen.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InfoAlmacen.ForeColor = System.Drawing.Color.Black
+        Me.InfoAlmacen.Location = New System.Drawing.Point(456, 44)
+        Me.InfoAlmacen.Multiline = True
+        Me.InfoAlmacen.Name = "InfoAlmacen"
+        Me.InfoAlmacen.ReadOnly = True
+        Me.InfoAlmacen.Size = New System.Drawing.Size(190, 88)
+        Me.InfoAlmacen.TabIndex = 32
+        Me.InfoAlmacen.Text = "Herramientas correspondientes al área de Almacen: Control de personal y Control d" &
+    "e inventarios"
+        Me.InfoAlmacen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.InfoAlmacen.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(374, 134)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(75, 19)
+        Me.Label6.TabIndex = 31
+        Me.Label6.Text = "Almacén"
+        '
+        'AlmacenCBX
+        '
+        Me.AlmacenCBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Almacen", True))
+        Me.AlmacenCBX.Location = New System.Drawing.Point(1016, 453)
+        Me.AlmacenCBX.Name = "AlmacenCBX"
+        Me.AlmacenCBX.Size = New System.Drawing.Size(104, 24)
+        Me.AlmacenCBX.TabIndex = 33
+        Me.AlmacenCBX.Text = "Almacén"
+        Me.AlmacenCBX.UseVisualStyleBackColor = True
+        '
         'Registros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -456,6 +513,11 @@ Partial Class Registros
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1604, 882)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.AlmacenCBX)
+        Me.Controls.Add(Me.InfoAlmacen)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.AlmacenBTN)
         Me.Controls.Add(Me.InfoControl)
         Me.Controls.Add(Me.InfoPlaneacion)
         Me.Controls.Add(Me.InfoIngenieria)
@@ -469,7 +531,6 @@ Partial Class Registros
         Me.Controls.Add(Me.ContProyectBTN)
         Me.Controls.Add(Me.Iniciobtn)
         Me.Controls.Add(Me.Publicar)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.PlaneacionBTN)
         Me.Controls.Add(Me.IngenieriaBTN)
@@ -531,4 +592,8 @@ Partial Class Registros
     Friend WithEvents NotifyIcon1 As NotifyIcon
     Friend WithEvents baseFSW As IO.FileSystemWatcher
     Friend WithEvents CotizacionesFSW As IO.FileSystemWatcher
+    Friend WithEvents InfoAlmacen As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents AlmacenBTN As Button
+    Friend WithEvents AlmacenCBX As CheckBox
 End Class

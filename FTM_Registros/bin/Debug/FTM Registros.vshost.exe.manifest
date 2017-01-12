@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="FTM Registros.exe" version="1.5.4.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="FTM Registros.exe" version="1.5.4.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="TRANSFORMACIONES_003_.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTM Registros.exe" size="9586176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTM Registros.exe" size="9814016">
       <assemblyIdentity name="FTM Registros" version="1.4.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vNgzDSlJ0kveJYesiYtD9Gsn0UYBSOTlV3Nl4DyEZ2E=</dsig:DigestValue>
+        <dsig:DigestValue>BbEOsyS9WgbfstNSKyP/rgQazE3UXOjkhaWri027qOA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -182,13 +182,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="FTM Registros.exe.config" size="2052">
+  <file name="FTM Registros.exe.config" size="2304">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>8bjsQI1sjEzBi10AYoyOdZgRFIwwo2w7TJ+Ps5eicI8=</dsig:DigestValue>
+      <dsig:DigestValue>PO0CdN9KpD9+cL56CiRdpIAxTIeXqpjkRJNTCPItH5Y=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Scripts\jquery.signalR-2.2.1.js" size="126411">

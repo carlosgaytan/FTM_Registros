@@ -46,6 +46,15 @@ Public Class Registros
         End If
 
     End Sub
+    Private Sub AlmacenBTN_Click(sender As Object, e As EventArgs) Handles AlmacenBTN.Click
+        If AlmacenCBX.CheckState = CheckState.Checked Then
+            Almacen.Show()
+        ElseIf AlmacenCBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Sub
+
     Private Sub Iniciobtn_Click(sender As Object, e As EventArgs) Handles Iniciobtn.Click
 
         'Oculta formas para cambiar de sesión
@@ -56,6 +65,7 @@ Public Class Registros
         Ingenieria.Hide()
         Planeacion.Hide()
         Control_Proyectos.Hide()
+        Almacen.Hide()
         Me.Hide()
 
     End Sub
@@ -71,6 +81,7 @@ Public Class Registros
             Ingenieria.Close()
             Planeacion.Close()
             Control_Proyectos.Close()
+            Almacen.Close()
             End
         Else
             e.Cancel = True
@@ -118,6 +129,12 @@ Public Class Registros
     Private Sub ContProyectBTN_MouseLeave(sender As Object, e As EventArgs) Handles ContProyectBTN.MouseLeave
         InfoControl.Visible = False
     End Sub
+    Private Sub AlmacenBTN_MouseHover(sender As Object, e As EventArgs) Handles AlmacenBTN.MouseHover
+        InfoAlmacen.Visible = True
+    End Sub
+    Private Sub AlmacenBTN_MouseLeave(sender As Object, e As EventArgs) Handles AlmacenBTN.MouseLeave
+        InfoAlmacen.Visible = False
+    End Sub
 #End Region
 
     Private Sub baseFSW_Changed(sender As Object, e As FileSystemEventArgs) Handles baseFSW.Changed
@@ -136,4 +153,5 @@ Public Class Registros
         NotifyIcon1.ShowBalloonTip(10000, "Aviso", "Nuevo archivo creado", ToolTipIcon.Info)
 
     End Sub
+
 End Class

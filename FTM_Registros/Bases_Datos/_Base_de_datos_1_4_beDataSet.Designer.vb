@@ -3607,6 +3607,8 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         Private columnRegistros As Global.System.Data.DataColumn
         
+        Private columnAlmacen As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3715,6 +3717,14 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AlmacenColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAlmacen
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3751,9 +3761,9 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddUsuariosPermisosRow(ByVal IdUsuario As String, ByVal Nombre As String, ByVal Gerencia As Boolean, ByVal Ventas As Boolean, ByVal Ingenieria As Boolean, ByVal ContProyect As Boolean, ByVal Planeacion As Boolean, ByVal Registros As Boolean) As UsuariosPermisosRow
+        Public Overloads Function AddUsuariosPermisosRow(ByVal IdUsuario As String, ByVal Nombre As String, ByVal Gerencia As Boolean, ByVal Ventas As Boolean, ByVal Ingenieria As Boolean, ByVal ContProyect As Boolean, ByVal Planeacion As Boolean, ByVal Registros As Boolean, ByVal Almacen As Boolean) As UsuariosPermisosRow
             Dim rowUsuariosPermisosRow As UsuariosPermisosRow = CType(Me.NewRow,UsuariosPermisosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, IdUsuario, Nombre, Gerencia, Ventas, Ingenieria, ContProyect, Planeacion, Registros}
+            Dim columnValuesArray() As Object = New Object() {Nothing, IdUsuario, Nombre, Gerencia, Ventas, Ingenieria, ContProyect, Planeacion, Registros, Almacen}
             rowUsuariosPermisosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowUsuariosPermisosRow)
             Return rowUsuariosPermisosRow
@@ -3791,6 +3801,7 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             Me.columnContProyect = MyBase.Columns("ContProyect")
             Me.columnPlaneacion = MyBase.Columns("Planeacion")
             Me.columnRegistros = MyBase.Columns("Registros")
+            Me.columnAlmacen = MyBase.Columns("Almacen")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3814,6 +3825,8 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             MyBase.Columns.Add(Me.columnPlaneacion)
             Me.columnRegistros = New Global.System.Data.DataColumn("Registros", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRegistros)
+            Me.columnAlmacen = New Global.System.Data.DataColumn("Almacen", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAlmacen)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdPermisoprincipal}, true))
             Me.columnIdPermisoprincipal.AutoIncrement = true
             Me.columnIdPermisoprincipal.AutoIncrementSeed = -1
@@ -6184,6 +6197,21 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Almacen() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableUsuariosPermisos.AlmacenColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Almacen' de la tabla 'UsuariosPermisos' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableUsuariosPermisos.AlmacenColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsIdUsuarioNull() As Boolean
             Return Me.IsNull(Me.tableUsuariosPermisos.IdUsuarioColumn)
         End Function
@@ -6276,6 +6304,18 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetRegistrosNull()
             Me(Me.tableUsuariosPermisos.RegistrosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAlmacenNull() As Boolean
+            Return Me.IsNull(Me.tableUsuariosPermisos.AlmacenColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAlmacenNull()
+            Me(Me.tableUsuariosPermisos.AlmacenColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -9682,6 +9722,7 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             tableMapping.ColumnMappings.Add("ContProyect", "ContProyect")
             tableMapping.ColumnMappings.Add("Planeacion", "Planeacion")
             tableMapping.ColumnMappings.Add("Registros", "Registros")
+            tableMapping.ColumnMappings.Add("Almacen", "Almacen")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -9691,7 +9732,8 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                 " = 1 AND `Ventas` IS NULL) OR (`Ventas` = ?)) AND ((? = 1 AND `Ingenieria` IS NU"& _ 
                 "LL) OR (`Ingenieria` = ?)) AND ((? = 1 AND `ContProyect` IS NULL) OR (`ContProye"& _ 
                 "ct` = ?)) AND ((? = 1 AND `Planeacion` IS NULL) OR (`Planeacion` = ?)) AND ((? ="& _ 
-                " 1 AND `Registros` IS NULL) OR (`Registros` = ?)))"
+                " 1 AND `Registros` IS NULL) OR (`Registros` = ?)) AND ((? = 1 AND `Almacen` IS N"& _ 
+                "ULL) OR (`Almacen` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdPermisoprincipal", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdPermisoprincipal", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdUsuario", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -9710,11 +9752,13 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Planeacion", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Planeacion", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Registros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Registros", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Registros", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Registros", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Almacen", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Almacen", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Almacen", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Almacen", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `UsuariosPermisos` (`IdUsuario`, `Nombre`, `Gerencia`, `Ventas`, `Ing"& _ 
-                "enieria`, `ContProyect`, `Planeacion`, `Registros`) VALUES (?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?)"
+                "enieria`, `ContProyect`, `Planeacion`, `Registros`, `Almacen`) VALUES (?, ?, ?, "& _ 
+                "?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdUsuario", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9724,17 +9768,19 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ContProyect", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ContProyect", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Planeacion", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Planeacion", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Registros", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Registros", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Almacen", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Almacen", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `UsuariosPermisos` SET `IdUsuario` = ?, `Nombre` = ?, `Gerencia` = ?, `Ven"& _ 
                 "tas` = ?, `Ingenieria` = ?, `ContProyect` = ?, `Planeacion` = ?, `Registros` = ?"& _ 
-                " WHERE ((`IdPermisoprincipal` = ?) AND ((? = 1 AND `IdUsuario` IS NULL) OR (`IdU"& _ 
-                "suario` = ?)) AND ((? = 1 AND `Nombre` IS NULL) OR (`Nombre` = ?)) AND ((? = 1 A"& _ 
-                "ND `Gerencia` IS NULL) OR (`Gerencia` = ?)) AND ((? = 1 AND `Ventas` IS NULL) OR"& _ 
-                " (`Ventas` = ?)) AND ((? = 1 AND `Ingenieria` IS NULL) OR (`Ingenieria` = ?)) AN"& _ 
-                "D ((? = 1 AND `ContProyect` IS NULL) OR (`ContProyect` = ?)) AND ((? = 1 AND `Pl"& _ 
-                "aneacion` IS NULL) OR (`Planeacion` = ?)) AND ((? = 1 AND `Registros` IS NULL) O"& _ 
-                "R (`Registros` = ?)))"
+                ", `Almacen` = ? WHERE ((`IdPermisoprincipal` = ?) AND ((? = 1 AND `IdUsuario` IS"& _ 
+                " NULL) OR (`IdUsuario` = ?)) AND ((? = 1 AND `Nombre` IS NULL) OR (`Nombre` = ?)"& _ 
+                ") AND ((? = 1 AND `Gerencia` IS NULL) OR (`Gerencia` = ?)) AND ((? = 1 AND `Vent"& _ 
+                "as` IS NULL) OR (`Ventas` = ?)) AND ((? = 1 AND `Ingenieria` IS NULL) OR (`Ingen"& _ 
+                "ieria` = ?)) AND ((? = 1 AND `ContProyect` IS NULL) OR (`ContProyect` = ?)) AND "& _ 
+                "((? = 1 AND `Planeacion` IS NULL) OR (`Planeacion` = ?)) AND ((? = 1 AND `Regist"& _ 
+                "ros` IS NULL) OR (`Registros` = ?)) AND ((? = 1 AND `Almacen` IS NULL) OR (`Alma"& _ 
+                "cen` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IdUsuario", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9744,6 +9790,7 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ContProyect", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ContProyect", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Planeacion", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Planeacion", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Registros", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Registros", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Almacen", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Almacen", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdPermisoprincipal", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdPermisoprincipal", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_IdUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdUsuario", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_IdUsuario", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "IdUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -9761,6 +9808,8 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Planeacion", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Planeacion", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Registros", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Registros", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Registros", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Registros", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Almacen", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Almacen", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Almacen", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Almacen", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9776,7 +9825,8 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        UsuariosPermisos.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            UsuariosPermisos"
+            Me._commandCollection(0).CommandText = "SELECT        IdPermisoprincipal, IdUsuario, Nombre, Gerencia, Ventas, Ingenieria"& _ 
+                ", ContProyect, Planeacion, Registros, Almacen"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            UsuariosPermisos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -9836,7 +9886,7 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_IdPermisoprincipal As Integer, ByVal Original_IdUsuario As String, ByVal Original_Nombre As String, ByVal Original_Gerencia As Boolean, ByVal Original_Ventas As Boolean, ByVal Original_Ingenieria As Boolean, ByVal Original_ContProyect As Boolean, ByVal Original_Planeacion As Boolean, ByVal Original_Registros As Boolean) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_IdPermisoprincipal As Integer, ByVal Original_IdUsuario As String, ByVal Original_Nombre As String, ByVal Original_Gerencia As Boolean, ByVal Original_Ventas As Boolean, ByVal Original_Ingenieria As Boolean, ByVal Original_ContProyect As Boolean, ByVal Original_Planeacion As Boolean, ByVal Original_Registros As Boolean, ByVal Original_Almacen As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IdPermisoprincipal,Integer)
             If (Original_IdUsuario Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -9864,6 +9914,8 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Planeacion,Boolean)
             Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
             Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Registros,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Almacen,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -9883,7 +9935,7 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IdUsuario As String, ByVal Nombre As String, ByVal Gerencia As Boolean, ByVal Ventas As Boolean, ByVal Ingenieria As Boolean, ByVal ContProyect As Boolean, ByVal Planeacion As Boolean, ByVal Registros As Boolean) As Integer
+        Public Overloads Overridable Function Insert(ByVal IdUsuario As String, ByVal Nombre As String, ByVal Gerencia As Boolean, ByVal Ventas As Boolean, ByVal Ingenieria As Boolean, ByVal ContProyect As Boolean, ByVal Planeacion As Boolean, ByVal Registros As Boolean, ByVal Almacen As Boolean) As Integer
             If (IdUsuario Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -9900,6 +9952,7 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me.Adapter.InsertCommand.Parameters(5).Value = CType(ContProyect,Boolean)
             Me.Adapter.InsertCommand.Parameters(6).Value = CType(Planeacion,Boolean)
             Me.Adapter.InsertCommand.Parameters(7).Value = CType(Registros,Boolean)
+            Me.Adapter.InsertCommand.Parameters(8).Value = CType(Almacen,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -9928,6 +9981,7 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                     ByVal ContProyect As Boolean,  _
                     ByVal Planeacion As Boolean,  _
                     ByVal Registros As Boolean,  _
+                    ByVal Almacen As Boolean,  _
                     ByVal Original_IdPermisoprincipal As Integer,  _
                     ByVal Original_IdUsuario As String,  _
                     ByVal Original_Nombre As String,  _
@@ -9936,7 +9990,8 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                     ByVal Original_Ingenieria As Boolean,  _
                     ByVal Original_ContProyect As Boolean,  _
                     ByVal Original_Planeacion As Boolean,  _
-                    ByVal Original_Registros As Boolean) As Integer
+                    ByVal Original_Registros As Boolean,  _
+                    ByVal Original_Almacen As Boolean) As Integer
             If (IdUsuario Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -9953,33 +10008,36 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(ContProyect,Boolean)
             Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Planeacion,Boolean)
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Registros,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_IdPermisoprincipal,Integer)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Almacen,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_IdPermisoprincipal,Integer)
             If (Original_IdUsuario Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IdUsuario,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_IdUsuario,String)
             End If
             If (Original_Nombre Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Nombre,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Nombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Gerencia,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Ventas,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Ingenieria,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_ContProyect,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Planeacion,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Registros,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Gerencia,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Ventas,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Ingenieria,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_ContProyect,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Planeacion,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Registros,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Almacen,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
