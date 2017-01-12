@@ -14,14 +14,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="FTM Registros.exe.manifest" size="14809">
+    <dependentAssembly dependencyType="install" codebase="FTM Registros.exe.manifest" size="14810">
       <assemblyIdentity name="FTM Registros.exe" version="1.5.4.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2mZVhiFiAiPDpySaE9MpGrovpNDL/2ujExn9GVGUcb0=</dsig:DigestValue>
+        <dsig:DigestValue>X89EywSf3yzFCMui2Hed7tn5wNwYhB2fgoW2MkeEOY8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -12,8 +12,6 @@
     Private Sub Cotizaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Ventas' Puede moverla o quitarla según sea necesario.
         Me.VentasTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Ventas)
-        ''TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Costos' Puede moverla o quitarla según sea necesario.
-        'Me.CostosTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Costos)
 
     End Sub
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click

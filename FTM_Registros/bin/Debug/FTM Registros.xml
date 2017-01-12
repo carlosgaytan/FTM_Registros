@@ -1557,22 +1557,22 @@ FTM Registros
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_ClientesDataTable">
+<member name="T:FTM_Registros.AlmacenBD.Base_ClientesDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_de_EmpleadosDataTable">
+<member name="T:FTM_Registros.AlmacenBD.Base_EmpleadosDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_MaterialDataTable">
+<member name="T:FTM_Registros.AlmacenBD.Base_MaterialDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Entradas_de_MaterialDataTable">
+<member name="T:FTM_Registros.AlmacenBD.Entradas_MaterialDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -1582,27 +1582,27 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Salidas_de_MaterialDataTable">
+<member name="T:FTM_Registros.AlmacenBD.Salidas_MaterialDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_ClientesRow">
+<member name="T:FTM_Registros.AlmacenBD.Base_ClientesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_de_EmpleadosRow">
+<member name="T:FTM_Registros.AlmacenBD.Base_EmpleadosRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_MaterialRow">
+<member name="T:FTM_Registros.AlmacenBD.Base_MaterialRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Entradas_de_MaterialRow">
+<member name="T:FTM_Registros.AlmacenBD.Entradas_MaterialRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1612,27 +1612,27 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Salidas_de_MaterialRow">
+<member name="T:FTM_Registros.AlmacenBD.Salidas_MaterialRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_ClientesRowChangeEvent">
+<member name="T:FTM_Registros.AlmacenBD.Base_ClientesRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_de_EmpleadosRowChangeEvent">
+<member name="T:FTM_Registros.AlmacenBD.Base_EmpleadosRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Base_de_Datos_MaterialRowChangeEvent">
+<member name="T:FTM_Registros.AlmacenBD.Base_MaterialRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Entradas_de_MaterialRowChangeEvent">
+<member name="T:FTM_Registros.AlmacenBD.Entradas_MaterialRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -1642,27 +1642,27 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBD.Salidas_de_MaterialRowChangeEvent">
+<member name="T:FTM_Registros.AlmacenBD.Salidas_MaterialRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_de_Datos_ClientesTableAdapter">
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_ClientesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_de_Datos_de_EmpleadosTableAdapter">
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.BaseEmpleadosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_de_Datos_MaterialTableAdapter">
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.Base_MaterialTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBDTableAdapters.Entradas_de_MaterialTableAdapter">
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.EntradasMaterialTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -1672,7 +1672,7 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FTM_Registros.AlmacenBDTableAdapters.Salidas_de_MaterialTableAdapter">
+<member name="T:FTM_Registros.AlmacenBDTableAdapters.SalidasMaterialTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

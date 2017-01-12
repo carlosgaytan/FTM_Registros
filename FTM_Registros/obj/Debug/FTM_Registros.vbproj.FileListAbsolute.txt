@@ -51,3 +51,5 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Form1.
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.IP.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Revision_docs.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Almacen.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.EntradaMP.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Inventario_MP.resources

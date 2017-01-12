@@ -162,6 +162,12 @@
     <Compile Include="Almacen\AlmacenBD.vb">
       <DependentUpon>AlmacenBD.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Almacen\EntradaMP.Designer.vb">
+      <DependentUpon>EntradaMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\EntradaMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Almacen\Inventario_MP.Designer.vb">
       <DependentUpon>Inventario_MP.vb</DependentUpon>
     </Compile>
@@ -391,6 +397,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Almacen\Almacen.resx">
       <DependentUpon>Almacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\EntradaMP.resx">
+      <DependentUpon>EntradaMP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Almacen\Inventario_MP.resx">
       <DependentUpon>Inventario_MP.vb</DependentUpon>
