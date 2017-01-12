@@ -148,6 +148,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacen\Almacen.Designer.vb">
+      <DependentUpon>Almacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Almacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bases_Datos\AgregarClaveFTM.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

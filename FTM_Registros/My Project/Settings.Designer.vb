@@ -109,6 +109,17 @@ Namespace My
                 Me("CarpetaLocal") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""S:\Base de datos\Almacén\Almacen.a"& _ 
+            "ccdb""")>  _
+        Public ReadOnly Property AlmacenConnectionString() As String
+            Get
+                Return CType(Me("AlmacenConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
