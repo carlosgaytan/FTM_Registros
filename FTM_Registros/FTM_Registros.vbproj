@@ -154,6 +154,11 @@
     <Compile Include="Almacen\Almacen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Almacen\AlmacenBD.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenBD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Bases_Datos\AgregarClaveFTM.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -446,6 +451,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Almacen\AlmacenBD.xsc">
+      <DependentUpon>AlmacenBD.xsd</DependentUpon>
+    </None>
+    <None Include="Almacen\AlmacenBD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenBD.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Almacen\AlmacenBD.xss">
+      <DependentUpon>AlmacenBD.xsd</DependentUpon>
+    </None>
     <None Include="Bases_Datos\AgregarClaveFTM.xsc">
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
     </None>
