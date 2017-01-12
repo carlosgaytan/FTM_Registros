@@ -25,17 +25,17 @@ Option Explicit On
 Partial Public Class AlmacenBD
     Inherits Global.System.Data.DataSet
     
-    Private tableBase_de_Datos_Clientes As Base_de_Datos_ClientesDataTable
+    Private tableBase_Clientes As Base_ClientesDataTable
     
-    Private tableBase_de_Datos_de_Empleados As Base_de_Datos_de_EmpleadosDataTable
+    Private tableBase_Empleados As Base_EmpleadosDataTable
     
-    Private tableBase_de_Datos_Material As Base_de_Datos_MaterialDataTable
+    Private tableBase_Material As Base_MaterialDataTable
     
-    Private tableEntradas_de_Material As Entradas_de_MaterialDataTable
+    Private tableEntradas_Material As Entradas_MaterialDataTable
     
     Private tableRACKS As RACKSDataTable
     
-    Private tableSalidas_de_Material As Salidas_de_MaterialDataTable
+    Private tableSalidas_Material As Salidas_MaterialDataTable
     
     Private _relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_ As Global.System.Data.DataRelation
     
@@ -76,23 +76,23 @@ Partial Public Class AlmacenBD
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("Base de Datos Clientes")) Is Nothing) Then
-                MyBase.Tables.Add(New Base_de_Datos_ClientesDataTable(ds.Tables("Base de Datos Clientes")))
+            If (Not (ds.Tables("Base_Clientes")) Is Nothing) Then
+                MyBase.Tables.Add(New Base_ClientesDataTable(ds.Tables("Base_Clientes")))
             End If
-            If (Not (ds.Tables("Base de Datos de Empleados")) Is Nothing) Then
-                MyBase.Tables.Add(New Base_de_Datos_de_EmpleadosDataTable(ds.Tables("Base de Datos de Empleados")))
+            If (Not (ds.Tables("Base_Empleados")) Is Nothing) Then
+                MyBase.Tables.Add(New Base_EmpleadosDataTable(ds.Tables("Base_Empleados")))
             End If
-            If (Not (ds.Tables("Base de Datos Material")) Is Nothing) Then
-                MyBase.Tables.Add(New Base_de_Datos_MaterialDataTable(ds.Tables("Base de Datos Material")))
+            If (Not (ds.Tables("Base_Material")) Is Nothing) Then
+                MyBase.Tables.Add(New Base_MaterialDataTable(ds.Tables("Base_Material")))
             End If
-            If (Not (ds.Tables("Entradas de Material")) Is Nothing) Then
-                MyBase.Tables.Add(New Entradas_de_MaterialDataTable(ds.Tables("Entradas de Material")))
+            If (Not (ds.Tables("Entradas_Material")) Is Nothing) Then
+                MyBase.Tables.Add(New Entradas_MaterialDataTable(ds.Tables("Entradas_Material")))
             End If
             If (Not (ds.Tables("RACKS")) Is Nothing) Then
                 MyBase.Tables.Add(New RACKSDataTable(ds.Tables("RACKS")))
             End If
-            If (Not (ds.Tables("Salidas de Material")) Is Nothing) Then
-                MyBase.Tables.Add(New Salidas_de_MaterialDataTable(ds.Tables("Salidas de Material")))
+            If (Not (ds.Tables("Salidas_Material")) Is Nothing) Then
+                MyBase.Tables.Add(New Salidas_MaterialDataTable(ds.Tables("Salidas_Material")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -115,9 +115,9 @@ Partial Public Class AlmacenBD
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Base_de_Datos_Clientes() As Base_de_Datos_ClientesDataTable
+    Public ReadOnly Property Base_Clientes() As Base_ClientesDataTable
         Get
-            Return Me.tableBase_de_Datos_Clientes
+            Return Me.tableBase_Clientes
         End Get
     End Property
     
@@ -125,9 +125,9 @@ Partial Public Class AlmacenBD
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Base_de_Datos_de_Empleados() As Base_de_Datos_de_EmpleadosDataTable
+    Public ReadOnly Property Base_Empleados() As Base_EmpleadosDataTable
         Get
-            Return Me.tableBase_de_Datos_de_Empleados
+            Return Me.tableBase_Empleados
         End Get
     End Property
     
@@ -135,9 +135,9 @@ Partial Public Class AlmacenBD
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Base_de_Datos_Material() As Base_de_Datos_MaterialDataTable
+    Public ReadOnly Property Base_Material() As Base_MaterialDataTable
         Get
-            Return Me.tableBase_de_Datos_Material
+            Return Me.tableBase_Material
         End Get
     End Property
     
@@ -145,9 +145,9 @@ Partial Public Class AlmacenBD
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Entradas_de_Material() As Entradas_de_MaterialDataTable
+    Public ReadOnly Property Entradas_Material() As Entradas_MaterialDataTable
         Get
-            Return Me.tableEntradas_de_Material
+            Return Me.tableEntradas_Material
         End Get
     End Property
     
@@ -165,9 +165,9 @@ Partial Public Class AlmacenBD
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Salidas_de_Material() As Salidas_de_MaterialDataTable
+    Public ReadOnly Property Salidas_Material() As Salidas_MaterialDataTable
         Get
-            Return Me.tableSalidas_de_Material
+            Return Me.tableSalidas_Material
         End Get
     End Property
     
@@ -238,23 +238,23 @@ Partial Public Class AlmacenBD
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("Base de Datos Clientes")) Is Nothing) Then
-                MyBase.Tables.Add(New Base_de_Datos_ClientesDataTable(ds.Tables("Base de Datos Clientes")))
+            If (Not (ds.Tables("Base_Clientes")) Is Nothing) Then
+                MyBase.Tables.Add(New Base_ClientesDataTable(ds.Tables("Base_Clientes")))
             End If
-            If (Not (ds.Tables("Base de Datos de Empleados")) Is Nothing) Then
-                MyBase.Tables.Add(New Base_de_Datos_de_EmpleadosDataTable(ds.Tables("Base de Datos de Empleados")))
+            If (Not (ds.Tables("Base_Empleados")) Is Nothing) Then
+                MyBase.Tables.Add(New Base_EmpleadosDataTable(ds.Tables("Base_Empleados")))
             End If
-            If (Not (ds.Tables("Base de Datos Material")) Is Nothing) Then
-                MyBase.Tables.Add(New Base_de_Datos_MaterialDataTable(ds.Tables("Base de Datos Material")))
+            If (Not (ds.Tables("Base_Material")) Is Nothing) Then
+                MyBase.Tables.Add(New Base_MaterialDataTable(ds.Tables("Base_Material")))
             End If
-            If (Not (ds.Tables("Entradas de Material")) Is Nothing) Then
-                MyBase.Tables.Add(New Entradas_de_MaterialDataTable(ds.Tables("Entradas de Material")))
+            If (Not (ds.Tables("Entradas_Material")) Is Nothing) Then
+                MyBase.Tables.Add(New Entradas_MaterialDataTable(ds.Tables("Entradas_Material")))
             End If
             If (Not (ds.Tables("RACKS")) Is Nothing) Then
                 MyBase.Tables.Add(New RACKSDataTable(ds.Tables("RACKS")))
             End If
-            If (Not (ds.Tables("Salidas de Material")) Is Nothing) Then
-                MyBase.Tables.Add(New Salidas_de_MaterialDataTable(ds.Tables("Salidas de Material")))
+            If (Not (ds.Tables("Salidas_Material")) Is Nothing) Then
+                MyBase.Tables.Add(New Salidas_MaterialDataTable(ds.Tables("Salidas_Material")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -288,28 +288,28 @@ Partial Public Class AlmacenBD
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tableBase_de_Datos_Clientes = CType(MyBase.Tables("Base de Datos Clientes"),Base_de_Datos_ClientesDataTable)
+        Me.tableBase_Clientes = CType(MyBase.Tables("Base_Clientes"),Base_ClientesDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableBase_de_Datos_Clientes) Is Nothing) Then
-                Me.tableBase_de_Datos_Clientes.InitVars
+            If (Not (Me.tableBase_Clientes) Is Nothing) Then
+                Me.tableBase_Clientes.InitVars
             End If
         End If
-        Me.tableBase_de_Datos_de_Empleados = CType(MyBase.Tables("Base de Datos de Empleados"),Base_de_Datos_de_EmpleadosDataTable)
+        Me.tableBase_Empleados = CType(MyBase.Tables("Base_Empleados"),Base_EmpleadosDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableBase_de_Datos_de_Empleados) Is Nothing) Then
-                Me.tableBase_de_Datos_de_Empleados.InitVars
+            If (Not (Me.tableBase_Empleados) Is Nothing) Then
+                Me.tableBase_Empleados.InitVars
             End If
         End If
-        Me.tableBase_de_Datos_Material = CType(MyBase.Tables("Base de Datos Material"),Base_de_Datos_MaterialDataTable)
+        Me.tableBase_Material = CType(MyBase.Tables("Base_Material"),Base_MaterialDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableBase_de_Datos_Material) Is Nothing) Then
-                Me.tableBase_de_Datos_Material.InitVars
+            If (Not (Me.tableBase_Material) Is Nothing) Then
+                Me.tableBase_Material.InitVars
             End If
         End If
-        Me.tableEntradas_de_Material = CType(MyBase.Tables("Entradas de Material"),Entradas_de_MaterialDataTable)
+        Me.tableEntradas_Material = CType(MyBase.Tables("Entradas_Material"),Entradas_MaterialDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableEntradas_de_Material) Is Nothing) Then
-                Me.tableEntradas_de_Material.InitVars
+            If (Not (Me.tableEntradas_Material) Is Nothing) Then
+                Me.tableEntradas_Material.InitVars
             End If
         End If
         Me.tableRACKS = CType(MyBase.Tables("RACKS"),RACKSDataTable)
@@ -318,10 +318,10 @@ Partial Public Class AlmacenBD
                 Me.tableRACKS.InitVars
             End If
         End If
-        Me.tableSalidas_de_Material = CType(MyBase.Tables("Salidas de Material"),Salidas_de_MaterialDataTable)
+        Me.tableSalidas_Material = CType(MyBase.Tables("Salidas_Material"),Salidas_MaterialDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableSalidas_de_Material) Is Nothing) Then
-                Me.tableSalidas_de_Material.InitVars
+            If (Not (Me.tableSalidas_Material) Is Nothing) Then
+                Me.tableSalidas_Material.InitVars
             End If
         End If
         Me._relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_ = Me.Relations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}")
@@ -339,51 +339,51 @@ Partial Public Class AlmacenBD
         Me.Namespace = "http://tempuri.org/AlmacenBD.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tableBase_de_Datos_Clientes = New Base_de_Datos_ClientesDataTable()
-        MyBase.Tables.Add(Me.tableBase_de_Datos_Clientes)
-        Me.tableBase_de_Datos_de_Empleados = New Base_de_Datos_de_EmpleadosDataTable()
-        MyBase.Tables.Add(Me.tableBase_de_Datos_de_Empleados)
-        Me.tableBase_de_Datos_Material = New Base_de_Datos_MaterialDataTable()
-        MyBase.Tables.Add(Me.tableBase_de_Datos_Material)
-        Me.tableEntradas_de_Material = New Entradas_de_MaterialDataTable()
-        MyBase.Tables.Add(Me.tableEntradas_de_Material)
+        Me.tableBase_Clientes = New Base_ClientesDataTable()
+        MyBase.Tables.Add(Me.tableBase_Clientes)
+        Me.tableBase_Empleados = New Base_EmpleadosDataTable()
+        MyBase.Tables.Add(Me.tableBase_Empleados)
+        Me.tableBase_Material = New Base_MaterialDataTable()
+        MyBase.Tables.Add(Me.tableBase_Material)
+        Me.tableEntradas_Material = New Entradas_MaterialDataTable()
+        MyBase.Tables.Add(Me.tableEntradas_Material)
         Me.tableRACKS = New RACKSDataTable()
         MyBase.Tables.Add(Me.tableRACKS)
-        Me.tableSalidas_de_Material = New Salidas_de_MaterialDataTable()
-        MyBase.Tables.Add(Me.tableSalidas_de_Material)
-        Me._relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_ = New Global.System.Data.DataRelation("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}", New Global.System.Data.DataColumn() {Me.tableBase_de_Datos_Material.CLAVEColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_de_Material.MATERIALColumn}, false)
+        Me.tableSalidas_Material = New Salidas_MaterialDataTable()
+        MyBase.Tables.Add(Me.tableSalidas_Material)
+        Me._relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_ = New Global.System.Data.DataRelation("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}", New Global.System.Data.DataColumn() {Me.tableBase_Material.CLAVEColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_Material.MATERIALColumn}, false)
         Me.Relations.Add(Me._relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_)
-        Me._relation_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_ = New Global.System.Data.DataRelation("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}", New Global.System.Data.DataColumn() {Me.tableBase_de_Datos_de_Empleados.NOMINAColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_de_Material.EMPLEADOColumn}, false)
+        Me._relation_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_ = New Global.System.Data.DataRelation("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}", New Global.System.Data.DataColumn() {Me.tableBase_Empleados.NOMINAColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_Material.EMPLEADOColumn}, false)
         Me.Relations.Add(Me._relation_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_)
-        Me._relation_F9EB98F8_A4A6_4906_B346_E557F553309D_ = New Global.System.Data.DataRelation("{F9EB98F8-A4A6-4906-B346-E557F553309D}", New Global.System.Data.DataColumn() {Me.tableBase_de_Datos_Clientes.CLAVEColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_de_Material.CLIENTEColumn}, false)
+        Me._relation_F9EB98F8_A4A6_4906_B346_E557F553309D_ = New Global.System.Data.DataRelation("{F9EB98F8-A4A6-4906-B346-E557F553309D}", New Global.System.Data.DataColumn() {Me.tableBase_Clientes.CLAVEColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_Material.CLIENTEColumn}, false)
         Me.Relations.Add(Me._relation_F9EB98F8_A4A6_4906_B346_E557F553309D_)
-        Me._relation_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_ = New Global.System.Data.DataRelation("{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}", New Global.System.Data.DataColumn() {Me.tableRACKS.NOMBREColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_de_Material.RACKColumn}, false)
+        Me._relation_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_ = New Global.System.Data.DataRelation("{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}", New Global.System.Data.DataColumn() {Me.tableRACKS.NOMBREColumn}, New Global.System.Data.DataColumn() {Me.tableEntradas_Material.RACKColumn}, false)
         Me.Relations.Add(Me._relation_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_)
-        Me._relation_9D5A0912_56D8_43F8_AD51_B38C710EACBE_ = New Global.System.Data.DataRelation("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}", New Global.System.Data.DataColumn() {Me.tableEntradas_de_Material.FOLIO_DE_ENTRADAColumn}, New Global.System.Data.DataColumn() {Me.tableSalidas_de_Material.FOLIO_DE_ENTRADAColumn}, false)
+        Me._relation_9D5A0912_56D8_43F8_AD51_B38C710EACBE_ = New Global.System.Data.DataRelation("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}", New Global.System.Data.DataColumn() {Me.tableEntradas_Material.FOLIO_DE_ENTRADAColumn}, New Global.System.Data.DataColumn() {Me.tableSalidas_Material.FOLIO_DE_ENTRADAColumn}, false)
         Me.Relations.Add(Me._relation_9D5A0912_56D8_43F8_AD51_B38C710EACBE_)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializeBase_de_Datos_Clientes() As Boolean
+    Private Function ShouldSerializeBase_Clientes() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializeBase_de_Datos_de_Empleados() As Boolean
+    Private Function ShouldSerializeBase_Empleados() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializeBase_de_Datos_Material() As Boolean
+    Private Function ShouldSerializeBase_Material() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializeEntradas_de_Material() As Boolean
+    Private Function ShouldSerializeEntradas_Material() As Boolean
         Return false
     End Function
     
@@ -395,7 +395,7 @@ Partial Public Class AlmacenBD
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializeSalidas_de_Material() As Boolean
+    Private Function ShouldSerializeSalidas_Material() As Boolean
         Return false
     End Function
     
@@ -458,30 +458,30 @@ Partial Public Class AlmacenBD
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub Base_de_Datos_ClientesRowChangeEventHandler(ByVal sender As Object, ByVal e As Base_de_Datos_ClientesRowChangeEvent)
+    Public Delegate Sub Base_ClientesRowChangeEventHandler(ByVal sender As Object, ByVal e As Base_ClientesRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub Base_de_Datos_de_EmpleadosRowChangeEventHandler(ByVal sender As Object, ByVal e As Base_de_Datos_de_EmpleadosRowChangeEvent)
+    Public Delegate Sub Base_EmpleadosRowChangeEventHandler(ByVal sender As Object, ByVal e As Base_EmpleadosRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub Base_de_Datos_MaterialRowChangeEventHandler(ByVal sender As Object, ByVal e As Base_de_Datos_MaterialRowChangeEvent)
+    Public Delegate Sub Base_MaterialRowChangeEventHandler(ByVal sender As Object, ByVal e As Base_MaterialRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub Entradas_de_MaterialRowChangeEventHandler(ByVal sender As Object, ByVal e As Entradas_de_MaterialRowChangeEvent)
+    Public Delegate Sub Entradas_MaterialRowChangeEventHandler(ByVal sender As Object, ByVal e As Entradas_MaterialRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub RACKSRowChangeEventHandler(ByVal sender As Object, ByVal e As RACKSRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub Salidas_de_MaterialRowChangeEventHandler(ByVal sender As Object, ByVal e As Salidas_de_MaterialRowChangeEvent)
+    Public Delegate Sub Salidas_MaterialRowChangeEventHandler(ByVal sender As Object, ByVal e As Salidas_MaterialRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class Base_de_Datos_ClientesDataTable
-        Inherits Global.System.Data.TypedTableBase(Of Base_de_Datos_ClientesRow)
+    Partial Public Class Base_ClientesDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Base_ClientesRow)
         
         Private columnCLAVE As Global.System.Data.DataColumn
         
@@ -499,7 +499,7 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Base de Datos Clientes"
+            Me.TableName = "Base_Clientes"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -589,50 +589,50 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As Base_de_Datos_ClientesRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Base_ClientesRow
             Get
-                Return CType(Me.Rows(index),Base_de_Datos_ClientesRow)
+                Return CType(Me.Rows(index),Base_ClientesRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_ClientesRowChanging As Base_de_Datos_ClientesRowChangeEventHandler
+        Public Event Base_ClientesRowChanging As Base_ClientesRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_ClientesRowChanged As Base_de_Datos_ClientesRowChangeEventHandler
+        Public Event Base_ClientesRowChanged As Base_ClientesRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_ClientesRowDeleting As Base_de_Datos_ClientesRowChangeEventHandler
+        Public Event Base_ClientesRowDeleting As Base_ClientesRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_ClientesRowDeleted As Base_de_Datos_ClientesRowChangeEventHandler
+        Public Event Base_ClientesRowDeleted As Base_ClientesRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddBase_de_Datos_ClientesRow(ByVal row As Base_de_Datos_ClientesRow)
+        Public Overloads Sub AddBase_ClientesRow(ByVal row As Base_ClientesRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddBase_de_Datos_ClientesRow(ByVal CLAVE As Integer, ByVal NOMBRE As String, ByVal DOMICILIO As String, ByVal TELEFONO As Integer, ByVal CODIGO_POSTAL As Integer, ByVal CONTACTO As String) As Base_de_Datos_ClientesRow
-            Dim rowBase_de_Datos_ClientesRow As Base_de_Datos_ClientesRow = CType(Me.NewRow,Base_de_Datos_ClientesRow)
+        Public Overloads Function AddBase_ClientesRow(ByVal CLAVE As Integer, ByVal NOMBRE As String, ByVal DOMICILIO As String, ByVal TELEFONO As Integer, ByVal CODIGO_POSTAL As Integer, ByVal CONTACTO As String) As Base_ClientesRow
+            Dim rowBase_ClientesRow As Base_ClientesRow = CType(Me.NewRow,Base_ClientesRow)
             Dim columnValuesArray() As Object = New Object() {CLAVE, NOMBRE, DOMICILIO, TELEFONO, CODIGO_POSTAL, CONTACTO}
-            rowBase_de_Datos_ClientesRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowBase_de_Datos_ClientesRow)
-            Return rowBase_de_Datos_ClientesRow
+            rowBase_ClientesRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowBase_ClientesRow)
+            Return rowBase_ClientesRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByCLAVE(ByVal CLAVE As Integer) As Base_de_Datos_ClientesRow
-            Return CType(Me.Rows.Find(New Object() {CLAVE}),Base_de_Datos_ClientesRow)
+        Public Function FindByCLAVE(ByVal CLAVE As Integer) As Base_ClientesRow
+            Return CType(Me.Rows.Find(New Object() {CLAVE}),Base_ClientesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As Base_de_Datos_ClientesDataTable = CType(MyBase.Clone,Base_de_Datos_ClientesDataTable)
+            Dim cln As Base_ClientesDataTable = CType(MyBase.Clone,Base_ClientesDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -640,7 +640,7 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New Base_de_Datos_ClientesDataTable()
+            Return New Base_ClientesDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -679,28 +679,28 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewBase_de_Datos_ClientesRow() As Base_de_Datos_ClientesRow
-            Return CType(Me.NewRow,Base_de_Datos_ClientesRow)
+        Public Function NewBase_ClientesRow() As Base_ClientesRow
+            Return CType(Me.NewRow,Base_ClientesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New Base_de_Datos_ClientesRow(builder)
+            Return New Base_ClientesRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(Base_de_Datos_ClientesRow)
+            Return GetType(Base_ClientesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.Base_de_Datos_ClientesRowChangedEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_ClientesRowChanged(Me, New Base_de_Datos_ClientesRowChangeEvent(CType(e.Row,Base_de_Datos_ClientesRow), e.Action))
+            If (Not (Me.Base_ClientesRowChangedEvent) Is Nothing) Then
+                RaiseEvent Base_ClientesRowChanged(Me, New Base_ClientesRowChangeEvent(CType(e.Row,Base_ClientesRow), e.Action))
             End If
         End Sub
         
@@ -708,8 +708,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.Base_de_Datos_ClientesRowChangingEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_ClientesRowChanging(Me, New Base_de_Datos_ClientesRowChangeEvent(CType(e.Row,Base_de_Datos_ClientesRow), e.Action))
+            If (Not (Me.Base_ClientesRowChangingEvent) Is Nothing) Then
+                RaiseEvent Base_ClientesRowChanging(Me, New Base_ClientesRowChangeEvent(CType(e.Row,Base_ClientesRow), e.Action))
             End If
         End Sub
         
@@ -717,8 +717,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.Base_de_Datos_ClientesRowDeletedEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_ClientesRowDeleted(Me, New Base_de_Datos_ClientesRowChangeEvent(CType(e.Row,Base_de_Datos_ClientesRow), e.Action))
+            If (Not (Me.Base_ClientesRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Base_ClientesRowDeleted(Me, New Base_ClientesRowChangeEvent(CType(e.Row,Base_ClientesRow), e.Action))
             End If
         End Sub
         
@@ -726,14 +726,14 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.Base_de_Datos_ClientesRowDeletingEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_ClientesRowDeleting(Me, New Base_de_Datos_ClientesRowChangeEvent(CType(e.Row,Base_de_Datos_ClientesRow), e.Action))
+            If (Not (Me.Base_ClientesRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Base_ClientesRowDeleting(Me, New Base_ClientesRowChangeEvent(CType(e.Row,Base_ClientesRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveBase_de_Datos_ClientesRow(ByVal row As Base_de_Datos_ClientesRow)
+        Public Sub RemoveBase_ClientesRow(ByVal row As Base_ClientesRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -760,7 +760,7 @@ Partial Public Class AlmacenBD
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "Base_de_Datos_ClientesDataTable"
+            attribute2.FixedValue = "Base_ClientesDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -809,8 +809,8 @@ Partial Public Class AlmacenBD
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class Base_de_Datos_de_EmpleadosDataTable
-        Inherits Global.System.Data.TypedTableBase(Of Base_de_Datos_de_EmpleadosRow)
+    Partial Public Class Base_EmpleadosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Base_EmpleadosRow)
         
         Private columnNOMINA As Global.System.Data.DataColumn
         
@@ -826,7 +826,7 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Base de Datos de Empleados"
+            Me.TableName = "Base_Empleados"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -908,50 +908,50 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As Base_de_Datos_de_EmpleadosRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Base_EmpleadosRow
             Get
-                Return CType(Me.Rows(index),Base_de_Datos_de_EmpleadosRow)
+                Return CType(Me.Rows(index),Base_EmpleadosRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_de_EmpleadosRowChanging As Base_de_Datos_de_EmpleadosRowChangeEventHandler
+        Public Event Base_EmpleadosRowChanging As Base_EmpleadosRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_de_EmpleadosRowChanged As Base_de_Datos_de_EmpleadosRowChangeEventHandler
+        Public Event Base_EmpleadosRowChanged As Base_EmpleadosRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_de_EmpleadosRowDeleting As Base_de_Datos_de_EmpleadosRowChangeEventHandler
+        Public Event Base_EmpleadosRowDeleting As Base_EmpleadosRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_de_EmpleadosRowDeleted As Base_de_Datos_de_EmpleadosRowChangeEventHandler
+        Public Event Base_EmpleadosRowDeleted As Base_EmpleadosRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddBase_de_Datos_de_EmpleadosRow(ByVal row As Base_de_Datos_de_EmpleadosRow)
+        Public Overloads Sub AddBase_EmpleadosRow(ByVal row As Base_EmpleadosRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddBase_de_Datos_de_EmpleadosRow(ByVal NOMINA As Integer, ByVal NOMBRE As String, ByVal TELEFONO As String, ByVal CARGO As String, ByVal Campo1 As String) As Base_de_Datos_de_EmpleadosRow
-            Dim rowBase_de_Datos_de_EmpleadosRow As Base_de_Datos_de_EmpleadosRow = CType(Me.NewRow,Base_de_Datos_de_EmpleadosRow)
+        Public Overloads Function AddBase_EmpleadosRow(ByVal NOMINA As Integer, ByVal NOMBRE As String, ByVal TELEFONO As String, ByVal CARGO As String, ByVal Campo1 As String) As Base_EmpleadosRow
+            Dim rowBase_EmpleadosRow As Base_EmpleadosRow = CType(Me.NewRow,Base_EmpleadosRow)
             Dim columnValuesArray() As Object = New Object() {NOMINA, NOMBRE, TELEFONO, CARGO, Campo1}
-            rowBase_de_Datos_de_EmpleadosRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowBase_de_Datos_de_EmpleadosRow)
-            Return rowBase_de_Datos_de_EmpleadosRow
+            rowBase_EmpleadosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowBase_EmpleadosRow)
+            Return rowBase_EmpleadosRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByNOMINA(ByVal NOMINA As Integer) As Base_de_Datos_de_EmpleadosRow
-            Return CType(Me.Rows.Find(New Object() {NOMINA}),Base_de_Datos_de_EmpleadosRow)
+        Public Function FindByNOMINA(ByVal NOMINA As Integer) As Base_EmpleadosRow
+            Return CType(Me.Rows.Find(New Object() {NOMINA}),Base_EmpleadosRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As Base_de_Datos_de_EmpleadosDataTable = CType(MyBase.Clone,Base_de_Datos_de_EmpleadosDataTable)
+            Dim cln As Base_EmpleadosDataTable = CType(MyBase.Clone,Base_EmpleadosDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -959,7 +959,7 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New Base_de_Datos_de_EmpleadosDataTable()
+            Return New Base_EmpleadosDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -996,28 +996,28 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewBase_de_Datos_de_EmpleadosRow() As Base_de_Datos_de_EmpleadosRow
-            Return CType(Me.NewRow,Base_de_Datos_de_EmpleadosRow)
+        Public Function NewBase_EmpleadosRow() As Base_EmpleadosRow
+            Return CType(Me.NewRow,Base_EmpleadosRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New Base_de_Datos_de_EmpleadosRow(builder)
+            Return New Base_EmpleadosRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(Base_de_Datos_de_EmpleadosRow)
+            Return GetType(Base_EmpleadosRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.Base_de_Datos_de_EmpleadosRowChangedEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_de_EmpleadosRowChanged(Me, New Base_de_Datos_de_EmpleadosRowChangeEvent(CType(e.Row,Base_de_Datos_de_EmpleadosRow), e.Action))
+            If (Not (Me.Base_EmpleadosRowChangedEvent) Is Nothing) Then
+                RaiseEvent Base_EmpleadosRowChanged(Me, New Base_EmpleadosRowChangeEvent(CType(e.Row,Base_EmpleadosRow), e.Action))
             End If
         End Sub
         
@@ -1025,8 +1025,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.Base_de_Datos_de_EmpleadosRowChangingEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_de_EmpleadosRowChanging(Me, New Base_de_Datos_de_EmpleadosRowChangeEvent(CType(e.Row,Base_de_Datos_de_EmpleadosRow), e.Action))
+            If (Not (Me.Base_EmpleadosRowChangingEvent) Is Nothing) Then
+                RaiseEvent Base_EmpleadosRowChanging(Me, New Base_EmpleadosRowChangeEvent(CType(e.Row,Base_EmpleadosRow), e.Action))
             End If
         End Sub
         
@@ -1034,8 +1034,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.Base_de_Datos_de_EmpleadosRowDeletedEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_de_EmpleadosRowDeleted(Me, New Base_de_Datos_de_EmpleadosRowChangeEvent(CType(e.Row,Base_de_Datos_de_EmpleadosRow), e.Action))
+            If (Not (Me.Base_EmpleadosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Base_EmpleadosRowDeleted(Me, New Base_EmpleadosRowChangeEvent(CType(e.Row,Base_EmpleadosRow), e.Action))
             End If
         End Sub
         
@@ -1043,14 +1043,14 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.Base_de_Datos_de_EmpleadosRowDeletingEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_de_EmpleadosRowDeleting(Me, New Base_de_Datos_de_EmpleadosRowChangeEvent(CType(e.Row,Base_de_Datos_de_EmpleadosRow), e.Action))
+            If (Not (Me.Base_EmpleadosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Base_EmpleadosRowDeleting(Me, New Base_EmpleadosRowChangeEvent(CType(e.Row,Base_EmpleadosRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveBase_de_Datos_de_EmpleadosRow(ByVal row As Base_de_Datos_de_EmpleadosRow)
+        Public Sub RemoveBase_EmpleadosRow(ByVal row As Base_EmpleadosRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -1077,7 +1077,7 @@ Partial Public Class AlmacenBD
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "Base_de_Datos_de_EmpleadosDataTable"
+            attribute2.FixedValue = "Base_EmpleadosDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -1126,8 +1126,8 @@ Partial Public Class AlmacenBD
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class Base_de_Datos_MaterialDataTable
-        Inherits Global.System.Data.TypedTableBase(Of Base_de_Datos_MaterialRow)
+    Partial Public Class Base_MaterialDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Base_MaterialRow)
         
         Private columnCLAVE As Global.System.Data.DataColumn
         
@@ -1137,7 +1137,7 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Base de Datos Material"
+            Me.TableName = "Base_Material"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -1195,50 +1195,50 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As Base_de_Datos_MaterialRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Base_MaterialRow
             Get
-                Return CType(Me.Rows(index),Base_de_Datos_MaterialRow)
+                Return CType(Me.Rows(index),Base_MaterialRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_MaterialRowChanging As Base_de_Datos_MaterialRowChangeEventHandler
+        Public Event Base_MaterialRowChanging As Base_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_MaterialRowChanged As Base_de_Datos_MaterialRowChangeEventHandler
+        Public Event Base_MaterialRowChanged As Base_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_MaterialRowDeleting As Base_de_Datos_MaterialRowChangeEventHandler
+        Public Event Base_MaterialRowDeleting As Base_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Base_de_Datos_MaterialRowDeleted As Base_de_Datos_MaterialRowChangeEventHandler
+        Public Event Base_MaterialRowDeleted As Base_MaterialRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddBase_de_Datos_MaterialRow(ByVal row As Base_de_Datos_MaterialRow)
+        Public Overloads Sub AddBase_MaterialRow(ByVal row As Base_MaterialRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddBase_de_Datos_MaterialRow(ByVal CLAVE As String, ByVal MATERIAL As String) As Base_de_Datos_MaterialRow
-            Dim rowBase_de_Datos_MaterialRow As Base_de_Datos_MaterialRow = CType(Me.NewRow,Base_de_Datos_MaterialRow)
+        Public Overloads Function AddBase_MaterialRow(ByVal CLAVE As String, ByVal MATERIAL As String) As Base_MaterialRow
+            Dim rowBase_MaterialRow As Base_MaterialRow = CType(Me.NewRow,Base_MaterialRow)
             Dim columnValuesArray() As Object = New Object() {CLAVE, MATERIAL}
-            rowBase_de_Datos_MaterialRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowBase_de_Datos_MaterialRow)
-            Return rowBase_de_Datos_MaterialRow
+            rowBase_MaterialRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowBase_MaterialRow)
+            Return rowBase_MaterialRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByCLAVE(ByVal CLAVE As String) As Base_de_Datos_MaterialRow
-            Return CType(Me.Rows.Find(New Object() {CLAVE}),Base_de_Datos_MaterialRow)
+        Public Function FindByCLAVE(ByVal CLAVE As String) As Base_MaterialRow
+            Return CType(Me.Rows.Find(New Object() {CLAVE}),Base_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As Base_de_Datos_MaterialDataTable = CType(MyBase.Clone,Base_de_Datos_MaterialDataTable)
+            Dim cln As Base_MaterialDataTable = CType(MyBase.Clone,Base_MaterialDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -1246,7 +1246,7 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New Base_de_Datos_MaterialDataTable()
+            Return New Base_MaterialDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1272,28 +1272,28 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewBase_de_Datos_MaterialRow() As Base_de_Datos_MaterialRow
-            Return CType(Me.NewRow,Base_de_Datos_MaterialRow)
+        Public Function NewBase_MaterialRow() As Base_MaterialRow
+            Return CType(Me.NewRow,Base_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New Base_de_Datos_MaterialRow(builder)
+            Return New Base_MaterialRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(Base_de_Datos_MaterialRow)
+            Return GetType(Base_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.Base_de_Datos_MaterialRowChangedEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_MaterialRowChanged(Me, New Base_de_Datos_MaterialRowChangeEvent(CType(e.Row,Base_de_Datos_MaterialRow), e.Action))
+            If (Not (Me.Base_MaterialRowChangedEvent) Is Nothing) Then
+                RaiseEvent Base_MaterialRowChanged(Me, New Base_MaterialRowChangeEvent(CType(e.Row,Base_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -1301,8 +1301,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.Base_de_Datos_MaterialRowChangingEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_MaterialRowChanging(Me, New Base_de_Datos_MaterialRowChangeEvent(CType(e.Row,Base_de_Datos_MaterialRow), e.Action))
+            If (Not (Me.Base_MaterialRowChangingEvent) Is Nothing) Then
+                RaiseEvent Base_MaterialRowChanging(Me, New Base_MaterialRowChangeEvent(CType(e.Row,Base_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -1310,8 +1310,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.Base_de_Datos_MaterialRowDeletedEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_MaterialRowDeleted(Me, New Base_de_Datos_MaterialRowChangeEvent(CType(e.Row,Base_de_Datos_MaterialRow), e.Action))
+            If (Not (Me.Base_MaterialRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Base_MaterialRowDeleted(Me, New Base_MaterialRowChangeEvent(CType(e.Row,Base_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -1319,14 +1319,14 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.Base_de_Datos_MaterialRowDeletingEvent) Is Nothing) Then
-                RaiseEvent Base_de_Datos_MaterialRowDeleting(Me, New Base_de_Datos_MaterialRowChangeEvent(CType(e.Row,Base_de_Datos_MaterialRow), e.Action))
+            If (Not (Me.Base_MaterialRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Base_MaterialRowDeleting(Me, New Base_MaterialRowChangeEvent(CType(e.Row,Base_MaterialRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveBase_de_Datos_MaterialRow(ByVal row As Base_de_Datos_MaterialRow)
+        Public Sub RemoveBase_MaterialRow(ByVal row As Base_MaterialRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -1353,7 +1353,7 @@ Partial Public Class AlmacenBD
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "Base_de_Datos_MaterialDataTable"
+            attribute2.FixedValue = "Base_MaterialDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -1402,16 +1402,14 @@ Partial Public Class AlmacenBD
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class Entradas_de_MaterialDataTable
-        Inherits Global.System.Data.TypedTableBase(Of Entradas_de_MaterialRow)
+    Partial Public Class Entradas_MaterialDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Entradas_MaterialRow)
         
         Private columnFOLIO_DE_ENTRADA As Global.System.Data.DataColumn
         
         Private columnFECHA As Global.System.Data.DataColumn
         
         Private columnCLIENTE As Global.System.Data.DataColumn
-        
-        Private columnFACTURA_O_REMISION As Global.System.Data.DataColumn
         
         Private columnORDEN_DE_COMPRA As Global.System.Data.DataColumn
         
@@ -1441,11 +1439,21 @@ Partial Public Class AlmacenBD
         
         Private columnEMPLEADO As Global.System.Data.DataColumn
         
+        Private columnFACTURA_O_REMISION As Global.System.Data.DataColumn
+        
+        Private columnExpr1 As Global.System.Data.DataColumn
+        
+        Private columnCOSTO As Global.System.Data.DataColumn
+        
+        Private columnCOSTO_KG As Global.System.Data.DataColumn
+        
+        Private columnAÑO As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Entradas de Material"
+            Me.TableName = "Entradas_Material"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -1497,14 +1505,6 @@ Partial Public Class AlmacenBD
         Public ReadOnly Property CLIENTEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCLIENTE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property FACTURA_O_REMISIONColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFACTURA_O_REMISION
             End Get
         End Property
         
@@ -1621,6 +1621,46 @@ Partial Public Class AlmacenBD
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FACTURA_O_REMISIONColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFACTURA_O_REMISION
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Expr1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExpr1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property COSTOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCOSTO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property COSTO_KGColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCOSTO_KG
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAÑO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1631,36 +1671,35 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As Entradas_de_MaterialRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Entradas_MaterialRow
             Get
-                Return CType(Me.Rows(index),Entradas_de_MaterialRow)
+                Return CType(Me.Rows(index),Entradas_MaterialRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Entradas_de_MaterialRowChanging As Entradas_de_MaterialRowChangeEventHandler
+        Public Event Entradas_MaterialRowChanging As Entradas_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Entradas_de_MaterialRowChanged As Entradas_de_MaterialRowChangeEventHandler
+        Public Event Entradas_MaterialRowChanged As Entradas_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Entradas_de_MaterialRowDeleting As Entradas_de_MaterialRowChangeEventHandler
+        Public Event Entradas_MaterialRowDeleting As Entradas_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Entradas_de_MaterialRowDeleted As Entradas_de_MaterialRowChangeEventHandler
+        Public Event Entradas_MaterialRowDeleted As Entradas_MaterialRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddEntradas_de_MaterialRow(ByVal row As Entradas_de_MaterialRow)
+        Public Overloads Sub AddEntradas_MaterialRow(ByVal row As Entradas_MaterialRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddEntradas_de_MaterialRow( _
+        Public Overloads Function AddEntradas_MaterialRow( _
                     ByVal FECHA As Date,  _
-                    ByVal _parentBase_de_Datos_ClientesRowBy_F9EB98F8_A4A6_4906_B346_E557F553309D_ As Base_de_Datos_ClientesRow,  _
-                    ByVal FACTURA_O_REMISION As String,  _
+                    ByVal _parentBase_ClientesRowBy_F9EB98F8_A4A6_4906_B346_E557F553309D_ As Base_ClientesRow,  _
                     ByVal ORDEN_DE_COMPRA As String,  _
                     ByVal CERTIFICADO_DE_CALIDAD As String,  _
                     ByVal CANTIDAD As String,  _
@@ -1668,42 +1707,47 @@ Partial Public Class AlmacenBD
                     ByVal LARGO As String,  _
                     ByVal ANCHO As String,  _
                     ByVal CALIBRE As String,  _
-                    ByVal _parentBase_de_Datos_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_ As Base_de_Datos_MaterialRow,  _
+                    ByVal _parentBase_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_ As Base_MaterialRow,  _
                     ByVal NUMERO_DE_PARTE As String,  _
                     ByVal _parentRACKSRowBy_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_ As RACKSRow,  _
                     ByVal NIVEL As String,  _
                     ByVal COMENTARIO As String,  _
                     ByVal LOTE As String,  _
-                    ByVal _parentBase_de_Datos_de_EmpleadosRowBy_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_ As Base_de_Datos_de_EmpleadosRow) As Entradas_de_MaterialRow
-            Dim rowEntradas_de_MaterialRow As Entradas_de_MaterialRow = CType(Me.NewRow,Entradas_de_MaterialRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, FECHA, Nothing, FACTURA_O_REMISION, ORDEN_DE_COMPRA, CERTIFICADO_DE_CALIDAD, CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, Nothing, NUMERO_DE_PARTE, Nothing, NIVEL, COMENTARIO, LOTE, Nothing}
-            If (Not (_parentBase_de_Datos_ClientesRowBy_F9EB98F8_A4A6_4906_B346_E557F553309D_) Is Nothing) Then
-                columnValuesArray(2) = _parentBase_de_Datos_ClientesRowBy_F9EB98F8_A4A6_4906_B346_E557F553309D_(0)
+                    ByVal _parentBase_EmpleadosRowBy_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_ As Base_EmpleadosRow,  _
+                    ByVal FACTURA_O_REMISION As String,  _
+                    ByVal Expr1 As String,  _
+                    ByVal COSTO As Integer,  _
+                    ByVal COSTO_KG As Integer,  _
+                    ByVal AÑO As Integer) As Entradas_MaterialRow
+            Dim rowEntradas_MaterialRow As Entradas_MaterialRow = CType(Me.NewRow,Entradas_MaterialRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, FECHA, Nothing, ORDEN_DE_COMPRA, CERTIFICADO_DE_CALIDAD, CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, Nothing, NUMERO_DE_PARTE, Nothing, NIVEL, COMENTARIO, LOTE, Nothing, FACTURA_O_REMISION, Expr1, COSTO, COSTO_KG, AÑO}
+            If (Not (_parentBase_ClientesRowBy_F9EB98F8_A4A6_4906_B346_E557F553309D_) Is Nothing) Then
+                columnValuesArray(2) = _parentBase_ClientesRowBy_F9EB98F8_A4A6_4906_B346_E557F553309D_(0)
             End If
-            If (Not (_parentBase_de_Datos_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_) Is Nothing) Then
-                columnValuesArray(11) = _parentBase_de_Datos_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_(0)
+            If (Not (_parentBase_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_) Is Nothing) Then
+                columnValuesArray(10) = _parentBase_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_(0)
             End If
             If (Not (_parentRACKSRowBy_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_) Is Nothing) Then
-                columnValuesArray(13) = _parentRACKSRowBy_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_(0)
+                columnValuesArray(12) = _parentRACKSRowBy_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_(0)
             End If
-            If (Not (_parentBase_de_Datos_de_EmpleadosRowBy_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_) Is Nothing) Then
-                columnValuesArray(17) = _parentBase_de_Datos_de_EmpleadosRowBy_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_(0)
+            If (Not (_parentBase_EmpleadosRowBy_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_) Is Nothing) Then
+                columnValuesArray(16) = _parentBase_EmpleadosRowBy_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_(0)
             End If
-            rowEntradas_de_MaterialRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowEntradas_de_MaterialRow)
-            Return rowEntradas_de_MaterialRow
+            rowEntradas_MaterialRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowEntradas_MaterialRow)
+            Return rowEntradas_MaterialRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByFOLIO_DE_ENTRADA(ByVal FOLIO_DE_ENTRADA As Integer) As Entradas_de_MaterialRow
-            Return CType(Me.Rows.Find(New Object() {FOLIO_DE_ENTRADA}),Entradas_de_MaterialRow)
+        Public Function FindByFOLIO_DE_ENTRADA(ByVal FOLIO_DE_ENTRADA As Integer) As Entradas_MaterialRow
+            Return CType(Me.Rows.Find(New Object() {FOLIO_DE_ENTRADA}),Entradas_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As Entradas_de_MaterialDataTable = CType(MyBase.Clone,Entradas_de_MaterialDataTable)
+            Dim cln As Entradas_MaterialDataTable = CType(MyBase.Clone,Entradas_MaterialDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -1711,7 +1755,7 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New Entradas_de_MaterialDataTable()
+            Return New Entradas_MaterialDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1720,7 +1764,6 @@ Partial Public Class AlmacenBD
             Me.columnFOLIO_DE_ENTRADA = MyBase.Columns("FOLIO DE ENTRADA")
             Me.columnFECHA = MyBase.Columns("FECHA")
             Me.columnCLIENTE = MyBase.Columns("CLIENTE")
-            Me.columnFACTURA_O_REMISION = MyBase.Columns("FACTURA O REMISION")
             Me.columnORDEN_DE_COMPRA = MyBase.Columns("ORDEN DE COMPRA")
             Me.columnCERTIFICADO_DE_CALIDAD = MyBase.Columns("CERTIFICADO DE CALIDAD")
             Me.columnCANTIDAD = MyBase.Columns("CANTIDAD")
@@ -1735,6 +1778,11 @@ Partial Public Class AlmacenBD
             Me.columnCOMENTARIO = MyBase.Columns("COMENTARIO")
             Me.columnLOTE = MyBase.Columns("LOTE")
             Me.columnEMPLEADO = MyBase.Columns("EMPLEADO")
+            Me.columnFACTURA_O_REMISION = MyBase.Columns("FACTURA O REMISION")
+            Me.columnExpr1 = MyBase.Columns("Expr1")
+            Me.columnCOSTO = MyBase.Columns("COSTO")
+            Me.columnCOSTO_KG = MyBase.Columns("COSTO_KG")
+            Me.columnAÑO = MyBase.Columns("AÑO")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1746,8 +1794,6 @@ Partial Public Class AlmacenBD
             MyBase.Columns.Add(Me.columnFECHA)
             Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCLIENTE)
-            Me.columnFACTURA_O_REMISION = New Global.System.Data.DataColumn("FACTURA O REMISION", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFACTURA_O_REMISION)
             Me.columnORDEN_DE_COMPRA = New Global.System.Data.DataColumn("ORDEN DE COMPRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnORDEN_DE_COMPRA)
             Me.columnCERTIFICADO_DE_CALIDAD = New Global.System.Data.DataColumn("CERTIFICADO DE CALIDAD", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1776,13 +1822,22 @@ Partial Public Class AlmacenBD
             MyBase.Columns.Add(Me.columnLOTE)
             Me.columnEMPLEADO = New Global.System.Data.DataColumn("EMPLEADO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEMPLEADO)
+            Me.columnFACTURA_O_REMISION = New Global.System.Data.DataColumn("FACTURA O REMISION", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFACTURA_O_REMISION)
+            Me.columnExpr1 = New Global.System.Data.DataColumn("Expr1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExpr1)
+            Me.columnCOSTO = New Global.System.Data.DataColumn("COSTO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCOSTO)
+            Me.columnCOSTO_KG = New Global.System.Data.DataColumn("COSTO_KG", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCOSTO_KG)
+            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAÑO)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnFOLIO_DE_ENTRADA}, true))
             Me.columnFOLIO_DE_ENTRADA.AutoIncrement = true
             Me.columnFOLIO_DE_ENTRADA.AutoIncrementSeed = -1
             Me.columnFOLIO_DE_ENTRADA.AutoIncrementStep = -1
             Me.columnFOLIO_DE_ENTRADA.AllowDBNull = false
             Me.columnFOLIO_DE_ENTRADA.Unique = true
-            Me.columnFACTURA_O_REMISION.MaxLength = 536870910
             Me.columnORDEN_DE_COMPRA.MaxLength = 536870910
             Me.columnCERTIFICADO_DE_CALIDAD.MaxLength = 536870910
             Me.columnCANTIDAD.MaxLength = 255
@@ -1796,32 +1851,34 @@ Partial Public Class AlmacenBD
             Me.columnNIVEL.MaxLength = 536870910
             Me.columnCOMENTARIO.MaxLength = 536870910
             Me.columnLOTE.MaxLength = 536870910
+            Me.columnFACTURA_O_REMISION.MaxLength = 536870910
+            Me.columnExpr1.MaxLength = 536870910
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewEntradas_de_MaterialRow() As Entradas_de_MaterialRow
-            Return CType(Me.NewRow,Entradas_de_MaterialRow)
+        Public Function NewEntradas_MaterialRow() As Entradas_MaterialRow
+            Return CType(Me.NewRow,Entradas_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New Entradas_de_MaterialRow(builder)
+            Return New Entradas_MaterialRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(Entradas_de_MaterialRow)
+            Return GetType(Entradas_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.Entradas_de_MaterialRowChangedEvent) Is Nothing) Then
-                RaiseEvent Entradas_de_MaterialRowChanged(Me, New Entradas_de_MaterialRowChangeEvent(CType(e.Row,Entradas_de_MaterialRow), e.Action))
+            If (Not (Me.Entradas_MaterialRowChangedEvent) Is Nothing) Then
+                RaiseEvent Entradas_MaterialRowChanged(Me, New Entradas_MaterialRowChangeEvent(CType(e.Row,Entradas_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -1829,8 +1886,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.Entradas_de_MaterialRowChangingEvent) Is Nothing) Then
-                RaiseEvent Entradas_de_MaterialRowChanging(Me, New Entradas_de_MaterialRowChangeEvent(CType(e.Row,Entradas_de_MaterialRow), e.Action))
+            If (Not (Me.Entradas_MaterialRowChangingEvent) Is Nothing) Then
+                RaiseEvent Entradas_MaterialRowChanging(Me, New Entradas_MaterialRowChangeEvent(CType(e.Row,Entradas_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -1838,8 +1895,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.Entradas_de_MaterialRowDeletedEvent) Is Nothing) Then
-                RaiseEvent Entradas_de_MaterialRowDeleted(Me, New Entradas_de_MaterialRowChangeEvent(CType(e.Row,Entradas_de_MaterialRow), e.Action))
+            If (Not (Me.Entradas_MaterialRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Entradas_MaterialRowDeleted(Me, New Entradas_MaterialRowChangeEvent(CType(e.Row,Entradas_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -1847,14 +1904,14 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.Entradas_de_MaterialRowDeletingEvent) Is Nothing) Then
-                RaiseEvent Entradas_de_MaterialRowDeleting(Me, New Entradas_de_MaterialRowChangeEvent(CType(e.Row,Entradas_de_MaterialRow), e.Action))
+            If (Not (Me.Entradas_MaterialRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Entradas_MaterialRowDeleting(Me, New Entradas_MaterialRowChangeEvent(CType(e.Row,Entradas_MaterialRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveEntradas_de_MaterialRow(ByVal row As Entradas_de_MaterialRow)
+        Public Sub RemoveEntradas_MaterialRow(ByVal row As Entradas_MaterialRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -1881,7 +1938,7 @@ Partial Public Class AlmacenBD
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "Entradas_de_MaterialDataTable"
+            attribute2.FixedValue = "Entradas_MaterialDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -2197,8 +2254,8 @@ Partial Public Class AlmacenBD
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class Salidas_de_MaterialDataTable
-        Inherits Global.System.Data.TypedTableBase(Of Salidas_de_MaterialRow)
+    Partial Public Class Salidas_MaterialDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Salidas_MaterialRow)
         
         Private columnFOLIO_DE_SALIDA As Global.System.Data.DataColumn
         
@@ -2222,7 +2279,7 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Salidas de Material"
+            Me.TableName = "Salidas_Material"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -2336,53 +2393,53 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As Salidas_de_MaterialRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Salidas_MaterialRow
             Get
-                Return CType(Me.Rows(index),Salidas_de_MaterialRow)
+                Return CType(Me.Rows(index),Salidas_MaterialRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Salidas_de_MaterialRowChanging As Salidas_de_MaterialRowChangeEventHandler
+        Public Event Salidas_MaterialRowChanging As Salidas_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Salidas_de_MaterialRowChanged As Salidas_de_MaterialRowChangeEventHandler
+        Public Event Salidas_MaterialRowChanged As Salidas_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Salidas_de_MaterialRowDeleting As Salidas_de_MaterialRowChangeEventHandler
+        Public Event Salidas_MaterialRowDeleting As Salidas_MaterialRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event Salidas_de_MaterialRowDeleted As Salidas_de_MaterialRowChangeEventHandler
+        Public Event Salidas_MaterialRowDeleted As Salidas_MaterialRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddSalidas_de_MaterialRow(ByVal row As Salidas_de_MaterialRow)
+        Public Overloads Sub AddSalidas_MaterialRow(ByVal row As Salidas_MaterialRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddSalidas_de_MaterialRow(ByVal CANTIDAD As Integer, ByVal _parentEntradas_de_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_ As Entradas_de_MaterialRow, ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String) As Salidas_de_MaterialRow
-            Dim rowSalidas_de_MaterialRow As Salidas_de_MaterialRow = CType(Me.NewRow,Salidas_de_MaterialRow)
+        Public Overloads Function AddSalidas_MaterialRow(ByVal CANTIDAD As Integer, ByVal _parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_ As Entradas_MaterialRow, ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String) As Salidas_MaterialRow
+            Dim rowSalidas_MaterialRow As Salidas_MaterialRow = CType(Me.NewRow,Salidas_MaterialRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, CANTIDAD, Nothing, FECHA, PEDIDO_INTERNO, ORDEN_DE_FABRICACION, MAQUINA, SOLICITANTE, AUTORIZACION}
-            If (Not (_parentEntradas_de_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_) Is Nothing) Then
-                columnValuesArray(2) = _parentEntradas_de_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_(0)
+            If (Not (_parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_) Is Nothing) Then
+                columnValuesArray(2) = _parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_(0)
             End If
-            rowSalidas_de_MaterialRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowSalidas_de_MaterialRow)
-            Return rowSalidas_de_MaterialRow
+            rowSalidas_MaterialRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowSalidas_MaterialRow)
+            Return rowSalidas_MaterialRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByFOLIO_DE_SALIDA(ByVal FOLIO_DE_SALIDA As Integer) As Salidas_de_MaterialRow
-            Return CType(Me.Rows.Find(New Object() {FOLIO_DE_SALIDA}),Salidas_de_MaterialRow)
+        Public Function FindByFOLIO_DE_SALIDA(ByVal FOLIO_DE_SALIDA As Integer) As Salidas_MaterialRow
+            Return CType(Me.Rows.Find(New Object() {FOLIO_DE_SALIDA}),Salidas_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As Salidas_de_MaterialDataTable = CType(MyBase.Clone,Salidas_de_MaterialDataTable)
+            Dim cln As Salidas_MaterialDataTable = CType(MyBase.Clone,Salidas_MaterialDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -2390,7 +2447,7 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New Salidas_de_MaterialDataTable()
+            Return New Salidas_MaterialDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2444,28 +2501,28 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewSalidas_de_MaterialRow() As Salidas_de_MaterialRow
-            Return CType(Me.NewRow,Salidas_de_MaterialRow)
+        Public Function NewSalidas_MaterialRow() As Salidas_MaterialRow
+            Return CType(Me.NewRow,Salidas_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New Salidas_de_MaterialRow(builder)
+            Return New Salidas_MaterialRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(Salidas_de_MaterialRow)
+            Return GetType(Salidas_MaterialRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.Salidas_de_MaterialRowChangedEvent) Is Nothing) Then
-                RaiseEvent Salidas_de_MaterialRowChanged(Me, New Salidas_de_MaterialRowChangeEvent(CType(e.Row,Salidas_de_MaterialRow), e.Action))
+            If (Not (Me.Salidas_MaterialRowChangedEvent) Is Nothing) Then
+                RaiseEvent Salidas_MaterialRowChanged(Me, New Salidas_MaterialRowChangeEvent(CType(e.Row,Salidas_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -2473,8 +2530,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.Salidas_de_MaterialRowChangingEvent) Is Nothing) Then
-                RaiseEvent Salidas_de_MaterialRowChanging(Me, New Salidas_de_MaterialRowChangeEvent(CType(e.Row,Salidas_de_MaterialRow), e.Action))
+            If (Not (Me.Salidas_MaterialRowChangingEvent) Is Nothing) Then
+                RaiseEvent Salidas_MaterialRowChanging(Me, New Salidas_MaterialRowChangeEvent(CType(e.Row,Salidas_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -2482,8 +2539,8 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.Salidas_de_MaterialRowDeletedEvent) Is Nothing) Then
-                RaiseEvent Salidas_de_MaterialRowDeleted(Me, New Salidas_de_MaterialRowChangeEvent(CType(e.Row,Salidas_de_MaterialRow), e.Action))
+            If (Not (Me.Salidas_MaterialRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Salidas_MaterialRowDeleted(Me, New Salidas_MaterialRowChangeEvent(CType(e.Row,Salidas_MaterialRow), e.Action))
             End If
         End Sub
         
@@ -2491,14 +2548,14 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.Salidas_de_MaterialRowDeletingEvent) Is Nothing) Then
-                RaiseEvent Salidas_de_MaterialRowDeleting(Me, New Salidas_de_MaterialRowChangeEvent(CType(e.Row,Salidas_de_MaterialRow), e.Action))
+            If (Not (Me.Salidas_MaterialRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Salidas_MaterialRowDeleting(Me, New Salidas_MaterialRowChangeEvent(CType(e.Row,Salidas_MaterialRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveSalidas_de_MaterialRow(ByVal row As Salidas_de_MaterialRow)
+        Public Sub RemoveSalidas_MaterialRow(ByVal row As Salidas_MaterialRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -2525,7 +2582,7 @@ Partial Public Class AlmacenBD
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "Salidas_de_MaterialDataTable"
+            attribute2.FixedValue = "Salidas_MaterialDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -2572,26 +2629,26 @@ Partial Public Class AlmacenBD
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class Base_de_Datos_ClientesRow
+    Partial Public Class Base_ClientesRow
         Inherits Global.System.Data.DataRow
         
-        Private tableBase_de_Datos_Clientes As Base_de_Datos_ClientesDataTable
+        Private tableBase_Clientes As Base_ClientesDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableBase_de_Datos_Clientes = CType(Me.Table,Base_de_Datos_ClientesDataTable)
+            Me.tableBase_Clientes = CType(Me.Table,Base_ClientesDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property CLAVE() As Integer
             Get
-                Return CType(Me(Me.tableBase_de_Datos_Clientes.CLAVEColumn),Integer)
+                Return CType(Me(Me.tableBase_Clientes.CLAVEColumn),Integer)
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Clientes.CLAVEColumn) = value
+                Me(Me.tableBase_Clientes.CLAVEColumn) = value
             End Set
         End Property
         
@@ -2600,13 +2657,13 @@ Partial Public Class AlmacenBD
         Public Property NOMBRE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_Clientes.NOMBREColumn),String)
+                    Return CType(Me(Me.tableBase_Clientes.NOMBREColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE' de la tabla 'Base de Datos Clientes' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE' de la tabla 'Base_Clientes' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Clientes.NOMBREColumn) = value
+                Me(Me.tableBase_Clientes.NOMBREColumn) = value
             End Set
         End Property
         
@@ -2615,14 +2672,13 @@ Partial Public Class AlmacenBD
         Public Property DOMICILIO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_Clientes.DOMICILIOColumn),String)
+                    Return CType(Me(Me.tableBase_Clientes.DOMICILIOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DOMICILIO' de la tabla 'Base de Datos Clientes' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DOMICILIO' de la tabla 'Base_Clientes' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Clientes.DOMICILIOColumn) = value
+                Me(Me.tableBase_Clientes.DOMICILIOColumn) = value
             End Set
         End Property
         
@@ -2631,14 +2687,13 @@ Partial Public Class AlmacenBD
         Public Property TELEFONO() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_Clientes.TELEFONOColumn),Integer)
+                    Return CType(Me(Me.tableBase_Clientes.TELEFONOColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TELEFONO' de la tabla 'Base de Datos Clientes' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TELEFONO' de la tabla 'Base_Clientes' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Clientes.TELEFONOColumn) = value
+                Me(Me.tableBase_Clientes.TELEFONOColumn) = value
             End Set
         End Property
         
@@ -2647,14 +2702,13 @@ Partial Public Class AlmacenBD
         Public Property CODIGO_POSTAL() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_Clientes.CODIGO_POSTALColumn),Integer)
+                    Return CType(Me(Me.tableBase_Clientes.CODIGO_POSTALColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO POSTAL' de la tabla 'Base de Datos Clientes' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO POSTAL' de la tabla 'Base_Clientes' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Clientes.CODIGO_POSTALColumn) = value
+                Me(Me.tableBase_Clientes.CODIGO_POSTALColumn) = value
             End Set
         End Property
         
@@ -2663,84 +2717,83 @@ Partial Public Class AlmacenBD
         Public Property CONTACTO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_Clientes.CONTACTOColumn),String)
+                    Return CType(Me(Me.tableBase_Clientes.CONTACTOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CONTACTO' de la tabla 'Base de Datos Clientes' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CONTACTO' de la tabla 'Base_Clientes' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Clientes.CONTACTOColumn) = value
+                Me(Me.tableBase_Clientes.CONTACTOColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNOMBRENull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_Clientes.NOMBREColumn)
+            Return Me.IsNull(Me.tableBase_Clientes.NOMBREColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNOMBRENull()
-            Me(Me.tableBase_de_Datos_Clientes.NOMBREColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Clientes.NOMBREColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsDOMICILIONull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_Clientes.DOMICILIOColumn)
+            Return Me.IsNull(Me.tableBase_Clientes.DOMICILIOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetDOMICILIONull()
-            Me(Me.tableBase_de_Datos_Clientes.DOMICILIOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Clientes.DOMICILIOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsTELEFONONull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_Clientes.TELEFONOColumn)
+            Return Me.IsNull(Me.tableBase_Clientes.TELEFONOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetTELEFONONull()
-            Me(Me.tableBase_de_Datos_Clientes.TELEFONOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Clientes.TELEFONOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCODIGO_POSTALNull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_Clientes.CODIGO_POSTALColumn)
+            Return Me.IsNull(Me.tableBase_Clientes.CODIGO_POSTALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCODIGO_POSTALNull()
-            Me(Me.tableBase_de_Datos_Clientes.CODIGO_POSTALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Clientes.CODIGO_POSTALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCONTACTONull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_Clientes.CONTACTOColumn)
+            Return Me.IsNull(Me.tableBase_Clientes.CONTACTOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCONTACTONull()
-            Me(Me.tableBase_de_Datos_Clientes.CONTACTOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Clientes.CONTACTOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetEntradas_de_MaterialRows() As Entradas_de_MaterialRow()
+        Public Function GetEntradas_MaterialRows() As Entradas_MaterialRow()
             If (Me.Table.ChildRelations("{F9EB98F8-A4A6-4906-B346-E557F553309D}") Is Nothing) Then
-                Return New Entradas_de_MaterialRow(-1) {}
+                Return New Entradas_MaterialRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{F9EB98F8-A4A6-4906-B346-E557F553309D}")),Entradas_de_MaterialRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{F9EB98F8-A4A6-4906-B346-E557F553309D}")),Entradas_MaterialRow())
             End If
         End Function
     End Class
@@ -2748,26 +2801,26 @@ Partial Public Class AlmacenBD
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class Base_de_Datos_de_EmpleadosRow
+    Partial Public Class Base_EmpleadosRow
         Inherits Global.System.Data.DataRow
         
-        Private tableBase_de_Datos_de_Empleados As Base_de_Datos_de_EmpleadosDataTable
+        Private tableBase_Empleados As Base_EmpleadosDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableBase_de_Datos_de_Empleados = CType(Me.Table,Base_de_Datos_de_EmpleadosDataTable)
+            Me.tableBase_Empleados = CType(Me.Table,Base_EmpleadosDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property NOMINA() As Integer
             Get
-                Return CType(Me(Me.tableBase_de_Datos_de_Empleados.NOMINAColumn),Integer)
+                Return CType(Me(Me.tableBase_Empleados.NOMINAColumn),Integer)
             End Get
             Set
-                Me(Me.tableBase_de_Datos_de_Empleados.NOMINAColumn) = value
+                Me(Me.tableBase_Empleados.NOMINAColumn) = value
             End Set
         End Property
         
@@ -2776,14 +2829,13 @@ Partial Public Class AlmacenBD
         Public Property NOMBRE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_de_Empleados.NOMBREColumn),String)
+                    Return CType(Me(Me.tableBase_Empleados.NOMBREColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE' de la tabla 'Base de Datos de Empleados' es DBNul"& _ 
-                            "l.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE' de la tabla 'Base_Empleados' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_de_Empleados.NOMBREColumn) = value
+                Me(Me.tableBase_Empleados.NOMBREColumn) = value
             End Set
         End Property
         
@@ -2792,14 +2844,13 @@ Partial Public Class AlmacenBD
         Public Property TELEFONO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_de_Empleados.TELEFONOColumn),String)
+                    Return CType(Me(Me.tableBase_Empleados.TELEFONOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TELEFONO' de la tabla 'Base de Datos de Empleados' es DBN"& _ 
-                            "ull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TELEFONO' de la tabla 'Base_Empleados' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_de_Empleados.TELEFONOColumn) = value
+                Me(Me.tableBase_Empleados.TELEFONOColumn) = value
             End Set
         End Property
         
@@ -2808,14 +2859,13 @@ Partial Public Class AlmacenBD
         Public Property CARGO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_de_Empleados.CARGOColumn),String)
+                    Return CType(Me(Me.tableBase_Empleados.CARGOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CARGO' de la tabla 'Base de Datos de Empleados' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CARGO' de la tabla 'Base_Empleados' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_de_Empleados.CARGOColumn) = value
+                Me(Me.tableBase_Empleados.CARGOColumn) = value
             End Set
         End Property
         
@@ -2824,72 +2874,71 @@ Partial Public Class AlmacenBD
         Public Property Campo1() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_de_Empleados.Campo1Column),String)
+                    Return CType(Me(Me.tableBase_Empleados.Campo1Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Campo1' de la tabla 'Base de Datos de Empleados' es DBNul"& _ 
-                            "l.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Campo1' de la tabla 'Base_Empleados' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_de_Empleados.Campo1Column) = value
+                Me(Me.tableBase_Empleados.Campo1Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNOMBRENull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_de_Empleados.NOMBREColumn)
+            Return Me.IsNull(Me.tableBase_Empleados.NOMBREColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNOMBRENull()
-            Me(Me.tableBase_de_Datos_de_Empleados.NOMBREColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Empleados.NOMBREColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsTELEFONONull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_de_Empleados.TELEFONOColumn)
+            Return Me.IsNull(Me.tableBase_Empleados.TELEFONOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetTELEFONONull()
-            Me(Me.tableBase_de_Datos_de_Empleados.TELEFONOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Empleados.TELEFONOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCARGONull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_de_Empleados.CARGOColumn)
+            Return Me.IsNull(Me.tableBase_Empleados.CARGOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCARGONull()
-            Me(Me.tableBase_de_Datos_de_Empleados.CARGOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Empleados.CARGOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCampo1Null() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_de_Empleados.Campo1Column)
+            Return Me.IsNull(Me.tableBase_Empleados.Campo1Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCampo1Null()
-            Me(Me.tableBase_de_Datos_de_Empleados.Campo1Column) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Empleados.Campo1Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetEntradas_de_MaterialRows() As Entradas_de_MaterialRow()
+        Public Function GetEntradas_MaterialRows() As Entradas_MaterialRow()
             If (Me.Table.ChildRelations("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}") Is Nothing) Then
-                Return New Entradas_de_MaterialRow(-1) {}
+                Return New Entradas_MaterialRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}")),Entradas_de_MaterialRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}")),Entradas_MaterialRow())
             End If
         End Function
     End Class
@@ -2897,26 +2946,26 @@ Partial Public Class AlmacenBD
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class Base_de_Datos_MaterialRow
+    Partial Public Class Base_MaterialRow
         Inherits Global.System.Data.DataRow
         
-        Private tableBase_de_Datos_Material As Base_de_Datos_MaterialDataTable
+        Private tableBase_Material As Base_MaterialDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableBase_de_Datos_Material = CType(Me.Table,Base_de_Datos_MaterialDataTable)
+            Me.tableBase_Material = CType(Me.Table,Base_MaterialDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property CLAVE() As String
             Get
-                Return CType(Me(Me.tableBase_de_Datos_Material.CLAVEColumn),String)
+                Return CType(Me(Me.tableBase_Material.CLAVEColumn),String)
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Material.CLAVEColumn) = value
+                Me(Me.tableBase_Material.CLAVEColumn) = value
             End Set
         End Property
         
@@ -2925,36 +2974,35 @@ Partial Public Class AlmacenBD
         Public Property MATERIAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBase_de_Datos_Material.MATERIALColumn),String)
+                    Return CType(Me(Me.tableBase_Material.MATERIALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MATERIAL' de la tabla 'Base de Datos Material' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MATERIAL' de la tabla 'Base_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableBase_de_Datos_Material.MATERIALColumn) = value
+                Me(Me.tableBase_Material.MATERIALColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsMATERIALNull() As Boolean
-            Return Me.IsNull(Me.tableBase_de_Datos_Material.MATERIALColumn)
+            Return Me.IsNull(Me.tableBase_Material.MATERIALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMATERIALNull()
-            Me(Me.tableBase_de_Datos_Material.MATERIALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableBase_Material.MATERIALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetEntradas_de_MaterialRows() As Entradas_de_MaterialRow()
+        Public Function GetEntradas_MaterialRows() As Entradas_MaterialRow()
             If (Me.Table.ChildRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}") Is Nothing) Then
-                Return New Entradas_de_MaterialRow(-1) {}
+                Return New Entradas_MaterialRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}")),Entradas_de_MaterialRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}")),Entradas_MaterialRow())
             End If
         End Function
     End Class
@@ -2962,26 +3010,26 @@ Partial Public Class AlmacenBD
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class Entradas_de_MaterialRow
+    Partial Public Class Entradas_MaterialRow
         Inherits Global.System.Data.DataRow
         
-        Private tableEntradas_de_Material As Entradas_de_MaterialDataTable
+        Private tableEntradas_Material As Entradas_MaterialDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableEntradas_de_Material = CType(Me.Table,Entradas_de_MaterialDataTable)
+            Me.tableEntradas_Material = CType(Me.Table,Entradas_MaterialDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property FOLIO_DE_ENTRADA() As Integer
             Get
-                Return CType(Me(Me.tableEntradas_de_Material.FOLIO_DE_ENTRADAColumn),Integer)
+                Return CType(Me(Me.tableEntradas_Material.FOLIO_DE_ENTRADAColumn),Integer)
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.FOLIO_DE_ENTRADAColumn) = value
+                Me(Me.tableEntradas_Material.FOLIO_DE_ENTRADAColumn) = value
             End Set
         End Property
         
@@ -2990,13 +3038,13 @@ Partial Public Class AlmacenBD
         Public Property FECHA() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.FECHAColumn),Date)
+                    Return CType(Me(Me.tableEntradas_Material.FECHAColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.FECHAColumn) = value
+                Me(Me.tableEntradas_Material.FECHAColumn) = value
             End Set
         End Property
         
@@ -3005,29 +3053,13 @@ Partial Public Class AlmacenBD
         Public Property CLIENTE() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.CLIENTEColumn),Integer)
+                    Return CType(Me(Me.tableEntradas_Material.CLIENTEColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.CLIENTEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property FACTURA_O_REMISION() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.FACTURA_O_REMISIONColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FACTURA O REMISION' de la tabla 'Entradas de Material' es"& _ 
-                            " DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableEntradas_de_Material.FACTURA_O_REMISIONColumn) = value
+                Me(Me.tableEntradas_Material.CLIENTEColumn) = value
             End Set
         End Property
         
@@ -3036,14 +3068,14 @@ Partial Public Class AlmacenBD
         Public Property ORDEN_DE_COMPRA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.ORDEN_DE_COMPRAColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.ORDEN_DE_COMPRAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ORDEN DE COMPRA' de la tabla 'Entradas de Material' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ORDEN DE COMPRA' de la tabla 'Entradas_Material' es DBNul"& _ 
+                            "l.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.ORDEN_DE_COMPRAColumn) = value
+                Me(Me.tableEntradas_Material.ORDEN_DE_COMPRAColumn) = value
             End Set
         End Property
         
@@ -3052,14 +3084,14 @@ Partial Public Class AlmacenBD
         Public Property CERTIFICADO_DE_CALIDAD() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.CERTIFICADO_DE_CALIDADColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.CERTIFICADO_DE_CALIDADColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CERTIFICADO DE CALIDAD' de la tabla 'Entradas de Material"& _ 
-                            "' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CERTIFICADO DE CALIDAD' de la tabla 'Entradas_Material' e"& _ 
+                            "s DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.CERTIFICADO_DE_CALIDADColumn) = value
+                Me(Me.tableEntradas_Material.CERTIFICADO_DE_CALIDADColumn) = value
             End Set
         End Property
         
@@ -3068,13 +3100,13 @@ Partial Public Class AlmacenBD
         Public Property CANTIDAD() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.CANTIDADColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.CANTIDADColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.CANTIDADColumn) = value
+                Me(Me.tableEntradas_Material.CANTIDADColumn) = value
             End Set
         End Property
         
@@ -3083,13 +3115,13 @@ Partial Public Class AlmacenBD
         Public Property UNIDAD() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.UNIDADColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.UNIDADColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'UNIDAD' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'UNIDAD' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.UNIDADColumn) = value
+                Me(Me.tableEntradas_Material.UNIDADColumn) = value
             End Set
         End Property
         
@@ -3098,13 +3130,13 @@ Partial Public Class AlmacenBD
         Public Property LARGO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.LARGOColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.LARGOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LARGO' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LARGO' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.LARGOColumn) = value
+                Me(Me.tableEntradas_Material.LARGOColumn) = value
             End Set
         End Property
         
@@ -3113,13 +3145,13 @@ Partial Public Class AlmacenBD
         Public Property ANCHO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.ANCHOColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.ANCHOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ANCHO' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ANCHO' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.ANCHOColumn) = value
+                Me(Me.tableEntradas_Material.ANCHOColumn) = value
             End Set
         End Property
         
@@ -3128,13 +3160,13 @@ Partial Public Class AlmacenBD
         Public Property CALIBRE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.CALIBREColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.CALIBREColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIBRE' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIBRE' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.CALIBREColumn) = value
+                Me(Me.tableEntradas_Material.CALIBREColumn) = value
             End Set
         End Property
         
@@ -3143,13 +3175,13 @@ Partial Public Class AlmacenBD
         Public Property MATERIAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.MATERIALColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.MATERIALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MATERIAL' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MATERIAL' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.MATERIALColumn) = value
+                Me(Me.tableEntradas_Material.MATERIALColumn) = value
             End Set
         End Property
         
@@ -3158,14 +3190,14 @@ Partial Public Class AlmacenBD
         Public Property NUMERO_DE_PARTE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.NUMERO_DE_PARTEColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.NUMERO_DE_PARTEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NUMERO DE PARTE' de la tabla 'Entradas de Material' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NUMERO DE PARTE' de la tabla 'Entradas_Material' es DBNul"& _ 
+                            "l.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.NUMERO_DE_PARTEColumn) = value
+                Me(Me.tableEntradas_Material.NUMERO_DE_PARTEColumn) = value
             End Set
         End Property
         
@@ -3174,13 +3206,13 @@ Partial Public Class AlmacenBD
         Public Property RACK() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.RACKColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.RACKColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RACK' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RACK' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.RACKColumn) = value
+                Me(Me.tableEntradas_Material.RACKColumn) = value
             End Set
         End Property
         
@@ -3189,13 +3221,13 @@ Partial Public Class AlmacenBD
         Public Property NIVEL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.NIVELColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.NIVELColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NIVEL' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NIVEL' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.NIVELColumn) = value
+                Me(Me.tableEntradas_Material.NIVELColumn) = value
             End Set
         End Property
         
@@ -3204,14 +3236,13 @@ Partial Public Class AlmacenBD
         Public Property COMENTARIO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.COMENTARIOColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.COMENTARIOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COMENTARIO' de la tabla 'Entradas de Material' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COMENTARIO' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.COMENTARIOColumn) = value
+                Me(Me.tableEntradas_Material.COMENTARIOColumn) = value
             End Set
         End Property
         
@@ -3220,13 +3251,13 @@ Partial Public Class AlmacenBD
         Public Property LOTE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.LOTEColumn),String)
+                    Return CType(Me(Me.tableEntradas_Material.LOTEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LOTE' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LOTE' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.LOTEColumn) = value
+                Me(Me.tableEntradas_Material.LOTEColumn) = value
             End Set
         End Property
         
@@ -3235,21 +3266,97 @@ Partial Public Class AlmacenBD
         Public Property EMPLEADO() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableEntradas_de_Material.EMPLEADOColumn),Integer)
+                    Return CType(Me(Me.tableEntradas_Material.EMPLEADOColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EMPLEADO' de la tabla 'Entradas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EMPLEADO' de la tabla 'Entradas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableEntradas_de_Material.EMPLEADOColumn) = value
+                Me(Me.tableEntradas_Material.EMPLEADOColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Base_de_Datos_MaterialRow() As Base_de_Datos_MaterialRow
+        Public Property FACTURA_O_REMISION() As String
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}")),Base_de_Datos_MaterialRow)
+                Try 
+                    Return CType(Me(Me.tableEntradas_Material.FACTURA_O_REMISIONColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FACTURA O REMISION' de la tabla 'Entradas_Material' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEntradas_Material.FACTURA_O_REMISIONColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Expr1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEntradas_Material.Expr1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Expr1' de la tabla 'Entradas_Material' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEntradas_Material.Expr1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property COSTO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableEntradas_Material.COSTOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COSTO' de la tabla 'Entradas_Material' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEntradas_Material.COSTOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property COSTO_KG() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableEntradas_Material.COSTO_KGColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COSTO_KG' de la tabla 'Entradas_Material' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEntradas_Material.COSTO_KGColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AÑO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableEntradas_Material.AÑOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Entradas_Material' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEntradas_Material.AÑOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Base_de_Datos_MaterialRow() As Base_MaterialRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}")),Base_MaterialRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}"))
@@ -3258,9 +3365,9 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Base_de_Datos_de_EmpleadosRow() As Base_de_Datos_de_EmpleadosRow
+        Public Property Base_de_Datos_de_EmpleadosRow() As Base_EmpleadosRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}")),Base_de_Datos_de_EmpleadosRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}")),Base_EmpleadosRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}"))
@@ -3269,9 +3376,9 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Base_de_Datos_ClientesRow() As Base_de_Datos_ClientesRow
+        Public Property Base_de_Datos_ClientesRow() As Base_ClientesRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{F9EB98F8-A4A6-4906-B346-E557F553309D}")),Base_de_Datos_ClientesRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{F9EB98F8-A4A6-4906-B346-E557F553309D}")),Base_ClientesRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("{F9EB98F8-A4A6-4906-B346-E557F553309D}"))
@@ -3292,214 +3399,262 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFECHANull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.FECHAColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.FECHAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFECHANull()
-            Me(Me.tableEntradas_de_Material.FECHAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.FECHAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCLIENTENull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.CLIENTEColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.CLIENTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCLIENTENull()
-            Me(Me.tableEntradas_de_Material.CLIENTEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsFACTURA_O_REMISIONNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.FACTURA_O_REMISIONColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetFACTURA_O_REMISIONNull()
-            Me(Me.tableEntradas_de_Material.FACTURA_O_REMISIONColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.CLIENTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsORDEN_DE_COMPRANull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.ORDEN_DE_COMPRAColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.ORDEN_DE_COMPRAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetORDEN_DE_COMPRANull()
-            Me(Me.tableEntradas_de_Material.ORDEN_DE_COMPRAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.ORDEN_DE_COMPRAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCERTIFICADO_DE_CALIDADNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.CERTIFICADO_DE_CALIDADColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.CERTIFICADO_DE_CALIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCERTIFICADO_DE_CALIDADNull()
-            Me(Me.tableEntradas_de_Material.CERTIFICADO_DE_CALIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.CERTIFICADO_DE_CALIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCANTIDADNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.CANTIDADColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.CANTIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCANTIDADNull()
-            Me(Me.tableEntradas_de_Material.CANTIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.CANTIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsUNIDADNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.UNIDADColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.UNIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetUNIDADNull()
-            Me(Me.tableEntradas_de_Material.UNIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.UNIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsLARGONull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.LARGOColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.LARGOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetLARGONull()
-            Me(Me.tableEntradas_de_Material.LARGOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.LARGOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsANCHONull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.ANCHOColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.ANCHOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetANCHONull()
-            Me(Me.tableEntradas_de_Material.ANCHOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.ANCHOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCALIBRENull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.CALIBREColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.CALIBREColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCALIBRENull()
-            Me(Me.tableEntradas_de_Material.CALIBREColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.CALIBREColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsMATERIALNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.MATERIALColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.MATERIALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMATERIALNull()
-            Me(Me.tableEntradas_de_Material.MATERIALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.MATERIALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNUMERO_DE_PARTENull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.NUMERO_DE_PARTEColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.NUMERO_DE_PARTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNUMERO_DE_PARTENull()
-            Me(Me.tableEntradas_de_Material.NUMERO_DE_PARTEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.NUMERO_DE_PARTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsRACKNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.RACKColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.RACKColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetRACKNull()
-            Me(Me.tableEntradas_de_Material.RACKColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.RACKColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNIVELNull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.NIVELColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.NIVELColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetNIVELNull()
-            Me(Me.tableEntradas_de_Material.NIVELColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.NIVELColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCOMENTARIONull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.COMENTARIOColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.COMENTARIOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCOMENTARIONull()
-            Me(Me.tableEntradas_de_Material.COMENTARIOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.COMENTARIOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsLOTENull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.LOTEColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.LOTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetLOTENull()
-            Me(Me.tableEntradas_de_Material.LOTEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.LOTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsEMPLEADONull() As Boolean
-            Return Me.IsNull(Me.tableEntradas_de_Material.EMPLEADOColumn)
+            Return Me.IsNull(Me.tableEntradas_Material.EMPLEADOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetEMPLEADONull()
-            Me(Me.tableEntradas_de_Material.EMPLEADOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableEntradas_Material.EMPLEADOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetSalidas_de_MaterialRows() As Salidas_de_MaterialRow()
+        Public Function IsFACTURA_O_REMISIONNull() As Boolean
+            Return Me.IsNull(Me.tableEntradas_Material.FACTURA_O_REMISIONColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFACTURA_O_REMISIONNull()
+            Me(Me.tableEntradas_Material.FACTURA_O_REMISIONColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsExpr1Null() As Boolean
+            Return Me.IsNull(Me.tableEntradas_Material.Expr1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetExpr1Null()
+            Me(Me.tableEntradas_Material.Expr1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCOSTONull() As Boolean
+            Return Me.IsNull(Me.tableEntradas_Material.COSTOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCOSTONull()
+            Me(Me.tableEntradas_Material.COSTOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCOSTO_KGNull() As Boolean
+            Return Me.IsNull(Me.tableEntradas_Material.COSTO_KGColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCOSTO_KGNull()
+            Me(Me.tableEntradas_Material.COSTO_KGColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAÑONull() As Boolean
+            Return Me.IsNull(Me.tableEntradas_Material.AÑOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAÑONull()
+            Me(Me.tableEntradas_Material.AÑOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetSalidas_MaterialRows() As Salidas_MaterialRow()
             If (Me.Table.ChildRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}") Is Nothing) Then
-                Return New Salidas_de_MaterialRow(-1) {}
+                Return New Salidas_MaterialRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}")),Salidas_de_MaterialRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}")),Salidas_MaterialRow())
             End If
         End Function
     End Class
@@ -3575,11 +3730,11 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetEntradas_de_MaterialRows() As Entradas_de_MaterialRow()
+        Public Function GetEntradas_de_MaterialRows() As Entradas_MaterialRow()
             If (Me.Table.ChildRelations("{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}") Is Nothing) Then
-                Return New Entradas_de_MaterialRow(-1) {}
+                Return New Entradas_MaterialRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}")),Entradas_de_MaterialRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}")),Entradas_MaterialRow())
             End If
         End Function
     End Class
@@ -3587,26 +3742,26 @@ Partial Public Class AlmacenBD
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class Salidas_de_MaterialRow
+    Partial Public Class Salidas_MaterialRow
         Inherits Global.System.Data.DataRow
         
-        Private tableSalidas_de_Material As Salidas_de_MaterialDataTable
+        Private tableSalidas_Material As Salidas_MaterialDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableSalidas_de_Material = CType(Me.Table,Salidas_de_MaterialDataTable)
+            Me.tableSalidas_Material = CType(Me.Table,Salidas_MaterialDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property FOLIO_DE_SALIDA() As Integer
             Get
-                Return CType(Me(Me.tableSalidas_de_Material.FOLIO_DE_SALIDAColumn),Integer)
+                Return CType(Me(Me.tableSalidas_Material.FOLIO_DE_SALIDAColumn),Integer)
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.FOLIO_DE_SALIDAColumn) = value
+                Me(Me.tableSalidas_Material.FOLIO_DE_SALIDAColumn) = value
             End Set
         End Property
         
@@ -3615,13 +3770,13 @@ Partial Public Class AlmacenBD
         Public Property CANTIDAD() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.CANTIDADColumn),Integer)
+                    Return CType(Me(Me.tableSalidas_Material.CANTIDADColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD' de la tabla 'Salidas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD' de la tabla 'Salidas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.CANTIDADColumn) = value
+                Me(Me.tableSalidas_Material.CANTIDADColumn) = value
             End Set
         End Property
         
@@ -3630,14 +3785,14 @@ Partial Public Class AlmacenBD
         Public Property FOLIO_DE_ENTRADA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.FOLIO_DE_ENTRADAColumn),Integer)
+                    Return CType(Me(Me.tableSalidas_Material.FOLIO_DE_ENTRADAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FOLIO DE ENTRADA' de la tabla 'Salidas de Material' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FOLIO DE ENTRADA' de la tabla 'Salidas_Material' es DBNul"& _ 
+                            "l.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.FOLIO_DE_ENTRADAColumn) = value
+                Me(Me.tableSalidas_Material.FOLIO_DE_ENTRADAColumn) = value
             End Set
         End Property
         
@@ -3646,13 +3801,13 @@ Partial Public Class AlmacenBD
         Public Property FECHA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.FECHAColumn),String)
+                    Return CType(Me(Me.tableSalidas_Material.FECHAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Salidas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Salidas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.FECHAColumn) = value
+                Me(Me.tableSalidas_Material.FECHAColumn) = value
             End Set
         End Property
         
@@ -3661,14 +3816,14 @@ Partial Public Class AlmacenBD
         Public Property PEDIDO_INTERNO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.PEDIDO_INTERNOColumn),String)
+                    Return CType(Me(Me.tableSalidas_Material.PEDIDO_INTERNOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PEDIDO INTERNO' de la tabla 'Salidas de Material' es DBNu"& _ 
-                            "ll.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PEDIDO INTERNO' de la tabla 'Salidas_Material' es DBNull."& _ 
+                            "", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.PEDIDO_INTERNOColumn) = value
+                Me(Me.tableSalidas_Material.PEDIDO_INTERNOColumn) = value
             End Set
         End Property
         
@@ -3677,14 +3832,14 @@ Partial Public Class AlmacenBD
         Public Property ORDEN_DE_FABRICACION() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.ORDEN_DE_FABRICACIONColumn),String)
+                    Return CType(Me(Me.tableSalidas_Material.ORDEN_DE_FABRICACIONColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ORDEN DE FABRICACION' de la tabla 'Salidas de Material' e"& _ 
-                            "s DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ORDEN DE FABRICACION' de la tabla 'Salidas_Material' es D"& _ 
+                            "BNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.ORDEN_DE_FABRICACIONColumn) = value
+                Me(Me.tableSalidas_Material.ORDEN_DE_FABRICACIONColumn) = value
             End Set
         End Property
         
@@ -3693,13 +3848,13 @@ Partial Public Class AlmacenBD
         Public Property MAQUINA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.MAQUINAColumn),String)
+                    Return CType(Me(Me.tableSalidas_Material.MAQUINAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'Salidas de Material' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'Salidas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.MAQUINAColumn) = value
+                Me(Me.tableSalidas_Material.MAQUINAColumn) = value
             End Set
         End Property
         
@@ -3708,14 +3863,13 @@ Partial Public Class AlmacenBD
         Public Property SOLICITANTE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.SOLICITANTEColumn),String)
+                    Return CType(Me(Me.tableSalidas_Material.SOLICITANTEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SOLICITANTE' de la tabla 'Salidas de Material' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SOLICITANTE' de la tabla 'Salidas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.SOLICITANTEColumn) = value
+                Me(Me.tableSalidas_Material.SOLICITANTEColumn) = value
             End Set
         End Property
         
@@ -3724,22 +3878,21 @@ Partial Public Class AlmacenBD
         Public Property AUTORIZACION() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableSalidas_de_Material.AUTORIZACIONColumn),String)
+                    Return CType(Me(Me.tableSalidas_Material.AUTORIZACIONColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AUTORIZACION' de la tabla 'Salidas de Material' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AUTORIZACION' de la tabla 'Salidas_Material' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableSalidas_de_Material.AUTORIZACIONColumn) = value
+                Me(Me.tableSalidas_Material.AUTORIZACIONColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Entradas_de_MaterialRow() As Entradas_de_MaterialRow
+        Public Property Entradas_de_MaterialRow() As Entradas_MaterialRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}")),Entradas_de_MaterialRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}")),Entradas_MaterialRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}"))
@@ -3749,97 +3902,97 @@ Partial Public Class AlmacenBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCANTIDADNull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.CANTIDADColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.CANTIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCANTIDADNull()
-            Me(Me.tableSalidas_de_Material.CANTIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.CANTIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFOLIO_DE_ENTRADANull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.FOLIO_DE_ENTRADAColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.FOLIO_DE_ENTRADAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFOLIO_DE_ENTRADANull()
-            Me(Me.tableSalidas_de_Material.FOLIO_DE_ENTRADAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.FOLIO_DE_ENTRADAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFECHANull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.FECHAColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.FECHAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFECHANull()
-            Me(Me.tableSalidas_de_Material.FECHAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.FECHAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsPEDIDO_INTERNONull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.PEDIDO_INTERNOColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.PEDIDO_INTERNOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPEDIDO_INTERNONull()
-            Me(Me.tableSalidas_de_Material.PEDIDO_INTERNOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.PEDIDO_INTERNOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsORDEN_DE_FABRICACIONNull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.ORDEN_DE_FABRICACIONColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.ORDEN_DE_FABRICACIONColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetORDEN_DE_FABRICACIONNull()
-            Me(Me.tableSalidas_de_Material.ORDEN_DE_FABRICACIONColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.ORDEN_DE_FABRICACIONColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsMAQUINANull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.MAQUINAColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.MAQUINAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMAQUINANull()
-            Me(Me.tableSalidas_de_Material.MAQUINAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.MAQUINAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsSOLICITANTENull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.SOLICITANTEColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.SOLICITANTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetSOLICITANTENull()
-            Me(Me.tableSalidas_de_Material.SOLICITANTEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.SOLICITANTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsAUTORIZACIONNull() As Boolean
-            Return Me.IsNull(Me.tableSalidas_de_Material.AUTORIZACIONColumn)
+            Return Me.IsNull(Me.tableSalidas_Material.AUTORIZACIONColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetAUTORIZACIONNull()
-            Me(Me.tableSalidas_de_Material.AUTORIZACIONColumn) = Global.System.Convert.DBNull
+            Me(Me.tableSalidas_Material.AUTORIZACIONColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3847,16 +4000,16 @@ Partial Public Class AlmacenBD
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class Base_de_Datos_ClientesRowChangeEvent
+    Public Class Base_ClientesRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As Base_de_Datos_ClientesRow
+        Private eventRow As Base_ClientesRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As Base_de_Datos_ClientesRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As Base_ClientesRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -3864,7 +4017,7 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As Base_de_Datos_ClientesRow
+        Public ReadOnly Property Row() As Base_ClientesRow
             Get
                 Return Me.eventRow
             End Get
@@ -3883,16 +4036,16 @@ Partial Public Class AlmacenBD
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class Base_de_Datos_de_EmpleadosRowChangeEvent
+    Public Class Base_EmpleadosRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As Base_de_Datos_de_EmpleadosRow
+        Private eventRow As Base_EmpleadosRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As Base_de_Datos_de_EmpleadosRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As Base_EmpleadosRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -3900,7 +4053,7 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As Base_de_Datos_de_EmpleadosRow
+        Public ReadOnly Property Row() As Base_EmpleadosRow
             Get
                 Return Me.eventRow
             End Get
@@ -3919,16 +4072,16 @@ Partial Public Class AlmacenBD
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class Base_de_Datos_MaterialRowChangeEvent
+    Public Class Base_MaterialRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As Base_de_Datos_MaterialRow
+        Private eventRow As Base_MaterialRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As Base_de_Datos_MaterialRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As Base_MaterialRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -3936,7 +4089,7 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As Base_de_Datos_MaterialRow
+        Public ReadOnly Property Row() As Base_MaterialRow
             Get
                 Return Me.eventRow
             End Get
@@ -3955,16 +4108,16 @@ Partial Public Class AlmacenBD
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class Entradas_de_MaterialRowChangeEvent
+    Public Class Entradas_MaterialRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As Entradas_de_MaterialRow
+        Private eventRow As Entradas_MaterialRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As Entradas_de_MaterialRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As Entradas_MaterialRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -3972,7 +4125,7 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As Entradas_de_MaterialRow
+        Public ReadOnly Property Row() As Entradas_MaterialRow
             Get
                 Return Me.eventRow
             End Get
@@ -4027,16 +4180,16 @@ Partial Public Class AlmacenBD
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class Salidas_de_MaterialRowChangeEvent
+    Public Class Salidas_MaterialRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As Salidas_de_MaterialRow
+        Private eventRow As Salidas_MaterialRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As Salidas_de_MaterialRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As Salidas_MaterialRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -4044,7 +4197,7 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As Salidas_de_MaterialRow
+        Public ReadOnly Property Row() As Salidas_MaterialRow
             Get
                 Return Me.eventRow
             End Get
@@ -4071,7 +4224,7 @@ Namespace AlmacenBDTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Base_de_Datos_ClientesTableAdapter
+    Partial Public Class Base_ClientesTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -4188,7 +4341,7 @@ Namespace AlmacenBDTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Base de Datos Clientes"
+            tableMapping.DataSetTable = "Base_Clientes"
             tableMapping.ColumnMappings.Add("CLAVE", "CLAVE")
             tableMapping.ColumnMappings.Add("NOMBRE", "NOMBRE")
             tableMapping.ColumnMappings.Add("DOMICILIO", "DOMICILIO")
@@ -4260,7 +4413,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Base_de_Datos_ClientesDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Base_ClientesDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4273,9 +4426,9 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As AlmacenBD.Base_de_Datos_ClientesDataTable
+        Public Overloads Overridable Function GetData() As AlmacenBD.Base_ClientesDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As AlmacenBD.Base_de_Datos_ClientesDataTable = New AlmacenBD.Base_de_Datos_ClientesDataTable()
+            Dim dataTable As AlmacenBD.Base_ClientesDataTable = New AlmacenBD.Base_ClientesDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4283,7 +4436,7 @@ Namespace AlmacenBDTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Base_de_Datos_ClientesDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Base_ClientesDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -4291,7 +4444,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As AlmacenBD) As Integer
-            Return Me.Adapter.Update(dataSet, "Base de Datos Clientes")
+            Return Me.Adapter.Update(dataSet, "Base_Clientes")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4468,7 +4621,7 @@ Namespace AlmacenBDTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Base_de_Datos_de_EmpleadosTableAdapter
+    Partial Public Class BaseEmpleadosTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -4585,7 +4738,7 @@ Namespace AlmacenBDTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Base de Datos de Empleados"
+            tableMapping.DataSetTable = "Base_Empleados"
             tableMapping.ColumnMappings.Add("NOMINA", "NOMINA")
             tableMapping.ColumnMappings.Add("NOMBRE", "NOMBRE")
             tableMapping.ColumnMappings.Add("TELEFONO", "TELEFONO")
@@ -4641,7 +4794,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Base_de_Datos_de_EmpleadosDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Base_EmpleadosDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4654,9 +4807,9 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As AlmacenBD.Base_de_Datos_de_EmpleadosDataTable
+        Public Overloads Overridable Function GetData() As AlmacenBD.Base_EmpleadosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As AlmacenBD.Base_de_Datos_de_EmpleadosDataTable = New AlmacenBD.Base_de_Datos_de_EmpleadosDataTable()
+            Dim dataTable As AlmacenBD.Base_EmpleadosDataTable = New AlmacenBD.Base_EmpleadosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4664,7 +4817,7 @@ Namespace AlmacenBDTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Base_de_Datos_de_EmpleadosDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Base_EmpleadosDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -4672,7 +4825,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As AlmacenBD) As Integer
-            Return Me.Adapter.Update(dataSet, "Base de Datos de Empleados")
+            Return Me.Adapter.Update(dataSet, "Base_Empleados")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4811,7 +4964,7 @@ Namespace AlmacenBDTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Base_de_Datos_MaterialTableAdapter
+    Partial Public Class Base_MaterialTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -4928,7 +5081,7 @@ Namespace AlmacenBDTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Base de Datos Material"
+            tableMapping.DataSetTable = "Base_Material"
             tableMapping.ColumnMappings.Add("CLAVE", "CLAVE")
             tableMapping.ColumnMappings.Add("MATERIAL", "MATERIAL")
             Me._adapter.TableMappings.Add(tableMapping)
@@ -4961,7 +5114,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Base_de_Datos_MaterialDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Base_MaterialDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4974,9 +5127,9 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As AlmacenBD.Base_de_Datos_MaterialDataTable
+        Public Overloads Overridable Function GetData() As AlmacenBD.Base_MaterialDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As AlmacenBD.Base_de_Datos_MaterialDataTable = New AlmacenBD.Base_de_Datos_MaterialDataTable()
+            Dim dataTable As AlmacenBD.Base_MaterialDataTable = New AlmacenBD.Base_MaterialDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4984,7 +5137,7 @@ Namespace AlmacenBDTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Base_de_Datos_MaterialDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Base_MaterialDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -4992,7 +5145,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As AlmacenBD) As Integer
-            Return Me.Adapter.Update(dataSet, "Base de Datos Material")
+            Return Me.Adapter.Update(dataSet, "Base_Material")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5049,7 +5202,7 @@ Namespace AlmacenBDTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Entradas_de_MaterialTableAdapter
+    Partial Public Class EntradasMaterialTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -5166,11 +5319,10 @@ Namespace AlmacenBDTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Entradas de Material"
+            tableMapping.DataSetTable = "Entradas_Material"
             tableMapping.ColumnMappings.Add("FOLIO DE ENTRADA", "FOLIO DE ENTRADA")
             tableMapping.ColumnMappings.Add("FECHA", "FECHA")
             tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE")
-            tableMapping.ColumnMappings.Add("FACTURA O REMISION", "FACTURA O REMISION")
             tableMapping.ColumnMappings.Add("ORDEN DE COMPRA", "ORDEN DE COMPRA")
             tableMapping.ColumnMappings.Add("CERTIFICADO DE CALIDAD", "CERTIFICADO DE CALIDAD")
             tableMapping.ColumnMappings.Add("CANTIDAD", "CANTIDAD")
@@ -5185,6 +5337,11 @@ Namespace AlmacenBDTableAdapters
             tableMapping.ColumnMappings.Add("COMENTARIO", "COMENTARIO")
             tableMapping.ColumnMappings.Add("LOTE", "LOTE")
             tableMapping.ColumnMappings.Add("EMPLEADO", "EMPLEADO")
+            tableMapping.ColumnMappings.Add("FACTURA O REMISION", "FACTURA O REMISION")
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1")
+            tableMapping.ColumnMappings.Add("COSTO", "COSTO")
+            tableMapping.ColumnMappings.Add("COSTO_KG", "COSTO_KG")
+            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -5193,7 +5350,9 @@ Namespace AlmacenBDTableAdapters
                 "ENTE` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1"& _ 
                 " AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS N"& _ 
                 "ULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND `EMPLEADO` IS NULL) OR (`EMPLEA"& _ 
-                "DO` = ?)))"
+                "DO` = ?)) AND ((? = 1 AND `COSTO` IS NULL) OR (`COSTO` = ?)) AND ((? = 1 AND `CO"& _ 
+                "STO_KG` IS NULL) OR (`COSTO_KG` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` ="& _ 
+                " ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_ENTRADA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE ENTRADA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -5208,12 +5367,19 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NUMERO_DE_PARTE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NUMERO DE PARTE", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_EMPLEADO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_EMPLEADO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_COSTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COSTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Entradas de Material` (`FECHA`, `CLIENTE`, `FACTURA O REMISION`, `OR"& _ 
                 "DEN DE COMPRA`, `CERTIFICADO DE CALIDAD`, `CANTIDAD`, `UNIDAD`, `LARGO`, `ANCHO`"& _ 
                 ", `CALIBRE`, `MATERIAL`, `NUMERO DE PARTE`, `RACK`, `NIVEL`, `COMENTARIO`, `LOTE"& _ 
-                "`, `EMPLEADO`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "`, `EMPLEADO`, `FACTURA O REMISION`, `COSTO`, `COSTO_KG`, `AÑO`) VALUES (?, ?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5232,17 +5398,24 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COMENTARIO", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COMENTARIO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LOTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LOTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EMPLEADO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Expr1", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Expr1", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COSTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Entradas de Material` SET `FECHA` = ?, `CLIENTE` = ?, `FACTURA O REMISION"& _ 
                 "` = ?, `ORDEN DE COMPRA` = ?, `CERTIFICADO DE CALIDAD` = ?, `CANTIDAD` = ?, `UNI"& _ 
                 "DAD` = ?, `LARGO` = ?, `ANCHO` = ?, `CALIBRE` = ?, `MATERIAL` = ?, `NUMERO DE PA"& _ 
-                "RTE` = ?, `RACK` = ?, `NIVEL` = ?, `COMENTARIO` = ?, `LOTE` = ?, `EMPLEADO` = ? "& _ 
-                "WHERE ((`FOLIO DE ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?"& _ 
-                ")) AND ((? = 1 AND `CLIENTE` IS NULL) OR (`CLIENTE` = ?)) AND ((? = 1 AND `CANTI"& _ 
-                "DAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD"& _ 
-                "` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) A"& _ 
-                "ND ((? = 1 AND `EMPLEADO` IS NULL) OR (`EMPLEADO` = ?)))"
+                "RTE` = ?, `RACK` = ?, `NIVEL` = ?, `COMENTARIO` = ?, `LOTE` = ?, `EMPLEADO` = ?,"& _ 
+                " `FACTURA O REMISION` = ?, `COSTO` = ?, `COSTO_KG` = ?, `AÑO` = ? WHERE ((`FOLIO"& _ 
+                " DE ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1"& _ 
+                " AND `CLIENTE` IS NULL) OR (`CLIENTE` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) "& _ 
+                "OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND (("& _ 
+                "? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND"& _ 
+                " `EMPLEADO` IS NULL) OR (`EMPLEADO` = ?)) AND ((? = 1 AND `COSTO` IS NULL) OR (`"& _ 
+                "COSTO` = ?)) AND ((? = 1 AND `COSTO_KG` IS NULL) OR (`COSTO_KG` = ?)) AND ((? = "& _ 
+                "1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5261,6 +5434,10 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COMENTARIO", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COMENTARIO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LOTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LOTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EMPLEADO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Expr1", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Expr1", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COSTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_ENTRADA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE ENTRADA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -5274,6 +5451,12 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NUMERO_DE_PARTE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NUMERO DE PARTE", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_EMPLEADO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_EMPLEADO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_COSTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COSTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5289,10 +5472,11 @@ Namespace AlmacenBDTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [FOLIO DE ENTRADA], FECHA, CLIENTE, [FACTURA O REMISION], [ORDEN DE COMPRA"& _ 
-                "], [CERTIFICADO DE CALIDAD], CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, MATERIAL, "& _ 
-                "[NUMERO DE PARTE], RACK, NIVEL, COMENTARIO, LOTE, EMPLEADO FROM [Entradas de Mat"& _ 
-                "erial]"
+            Me._commandCollection(0).CommandText = "SELECT        [FOLIO DE ENTRADA], FECHA, CLIENTE, [FACTURA O REMISION], [ORDEN DE"& _ 
+                " COMPRA], [CERTIFICADO DE CALIDAD], CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  "& _ 
+                "                        MATERIAL, [NUMERO DE PARTE], RACK, NIVEL, COMENTARIO, LO"& _ 
+                "TE, EMPLEADO, [FACTURA O REMISION] AS Expr1, COSTO, COSTO_KG, AÑO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         "& _ 
+                "   [Entradas de Material]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5300,7 +5484,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Entradas_de_MaterialDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Entradas_MaterialDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5313,9 +5497,9 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As AlmacenBD.Entradas_de_MaterialDataTable
+        Public Overloads Overridable Function GetData() As AlmacenBD.Entradas_MaterialDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As AlmacenBD.Entradas_de_MaterialDataTable = New AlmacenBD.Entradas_de_MaterialDataTable()
+            Dim dataTable As AlmacenBD.Entradas_MaterialDataTable = New AlmacenBD.Entradas_MaterialDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5323,7 +5507,7 @@ Namespace AlmacenBDTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Entradas_de_MaterialDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Entradas_MaterialDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -5331,7 +5515,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As AlmacenBD) As Integer
-            Return Me.Adapter.Update(dataSet, "Entradas de Material")
+            Return Me.Adapter.Update(dataSet, "Entradas_Material")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5352,7 +5536,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_FOLIO_DE_ENTRADA As Integer, ByVal Original_FECHA As Global.System.Nullable(Of Date), ByVal Original_CLIENTE As Global.System.Nullable(Of Integer), ByVal Original_CANTIDAD As String, ByVal Original_UNIDAD As String, ByVal Original_NUMERO_DE_PARTE As String, ByVal Original_EMPLEADO As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_FOLIO_DE_ENTRADA As Integer, ByVal Original_FECHA As Global.System.Nullable(Of Date), ByVal Original_CLIENTE As Global.System.Nullable(Of Integer), ByVal Original_CANTIDAD As String, ByVal Original_UNIDAD As String, ByVal Original_NUMERO_DE_PARTE As String, ByVal Original_EMPLEADO As Global.System.Nullable(Of Integer), ByVal Original_COSTO As Global.System.Nullable(Of Integer), ByVal Original_COSTO_KG As Global.System.Nullable(Of Integer), ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_FOLIO_DE_ENTRADA,Integer)
             If (Original_FECHA.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -5396,6 +5580,27 @@ Namespace AlmacenBDTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
+            If (Original_COSTO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_COSTO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_COSTO_KG.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_COSTO_KG.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5432,7 +5637,11 @@ Namespace AlmacenBDTableAdapters
                     ByVal NIVEL As String,  _
                     ByVal COMENTARIO As String,  _
                     ByVal LOTE As String,  _
-                    ByVal EMPLEADO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal EMPLEADO As Global.System.Nullable(Of Integer),  _
+                    ByVal Expr1 As String,  _
+                    ByVal COSTO As Global.System.Nullable(Of Integer),  _
+                    ByVal COSTO_KG As Global.System.Nullable(Of Integer),  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
             If (FECHA.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(FECHA.Value,Date)
             Else
@@ -5518,6 +5727,26 @@ Namespace AlmacenBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
+            If (Expr1 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(Expr1,String)
+            End If
+            If (COSTO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(COSTO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (COSTO_KG.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(COSTO_KG.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5555,13 +5784,20 @@ Namespace AlmacenBDTableAdapters
                     ByVal COMENTARIO As String,  _
                     ByVal LOTE As String,  _
                     ByVal EMPLEADO As Global.System.Nullable(Of Integer),  _
+                    ByVal Expr1 As String,  _
+                    ByVal COSTO As Global.System.Nullable(Of Integer),  _
+                    ByVal COSTO_KG As Global.System.Nullable(Of Integer),  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
                     ByVal Original_FOLIO_DE_ENTRADA As Integer,  _
                     ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
                     ByVal Original_CLIENTE As Global.System.Nullable(Of Integer),  _
                     ByVal Original_CANTIDAD As String,  _
                     ByVal Original_UNIDAD As String,  _
                     ByVal Original_NUMERO_DE_PARTE As String,  _
-                    ByVal Original_EMPLEADO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_EMPLEADO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_COSTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_COSTO_KG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
             If (FECHA.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(FECHA.Value,Date)
             Else
@@ -5647,48 +5883,89 @@ Namespace AlmacenBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_FOLIO_DE_ENTRADA,Integer)
-            If (Original_FECHA.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_FECHA.Value,Date)
+            If (Expr1 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Expr1,String)
+            End If
+            If (COSTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(COSTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (COSTO_KG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(COSTO_KG.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            If (Original_CLIENTE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_CLIENTE.Value,Integer)
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(AÑO.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
-            If (Original_CANTIDAD Is Nothing) Then
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_FOLIO_DE_ENTRADA,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_FECHA.Value,Date)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_CANTIDAD,String)
             End If
-            If (Original_UNIDAD Is Nothing) Then
+            If (Original_CLIENTE.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_CLIENTE.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_UNIDAD,String)
             End If
-            If (Original_NUMERO_DE_PARTE Is Nothing) Then
+            If (Original_CANTIDAD Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_NUMERO_DE_PARTE,String)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_CANTIDAD,String)
             End If
-            If (Original_EMPLEADO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_EMPLEADO.Value,Integer)
-            Else
+            If (Original_UNIDAD Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_UNIDAD,String)
+            End If
+            If (Original_NUMERO_DE_PARTE Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_NUMERO_DE_PARTE,String)
+            End If
+            If (Original_EMPLEADO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_EMPLEADO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+            End If
+            If (Original_COSTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_COSTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+            End If
+            If (Original_COSTO_KG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_COSTO_KG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5953,7 +6230,7 @@ Namespace AlmacenBDTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Salidas_de_MaterialTableAdapter
+    Partial Public Class SalidasMaterialTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -6070,7 +6347,7 @@ Namespace AlmacenBDTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Salidas de Material"
+            tableMapping.DataSetTable = "Salidas_Material"
             tableMapping.ColumnMappings.Add("FOLIO DE SALIDA", "FOLIO DE SALIDA")
             tableMapping.ColumnMappings.Add("CANTIDAD", "CANTIDAD")
             tableMapping.ColumnMappings.Add("FOLIO DE ENTRADA", "FOLIO DE ENTRADA")
@@ -6152,7 +6429,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Salidas_de_MaterialDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As AlmacenBD.Salidas_MaterialDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6165,9 +6442,9 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As AlmacenBD.Salidas_de_MaterialDataTable
+        Public Overloads Overridable Function GetData() As AlmacenBD.Salidas_MaterialDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As AlmacenBD.Salidas_de_MaterialDataTable = New AlmacenBD.Salidas_de_MaterialDataTable()
+            Dim dataTable As AlmacenBD.Salidas_MaterialDataTable = New AlmacenBD.Salidas_MaterialDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6175,7 +6452,7 @@ Namespace AlmacenBDTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Salidas_de_MaterialDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As AlmacenBD.Salidas_MaterialDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -6183,7 +6460,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As AlmacenBD) As Integer
-            Return Me.Adapter.Update(dataSet, "Salidas de Material")
+            Return Me.Adapter.Update(dataSet, "Salidas_Material")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6384,17 +6661,17 @@ Namespace AlmacenBDTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _base_de_Datos_ClientesTableAdapter As Base_de_Datos_ClientesTableAdapter
+        Private _base_ClientesTableAdapter As Base_ClientesTableAdapter
         
-        Private _base_de_Datos_de_EmpleadosTableAdapter As Base_de_Datos_de_EmpleadosTableAdapter
+        Private _baseEmpleadosTableAdapter As BaseEmpleadosTableAdapter
         
-        Private _base_de_Datos_MaterialTableAdapter As Base_de_Datos_MaterialTableAdapter
+        Private _base_MaterialTableAdapter As Base_MaterialTableAdapter
         
-        Private _entradas_de_MaterialTableAdapter As Entradas_de_MaterialTableAdapter
+        Private _entradasMaterialTableAdapter As EntradasMaterialTableAdapter
         
         Private _rACKSTableAdapter As RACKSTableAdapter
         
-        Private _salidas_de_MaterialTableAdapter As Salidas_de_MaterialTableAdapter
+        Private _salidasMaterialTableAdapter As SalidasMaterialTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -6416,12 +6693,12 @@ Namespace AlmacenBDTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Base_de_Datos_ClientesTableAdapter() As Base_de_Datos_ClientesTableAdapter
+        Public Property Base_ClientesTableAdapter() As Base_ClientesTableAdapter
             Get
-                Return Me._base_de_Datos_ClientesTableAdapter
+                Return Me._base_ClientesTableAdapter
             End Get
             Set
-                Me._base_de_Datos_ClientesTableAdapter = value
+                Me._base_ClientesTableAdapter = value
             End Set
         End Property
         
@@ -6430,12 +6707,12 @@ Namespace AlmacenBDTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Base_de_Datos_de_EmpleadosTableAdapter() As Base_de_Datos_de_EmpleadosTableAdapter
+        Public Property BaseEmpleadosTableAdapter() As BaseEmpleadosTableAdapter
             Get
-                Return Me._base_de_Datos_de_EmpleadosTableAdapter
+                Return Me._baseEmpleadosTableAdapter
             End Get
             Set
-                Me._base_de_Datos_de_EmpleadosTableAdapter = value
+                Me._baseEmpleadosTableAdapter = value
             End Set
         End Property
         
@@ -6444,12 +6721,12 @@ Namespace AlmacenBDTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Base_de_Datos_MaterialTableAdapter() As Base_de_Datos_MaterialTableAdapter
+        Public Property Base_MaterialTableAdapter() As Base_MaterialTableAdapter
             Get
-                Return Me._base_de_Datos_MaterialTableAdapter
+                Return Me._base_MaterialTableAdapter
             End Get
             Set
-                Me._base_de_Datos_MaterialTableAdapter = value
+                Me._base_MaterialTableAdapter = value
             End Set
         End Property
         
@@ -6458,12 +6735,12 @@ Namespace AlmacenBDTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Entradas_de_MaterialTableAdapter() As Entradas_de_MaterialTableAdapter
+        Public Property EntradasMaterialTableAdapter() As EntradasMaterialTableAdapter
             Get
-                Return Me._entradas_de_MaterialTableAdapter
+                Return Me._entradasMaterialTableAdapter
             End Get
             Set
-                Me._entradas_de_MaterialTableAdapter = value
+                Me._entradasMaterialTableAdapter = value
             End Set
         End Property
         
@@ -6486,12 +6763,12 @@ Namespace AlmacenBDTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Salidas_de_MaterialTableAdapter() As Salidas_de_MaterialTableAdapter
+        Public Property SalidasMaterialTableAdapter() As SalidasMaterialTableAdapter
             Get
-                Return Me._salidas_de_MaterialTableAdapter
+                Return Me._salidasMaterialTableAdapter
             End Get
             Set
-                Me._salidas_de_MaterialTableAdapter = value
+                Me._salidasMaterialTableAdapter = value
             End Set
         End Property
         
@@ -6514,29 +6791,29 @@ Namespace AlmacenBDTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._base_de_Datos_ClientesTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._base_de_Datos_ClientesTableAdapter.Connection
+                If ((Not (Me._base_ClientesTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._base_ClientesTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._base_ClientesTableAdapter.Connection
                 End If
-                If ((Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._base_de_Datos_de_EmpleadosTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._base_de_Datos_de_EmpleadosTableAdapter.Connection
+                If ((Not (Me._baseEmpleadosTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._baseEmpleadosTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._baseEmpleadosTableAdapter.Connection
                 End If
-                If ((Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._base_de_Datos_MaterialTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._base_de_Datos_MaterialTableAdapter.Connection
+                If ((Not (Me._base_MaterialTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._base_MaterialTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._base_MaterialTableAdapter.Connection
                 End If
-                If ((Not (Me._entradas_de_MaterialTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._entradas_de_MaterialTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._entradas_de_MaterialTableAdapter.Connection
+                If ((Not (Me._entradasMaterialTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._entradasMaterialTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._entradasMaterialTableAdapter.Connection
                 End If
                 If ((Not (Me._rACKSTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._rACKSTableAdapter.Connection) Is Nothing)) Then
                     Return Me._rACKSTableAdapter.Connection
                 End If
-                If ((Not (Me._salidas_de_MaterialTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._salidas_de_MaterialTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._salidas_de_MaterialTableAdapter.Connection
+                If ((Not (Me._salidasMaterialTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._salidasMaterialTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._salidasMaterialTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -6551,22 +6828,22 @@ Namespace AlmacenBDTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing) Then
+                If (Not (Me._base_ClientesTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing) Then
+                If (Not (Me._baseEmpleadosTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing) Then
+                If (Not (Me._base_MaterialTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._entradas_de_MaterialTableAdapter) Is Nothing) Then
+                If (Not (Me._entradasMaterialTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._rACKSTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._salidas_de_MaterialTableAdapter) Is Nothing) Then
+                If (Not (Me._salidasMaterialTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -6580,30 +6857,30 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As AlmacenBD, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_Clientes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._base_ClientesTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Base_Clientes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_ClientesTableAdapter.Update(updatedRows))
+                    result = (result + Me._base_ClientesTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_de_Empleados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._baseEmpleadosTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Base_Empleados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_de_EmpleadosTableAdapter.Update(updatedRows))
+                    result = (result + Me._baseEmpleadosTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._base_MaterialTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Base_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_MaterialTableAdapter.Update(updatedRows))
+                    result = (result + Me._base_MaterialTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -6616,21 +6893,21 @@ Namespace AlmacenBDTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._entradas_de_MaterialTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Entradas_de_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._entradasMaterialTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Entradas_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._entradas_de_MaterialTableAdapter.Update(updatedRows))
+                    result = (result + Me._entradasMaterialTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._salidas_de_MaterialTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Salidas_de_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._salidasMaterialTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Salidas_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._salidas_de_MaterialTableAdapter.Update(updatedRows))
+                    result = (result + Me._salidasMaterialTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -6644,27 +6921,27 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As AlmacenBD, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_Clientes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._base_ClientesTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Base_Clientes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_ClientesTableAdapter.Update(addedRows))
+                    result = (result + Me._base_ClientesTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_de_Empleados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._baseEmpleadosTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Base_Empleados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_de_EmpleadosTableAdapter.Update(addedRows))
+                    result = (result + Me._baseEmpleadosTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._base_MaterialTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Base_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_MaterialTableAdapter.Update(addedRows))
+                    result = (result + Me._base_MaterialTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -6676,19 +6953,19 @@ Namespace AlmacenBDTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._entradas_de_MaterialTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.Entradas_de_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._entradasMaterialTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Entradas_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._entradas_de_MaterialTableAdapter.Update(addedRows))
+                    result = (result + Me._entradasMaterialTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._salidas_de_MaterialTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.Salidas_de_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._salidasMaterialTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Salidas_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._salidas_de_MaterialTableAdapter.Update(addedRows))
+                    result = (result + Me._salidasMaterialTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -6702,19 +6979,19 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As AlmacenBD, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._salidas_de_MaterialTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Salidas_de_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._salidasMaterialTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Salidas_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._salidas_de_MaterialTableAdapter.Update(deletedRows))
+                    result = (result + Me._salidasMaterialTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._entradas_de_MaterialTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Entradas_de_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._entradasMaterialTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Entradas_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._entradas_de_MaterialTableAdapter.Update(deletedRows))
+                    result = (result + Me._entradasMaterialTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -6726,27 +7003,27 @@ Namespace AlmacenBDTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._base_MaterialTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Base_Material.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_MaterialTableAdapter.Update(deletedRows))
+                    result = (result + Me._base_MaterialTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_de_Empleados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._baseEmpleadosTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Base_Empleados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_de_EmpleadosTableAdapter.Update(deletedRows))
+                    result = (result + Me._baseEmpleadosTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Base_de_Datos_Clientes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._base_ClientesTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Base_Clientes.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._base_de_Datos_ClientesTableAdapter.Update(deletedRows))
+                    result = (result + Me._base_ClientesTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -6791,23 +7068,23 @@ Namespace AlmacenBDTableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._base_de_Datos_ClientesTableAdapter.Connection) = false)) Then
+            If ((Not (Me._base_ClientesTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._base_ClientesTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._base_de_Datos_de_EmpleadosTableAdapter.Connection) = false)) Then
+            If ((Not (Me._baseEmpleadosTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._baseEmpleadosTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._base_de_Datos_MaterialTableAdapter.Connection) = false)) Then
+            If ((Not (Me._base_MaterialTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._base_MaterialTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._entradas_de_MaterialTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._entradas_de_MaterialTableAdapter.Connection) = false)) Then
+            If ((Not (Me._entradasMaterialTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._entradasMaterialTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -6816,8 +7093,8 @@ Namespace AlmacenBDTableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._salidas_de_MaterialTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._salidas_de_MaterialTableAdapter.Connection) = false)) Then
+            If ((Not (Me._salidasMaterialTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._salidasMaterialTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -6853,40 +7130,40 @@ Namespace AlmacenBDTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._base_de_Datos_ClientesTableAdapter, Me._base_de_Datos_ClientesTableAdapter.Connection)
-                    Me._base_de_Datos_ClientesTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._base_de_Datos_ClientesTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._base_de_Datos_ClientesTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._base_de_Datos_ClientesTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._base_de_Datos_ClientesTableAdapter.Adapter)
+                If (Not (Me._base_ClientesTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._base_ClientesTableAdapter, Me._base_ClientesTableAdapter.Connection)
+                    Me._base_ClientesTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._base_ClientesTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._base_ClientesTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._base_ClientesTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._base_ClientesTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._base_de_Datos_de_EmpleadosTableAdapter, Me._base_de_Datos_de_EmpleadosTableAdapter.Connection)
-                    Me._base_de_Datos_de_EmpleadosTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._base_de_Datos_de_EmpleadosTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._base_de_Datos_de_EmpleadosTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._base_de_Datos_de_EmpleadosTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._base_de_Datos_de_EmpleadosTableAdapter.Adapter)
+                If (Not (Me._baseEmpleadosTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._baseEmpleadosTableAdapter, Me._baseEmpleadosTableAdapter.Connection)
+                    Me._baseEmpleadosTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._baseEmpleadosTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._baseEmpleadosTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._baseEmpleadosTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._baseEmpleadosTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._base_de_Datos_MaterialTableAdapter, Me._base_de_Datos_MaterialTableAdapter.Connection)
-                    Me._base_de_Datos_MaterialTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._base_de_Datos_MaterialTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._base_de_Datos_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._base_de_Datos_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._base_de_Datos_MaterialTableAdapter.Adapter)
+                If (Not (Me._base_MaterialTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._base_MaterialTableAdapter, Me._base_MaterialTableAdapter.Connection)
+                    Me._base_MaterialTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._base_MaterialTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._base_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._base_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._base_MaterialTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._entradas_de_MaterialTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._entradas_de_MaterialTableAdapter, Me._entradas_de_MaterialTableAdapter.Connection)
-                    Me._entradas_de_MaterialTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._entradas_de_MaterialTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._entradas_de_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._entradas_de_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._entradas_de_MaterialTableAdapter.Adapter)
+                If (Not (Me._entradasMaterialTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._entradasMaterialTableAdapter, Me._entradasMaterialTableAdapter.Connection)
+                    Me._entradasMaterialTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._entradasMaterialTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._entradasMaterialTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._entradasMaterialTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._entradasMaterialTableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._rACKSTableAdapter) Is Nothing) Then
@@ -6898,13 +7175,13 @@ Namespace AlmacenBDTableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._rACKSTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._salidas_de_MaterialTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._salidas_de_MaterialTableAdapter, Me._salidas_de_MaterialTableAdapter.Connection)
-                    Me._salidas_de_MaterialTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._salidas_de_MaterialTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._salidas_de_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._salidas_de_MaterialTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._salidas_de_MaterialTableAdapter.Adapter)
+                If (Not (Me._salidasMaterialTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._salidasMaterialTableAdapter, Me._salidasMaterialTableAdapter.Connection)
+                    Me._salidasMaterialTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._salidasMaterialTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._salidasMaterialTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._salidasMaterialTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._salidasMaterialTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -6967,29 +7244,29 @@ Namespace AlmacenBDTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._base_de_Datos_ClientesTableAdapter) Is Nothing) Then
-                    Me._base_de_Datos_ClientesTableAdapter.Connection = CType(revertConnections(Me._base_de_Datos_ClientesTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._base_de_Datos_ClientesTableAdapter.Transaction = Nothing
+                If (Not (Me._base_ClientesTableAdapter) Is Nothing) Then
+                    Me._base_ClientesTableAdapter.Connection = CType(revertConnections(Me._base_ClientesTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._base_ClientesTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._base_de_Datos_de_EmpleadosTableAdapter) Is Nothing) Then
-                    Me._base_de_Datos_de_EmpleadosTableAdapter.Connection = CType(revertConnections(Me._base_de_Datos_de_EmpleadosTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._base_de_Datos_de_EmpleadosTableAdapter.Transaction = Nothing
+                If (Not (Me._baseEmpleadosTableAdapter) Is Nothing) Then
+                    Me._baseEmpleadosTableAdapter.Connection = CType(revertConnections(Me._baseEmpleadosTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._baseEmpleadosTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._base_de_Datos_MaterialTableAdapter) Is Nothing) Then
-                    Me._base_de_Datos_MaterialTableAdapter.Connection = CType(revertConnections(Me._base_de_Datos_MaterialTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._base_de_Datos_MaterialTableAdapter.Transaction = Nothing
+                If (Not (Me._base_MaterialTableAdapter) Is Nothing) Then
+                    Me._base_MaterialTableAdapter.Connection = CType(revertConnections(Me._base_MaterialTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._base_MaterialTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._entradas_de_MaterialTableAdapter) Is Nothing) Then
-                    Me._entradas_de_MaterialTableAdapter.Connection = CType(revertConnections(Me._entradas_de_MaterialTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._entradas_de_MaterialTableAdapter.Transaction = Nothing
+                If (Not (Me._entradasMaterialTableAdapter) Is Nothing) Then
+                    Me._entradasMaterialTableAdapter.Connection = CType(revertConnections(Me._entradasMaterialTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._entradasMaterialTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._rACKSTableAdapter) Is Nothing) Then
                     Me._rACKSTableAdapter.Connection = CType(revertConnections(Me._rACKSTableAdapter),Global.System.Data.OleDb.OleDbConnection)
                     Me._rACKSTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._salidas_de_MaterialTableAdapter) Is Nothing) Then
-                    Me._salidas_de_MaterialTableAdapter.Connection = CType(revertConnections(Me._salidas_de_MaterialTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._salidas_de_MaterialTableAdapter.Transaction = Nothing
+                If (Not (Me._salidasMaterialTableAdapter) Is Nothing) Then
+                    Me._salidasMaterialTableAdapter.Connection = CType(revertConnections(Me._salidasMaterialTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._salidasMaterialTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

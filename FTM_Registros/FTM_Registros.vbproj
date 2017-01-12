@@ -159,6 +159,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlmacenBD.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Almacen\AlmacenBD.vb">
+      <DependentUpon>AlmacenBD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Inventario_MP.Designer.vb">
+      <DependentUpon>Inventario_MP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Inventario_MP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bases_Datos\AgregarClaveFTM.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -382,6 +391,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Almacen\Almacen.resx">
       <DependentUpon>Almacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\Inventario_MP.resx">
+      <DependentUpon>Inventario_MP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chat\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

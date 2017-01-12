@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="AlmacenConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AlmacenConnectionString (MySettings)" PropertyReference="ApplicationSettings.FTM_Registros.My.MySettings.GlobalReference.Default.AlmacenConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base de Datos ClientesTableAdapter" GeneratorDataComponentClassName="Base_de_Datos_ClientesTableAdapter" Name="Base de Datos Clientes" UserDataComponentName="Base de Datos ClientesTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_ClientesTableAdapter" GeneratorDataComponentClassName="Base_ClientesTableAdapter" Name="Base_Clientes" UserDataComponentName="Base_ClientesTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="AlmacenConnectionString (MySettings)" DbObjectName="Base de Datos Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -71,7 +71,7 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base de Datos de EmpleadosTableAdapter" GeneratorDataComponentClassName="Base_de_Datos_de_EmpleadosTableAdapter" Name="Base de Datos de Empleados" UserDataComponentName="Base de Datos de EmpleadosTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BaseEmpleadosTableAdapter" GeneratorDataComponentClassName="BaseEmpleadosTableAdapter" Name="Base_Empleados" UserDataComponentName="BaseEmpleadosTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="AlmacenConnectionString (MySettings)" DbObjectName="Base de Datos de Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -124,7 +124,7 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base de Datos MaterialTableAdapter" GeneratorDataComponentClassName="Base_de_Datos_MaterialTableAdapter" Name="Base de Datos Material" UserDataComponentName="Base de Datos MaterialTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Base_MaterialTableAdapter" GeneratorDataComponentClassName="Base_MaterialTableAdapter" Name="Base_Material" UserDataComponentName="Base_MaterialTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="AlmacenConnectionString (MySettings)" DbObjectName="Base de Datos Material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
@@ -150,12 +150,12 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Entradas de MaterialTableAdapter" GeneratorDataComponentClassName="Entradas_de_MaterialTableAdapter" Name="Entradas de Material" UserDataComponentName="Entradas de MaterialTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EntradasMaterialTableAdapter" GeneratorDataComponentClassName="EntradasMaterialTableAdapter" Name="Entradas_Material" UserDataComponentName="EntradasMaterialTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="AlmacenConnectionString (MySettings)" DbObjectName="Entradas de Material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Entradas de Material` WHERE ((`FOLIO DE ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1 AND `CLIENTE` IS NULL) OR (`CLIENTE` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND `EMPLEADO` IS NULL) OR (`EMPLEADO` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Entradas de Material` WHERE ((`FOLIO DE ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1 AND `CLIENTE` IS NULL) OR (`CLIENTE` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND `EMPLEADO` IS NULL) OR (`EMPLEADO` = ?)) AND ((? = 1 AND `COSTO` IS NULL) OR (`COSTO` = ?)) AND ((? = 1 AND `COSTO_KG` IS NULL) OR (`COSTO_KG` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_FOLIO_DE_ENTRADA" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="FOLIO DE ENTRADA" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_FECHA" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="FECHA" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -170,12 +170,18 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NUMERO_DE_PARTE" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="NUMERO DE PARTE" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_EMPLEADO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="EMPLEADO" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_EMPLEADO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="EMPLEADO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_COSTO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_COSTO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_COSTO_KG" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO_KG" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_COSTO_KG" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO_KG" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_AÑO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="AÑO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_AÑO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="AÑO" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Entradas de Material` (`FECHA`, `CLIENTE`, `FACTURA O REMISION`, `ORDEN DE COMPRA`, `CERTIFICADO DE CALIDAD`, `CANTIDAD`, `UNIDAD`, `LARGO`, `ANCHO`, `CALIBRE`, `MATERIAL`, `NUMERO DE PARTE`, `RACK`, `NIVEL`, `COMENTARIO`, `LOTE`, `EMPLEADO`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Entradas de Material` (`FECHA`, `CLIENTE`, `FACTURA O REMISION`, `ORDEN DE COMPRA`, `CERTIFICADO DE CALIDAD`, `CANTIDAD`, `UNIDAD`, `LARGO`, `ANCHO`, `CALIBRE`, `MATERIAL`, `NUMERO DE PARTE`, `RACK`, `NIVEL`, `COMENTARIO`, `LOTE`, `EMPLEADO`, `FACTURA O REMISION`, `COSTO`, `COSTO_KG`, `AÑO`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="FECHA" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="CLIENTE" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CLIENTE" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -194,18 +200,24 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="COMENTARIO" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="COMENTARIO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="LOTE" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="LOTE" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="EMPLEADO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="EMPLEADO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Expr1" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Expr1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="COSTO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="COSTO_KG" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO_KG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="AÑO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="AÑO" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [FOLIO DE ENTRADA], FECHA, CLIENTE, [FACTURA O REMISION], [ORDEN DE COMPRA], [CERTIFICADO DE CALIDAD], CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, MATERIAL, [NUMERO DE PARTE], RACK, NIVEL, COMENTARIO, LOTE, EMPLEADO FROM [Entradas de Material]</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [FOLIO DE ENTRADA], FECHA, CLIENTE, [FACTURA O REMISION], [ORDEN DE COMPRA], [CERTIFICADO DE CALIDAD], CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE,
+                          MATERIAL, [NUMERO DE PARTE], RACK, NIVEL, COMENTARIO, LOTE, EMPLEADO, [FACTURA O REMISION] AS Expr1, COSTO, COSTO_KG, AÑO
+FROM            [Entradas de Material]</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Entradas de Material` SET `FECHA` = ?, `CLIENTE` = ?, `FACTURA O REMISION` = ?, `ORDEN DE COMPRA` = ?, `CERTIFICADO DE CALIDAD` = ?, `CANTIDAD` = ?, `UNIDAD` = ?, `LARGO` = ?, `ANCHO` = ?, `CALIBRE` = ?, `MATERIAL` = ?, `NUMERO DE PARTE` = ?, `RACK` = ?, `NIVEL` = ?, `COMENTARIO` = ?, `LOTE` = ?, `EMPLEADO` = ? WHERE ((`FOLIO DE ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1 AND `CLIENTE` IS NULL) OR (`CLIENTE` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND `EMPLEADO` IS NULL) OR (`EMPLEADO` = ?)))</CommandText>
+                    <CommandText>UPDATE `Entradas de Material` SET `FECHA` = ?, `CLIENTE` = ?, `FACTURA O REMISION` = ?, `ORDEN DE COMPRA` = ?, `CERTIFICADO DE CALIDAD` = ?, `CANTIDAD` = ?, `UNIDAD` = ?, `LARGO` = ?, `ANCHO` = ?, `CALIBRE` = ?, `MATERIAL` = ?, `NUMERO DE PARTE` = ?, `RACK` = ?, `NIVEL` = ?, `COMENTARIO` = ?, `LOTE` = ?, `EMPLEADO` = ?, `FACTURA O REMISION` = ?, `COSTO` = ?, `COSTO_KG` = ?, `AÑO` = ? WHERE ((`FOLIO DE ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1 AND `CLIENTE` IS NULL) OR (`CLIENTE` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND `EMPLEADO` IS NULL) OR (`EMPLEADO` = ?)) AND ((? = 1 AND `COSTO` IS NULL) OR (`COSTO` = ?)) AND ((? = 1 AND `COSTO_KG` IS NULL) OR (`COSTO_KG` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="FECHA" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="CLIENTE" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CLIENTE" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -224,6 +236,10 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="COMENTARIO" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="COMENTARIO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="LOTE" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="LOTE" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="EMPLEADO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="EMPLEADO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Expr1" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Expr1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="COSTO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="COSTO_KG" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO_KG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="AÑO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="AÑO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_FOLIO_DE_ENTRADA" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="FOLIO DE ENTRADA" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_FECHA" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="FECHA" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_FECHA" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -237,6 +253,12 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_NUMERO_DE_PARTE" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="NUMERO DE PARTE" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_EMPLEADO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="EMPLEADO" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_EMPLEADO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="EMPLEADO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_COSTO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_COSTO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_COSTO_KG" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO_KG" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_COSTO_KG" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="COSTO_KG" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_AÑO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="AÑO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_AÑO" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="AÑO" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -246,7 +268,6 @@
               <Mapping SourceColumn="FOLIO DE ENTRADA" DataSetColumn="FOLIO DE ENTRADA" />
               <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
               <Mapping SourceColumn="CLIENTE" DataSetColumn="CLIENTE" />
-              <Mapping SourceColumn="FACTURA O REMISION" DataSetColumn="FACTURA O REMISION" />
               <Mapping SourceColumn="ORDEN DE COMPRA" DataSetColumn="ORDEN DE COMPRA" />
               <Mapping SourceColumn="CERTIFICADO DE CALIDAD" DataSetColumn="CERTIFICADO DE CALIDAD" />
               <Mapping SourceColumn="CANTIDAD" DataSetColumn="CANTIDAD" />
@@ -261,6 +282,11 @@
               <Mapping SourceColumn="COMENTARIO" DataSetColumn="COMENTARIO" />
               <Mapping SourceColumn="LOTE" DataSetColumn="LOTE" />
               <Mapping SourceColumn="EMPLEADO" DataSetColumn="EMPLEADO" />
+              <Mapping SourceColumn="FACTURA O REMISION" DataSetColumn="FACTURA O REMISION" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="COSTO" DataSetColumn="COSTO" />
+              <Mapping SourceColumn="COSTO_KG" DataSetColumn="COSTO_KG" />
+              <Mapping SourceColumn="AÑO" DataSetColumn="AÑO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -290,7 +316,7 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Salidas de MaterialTableAdapter" GeneratorDataComponentClassName="Salidas_de_MaterialTableAdapter" Name="Salidas de Material" UserDataComponentName="Salidas de MaterialTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SalidasMaterialTableAdapter" GeneratorDataComponentClassName="SalidasMaterialTableAdapter" Name="Salidas_Material" UserDataComponentName="SalidasMaterialTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="AlmacenConnectionString (MySettings)" DbObjectName="Salidas de Material" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -369,7 +395,7 @@
   <xs:element name="AlmacenBD" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AlmacenBD" msprop:Generator_UserDSName="AlmacenBD">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Base_x0020_de_x0020_Datos_x0020_Clientes" msprop:Generator_TableClassName="Base_de_Datos_ClientesDataTable" msprop:Generator_TableVarName="tableBase_de_Datos_Clientes" msprop:Generator_TablePropName="Base_de_Datos_Clientes" msprop:Generator_RowDeletingName="Base_de_Datos_ClientesRowDeleting" msprop:Generator_RowChangingName="Base_de_Datos_ClientesRowChanging" msprop:Generator_RowEvHandlerName="Base_de_Datos_ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_de_Datos_ClientesRowDeleted" msprop:Generator_UserTableName="Base de Datos Clientes" msprop:Generator_RowChangedName="Base_de_Datos_ClientesRowChanged" msprop:Generator_RowEvArgName="Base_de_Datos_ClientesRowChangeEvent" msprop:Generator_RowClassName="Base_de_Datos_ClientesRow">
+        <xs:element name="Base_Clientes" msprop:Generator_TableClassName="Base_ClientesDataTable" msprop:Generator_TableVarName="tableBase_Clientes" msprop:Generator_RowChangedName="Base_ClientesRowChanged" msprop:Generator_TablePropName="Base_Clientes" msprop:Generator_RowDeletingName="Base_ClientesRowDeleting" msprop:Generator_RowChangingName="Base_ClientesRowChanging" msprop:Generator_RowEvHandlerName="Base_ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_ClientesRowDeleted" msprop:Generator_RowClassName="Base_ClientesRow" msprop:Generator_UserTableName="Base_Clientes" msprop:Generator_RowEvArgName="Base_ClientesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CLAVE" msprop:Generator_ColumnVarNameInTable="columnCLAVE" msprop:Generator_ColumnPropNameInRow="CLAVE" msprop:Generator_ColumnPropNameInTable="CLAVEColumn" msprop:Generator_UserColumnName="CLAVE" type="xs:int" />
@@ -399,7 +425,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Base_x0020_de_x0020_Datos_x0020_de_x0020_Empleados" msprop:Generator_TableClassName="Base_de_Datos_de_EmpleadosDataTable" msprop:Generator_TableVarName="tableBase_de_Datos_de_Empleados" msprop:Generator_TablePropName="Base_de_Datos_de_Empleados" msprop:Generator_RowDeletingName="Base_de_Datos_de_EmpleadosRowDeleting" msprop:Generator_RowChangingName="Base_de_Datos_de_EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="Base_de_Datos_de_EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_de_Datos_de_EmpleadosRowDeleted" msprop:Generator_UserTableName="Base de Datos de Empleados" msprop:Generator_RowChangedName="Base_de_Datos_de_EmpleadosRowChanged" msprop:Generator_RowEvArgName="Base_de_Datos_de_EmpleadosRowChangeEvent" msprop:Generator_RowClassName="Base_de_Datos_de_EmpleadosRow">
+        <xs:element name="Base_Empleados" msprop:Generator_TableClassName="Base_EmpleadosDataTable" msprop:Generator_TableVarName="tableBase_Empleados" msprop:Generator_RowChangedName="Base_EmpleadosRowChanged" msprop:Generator_TablePropName="Base_Empleados" msprop:Generator_RowDeletingName="Base_EmpleadosRowDeleting" msprop:Generator_RowChangingName="Base_EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="Base_EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_EmpleadosRowDeleted" msprop:Generator_RowClassName="Base_EmpleadosRow" msprop:Generator_UserTableName="Base_Empleados" msprop:Generator_RowEvArgName="Base_EmpleadosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMINA" msprop:Generator_ColumnVarNameInTable="columnNOMINA" msprop:Generator_ColumnPropNameInRow="NOMINA" msprop:Generator_ColumnPropNameInTable="NOMINAColumn" msprop:Generator_UserColumnName="NOMINA" type="xs:int" />
@@ -434,7 +460,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Base_x0020_de_x0020_Datos_x0020_Material" msprop:Generator_TableClassName="Base_de_Datos_MaterialDataTable" msprop:Generator_TableVarName="tableBase_de_Datos_Material" msprop:Generator_TablePropName="Base_de_Datos_Material" msprop:Generator_RowDeletingName="Base_de_Datos_MaterialRowDeleting" msprop:Generator_RowChangingName="Base_de_Datos_MaterialRowChanging" msprop:Generator_RowEvHandlerName="Base_de_Datos_MaterialRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_de_Datos_MaterialRowDeleted" msprop:Generator_UserTableName="Base de Datos Material" msprop:Generator_RowChangedName="Base_de_Datos_MaterialRowChanged" msprop:Generator_RowEvArgName="Base_de_Datos_MaterialRowChangeEvent" msprop:Generator_RowClassName="Base_de_Datos_MaterialRow">
+        <xs:element name="Base_Material" msprop:Generator_TableClassName="Base_MaterialDataTable" msprop:Generator_TableVarName="tableBase_Material" msprop:Generator_RowChangedName="Base_MaterialRowChanged" msprop:Generator_TablePropName="Base_Material" msprop:Generator_RowDeletingName="Base_MaterialRowDeleting" msprop:Generator_RowChangingName="Base_MaterialRowChanging" msprop:Generator_RowEvHandlerName="Base_MaterialRowChangeEventHandler" msprop:Generator_RowDeletedName="Base_MaterialRowDeleted" msprop:Generator_RowClassName="Base_MaterialRow" msprop:Generator_UserTableName="Base_Material" msprop:Generator_RowEvArgName="Base_MaterialRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CLAVE" msprop:Generator_ColumnVarNameInTable="columnCLAVE" msprop:Generator_ColumnPropNameInRow="CLAVE" msprop:Generator_ColumnPropNameInTable="CLAVEColumn" msprop:Generator_UserColumnName="CLAVE">
@@ -454,19 +480,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Entradas_x0020_de_x0020_Material" msprop:Generator_TableClassName="Entradas_de_MaterialDataTable" msprop:Generator_TableVarName="tableEntradas_de_Material" msprop:Generator_TablePropName="Entradas_de_Material" msprop:Generator_RowDeletingName="Entradas_de_MaterialRowDeleting" msprop:Generator_RowChangingName="Entradas_de_MaterialRowChanging" msprop:Generator_RowEvHandlerName="Entradas_de_MaterialRowChangeEventHandler" msprop:Generator_RowDeletedName="Entradas_de_MaterialRowDeleted" msprop:Generator_UserTableName="Entradas de Material" msprop:Generator_RowChangedName="Entradas_de_MaterialRowChanged" msprop:Generator_RowEvArgName="Entradas_de_MaterialRowChangeEvent" msprop:Generator_RowClassName="Entradas_de_MaterialRow">
+        <xs:element name="Entradas_Material" msprop:Generator_TableClassName="Entradas_MaterialDataTable" msprop:Generator_TableVarName="tableEntradas_Material" msprop:Generator_RowChangedName="Entradas_MaterialRowChanged" msprop:Generator_TablePropName="Entradas_Material" msprop:Generator_RowDeletingName="Entradas_MaterialRowDeleting" msprop:Generator_RowChangingName="Entradas_MaterialRowChanging" msprop:Generator_RowEvHandlerName="Entradas_MaterialRowChangeEventHandler" msprop:Generator_RowDeletedName="Entradas_MaterialRowDeleted" msprop:Generator_RowClassName="Entradas_MaterialRow" msprop:Generator_UserTableName="Entradas_Material" msprop:Generator_RowEvArgName="Entradas_MaterialRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FOLIO_x0020_DE_x0020_ENTRADA" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFOLIO_DE_ENTRADA" msprop:Generator_ColumnPropNameInRow="FOLIO_DE_ENTRADA" msprop:Generator_ColumnPropNameInTable="FOLIO_DE_ENTRADAColumn" msprop:Generator_UserColumnName="FOLIO DE ENTRADA" type="xs:int" />
               <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" msprop:Generator_UserColumnName="CLIENTE" type="xs:int" minOccurs="0" />
-              <xs:element name="FACTURA_x0020_O_x0020_REMISION" msprop:Generator_ColumnVarNameInTable="columnFACTURA_O_REMISION" msprop:Generator_ColumnPropNameInRow="FACTURA_O_REMISION" msprop:Generator_ColumnPropNameInTable="FACTURA_O_REMISIONColumn" msprop:Generator_UserColumnName="FACTURA O REMISION" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="536870910" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="ORDEN_x0020_DE_x0020_COMPRA" msprop:Generator_ColumnVarNameInTable="columnORDEN_DE_COMPRA" msprop:Generator_ColumnPropNameInRow="ORDEN_DE_COMPRA" msprop:Generator_ColumnPropNameInTable="ORDEN_DE_COMPRAColumn" msprop:Generator_UserColumnName="ORDEN DE COMPRA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -559,10 +578,27 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO" msprop:Generator_ColumnPropNameInRow="EMPLEADO" msprop:Generator_ColumnPropNameInTable="EMPLEADOColumn" msprop:Generator_UserColumnName="EMPLEADO" type="xs:int" minOccurs="0" />
+              <xs:element name="FACTURA_x0020_O_x0020_REMISION" msprop:Generator_ColumnVarNameInTable="columnFACTURA_O_REMISION" msprop:Generator_ColumnPropNameInRow="FACTURA_O_REMISION" msprop:Generator_ColumnPropNameInTable="FACTURA_O_REMISIONColumn" msprop:Generator_UserColumnName="FACTURA O REMISION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COSTO" msprop:Generator_ColumnVarNameInTable="columnCOSTO" msprop:Generator_ColumnPropNameInRow="COSTO" msprop:Generator_ColumnPropNameInTable="COSTOColumn" msprop:Generator_UserColumnName="COSTO" type="xs:int" minOccurs="0" />
+              <xs:element name="COSTO_KG" msprop:Generator_ColumnVarNameInTable="columnCOSTO_KG" msprop:Generator_ColumnPropNameInRow="COSTO_KG" msprop:Generator_ColumnPropNameInTable="COSTO_KGColumn" msprop:Generator_UserColumnName="COSTO_KG" type="xs:int" minOccurs="0" />
+              <xs:element name="AÑO" msprop:Generator_ColumnVarNameInTable="columnAÑO" msprop:Generator_ColumnPropNameInRow="AÑO" msprop:Generator_ColumnPropNameInTable="AÑOColumn" msprop:Generator_UserColumnName="AÑO" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RACKS" msprop:Generator_TableClassName="RACKSDataTable" msprop:Generator_TableVarName="tableRACKS" msprop:Generator_TablePropName="RACKS" msprop:Generator_RowDeletingName="RACKSRowDeleting" msprop:Generator_RowChangingName="RACKSRowChanging" msprop:Generator_RowEvHandlerName="RACKSRowChangeEventHandler" msprop:Generator_RowDeletedName="RACKSRowDeleted" msprop:Generator_UserTableName="RACKS" msprop:Generator_RowChangedName="RACKSRowChanged" msprop:Generator_RowEvArgName="RACKSRowChangeEvent" msprop:Generator_RowClassName="RACKSRow">
+        <xs:element name="RACKS" msprop:Generator_TableClassName="RACKSDataTable" msprop:Generator_TableVarName="tableRACKS" msprop:Generator_RowChangedName="RACKSRowChanged" msprop:Generator_TablePropName="RACKS" msprop:Generator_RowDeletingName="RACKSRowDeleting" msprop:Generator_RowChangingName="RACKSRowChanging" msprop:Generator_RowEvHandlerName="RACKSRowChangeEventHandler" msprop:Generator_RowDeletedName="RACKSRowDeleted" msprop:Generator_RowClassName="RACKSRow" msprop:Generator_UserTableName="RACKS" msprop:Generator_RowEvArgName="RACKSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
@@ -582,7 +618,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Salidas_x0020_de_x0020_Material" msprop:Generator_TableClassName="Salidas_de_MaterialDataTable" msprop:Generator_TableVarName="tableSalidas_de_Material" msprop:Generator_TablePropName="Salidas_de_Material" msprop:Generator_RowDeletingName="Salidas_de_MaterialRowDeleting" msprop:Generator_RowChangingName="Salidas_de_MaterialRowChanging" msprop:Generator_RowEvHandlerName="Salidas_de_MaterialRowChangeEventHandler" msprop:Generator_RowDeletedName="Salidas_de_MaterialRowDeleted" msprop:Generator_UserTableName="Salidas de Material" msprop:Generator_RowChangedName="Salidas_de_MaterialRowChanged" msprop:Generator_RowEvArgName="Salidas_de_MaterialRowChangeEvent" msprop:Generator_RowClassName="Salidas_de_MaterialRow">
+        <xs:element name="Salidas_Material" msprop:Generator_TableClassName="Salidas_MaterialDataTable" msprop:Generator_TableVarName="tableSalidas_Material" msprop:Generator_RowChangedName="Salidas_MaterialRowChanged" msprop:Generator_TablePropName="Salidas_Material" msprop:Generator_RowDeletingName="Salidas_MaterialRowDeleting" msprop:Generator_RowChangingName="Salidas_MaterialRowChanging" msprop:Generator_RowEvHandlerName="Salidas_MaterialRowChangeEventHandler" msprop:Generator_RowDeletedName="Salidas_MaterialRowDeleted" msprop:Generator_RowClassName="Salidas_MaterialRow" msprop:Generator_UserTableName="Salidas_Material" msprop:Generator_RowEvArgName="Salidas_MaterialRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FOLIO_x0020_DE_x0020_SALIDA" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFOLIO_DE_SALIDA" msprop:Generator_ColumnPropNameInRow="FOLIO_DE_SALIDA" msprop:Generator_ColumnPropNameInTable="FOLIO_DE_SALIDAColumn" msprop:Generator_UserColumnName="FOLIO DE SALIDA" type="xs:int" />
@@ -636,33 +672,33 @@
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Base_x0020_de_x0020_Datos_x0020_Clientes" />
+      <xs:selector xpath=".//mstns:Base_Clientes" />
       <xs:field xpath="mstns:CLAVE" />
     </xs:unique>
-    <xs:unique name="Base_x0020_de_x0020_Datos_x0020_de_x0020_Empleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Base_x0020_de_x0020_Datos_x0020_de_x0020_Empleados" />
+    <xs:unique name="Base_Empleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Base_Empleados" />
       <xs:field xpath="mstns:NOMINA" />
     </xs:unique>
-    <xs:unique name="Base_x0020_de_x0020_Datos_x0020_Material_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Base_x0020_de_x0020_Datos_x0020_Material" />
+    <xs:unique name="Base_Material_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Base_Material" />
       <xs:field xpath="mstns:CLAVE" />
     </xs:unique>
-    <xs:unique name="Entradas_x0020_de_x0020_Material_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Entradas_x0020_de_x0020_Material" />
+    <xs:unique name="Entradas_Material_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Entradas_Material" />
       <xs:field xpath="mstns:FOLIO_x0020_DE_x0020_ENTRADA" />
     </xs:unique>
-    <xs:unique name="Salidas_x0020_de_x0020_Material_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Salidas_x0020_de_x0020_Material" />
+    <xs:unique name="Salidas_Material_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Salidas_Material" />
       <xs:field xpath="mstns:FOLIO_x0020_DE_x0020_SALIDA" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="_x007B_0A4B2DD8-5CE8-4E61-8262-47AB29C2F654_x007D_" msdata:parent="Base_x0020_de_x0020_Datos_x0020_Material" msdata:child="Entradas_x0020_de_x0020_Material" msdata:parentkey="CLAVE" msdata:childkey="MATERIAL" msprop:Generator_UserChildTable="Entradas de Material" msprop:Generator_ChildPropName="GetEntradas_de_MaterialRows" msprop:Generator_UserRelationName="{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}" msprop:Generator_ParentPropName="Base_de_Datos_MaterialRow" msprop:Generator_RelationVarName="_relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_" msprop:Generator_UserParentTable="Base de Datos Material" />
-      <msdata:Relationship name="_x007B_6ABD57B3-818C-47F1-8AC8-FBD781BF5299_x007D_" msdata:parent="Base_x0020_de_x0020_Datos_x0020_de_x0020_Empleados" msdata:child="Entradas_x0020_de_x0020_Material" msdata:parentkey="NOMINA" msdata:childkey="EMPLEADO" msprop:Generator_UserChildTable="Entradas de Material" msprop:Generator_ChildPropName="GetEntradas_de_MaterialRows" msprop:Generator_UserRelationName="{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}" msprop:Generator_ParentPropName="Base_de_Datos_de_EmpleadosRow" msprop:Generator_RelationVarName="_relation_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_" msprop:Generator_UserParentTable="Base de Datos de Empleados" />
-      <msdata:Relationship name="_x007B_F9EB98F8-A4A6-4906-B346-E557F553309D_x007D_" msdata:parent="Base_x0020_de_x0020_Datos_x0020_Clientes" msdata:child="Entradas_x0020_de_x0020_Material" msdata:parentkey="CLAVE" msdata:childkey="CLIENTE" msprop:Generator_UserChildTable="Entradas de Material" msprop:Generator_ChildPropName="GetEntradas_de_MaterialRows" msprop:Generator_UserRelationName="{F9EB98F8-A4A6-4906-B346-E557F553309D}" msprop:Generator_ParentPropName="Base_de_Datos_ClientesRow" msprop:Generator_RelationVarName="_relation_F9EB98F8_A4A6_4906_B346_E557F553309D_" msprop:Generator_UserParentTable="Base de Datos Clientes" />
-      <msdata:Relationship name="_x007B_6C90DFC1-339A-4CE1-BCE1-03148D0A8013_x007D_" msdata:parent="RACKS" msdata:child="Entradas_x0020_de_x0020_Material" msdata:parentkey="NOMBRE" msdata:childkey="RACK" msprop:Generator_UserChildTable="Entradas de Material" msprop:Generator_ChildPropName="GetEntradas_de_MaterialRows" msprop:Generator_UserRelationName="{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}" msprop:Generator_RelationVarName="_relation_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_" msprop:Generator_UserParentTable="RACKS" msprop:Generator_ParentPropName="RACKSRow" />
-      <msdata:Relationship name="_x007B_9D5A0912-56D8-43F8-AD51-B38C710EACBE_x007D_" msdata:parent="Entradas_x0020_de_x0020_Material" msdata:child="Salidas_x0020_de_x0020_Material" msdata:parentkey="FOLIO_x0020_DE_x0020_ENTRADA" msdata:childkey="FOLIO_x0020_DE_x0020_ENTRADA" msprop:Generator_UserChildTable="Salidas de Material" msprop:Generator_ChildPropName="GetSalidas_de_MaterialRows" msprop:Generator_UserRelationName="{9D5A0912-56D8-43F8-AD51-B38C710EACBE}" msprop:Generator_ParentPropName="Entradas_de_MaterialRow" msprop:Generator_RelationVarName="_relation_9D5A0912_56D8_43F8_AD51_B38C710EACBE_" msprop:Generator_UserParentTable="Entradas de Material" />
+      <msdata:Relationship name="_x007B_0A4B2DD8-5CE8-4E61-8262-47AB29C2F654_x007D_" msdata:parent="Base_Material" msdata:child="Entradas_Material" msdata:parentkey="CLAVE" msdata:childkey="MATERIAL" msprop:Generator_UserChildTable="Entradas_Material" msprop:Generator_ChildPropName="GetEntradas_MaterialRows" msprop:Generator_UserRelationName="{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}" msprop:Generator_RelationVarName="_relation_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_" msprop:Generator_UserParentTable="Base_Material" msprop:Generator_ParentPropName="Base_de_Datos_MaterialRow" />
+      <msdata:Relationship name="_x007B_6ABD57B3-818C-47F1-8AC8-FBD781BF5299_x007D_" msdata:parent="Base_Empleados" msdata:child="Entradas_Material" msdata:parentkey="NOMINA" msdata:childkey="EMPLEADO" msprop:Generator_UserChildTable="Entradas_Material" msprop:Generator_ChildPropName="GetEntradas_MaterialRows" msprop:Generator_UserRelationName="{6ABD57B3-818C-47F1-8AC8-FBD781BF5299}" msprop:Generator_RelationVarName="_relation_6ABD57B3_818C_47F1_8AC8_FBD781BF5299_" msprop:Generator_UserParentTable="Base_Empleados" msprop:Generator_ParentPropName="Base_de_Datos_de_EmpleadosRow" />
+      <msdata:Relationship name="_x007B_F9EB98F8-A4A6-4906-B346-E557F553309D_x007D_" msdata:parent="Base_Clientes" msdata:child="Entradas_Material" msdata:parentkey="CLAVE" msdata:childkey="CLIENTE" msprop:Generator_UserChildTable="Entradas_Material" msprop:Generator_ChildPropName="GetEntradas_MaterialRows" msprop:Generator_UserRelationName="{F9EB98F8-A4A6-4906-B346-E557F553309D}" msprop:Generator_RelationVarName="_relation_F9EB98F8_A4A6_4906_B346_E557F553309D_" msprop:Generator_UserParentTable="Base_Clientes" msprop:Generator_ParentPropName="Base_de_Datos_ClientesRow" />
+      <msdata:Relationship name="_x007B_6C90DFC1-339A-4CE1-BCE1-03148D0A8013_x007D_" msdata:parent="RACKS" msdata:child="Entradas_Material" msdata:parentkey="NOMBRE" msdata:childkey="RACK" msprop:Generator_UserChildTable="Entradas_Material" msprop:Generator_ChildPropName="GetEntradas_de_MaterialRows" msprop:Generator_UserRelationName="{6C90DFC1-339A-4CE1-BCE1-03148D0A8013}" msprop:Generator_ParentPropName="RACKSRow" msprop:Generator_RelationVarName="_relation_6C90DFC1_339A_4CE1_BCE1_03148D0A8013_" msprop:Generator_UserParentTable="RACKS" />
+      <msdata:Relationship name="_x007B_9D5A0912-56D8-43F8-AD51-B38C710EACBE_x007D_" msdata:parent="Entradas_Material" msdata:child="Salidas_Material" msdata:parentkey="FOLIO_x0020_DE_x0020_ENTRADA" msdata:childkey="FOLIO_x0020_DE_x0020_ENTRADA" msprop:Generator_UserChildTable="Salidas_Material" msprop:Generator_ChildPropName="GetSalidas_MaterialRows" msprop:Generator_UserRelationName="{9D5A0912-56D8-43F8-AD51-B38C710EACBE}" msprop:Generator_RelationVarName="_relation_9D5A0912_56D8_43F8_AD51_B38C710EACBE_" msprop:Generator_UserParentTable="Entradas_Material" msprop:Generator_ParentPropName="Entradas_de_MaterialRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
