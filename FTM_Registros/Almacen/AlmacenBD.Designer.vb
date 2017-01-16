@@ -1437,6 +1437,8 @@ Partial Public Class AlmacenBD
         
         Private columnCLIENTE As Global.System.Data.DataColumn
         
+        Private columnFOLIO_DE_SALIDA As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1641,6 +1643,14 @@ Partial Public Class AlmacenBD
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FOLIO_DE_SALIDAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFOLIO_DE_SALIDA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1697,9 +1707,10 @@ Partial Public Class AlmacenBD
                     ByVal COSTO_KG As Integer,  _
                     ByVal AÑO As Integer,  _
                     ByVal EMPLEADO As String,  _
-                    ByVal CLIENTE As String) As Entradas_MaterialRow
+                    ByVal CLIENTE As String,  _
+                    ByVal FOLIO_DE_SALIDA As Integer) As Entradas_MaterialRow
             Dim rowEntradas_MaterialRow As Entradas_MaterialRow = CType(Me.NewRow,Entradas_MaterialRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, FECHA, ORDEN_DE_COMPRA, CERTIFICADO_DE_CALIDAD, CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, Nothing, NUMERO_DE_PARTE, Nothing, NIVEL, COMENTARIO, LOTE, FACTURA_O_REMISION, COSTO, COSTO_KG, AÑO, EMPLEADO, CLIENTE}
+            Dim columnValuesArray() As Object = New Object() {Nothing, FECHA, ORDEN_DE_COMPRA, CERTIFICADO_DE_CALIDAD, CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, Nothing, NUMERO_DE_PARTE, Nothing, NIVEL, COMENTARIO, LOTE, FACTURA_O_REMISION, COSTO, COSTO_KG, AÑO, EMPLEADO, CLIENTE, FOLIO_DE_SALIDA}
             If (Not (_parentBase_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_) Is Nothing) Then
                 columnValuesArray(9) = _parentBase_MaterialRowBy_0A4B2DD8_5CE8_4E61_8262_47AB29C2F654_(0)
             End If
@@ -1755,6 +1766,7 @@ Partial Public Class AlmacenBD
             Me.columnAÑO = MyBase.Columns("AÑO")
             Me.columnEMPLEADO = MyBase.Columns("EMPLEADO")
             Me.columnCLIENTE = MyBase.Columns("CLIENTE")
+            Me.columnFOLIO_DE_SALIDA = MyBase.Columns("FOLIO DE SALIDA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1802,6 +1814,8 @@ Partial Public Class AlmacenBD
             MyBase.Columns.Add(Me.columnEMPLEADO)
             Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCLIENTE)
+            Me.columnFOLIO_DE_SALIDA = New Global.System.Data.DataColumn("FOLIO DE SALIDA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFOLIO_DE_SALIDA)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnFOLIO_DE_ENTRADA}, true))
             Me.columnFOLIO_DE_ENTRADA.AutoIncrement = true
             Me.columnFOLIO_DE_ENTRADA.AutoIncrementSeed = -1
@@ -2246,6 +2260,10 @@ Partial Public Class AlmacenBD
         
         Private columnAUTORIZACION As Global.System.Data.DataColumn
         
+        Private columnOC As Global.System.Data.DataColumn
+        
+        Private columnMATERIAL As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -2354,6 +2372,22 @@ Partial Public Class AlmacenBD
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OCColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOC
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MATERIALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMATERIAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2390,9 +2424,9 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddSalidas_MaterialRow(ByVal CANTIDAD As Integer, ByVal _parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_ As Entradas_MaterialRow, ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String) As Salidas_MaterialRow
+        Public Overloads Function AddSalidas_MaterialRow(ByVal CANTIDAD As Integer, ByVal _parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_ As Entradas_MaterialRow, ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String, ByVal OC As String, ByVal MATERIAL As String) As Salidas_MaterialRow
             Dim rowSalidas_MaterialRow As Salidas_MaterialRow = CType(Me.NewRow,Salidas_MaterialRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, CANTIDAD, Nothing, FECHA, PEDIDO_INTERNO, ORDEN_DE_FABRICACION, MAQUINA, SOLICITANTE, AUTORIZACION}
+            Dim columnValuesArray() As Object = New Object() {Nothing, CANTIDAD, Nothing, FECHA, PEDIDO_INTERNO, ORDEN_DE_FABRICACION, MAQUINA, SOLICITANTE, AUTORIZACION, OC, MATERIAL}
             If (Not (_parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_) Is Nothing) Then
                 columnValuesArray(2) = _parentEntradas_MaterialRowBy_9D5A0912_56D8_43F8_AD51_B38C710EACBE_(0)
             End If
@@ -2433,6 +2467,8 @@ Partial Public Class AlmacenBD
             Me.columnMAQUINA = MyBase.Columns("MAQUINA")
             Me.columnSOLICITANTE = MyBase.Columns("SOLICITANTE")
             Me.columnAUTORIZACION = MyBase.Columns("AUTORIZACION")
+            Me.columnOC = MyBase.Columns("OC")
+            Me.columnMATERIAL = MyBase.Columns("MATERIAL")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2456,6 +2492,10 @@ Partial Public Class AlmacenBD
             MyBase.Columns.Add(Me.columnSOLICITANTE)
             Me.columnAUTORIZACION = New Global.System.Data.DataColumn("AUTORIZACION", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAUTORIZACION)
+            Me.columnOC = New Global.System.Data.DataColumn("OC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOC)
+            Me.columnMATERIAL = New Global.System.Data.DataColumn("MATERIAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMATERIAL)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnFOLIO_DE_SALIDA}, true))
             Me.columnFOLIO_DE_SALIDA.AutoIncrement = true
             Me.columnFOLIO_DE_SALIDA.AutoIncrementSeed = -1
@@ -2468,6 +2508,8 @@ Partial Public Class AlmacenBD
             Me.columnMAQUINA.MaxLength = 536870910
             Me.columnSOLICITANTE.MaxLength = 536870910
             Me.columnAUTORIZACION.MaxLength = 536870910
+            Me.columnOC.MaxLength = 536870910
+            Me.columnMATERIAL.MaxLength = 536870910
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3290,6 +3332,22 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FOLIO_DE_SALIDA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableEntradas_Material.FOLIO_DE_SALIDAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FOLIO DE SALIDA' de la tabla 'Entradas_Material' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEntradas_Material.FOLIO_DE_SALIDAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Base_de_Datos_MaterialRow() As Base_MaterialRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("{0A4B2DD8-5CE8-4E61-8262-47AB29C2F654}")),Base_MaterialRow)
@@ -3552,6 +3610,18 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFOLIO_DE_SALIDANull() As Boolean
+            Return Me.IsNull(Me.tableEntradas_Material.FOLIO_DE_SALIDAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFOLIO_DE_SALIDANull()
+            Me(Me.tableEntradas_Material.FOLIO_DE_SALIDAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function GetSalidas_MaterialRows() As Salidas_MaterialRow()
             If (Me.Table.ChildRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}") Is Nothing) Then
                 Return New Salidas_MaterialRow(-1) {}
@@ -3792,6 +3862,36 @@ Partial Public Class AlmacenBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property OC() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSalidas_Material.OCColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OC' de la tabla 'Salidas_Material' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSalidas_Material.OCColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MATERIAL() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSalidas_Material.MATERIALColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MATERIAL' de la tabla 'Salidas_Material' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSalidas_Material.MATERIALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Entradas_de_MaterialRow() As Entradas_MaterialRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("{9D5A0912-56D8-43F8-AD51-B38C710EACBE}")),Entradas_MaterialRow)
@@ -3895,6 +3995,30 @@ Partial Public Class AlmacenBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetAUTORIZACIONNull()
             Me(Me.tableSalidas_Material.AUTORIZACIONColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOCNull() As Boolean
+            Return Me.IsNull(Me.tableSalidas_Material.OCColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOCNull()
+            Me(Me.tableSalidas_Material.OCColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMATERIALNull() As Boolean
+            Return Me.IsNull(Me.tableSalidas_Material.MATERIALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMATERIALNull()
+            Me(Me.tableSalidas_Material.MATERIALColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -5243,6 +5367,7 @@ Namespace AlmacenBDTableAdapters
             tableMapping.ColumnMappings.Add("AÑO", "AÑO")
             tableMapping.ColumnMappings.Add("EMPLEADO", "EMPLEADO")
             tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE")
+            tableMapping.ColumnMappings.Add("FOLIO DE SALIDA", "FOLIO DE SALIDA")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -5251,7 +5376,8 @@ Namespace AlmacenBDTableAdapters
                 "NTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((? = 1 A"& _ 
                 "ND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND `COSTO"& _ 
                 "` IS NULL) OR (`COSTO` = ?)) AND ((? = 1 AND `COSTO_KG` IS NULL) OR (`COSTO_KG` "& _ 
-                "= ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                "= ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)) AND ((? = 1 AND `FOLIO DE S"& _ 
+                "ALIDA` IS NULL) OR (`FOLIO DE SALIDA` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_ENTRADA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE ENTRADA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -5268,13 +5394,15 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Entradas de Material` (`FECHA`, `FACTURA O REMISION`, `ORDEN DE COMP"& _ 
                 "RA`, `CERTIFICADO DE CALIDAD`, `CANTIDAD`, `UNIDAD`, `LARGO`, `ANCHO`, `CALIBRE`"& _ 
                 ", `MATERIAL`, `NUMERO DE PARTE`, `RACK`, `NIVEL`, `COMENTARIO`, `LOTE`, `COSTO`,"& _ 
-                " `COSTO_KG`, `AÑO`, `EMPLEADO`, `CLIENTE`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                " `COSTO_KG`, `AÑO`, `EMPLEADO`, `CLIENTE`, `FOLIO DE SALIDA`) VALUES (?, ?, ?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FACTURA_O_REMISION", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FACTURA O REMISION", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5296,18 +5424,20 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EMPLEADO", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Entradas de Material` SET `FECHA` = ?, `FACTURA O REMISION` = ?, `ORDEN D"& _ 
                 "E COMPRA` = ?, `CERTIFICADO DE CALIDAD` = ?, `CANTIDAD` = ?, `UNIDAD` = ?, `LARG"& _ 
                 "O` = ?, `ANCHO` = ?, `CALIBRE` = ?, `MATERIAL` = ?, `NUMERO DE PARTE` = ?, `RACK"& _ 
                 "` = ?, `NIVEL` = ?, `COMENTARIO` = ?, `LOTE` = ?, `COSTO` = ?, `COSTO_KG` = ?, `"& _ 
-                "AÑO` = ?, `EMPLEADO` = ?, `CLIENTE` = ? WHERE ((`FOLIO DE ENTRADA` = ?) AND ((? "& _ 
-                "= 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1 AND `CANTIDAD` IS NULL) O"& _ 
-                "R (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR (`UNIDAD` = ?)) AND ((?"& _ 
-                " = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE` = ?)) AND ((? = 1 AND "& _ 
-                "`COSTO` IS NULL) OR (`COSTO` = ?)) AND ((? = 1 AND `COSTO_KG` IS NULL) OR (`COST"& _ 
-                "O_KG` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                "AÑO` = ?, `EMPLEADO` = ?, `CLIENTE` = ?, `FOLIO DE SALIDA` = ? WHERE ((`FOLIO DE"& _ 
+                " ENTRADA` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?)) AND ((? = 1 AN"& _ 
+                "D `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `UNIDAD` IS NULL) OR "& _ 
+                "(`UNIDAD` = ?)) AND ((? = 1 AND `NUMERO DE PARTE` IS NULL) OR (`NUMERO DE PARTE`"& _ 
+                " = ?)) AND ((? = 1 AND `COSTO` IS NULL) OR (`COSTO` = ?)) AND ((? = 1 AND `COSTO"& _ 
+                "_KG` IS NULL) OR (`COSTO_KG` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)"& _ 
+                ") AND ((? = 1 AND `FOLIO DE SALIDA` IS NULL) OR (`FOLIO DE SALIDA` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FACTURA_O_REMISION", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FACTURA O REMISION", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5329,6 +5459,7 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("EMPLEADO", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EMPLEADO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_ENTRADA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE ENTRADA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -5344,6 +5475,8 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COSTO_KG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COSTO_KG", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5362,7 +5495,8 @@ Namespace AlmacenBDTableAdapters
             Me._commandCollection(0).CommandText = "SELECT        [FOLIO DE ENTRADA], FECHA, [FACTURA O REMISION], [ORDEN DE COMPRA],"& _ 
                 " [CERTIFICADO DE CALIDAD], CANTIDAD, UNIDAD, LARGO, ANCHO, CALIBRE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
                 "               MATERIAL, [NUMERO DE PARTE], RACK, NIVEL, COMENTARIO, LOTE, COSTO"& _ 
-                ", COSTO_KG, AÑO, EMPLEADO, CLIENTE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            [Entradas de Material]"
+                ", COSTO_KG, AÑO, EMPLEADO, CLIENTE, [FOLIO DE SALIDA]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            [Entradas"& _ 
+                " de Material]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5422,7 +5556,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_FOLIO_DE_ENTRADA As Integer, ByVal Original_FECHA As Global.System.Nullable(Of Date), ByVal Original_CANTIDAD As String, ByVal Original_UNIDAD As String, ByVal Original_NUMERO_DE_PARTE As String, ByVal Original_COSTO As Global.System.Nullable(Of Integer), ByVal Original_COSTO_KG As Global.System.Nullable(Of Integer), ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_FOLIO_DE_ENTRADA As Integer, ByVal Original_FECHA As Global.System.Nullable(Of Date), ByVal Original_CANTIDAD As String, ByVal Original_UNIDAD As String, ByVal Original_NUMERO_DE_PARTE As String, ByVal Original_COSTO As Global.System.Nullable(Of Integer), ByVal Original_COSTO_KG As Global.System.Nullable(Of Integer), ByVal Original_AÑO As Global.System.Nullable(Of Integer), ByVal Original_FOLIO_DE_SALIDA As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_FOLIO_DE_ENTRADA,Integer)
             If (Original_FECHA.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -5473,6 +5607,13 @@ Namespace AlmacenBDTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
+            If (Original_FOLIO_DE_SALIDA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_FOLIO_DE_SALIDA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5512,7 +5653,8 @@ Namespace AlmacenBDTableAdapters
                     ByVal COSTO_KG As Global.System.Nullable(Of Integer),  _
                     ByVal AÑO As Global.System.Nullable(Of Integer),  _
                     ByVal EMPLEADO As String,  _
-                    ByVal CLIENTE As String) As Integer
+                    ByVal CLIENTE As String,  _
+                    ByVal FOLIO_DE_SALIDA As Global.System.Nullable(Of Integer)) As Integer
             If (FECHA.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(FECHA.Value,Date)
             Else
@@ -5613,6 +5755,11 @@ Namespace AlmacenBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(19).Value = CType(CLIENTE,String)
             End If
+            If (FOLIO_DE_SALIDA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(FOLIO_DE_SALIDA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5653,6 +5800,7 @@ Namespace AlmacenBDTableAdapters
                     ByVal AÑO As Global.System.Nullable(Of Integer),  _
                     ByVal EMPLEADO As String,  _
                     ByVal CLIENTE As String,  _
+                    ByVal FOLIO_DE_SALIDA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_FOLIO_DE_ENTRADA As Integer,  _
                     ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
                     ByVal Original_CANTIDAD As String,  _
@@ -5660,7 +5808,8 @@ Namespace AlmacenBDTableAdapters
                     ByVal Original_NUMERO_DE_PARTE As String,  _
                     ByVal Original_COSTO As Global.System.Nullable(Of Integer),  _
                     ByVal Original_COSTO_KG As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FOLIO_DE_SALIDA As Global.System.Nullable(Of Integer)) As Integer
             If (FECHA.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(FECHA.Value,Date)
             Else
@@ -5761,55 +5910,67 @@ Namespace AlmacenBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(19).Value = CType(CLIENTE,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_FOLIO_DE_ENTRADA,Integer)
-            If (Original_FECHA.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_FECHA.Value,Date)
+            If (FOLIO_DE_SALIDA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(FOLIO_DE_SALIDA.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_FOLIO_DE_ENTRADA,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
             If (Original_CANTIDAD Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_CANTIDAD,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_CANTIDAD,String)
             End If
             If (Original_UNIDAD Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_UNIDAD,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_UNIDAD,String)
             End If
             If (Original_NUMERO_DE_PARTE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_NUMERO_DE_PARTE,String)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_NUMERO_DE_PARTE,String)
             End If
             If (Original_COSTO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_COSTO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_COSTO.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
             If (Original_COSTO_KG.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_COSTO_KG.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_COSTO_KG.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
             If (Original_AÑO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_AÑO.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FOLIO_DE_SALIDA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_FOLIO_DE_SALIDA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -6201,6 +6362,8 @@ Namespace AlmacenBDTableAdapters
             tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
             tableMapping.ColumnMappings.Add("SOLICITANTE", "SOLICITANTE")
             tableMapping.ColumnMappings.Add("AUTORIZACION", "AUTORIZACION")
+            tableMapping.ColumnMappings.Add("OC", "OC")
+            tableMapping.ColumnMappings.Add("MATERIAL", "MATERIAL")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -6216,8 +6379,8 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Salidas de Material` (`CANTIDAD`, `FOLIO DE ENTRADA`, `FECHA`, `PEDI"& _ 
-                "DO INTERNO`, `ORDEN DE FABRICACION`, `MAQUINA`, `SOLICITANTE`, `AUTORIZACION`) V"& _ 
-                "ALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+                "DO INTERNO`, `ORDEN DE FABRICACION`, `MAQUINA`, `SOLICITANTE`, `AUTORIZACION`, `"& _ 
+                "OC`, `MATERIAL`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FOLIO_DE_ENTRADA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE ENTRADA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6227,13 +6390,15 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SOLICITANTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SOLICITANTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AUTORIZACION", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AUTORIZACION", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OC", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OC", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MATERIAL", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Salidas de Material` SET `CANTIDAD` = ?, `FOLIO DE ENTRADA` = ?, `FECHA` "& _ 
                 "= ?, `PEDIDO INTERNO` = ?, `ORDEN DE FABRICACION` = ?, `MAQUINA` = ?, `SOLICITAN"& _ 
-                "TE` = ?, `AUTORIZACION` = ? WHERE ((`FOLIO DE SALIDA` = ?) AND ((? = 1 AND `CANT"& _ 
-                "IDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `FOLIO DE ENTRADA` IS NULL) "& _ 
-                "OR (`FOLIO DE ENTRADA` = ?)))"
+                "TE` = ?, `AUTORIZACION` = ?, `OC` = ?, `MATERIAL` = ? WHERE ((`FOLIO DE SALIDA` "& _ 
+                "= ?) AND ((? = 1 AND `CANTIDAD` IS NULL) OR (`CANTIDAD` = ?)) AND ((? = 1 AND `F"& _ 
+                "OLIO DE ENTRADA` IS NULL) OR (`FOLIO DE ENTRADA` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FOLIO_DE_ENTRADA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE ENTRADA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6243,6 +6408,8 @@ Namespace AlmacenBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SOLICITANTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SOLICITANTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AUTORIZACION", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AUTORIZACION", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OC", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OC", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MATERIAL", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FOLIO_DE_SALIDA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FOLIO DE SALIDA", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CANTIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CANTIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -6263,9 +6430,9 @@ Namespace AlmacenBDTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [FOLIO DE SALIDA], CANTIDAD, [FOLIO DE ENTRADA], FECHA, [PEDIDO INTERNO], "& _ 
-                "[ORDEN DE FABRICACION], MAQUINA, SOLICITANTE, AUTORIZACION FROM [Salidas de Mate"& _ 
-                "rial]"
+            Me._commandCollection(0).CommandText = "SELECT        [FOLIO DE SALIDA], CANTIDAD, [FOLIO DE ENTRADA], FECHA, [PEDIDO INT"& _ 
+                "ERNO], [ORDEN DE FABRICACION], MAQUINA, SOLICITANTE, AUTORIZACION, OC, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
+                "                  MATERIAL"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            [Salidas de Material]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -6360,7 +6527,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal CANTIDAD As Global.System.Nullable(Of Integer), ByVal FOLIO_DE_ENTRADA As Global.System.Nullable(Of Integer), ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal CANTIDAD As Global.System.Nullable(Of Integer), ByVal FOLIO_DE_ENTRADA As Global.System.Nullable(Of Integer), ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String, ByVal OC As String, ByVal MATERIAL As String) As Integer
             If (CANTIDAD.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(CANTIDAD.Value,Integer)
             Else
@@ -6401,6 +6568,16 @@ Namespace AlmacenBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = CType(AUTORIZACION,String)
             End If
+            If (OC Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(OC,String)
+            End If
+            If (MATERIAL Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(MATERIAL,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6420,7 +6597,7 @@ Namespace AlmacenBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal CANTIDAD As Global.System.Nullable(Of Integer), ByVal FOLIO_DE_ENTRADA As Global.System.Nullable(Of Integer), ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String, ByVal Original_FOLIO_DE_SALIDA As Integer, ByVal Original_CANTIDAD As Global.System.Nullable(Of Integer), ByVal Original_FOLIO_DE_ENTRADA As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update(ByVal CANTIDAD As Global.System.Nullable(Of Integer), ByVal FOLIO_DE_ENTRADA As Global.System.Nullable(Of Integer), ByVal FECHA As String, ByVal PEDIDO_INTERNO As String, ByVal ORDEN_DE_FABRICACION As String, ByVal MAQUINA As String, ByVal SOLICITANTE As String, ByVal AUTORIZACION As String, ByVal OC As String, ByVal MATERIAL As String, ByVal Original_FOLIO_DE_SALIDA As Integer, ByVal Original_CANTIDAD As Global.System.Nullable(Of Integer), ByVal Original_FOLIO_DE_ENTRADA As Global.System.Nullable(Of Integer)) As Integer
             If (CANTIDAD.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CANTIDAD.Value,Integer)
             Else
@@ -6461,20 +6638,30 @@ Namespace AlmacenBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = CType(AUTORIZACION,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_FOLIO_DE_SALIDA,Integer)
-            If (Original_CANTIDAD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_CANTIDAD.Value,Integer)
+            If (OC Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(OC,String)
             End If
-            If (Original_FOLIO_DE_ENTRADA.HasValue = true) Then
+            If (MATERIAL Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(MATERIAL,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_FOLIO_DE_SALIDA,Integer)
+            If (Original_CANTIDAD.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_FOLIO_DE_ENTRADA.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_CANTIDAD.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FOLIO_DE_ENTRADA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_FOLIO_DE_ENTRADA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
