@@ -31,17 +31,20 @@ Partial Class Inventario_MP
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(1137, 441)
+        Me.ReportViewer1.Size = New System.Drawing.Size(958, 559)
         Me.ReportViewer1.TabIndex = 0
         '
         'Inventario_MP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1137, 441)
+        Me.ClientSize = New System.Drawing.Size(958, 559)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(400, 140)
         Me.Name = "Inventario_MP"
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Inventario_MP"
         Me.ResumeLayout(False)
 

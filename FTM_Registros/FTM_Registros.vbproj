@@ -168,6 +168,12 @@
     <Compile Include="Almacen\EntradaMP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Almacen\EntradasSalidas.Designer.vb">
+      <DependentUpon>EntradasSalidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\EntradasSalidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Almacen\Inventario_MP.Designer.vb">
       <DependentUpon>Inventario_MP.vb</DependentUpon>
     </Compile>
@@ -406,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Almacen\EntradaMP.resx">
       <DependentUpon>EntradaMP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\EntradasSalidas.resx">
+      <DependentUpon>EntradasSalidas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Almacen\Inventario_MP.resx">
       <DependentUpon>Inventario_MP.vb</DependentUpon>

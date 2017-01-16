@@ -25,11 +25,12 @@ Partial Class Almacen
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Almacen))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.SalidasBTN = New System.Windows.Forms.Button()
         Me.EntradasBTN = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.invmpBTN = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.SalidasBTN = New System.Windows.Forms.Button()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,9 +45,24 @@ Partial Class Almacen
         Me.Panel1.Size = New System.Drawing.Size(177, 615)
         Me.Panel1.TabIndex = 0
         '
+        'SalidasBTN
+        '
+        Me.SalidasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Delete_archive
+        Me.SalidasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SalidasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalidasBTN.ForeColor = System.Drawing.Color.Black
+        Me.SalidasBTN.Location = New System.Drawing.Point(49, 300)
+        Me.SalidasBTN.Name = "SalidasBTN"
+        Me.SalidasBTN.Size = New System.Drawing.Size(75, 75)
+        Me.SalidasBTN.TabIndex = 26
+        Me.SalidasBTN.Text = "Salidas Material"
+        Me.SalidasBTN.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.ToolTip1.SetToolTip(Me.SalidasBTN, "Registra la salida de material")
+        Me.SalidasBTN.UseVisualStyleBackColor = True
+        '
         'EntradasBTN
         '
-        Me.EntradasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_archive
+        Me.EntradasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.shipping_products_22121
         Me.EntradasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.EntradasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EntradasBTN.ForeColor = System.Drawing.Color.Black
@@ -84,20 +100,12 @@ Partial Class Almacen
         Me.ToolTip1.SetToolTip(Me.invmpBTN, "Muestra el inventario de Materia Prima ")
         Me.invmpBTN.UseVisualStyleBackColor = True
         '
-        'SalidasBTN
+        'ReportViewer1
         '
-        Me.SalidasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Delete_archive
-        Me.SalidasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.SalidasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SalidasBTN.ForeColor = System.Drawing.Color.Black
-        Me.SalidasBTN.Location = New System.Drawing.Point(49, 300)
-        Me.SalidasBTN.Name = "SalidasBTN"
-        Me.SalidasBTN.Size = New System.Drawing.Size(75, 75)
-        Me.SalidasBTN.TabIndex = 26
-        Me.SalidasBTN.Text = "Salidas Material"
-        Me.SalidasBTN.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.ToolTip1.SetToolTip(Me.SalidasBTN, "Registra la salida de material")
-        Me.SalidasBTN.UseVisualStyleBackColor = True
+        Me.ReportViewer1.Location = New System.Drawing.Point(188, 9)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(977, 594)
+        Me.ReportViewer1.TabIndex = 1
         '
         'Almacen
         '
@@ -105,7 +113,8 @@ Partial Class Almacen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1127, 615)
+        Me.ClientSize = New System.Drawing.Size(1177, 615)
+        Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Almacen"
@@ -123,4 +132,5 @@ Partial Class Almacen
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents EntradasBTN As Button
     Friend WithEvents SalidasBTN As Button
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class
