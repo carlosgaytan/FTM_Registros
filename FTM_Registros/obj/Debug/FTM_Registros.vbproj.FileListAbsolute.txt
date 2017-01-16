@@ -53,3 +53,4 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Revisi
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Almacen.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.EntradaMP.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Inventario_MP.resources
+S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.SalidaMP.resources

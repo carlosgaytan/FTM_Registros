@@ -76,7 +76,7 @@ Partial Class EntradaMP
         '
         'LoteTXT
         '
-        Me.LoteTXT.Location = New System.Drawing.Point(455, 173)
+        Me.LoteTXT.Location = New System.Drawing.Point(412, 147)
         Me.LoteTXT.Name = "LoteTXT"
         Me.LoteTXT.Size = New System.Drawing.Size(145, 20)
         Me.LoteTXT.TabIndex = 1
@@ -126,14 +126,15 @@ Partial Class EntradaMP
         '
         'CantidadTXT
         '
-        Me.CantidadTXT.Location = New System.Drawing.Point(455, 17)
+        Me.CantidadTXT.Location = New System.Drawing.Point(113, 254)
         Me.CantidadTXT.Name = "CantidadTXT"
         Me.CantidadTXT.Size = New System.Drawing.Size(145, 20)
         Me.CantidadTXT.TabIndex = 10
+        Me.CantidadTXT.Visible = False
         '
         'UnidadTXT
         '
-        Me.UnidadTXT.Location = New System.Drawing.Point(455, 43)
+        Me.UnidadTXT.Location = New System.Drawing.Point(412, 17)
         Me.UnidadTXT.Name = "UnidadTXT"
         Me.UnidadTXT.Size = New System.Drawing.Size(145, 20)
         Me.UnidadTXT.TabIndex = 11
@@ -141,35 +142,35 @@ Partial Class EntradaMP
         '
         'CostoTXT
         '
-        Me.CostoTXT.Location = New System.Drawing.Point(455, 69)
+        Me.CostoTXT.Location = New System.Drawing.Point(412, 43)
         Me.CostoTXT.Name = "CostoTXT"
         Me.CostoTXT.Size = New System.Drawing.Size(145, 20)
         Me.CostoTXT.TabIndex = 12
         '
         'CostokgTXT
         '
-        Me.CostokgTXT.Location = New System.Drawing.Point(455, 95)
+        Me.CostokgTXT.Location = New System.Drawing.Point(412, 69)
         Me.CostokgTXT.Name = "CostokgTXT"
         Me.CostokgTXT.Size = New System.Drawing.Size(145, 20)
         Me.CostokgTXT.TabIndex = 13
         '
         'RackTXT
         '
-        Me.RackTXT.Location = New System.Drawing.Point(455, 121)
+        Me.RackTXT.Location = New System.Drawing.Point(412, 95)
         Me.RackTXT.Name = "RackTXT"
         Me.RackTXT.Size = New System.Drawing.Size(145, 20)
         Me.RackTXT.TabIndex = 14
         '
         'NivelTXT
         '
-        Me.NivelTXT.Location = New System.Drawing.Point(455, 147)
+        Me.NivelTXT.Location = New System.Drawing.Point(412, 121)
         Me.NivelTXT.Name = "NivelTXT"
         Me.NivelTXT.Size = New System.Drawing.Size(145, 20)
         Me.NivelTXT.TabIndex = 15
         '
         'ComentarioTXT
         '
-        Me.ComentarioTXT.Location = New System.Drawing.Point(455, 229)
+        Me.ComentarioTXT.Location = New System.Drawing.Point(412, 203)
         Me.ComentarioTXT.Multiline = True
         Me.ComentarioTXT.Name = "ComentarioTXT"
         Me.ComentarioTXT.Size = New System.Drawing.Size(294, 82)
@@ -177,7 +178,7 @@ Partial Class EntradaMP
         '
         'noParteTXT
         '
-        Me.noParteTXT.Location = New System.Drawing.Point(455, 199)
+        Me.noParteTXT.Location = New System.Drawing.Point(412, 173)
         Me.noParteTXT.Name = "noParteTXT"
         Me.noParteTXT.Size = New System.Drawing.Size(145, 20)
         Me.noParteTXT.TabIndex = 17
@@ -274,16 +275,17 @@ Partial Class EntradaMP
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(354, 20)
+        Me.Label11.Location = New System.Drawing.Point(12, 257)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(52, 13)
         Me.Label11.TabIndex = 31
         Me.Label11.Text = "Cantidad:"
+        Me.Label11.Visible = False
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(354, 46)
+        Me.Label12.Location = New System.Drawing.Point(311, 20)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(44, 13)
         Me.Label12.TabIndex = 32
@@ -292,7 +294,7 @@ Partial Class EntradaMP
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(354, 72)
+        Me.Label13.Location = New System.Drawing.Point(311, 46)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(37, 13)
         Me.Label13.TabIndex = 33
@@ -301,7 +303,7 @@ Partial Class EntradaMP
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(354, 98)
+        Me.Label14.Location = New System.Drawing.Point(311, 72)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(73, 13)
         Me.Label14.TabIndex = 34
@@ -310,7 +312,7 @@ Partial Class EntradaMP
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(354, 124)
+        Me.Label15.Location = New System.Drawing.Point(311, 98)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(39, 13)
         Me.Label15.TabIndex = 35
@@ -319,7 +321,7 @@ Partial Class EntradaMP
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(354, 150)
+        Me.Label16.Location = New System.Drawing.Point(311, 124)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(34, 13)
         Me.Label16.TabIndex = 36
@@ -328,7 +330,7 @@ Partial Class EntradaMP
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(354, 232)
+        Me.Label17.Location = New System.Drawing.Point(311, 206)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(63, 13)
         Me.Label17.TabIndex = 37
@@ -337,7 +339,7 @@ Partial Class EntradaMP
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(354, 176)
+        Me.Label18.Location = New System.Drawing.Point(311, 150)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(31, 13)
         Me.Label18.TabIndex = 38
@@ -346,7 +348,7 @@ Partial Class EntradaMP
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(354, 202)
+        Me.Label19.Location = New System.Drawing.Point(311, 176)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(69, 13)
         Me.Label19.TabIndex = 39
@@ -354,7 +356,7 @@ Partial Class EntradaMP
         '
         'GuardarBTN
         '
-        Me.GuardarBTN.Location = New System.Drawing.Point(674, 339)
+        Me.GuardarBTN.Location = New System.Drawing.Point(631, 291)
         Me.GuardarBTN.Name = "GuardarBTN"
         Me.GuardarBTN.Size = New System.Drawing.Size(75, 23)
         Me.GuardarBTN.TabIndex = 42
@@ -423,7 +425,7 @@ Partial Class EntradaMP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(761, 374)
+        Me.ClientSize = New System.Drawing.Size(721, 330)
         Me.Controls.Add(Me.CalibreCMX)
         Me.Controls.Add(Me.ClienteCMB)
         Me.Controls.Add(Me.GuardarBTN)

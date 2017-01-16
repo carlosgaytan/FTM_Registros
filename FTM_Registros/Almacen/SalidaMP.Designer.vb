@@ -28,6 +28,7 @@ Partial Class SalidaMP
         Me.Salidas_MaterialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalidasMaterialTableAdapter = New FTM_Registros.AlmacenBDTableAdapters.SalidasMaterialTableAdapter()
         Me.TableAdapterManager = New FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager()
+        Me.EntradasMaterialTableAdapter = New FTM_Registros.AlmacenBDTableAdapters.EntradasMaterialTableAdapter()
         Me.SalidaTXT = New System.Windows.Forms.TextBox()
         Me.ocTXT = New System.Windows.Forms.TextBox()
         Me.piTXT = New System.Windows.Forms.TextBox()
@@ -52,7 +53,6 @@ Partial Class SalidaMP
         Me.GuardarBTN = New System.Windows.Forms.Button()
         Me.EntradaTXT = New System.Windows.Forms.ComboBox()
         Me.EntradasMaterialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EntradasMaterialTableAdapter = New FTM_Registros.AlmacenBDTableAdapters.EntradasMaterialTableAdapter()
         CType(Me.AlmacenBD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Salidas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EntradasMaterialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,65 +83,69 @@ Partial Class SalidaMP
         Me.TableAdapterManager.SalidasMaterialTableAdapter = Me.SalidasMaterialTableAdapter
         Me.TableAdapterManager.UpdateOrder = FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'EntradasMaterialTableAdapter
+        '
+        Me.EntradasMaterialTableAdapter.ClearBeforeFill = True
+        '
         'SalidaTXT
         '
-        Me.SalidaTXT.Location = New System.Drawing.Point(105, 39)
+        Me.SalidaTXT.Location = New System.Drawing.Point(105, 17)
         Me.SalidaTXT.Name = "SalidaTXT"
         Me.SalidaTXT.Size = New System.Drawing.Size(121, 20)
         Me.SalidaTXT.TabIndex = 0
         '
         'ocTXT
         '
-        Me.ocTXT.Location = New System.Drawing.Point(105, 117)
+        Me.ocTXT.Location = New System.Drawing.Point(105, 95)
         Me.ocTXT.Name = "ocTXT"
         Me.ocTXT.Size = New System.Drawing.Size(121, 20)
         Me.ocTXT.TabIndex = 3
         '
         'piTXT
         '
-        Me.piTXT.Location = New System.Drawing.Point(105, 143)
+        Me.piTXT.Location = New System.Drawing.Point(105, 121)
         Me.piTXT.Name = "piTXT"
         Me.piTXT.Size = New System.Drawing.Size(121, 20)
         Me.piTXT.TabIndex = 4
         '
         'ofTXT
         '
-        Me.ofTXT.Location = New System.Drawing.Point(105, 169)
+        Me.ofTXT.Location = New System.Drawing.Point(105, 147)
         Me.ofTXT.Name = "ofTXT"
         Me.ofTXT.Size = New System.Drawing.Size(121, 20)
         Me.ofTXT.TabIndex = 5
         '
         'MaterialTXT
         '
-        Me.MaterialTXT.Location = New System.Drawing.Point(105, 195)
+        Me.MaterialTXT.Location = New System.Drawing.Point(327, 43)
         Me.MaterialTXT.Name = "MaterialTXT"
         Me.MaterialTXT.Size = New System.Drawing.Size(121, 20)
         Me.MaterialTXT.TabIndex = 6
         '
         'SolicitanteTXT
         '
-        Me.SolicitanteTXT.Location = New System.Drawing.Point(105, 221)
+        Me.SolicitanteTXT.Location = New System.Drawing.Point(327, 69)
         Me.SolicitanteTXT.Name = "SolicitanteTXT"
         Me.SolicitanteTXT.Size = New System.Drawing.Size(121, 20)
         Me.SolicitanteTXT.TabIndex = 7
         '
         'AutorizaTXT
         '
-        Me.AutorizaTXT.Location = New System.Drawing.Point(105, 247)
+        Me.AutorizaTXT.Location = New System.Drawing.Point(327, 95)
         Me.AutorizaTXT.Name = "AutorizaTXT"
         Me.AutorizaTXT.Size = New System.Drawing.Size(121, 20)
         Me.AutorizaTXT.TabIndex = 8
         '
         'CantTXT
         '
-        Me.CantTXT.Location = New System.Drawing.Point(105, 273)
+        Me.CantTXT.Location = New System.Drawing.Point(327, 121)
         Me.CantTXT.Name = "CantTXT"
         Me.CantTXT.Size = New System.Drawing.Size(121, 20)
         Me.CantTXT.TabIndex = 9
         '
         'MaqTXT
         '
-        Me.MaqTXT.Location = New System.Drawing.Point(105, 299)
+        Me.MaqTXT.Location = New System.Drawing.Point(327, 147)
         Me.MaqTXT.Name = "MaqTXT"
         Me.MaqTXT.Size = New System.Drawing.Size(121, 20)
         Me.MaqTXT.TabIndex = 10
@@ -149,7 +153,7 @@ Partial Class SalidaMP
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 42)
+        Me.Label1.Location = New System.Drawing.Point(12, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(79, 13)
         Me.Label1.TabIndex = 11
@@ -158,7 +162,7 @@ Partial Class SalidaMP
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 68)
+        Me.Label2.Location = New System.Drawing.Point(12, 46)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 13)
         Me.Label2.TabIndex = 12
@@ -167,7 +171,7 @@ Partial Class SalidaMP
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 94)
+        Me.Label3.Location = New System.Drawing.Point(12, 72)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 13)
         Me.Label3.TabIndex = 13
@@ -176,7 +180,7 @@ Partial Class SalidaMP
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 120)
+        Me.Label4.Location = New System.Drawing.Point(12, 98)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(92, 13)
         Me.Label4.TabIndex = 14
@@ -185,7 +189,7 @@ Partial Class SalidaMP
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 146)
+        Me.Label5.Location = New System.Drawing.Point(12, 124)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 13)
         Me.Label5.TabIndex = 15
@@ -194,7 +198,7 @@ Partial Class SalidaMP
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 172)
+        Me.Label6.Location = New System.Drawing.Point(12, 150)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(88, 13)
         Me.Label6.TabIndex = 16
@@ -203,7 +207,7 @@ Partial Class SalidaMP
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 198)
+        Me.Label7.Location = New System.Drawing.Point(263, 46)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(44, 13)
         Me.Label7.TabIndex = 17
@@ -212,7 +216,7 @@ Partial Class SalidaMP
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 224)
+        Me.Label8.Location = New System.Drawing.Point(263, 72)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(59, 13)
         Me.Label8.TabIndex = 18
@@ -221,7 +225,7 @@ Partial Class SalidaMP
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(12, 250)
+        Me.Label9.Location = New System.Drawing.Point(263, 98)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(48, 13)
         Me.Label9.TabIndex = 19
@@ -230,7 +234,7 @@ Partial Class SalidaMP
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(12, 276)
+        Me.Label10.Location = New System.Drawing.Point(263, 124)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(52, 13)
         Me.Label10.TabIndex = 20
@@ -239,7 +243,7 @@ Partial Class SalidaMP
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(12, 302)
+        Me.Label11.Location = New System.Drawing.Point(263, 150)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(51, 13)
         Me.Label11.TabIndex = 21
@@ -248,14 +252,14 @@ Partial Class SalidaMP
         'FechaTXT
         '
         Me.FechaTXT.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaTXT.Location = New System.Drawing.Point(105, 65)
+        Me.FechaTXT.Location = New System.Drawing.Point(105, 43)
         Me.FechaTXT.Name = "FechaTXT"
         Me.FechaTXT.Size = New System.Drawing.Size(121, 20)
         Me.FechaTXT.TabIndex = 22
         '
         'GuardarBTN
         '
-        Me.GuardarBTN.Location = New System.Drawing.Point(447, 243)
+        Me.GuardarBTN.Location = New System.Drawing.Point(375, 173)
         Me.GuardarBTN.Name = "GuardarBTN"
         Me.GuardarBTN.Size = New System.Drawing.Size(75, 23)
         Me.GuardarBTN.TabIndex = 23
@@ -267,7 +271,7 @@ Partial Class SalidaMP
         Me.EntradaTXT.DataSource = Me.EntradasMaterialBindingSource
         Me.EntradaTXT.DisplayMember = "FOLIO DE ENTRADA"
         Me.EntradaTXT.FormattingEnabled = True
-        Me.EntradaTXT.Location = New System.Drawing.Point(105, 91)
+        Me.EntradaTXT.Location = New System.Drawing.Point(105, 69)
         Me.EntradaTXT.Name = "EntradaTXT"
         Me.EntradaTXT.Size = New System.Drawing.Size(121, 21)
         Me.EntradaTXT.TabIndex = 24
@@ -277,15 +281,11 @@ Partial Class SalidaMP
         Me.EntradasMaterialBindingSource.DataMember = "Entradas_Material"
         Me.EntradasMaterialBindingSource.DataSource = Me.AlmacenBD
         '
-        'EntradasMaterialTableAdapter
-        '
-        Me.EntradasMaterialTableAdapter.ClearBeforeFill = True
-        '
         'SalidaMP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(972, 607)
+        Me.ClientSize = New System.Drawing.Size(462, 208)
         Me.Controls.Add(Me.EntradaTXT)
         Me.Controls.Add(Me.GuardarBTN)
         Me.Controls.Add(Me.FechaTXT)
@@ -311,6 +311,7 @@ Partial Class SalidaMP
         Me.Controls.Add(Me.SalidaTXT)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SalidaMP"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Salidas de material"
         CType(Me.AlmacenBD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Salidas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

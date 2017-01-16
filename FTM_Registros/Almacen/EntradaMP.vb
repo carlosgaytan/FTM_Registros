@@ -10,7 +10,7 @@ Public Class EntradaMP
     Private Sub GuardarBTN_Click(sender As Object, e As EventArgs) Handles GuardarBTN.Click
 
         'Genera registro
-        If FechaTXT.Text = "" Or ClienteCMB.Text = "" Or FacturaTXT.Text = "" Or OCTXT.Text = "" Or CalidadTXT.Text = "" Or LargoTXT.Text = "" Or AnchoTXT.Text = "" Or CalibreCMX.Text = "" Or MaterialTXT.Text = "" Or CantidadTXT.Text = "" Or UnidadTXT.Text = "" Or CostoTXT.Text = "" Or CostokgTXT.Text = "" Or RackTXT.Text = "" Or NivelTXT.Text = "" Then
+        If FechaTXT.Text = "" Or ClienteCMB.Text = "" Or FacturaTXT.Text = "" Or OCTXT.Text = "" Or CalidadTXT.Text = "" Or LargoTXT.Text = "" Or AnchoTXT.Text = "" Or CalibreCMX.Text = "" Or MaterialTXT.Text = "" Or UnidadTXT.Text = "" Or CostoTXT.Text = "" Or CostokgTXT.Text = "" Or RackTXT.Text = "" Or NivelTXT.Text = "" Then
             MessageBox.Show("Hay campos vacios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             'Cambia color de los campos vacios o llenos
@@ -54,11 +54,11 @@ Public Class EntradaMP
                 MaterialTXT.BackColor = System.Drawing.Color.White
             End If
             '----------------
-            If CantidadTXT.Text = "" Then
-                CantidadTXT.BackColor = System.Drawing.Color.LightCoral
-            Else
-                CantidadTXT.BackColor = System.Drawing.Color.White
-            End If
+            'If CantidadTXT.Text = "" Then
+            '    CantidadTXT.BackColor = System.Drawing.Color.LightCoral
+            'Else
+            '    CantidadTXT.BackColor = System.Drawing.Color.White
+            'End If
             '----------------
             If UnidadTXT.Text = "" Then
                 UnidadTXT.BackColor = System.Drawing.Color.LightCoral
@@ -106,7 +106,7 @@ Public Class EntradaMP
             NuevoRegistro.ANCHO = AnchoTXT.Text
             NuevoRegistro.CALIBRE = CalibreCMX.Text
             NuevoRegistro.MATERIAL = MaterialTXT.Text
-            NuevoRegistro.CANTIDAD = CantidadTXT.Text
+            'NuevoRegistro.CANTIDAD = CantidadTXT.Text
             NuevoRegistro.UNIDAD = UnidadTXT.Text
             NuevoRegistro.COSTO = CostoTXT.Text
             NuevoRegistro.COSTO_KG = CostokgTXT.Text

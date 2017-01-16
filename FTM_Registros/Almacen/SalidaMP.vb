@@ -7,7 +7,7 @@
         Me.SalidasMaterialTableAdapter.Fill(Me.AlmacenBD.Salidas_Material)
 
     End Sub
-
+#Region "Generar registro"
     Private Sub GuardarBTN_Click(sender As Object, e As EventArgs) Handles GuardarBTN.Click
 
         'Genera registro
@@ -110,5 +110,5 @@
             MessageBox.Show("Registro guardado", "Registros")
         End If
     End Sub
-
+#End Region
 End Class

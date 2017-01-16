@@ -25,15 +25,17 @@ Partial Class Almacen
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Almacen))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.EntradasBTN = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.invmpBTN = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.EntradasBTN = New System.Windows.Forms.Button()
+        Me.SalidasBTN = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.SalidasBTN)
         Me.Panel1.Controls.Add(Me.EntradasBTN)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.invmpBTN)
@@ -41,6 +43,21 @@ Partial Class Almacen
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(177, 615)
         Me.Panel1.TabIndex = 0
+        '
+        'EntradasBTN
+        '
+        Me.EntradasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_archive
+        Me.EntradasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.EntradasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EntradasBTN.ForeColor = System.Drawing.Color.Black
+        Me.EntradasBTN.Location = New System.Drawing.Point(49, 195)
+        Me.EntradasBTN.Name = "EntradasBTN"
+        Me.EntradasBTN.Size = New System.Drawing.Size(75, 75)
+        Me.EntradasBTN.TabIndex = 25
+        Me.EntradasBTN.Text = "Entradas Material"
+        Me.EntradasBTN.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.ToolTip1.SetToolTip(Me.EntradasBTN, "Genera la entrada de material nuevo")
+        Me.EntradasBTN.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -67,19 +84,20 @@ Partial Class Almacen
         Me.ToolTip1.SetToolTip(Me.invmpBTN, "Muestra el inventario de Materia Prima ")
         Me.invmpBTN.UseVisualStyleBackColor = True
         '
-        'EntradasBTN
+        'SalidasBTN
         '
-        Me.EntradasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.packaging_22140
-        Me.EntradasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EntradasBTN.ForeColor = System.Drawing.Color.Black
-        Me.EntradasBTN.Location = New System.Drawing.Point(49, 195)
-        Me.EntradasBTN.Name = "EntradasBTN"
-        Me.EntradasBTN.Size = New System.Drawing.Size(75, 75)
-        Me.EntradasBTN.TabIndex = 25
-        Me.EntradasBTN.Text = "Entradas Material"
-        Me.EntradasBTN.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.ToolTip1.SetToolTip(Me.EntradasBTN, "Muestra el inventario de Materia Prima ")
-        Me.EntradasBTN.UseVisualStyleBackColor = True
+        Me.SalidasBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Delete_archive
+        Me.SalidasBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SalidasBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalidasBTN.ForeColor = System.Drawing.Color.Black
+        Me.SalidasBTN.Location = New System.Drawing.Point(49, 300)
+        Me.SalidasBTN.Name = "SalidasBTN"
+        Me.SalidasBTN.Size = New System.Drawing.Size(75, 75)
+        Me.SalidasBTN.TabIndex = 26
+        Me.SalidasBTN.Text = "Salidas Material"
+        Me.SalidasBTN.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.ToolTip1.SetToolTip(Me.SalidasBTN, "Registra la salida de material")
+        Me.SalidasBTN.UseVisualStyleBackColor = True
         '
         'Almacen
         '
@@ -104,4 +122,5 @@ Partial Class Almacen
     Friend WithEvents Label4 As Label
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents EntradasBTN As Button
+    Friend WithEvents SalidasBTN As Button
 End Class
