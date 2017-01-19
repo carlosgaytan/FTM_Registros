@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class RegIndicadadores
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,17 @@ Partial Class RegIndicadadores
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegIndicadadores))
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.AreaTXT = New System.Windows.Forms.ComboBox()
+        Me.ClienteTXT = New System.Windows.Forms.ComboBox()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
+        Me.FechaTXT = New System.Windows.Forms.DateTimePicker()
+        Me.MaquinaTXT = New System.Windows.Forms.ComboBox()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -57,99 +58,106 @@ Partial Class RegIndicadadores
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.MantTXT = New System.Windows.Forms.TextBox()
+        Me.DuracTXT = New System.Windows.Forms.TextBox()
+        Me.OtroTXT = New System.Windows.Forms.TextBox()
+        Me.PersoTXT = New System.Windows.Forms.TextBox()
+        Me.FmaqTXT = New System.Windows.Forms.TextBox()
+        Me.GasesTXT = New System.Windows.Forms.TextBox()
+        Me.FofTXT = New System.Windows.Forms.TextBox()
+        Me.DescTXT = New System.Windows.Forms.TextBox()
+        Me.CalTXT = New System.Windows.Forms.TextBox()
+        Me.EnerTXT = New System.Windows.Forms.TextBox()
+        Me.ProgramaTXT = New System.Windows.Forms.TextBox()
+        Me.MatTXT = New System.Windows.Forms.TextBox()
+        Me.AjusTXT = New System.Windows.Forms.TextBox()
+        Me.setupTXT = New System.Windows.Forms.TextBox()
+        Me.LimpTXT = New System.Windows.Forms.TextBox()
+        Me.TrabTXT = New System.Windows.Forms.TextBox()
+        Me.SemTXT = New System.Windows.Forms.TextBox()
+        Me.SCRAPTXT = New System.Windows.Forms.TextBox()
+        Me.RechazadasTXT = New System.Windows.Forms.TextBox()
+        Me.ProdTXT = New System.Windows.Forms.TextBox()
+        Me.ProgTXT = New System.Windows.Forms.TextBox()
+        Me.hrTXT = New System.Windows.Forms.TextBox()
+        Me.hpTXT = New System.Windows.Forms.TextBox()
+        Me.OFTXT = New System.Windows.Forms.TextBox()
         Me.GuardarBTN = New System.Windows.Forms.Button()
+        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
+        Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RegistrosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.RegistrosTableAdapter()
+        Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ClientesTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter()
+        Me.VaciarBTN = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label30
+        'AreaTXT
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(168, 216)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(194, 26)
-        Me.Label30.TabIndex = 122
-        Me.Label30.Text = "Tiempos Muertos"
+        Me.AreaTXT.FormattingEnabled = True
+        Me.AreaTXT.Items.AddRange(New Object() {"Láser", "Doblez", "Maquinados", "Punzonado"})
+        Me.AreaTXT.Location = New System.Drawing.Point(183, 29)
+        Me.AreaTXT.Name = "AreaTXT"
+        Me.AreaTXT.Size = New System.Drawing.Size(121, 21)
+        Me.AreaTXT.TabIndex = 2
         '
-        'ComboBox3
+        'ClienteTXT
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(246, 84)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 121
+        Me.ClienteTXT.DataSource = Me.ClientesBindingSource
+        Me.ClienteTXT.DisplayMember = "Cliente"
+        Me.ClienteTXT.FormattingEnabled = True
+        Me.ClienteTXT.Location = New System.Drawing.Point(54, 63)
+        Me.ClienteTXT.Name = "ClienteTXT"
+        Me.ClienteTXT.Size = New System.Drawing.Size(121, 21)
+        Me.ClienteTXT.TabIndex = 5
         '
-        'ComboBox2
+        'ClientesBindingSource
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(62, 84)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 120
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
         '
-        'DateTimePicker1
+        '_Base_de_datos_1_4_beDataSet
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(385, 50)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(121, 20)
-        Me.DateTimePicker1.TabIndex = 119
+        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
+        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ComboBox1
+        'FechaTXT
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(199, 50)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 118
+        Me.FechaTXT.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.FechaTXT.Location = New System.Drawing.Point(377, 29)
+        Me.FechaTXT.Name = "FechaTXT"
+        Me.FechaTXT.Size = New System.Drawing.Size(121, 20)
+        Me.FechaTXT.TabIndex = 3
+        '
+        'MaquinaTXT
+        '
+        Me.MaquinaTXT.FormattingEnabled = True
+        Me.MaquinaTXT.Location = New System.Drawing.Point(266, 63)
+        Me.MaquinaTXT.Name = "MaquinaTXT"
+        Me.MaquinaTXT.Size = New System.Drawing.Size(121, 21)
+        Me.MaquinaTXT.TabIndex = 6
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(30, 262)
+        Me.Label29.Location = New System.Drawing.Point(15, 31)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(79, 13)
         Me.Label29.TabIndex = 117
         Me.Label29.Text = "Mantenimiento:"
         '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(513, 288)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(30, 13)
-        Me.Label28.TabIndex = 116
-        Me.Label28.Text = "Mes:"
-        '
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(242, 444)
+        Me.Label27.Location = New System.Drawing.Point(227, 213)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(53, 13)
         Me.Label27.TabIndex = 115
@@ -158,7 +166,7 @@ Partial Class RegIndicadadores
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(242, 418)
+        Me.Label26.Location = New System.Drawing.Point(227, 187)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(30, 13)
         Me.Label26.TabIndex = 114
@@ -167,7 +175,7 @@ Partial Class RegIndicadadores
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(242, 392)
+        Me.Label25.Location = New System.Drawing.Point(227, 161)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(80, 13)
         Me.Label25.TabIndex = 113
@@ -176,7 +184,7 @@ Partial Class RegIndicadadores
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(242, 366)
+        Me.Label24.Location = New System.Drawing.Point(227, 135)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(76, 13)
         Me.Label24.TabIndex = 112
@@ -185,7 +193,7 @@ Partial Class RegIndicadadores
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(242, 340)
+        Me.Label23.Location = New System.Drawing.Point(227, 109)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(40, 13)
         Me.Label23.TabIndex = 111
@@ -194,7 +202,7 @@ Partial Class RegIndicadadores
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(242, 314)
+        Me.Label22.Location = New System.Drawing.Point(227, 83)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(50, 13)
         Me.Label22.TabIndex = 110
@@ -203,7 +211,7 @@ Partial Class RegIndicadadores
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(242, 288)
+        Me.Label21.Location = New System.Drawing.Point(227, 57)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(56, 13)
         Me.Label21.TabIndex = 109
@@ -212,7 +220,7 @@ Partial Class RegIndicadadores
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(242, 262)
+        Me.Label20.Location = New System.Drawing.Point(227, 31)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(45, 13)
         Me.Label20.TabIndex = 108
@@ -221,7 +229,7 @@ Partial Class RegIndicadadores
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(30, 444)
+        Me.Label19.Location = New System.Drawing.Point(15, 213)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(89, 13)
         Me.Label19.TabIndex = 107
@@ -230,7 +238,7 @@ Partial Class RegIndicadadores
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(30, 418)
+        Me.Label18.Location = New System.Drawing.Point(15, 187)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(55, 13)
         Me.Label18.TabIndex = 106
@@ -239,7 +247,7 @@ Partial Class RegIndicadadores
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(30, 392)
+        Me.Label17.Location = New System.Drawing.Point(15, 161)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(88, 13)
         Me.Label17.TabIndex = 105
@@ -248,7 +256,7 @@ Partial Class RegIndicadadores
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(30, 366)
+        Me.Label16.Location = New System.Drawing.Point(15, 135)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(44, 13)
         Me.Label16.TabIndex = 104
@@ -257,7 +265,7 @@ Partial Class RegIndicadadores
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(30, 340)
+        Me.Label15.Location = New System.Drawing.Point(15, 109)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(43, 13)
         Me.Label15.TabIndex = 103
@@ -266,7 +274,7 @@ Partial Class RegIndicadadores
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(30, 314)
+        Me.Label14.Location = New System.Drawing.Point(15, 83)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(51, 13)
         Me.Label14.TabIndex = 102
@@ -275,7 +283,7 @@ Partial Class RegIndicadadores
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(30, 288)
+        Me.Label13.Location = New System.Drawing.Point(15, 57)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(83, 13)
         Me.Label13.TabIndex = 101
@@ -284,7 +292,7 @@ Partial Class RegIndicadadores
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(513, 262)
+        Me.Label12.Location = New System.Drawing.Point(519, 32)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(49, 13)
         Me.Label12.TabIndex = 100
@@ -293,7 +301,7 @@ Partial Class RegIndicadadores
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(387, 146)
+        Me.Label11.Location = New System.Drawing.Point(453, 125)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(46, 13)
         Me.Label11.TabIndex = 99
@@ -302,7 +310,7 @@ Partial Class RegIndicadadores
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(387, 120)
+        Me.Label10.Location = New System.Drawing.Point(453, 99)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(94, 13)
         Me.Label10.TabIndex = 98
@@ -311,43 +319,43 @@ Partial Class RegIndicadadores
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(181, 146)
+        Me.Label9.Location = New System.Drawing.Point(208, 125)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 13)
+        Me.Label9.Size = New System.Drawing.Size(87, 13)
         Me.Label9.TabIndex = 97
-        Me.Label9.Text = "Pza. Prod.:"
+        Me.Label9.Text = "Pza. Producidas:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(181, 120)
+        Me.Label8.Location = New System.Drawing.Point(208, 99)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(59, 13)
+        Me.Label8.Size = New System.Drawing.Size(96, 13)
         Me.Label8.TabIndex = 96
-        Me.Label8.Text = "Pza. Prog.:"
+        Me.Label8.Text = "Pza. Programados:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(14, 146)
+        Me.Label7.Location = New System.Drawing.Point(6, 125)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(26, 13)
+        Me.Label7.Size = New System.Drawing.Size(46, 13)
         Me.Label7.TabIndex = 95
-        Me.Label7.Text = "HR:"
+        Me.Label7.Text = "H. Real:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(14, 120)
+        Me.Label6.Location = New System.Drawing.Point(6, 99)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 13)
+        Me.Label6.Size = New System.Drawing.Size(46, 13)
         Me.Label6.TabIndex = 94
-        Me.Label6.Text = "HP:"
+        Me.Label6.Text = "H. Prog:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(208, 87)
+        Me.Label5.Location = New System.Drawing.Point(145, 32)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(32, 13)
         Me.Label5.TabIndex = 93
@@ -356,7 +364,7 @@ Partial Class RegIndicadadores
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 87)
+        Me.Label4.Location = New System.Drawing.Point(6, 66)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 92
@@ -365,7 +373,7 @@ Partial Class RegIndicadadores
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(339, 53)
+        Me.Label3.Location = New System.Drawing.Point(331, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(40, 13)
         Me.Label3.TabIndex = 91
@@ -374,7 +382,7 @@ Partial Class RegIndicadadores
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(142, 53)
+        Me.Label2.Location = New System.Drawing.Point(209, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(51, 13)
         Me.Label2.TabIndex = 90
@@ -383,288 +391,327 @@ Partial Class RegIndicadadores
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 53)
+        Me.Label1.Location = New System.Drawing.Point(6, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(24, 13)
         Me.Label1.TabIndex = 89
         Me.Label1.Text = "OF:"
         '
-        'TextBox30
+        'MantTXT
         '
-        Me.TextBox30.Location = New System.Drawing.Point(125, 259)
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox30.TabIndex = 88
+        Me.MantTXT.Location = New System.Drawing.Point(110, 28)
+        Me.MantTXT.Name = "MantTXT"
+        Me.MantTXT.Size = New System.Drawing.Size(100, 20)
+        Me.MantTXT.TabIndex = 13
         '
-        'TextBox29
+        'DuracTXT
         '
-        Me.TextBox29.Location = New System.Drawing.Point(568, 285)
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox29.TabIndex = 87
+        Me.DuracTXT.Location = New System.Drawing.Point(320, 210)
+        Me.DuracTXT.Name = "DuracTXT"
+        Me.DuracTXT.Size = New System.Drawing.Size(100, 20)
+        Me.DuracTXT.TabIndex = 28
         '
-        'TextBox28
+        'OtroTXT
         '
-        Me.TextBox28.Location = New System.Drawing.Point(335, 441)
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox28.TabIndex = 86
+        Me.OtroTXT.Location = New System.Drawing.Point(320, 184)
+        Me.OtroTXT.Name = "OtroTXT"
+        Me.OtroTXT.Size = New System.Drawing.Size(100, 20)
+        Me.OtroTXT.TabIndex = 27
         '
-        'TextBox27
+        'PersoTXT
         '
-        Me.TextBox27.Location = New System.Drawing.Point(335, 415)
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox27.TabIndex = 85
+        Me.PersoTXT.Location = New System.Drawing.Point(320, 158)
+        Me.PersoTXT.Name = "PersoTXT"
+        Me.PersoTXT.Size = New System.Drawing.Size(100, 20)
+        Me.PersoTXT.TabIndex = 26
         '
-        'TextBox26
+        'FmaqTXT
         '
-        Me.TextBox26.Location = New System.Drawing.Point(335, 389)
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox26.TabIndex = 84
+        Me.FmaqTXT.Location = New System.Drawing.Point(320, 132)
+        Me.FmaqTXT.Name = "FmaqTXT"
+        Me.FmaqTXT.Size = New System.Drawing.Size(100, 20)
+        Me.FmaqTXT.TabIndex = 25
         '
-        'TextBox25
+        'GasesTXT
         '
-        Me.TextBox25.Location = New System.Drawing.Point(335, 363)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox25.TabIndex = 83
+        Me.GasesTXT.Location = New System.Drawing.Point(320, 106)
+        Me.GasesTXT.Name = "GasesTXT"
+        Me.GasesTXT.Size = New System.Drawing.Size(100, 20)
+        Me.GasesTXT.TabIndex = 24
         '
-        'TextBox24
+        'FofTXT
         '
-        Me.TextBox24.Location = New System.Drawing.Point(335, 337)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox24.TabIndex = 82
+        Me.FofTXT.Location = New System.Drawing.Point(320, 80)
+        Me.FofTXT.Name = "FofTXT"
+        Me.FofTXT.Size = New System.Drawing.Size(100, 20)
+        Me.FofTXT.TabIndex = 23
         '
-        'TextBox23
+        'DescTXT
         '
-        Me.TextBox23.Location = New System.Drawing.Point(335, 311)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox23.TabIndex = 81
+        Me.DescTXT.Location = New System.Drawing.Point(320, 54)
+        Me.DescTXT.Name = "DescTXT"
+        Me.DescTXT.Size = New System.Drawing.Size(100, 20)
+        Me.DescTXT.TabIndex = 22
         '
-        'TextBox22
+        'CalTXT
         '
-        Me.TextBox22.Location = New System.Drawing.Point(335, 285)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox22.TabIndex = 80
+        Me.CalTXT.Location = New System.Drawing.Point(320, 28)
+        Me.CalTXT.Name = "CalTXT"
+        Me.CalTXT.Size = New System.Drawing.Size(100, 20)
+        Me.CalTXT.TabIndex = 21
         '
-        'TextBox21
+        'EnerTXT
         '
-        Me.TextBox21.Location = New System.Drawing.Point(335, 259)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox21.TabIndex = 79
+        Me.EnerTXT.Location = New System.Drawing.Point(108, 210)
+        Me.EnerTXT.Name = "EnerTXT"
+        Me.EnerTXT.Size = New System.Drawing.Size(100, 20)
+        Me.EnerTXT.TabIndex = 20
         '
-        'TextBox20
+        'ProgramaTXT
         '
-        Me.TextBox20.Location = New System.Drawing.Point(123, 441)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox20.TabIndex = 78
+        Me.ProgramaTXT.Location = New System.Drawing.Point(108, 184)
+        Me.ProgramaTXT.Name = "ProgramaTXT"
+        Me.ProgramaTXT.Size = New System.Drawing.Size(100, 20)
+        Me.ProgramaTXT.TabIndex = 19
         '
-        'TextBox19
+        'MatTXT
         '
-        Me.TextBox19.Location = New System.Drawing.Point(123, 415)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox19.TabIndex = 77
+        Me.MatTXT.Location = New System.Drawing.Point(108, 158)
+        Me.MatTXT.Name = "MatTXT"
+        Me.MatTXT.Size = New System.Drawing.Size(100, 20)
+        Me.MatTXT.TabIndex = 18
         '
-        'TextBox18
+        'AjusTXT
         '
-        Me.TextBox18.Location = New System.Drawing.Point(123, 389)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox18.TabIndex = 76
+        Me.AjusTXT.Location = New System.Drawing.Point(108, 132)
+        Me.AjusTXT.Name = "AjusTXT"
+        Me.AjusTXT.Size = New System.Drawing.Size(100, 20)
+        Me.AjusTXT.TabIndex = 17
         '
-        'TextBox17
+        'setupTXT
         '
-        Me.TextBox17.Location = New System.Drawing.Point(123, 363)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox17.TabIndex = 75
+        Me.setupTXT.Location = New System.Drawing.Point(110, 106)
+        Me.setupTXT.Name = "setupTXT"
+        Me.setupTXT.Size = New System.Drawing.Size(100, 20)
+        Me.setupTXT.TabIndex = 16
         '
-        'TextBox15
+        'LimpTXT
         '
-        Me.TextBox15.Location = New System.Drawing.Point(125, 337)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox15.TabIndex = 74
+        Me.LimpTXT.Location = New System.Drawing.Point(110, 80)
+        Me.LimpTXT.Name = "LimpTXT"
+        Me.LimpTXT.Size = New System.Drawing.Size(100, 20)
+        Me.LimpTXT.TabIndex = 15
         '
-        'TextBox14
+        'TrabTXT
         '
-        Me.TextBox14.Location = New System.Drawing.Point(125, 311)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox14.TabIndex = 73
+        Me.TrabTXT.Location = New System.Drawing.Point(110, 54)
+        Me.TrabTXT.Name = "TrabTXT"
+        Me.TrabTXT.Size = New System.Drawing.Size(100, 20)
+        Me.TrabTXT.TabIndex = 14
         '
-        'TextBox13
+        'SemTXT
         '
-        Me.TextBox13.Location = New System.Drawing.Point(125, 285)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox13.TabIndex = 72
+        Me.SemTXT.Location = New System.Drawing.Point(574, 29)
+        Me.SemTXT.Name = "SemTXT"
+        Me.SemTXT.Size = New System.Drawing.Size(60, 20)
+        Me.SemTXT.TabIndex = 4
         '
-        'TextBox12
+        'SCRAPTXT
         '
-        Me.TextBox12.Location = New System.Drawing.Point(568, 259)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox12.TabIndex = 71
+        Me.SCRAPTXT.Location = New System.Drawing.Point(548, 122)
+        Me.SCRAPTXT.Name = "SCRAPTXT"
+        Me.SCRAPTXT.Size = New System.Drawing.Size(100, 20)
+        Me.SCRAPTXT.TabIndex = 12
         '
-        'TextBox11
+        'RechazadasTXT
         '
-        Me.TextBox11.Location = New System.Drawing.Point(482, 143)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 70
+        Me.RechazadasTXT.Location = New System.Drawing.Point(548, 96)
+        Me.RechazadasTXT.Name = "RechazadasTXT"
+        Me.RechazadasTXT.Size = New System.Drawing.Size(100, 20)
+        Me.RechazadasTXT.TabIndex = 11
         '
-        'TextBox10
+        'ProdTXT
         '
-        Me.TextBox10.Location = New System.Drawing.Point(482, 117)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 69
+        Me.ProdTXT.Location = New System.Drawing.Point(310, 122)
+        Me.ProdTXT.Name = "ProdTXT"
+        Me.ProdTXT.Size = New System.Drawing.Size(100, 20)
+        Me.ProdTXT.TabIndex = 10
         '
-        'TextBox9
+        'ProgTXT
         '
-        Me.TextBox9.Location = New System.Drawing.Point(246, 143)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 68
+        Me.ProgTXT.Location = New System.Drawing.Point(310, 96)
+        Me.ProgTXT.Name = "ProgTXT"
+        Me.ProgTXT.Size = New System.Drawing.Size(100, 20)
+        Me.ProgTXT.TabIndex = 9
         '
-        'TextBox8
+        'hrTXT
         '
-        Me.TextBox8.Location = New System.Drawing.Point(246, 117)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 67
+        Me.hrTXT.Location = New System.Drawing.Point(58, 122)
+        Me.hrTXT.Name = "hrTXT"
+        Me.hrTXT.Size = New System.Drawing.Size(100, 20)
+        Me.hrTXT.TabIndex = 8
         '
-        'TextBox7
+        'hpTXT
         '
-        Me.TextBox7.Location = New System.Drawing.Point(45, 143)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 66
+        Me.hpTXT.Location = New System.Drawing.Point(58, 96)
+        Me.hpTXT.Name = "hpTXT"
+        Me.hpTXT.Size = New System.Drawing.Size(100, 20)
+        Me.hpTXT.TabIndex = 7
         '
-        'TextBox6
+        'OFTXT
         '
-        Me.TextBox6.Location = New System.Drawing.Point(45, 117)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 65
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(44, 50)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(77, 20)
-        Me.TextBox1.TabIndex = 64
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(12, 9)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(101, 26)
-        Me.Label31.TabIndex = 123
-        Me.Label31.Text = "Registro"
+        Me.OFTXT.Location = New System.Drawing.Point(36, 29)
+        Me.OFTXT.Name = "OFTXT"
+        Me.OFTXT.Size = New System.Drawing.Size(77, 20)
+        Me.OFTXT.TabIndex = 1
         '
         'GuardarBTN
         '
         Me.GuardarBTN.Location = New System.Drawing.Point(593, 438)
         Me.GuardarBTN.Name = "GuardarBTN"
         Me.GuardarBTN.Size = New System.Drawing.Size(75, 23)
-        Me.GuardarBTN.TabIndex = 124
+        Me.GuardarBTN.TabIndex = 29
         Me.GuardarBTN.Text = "Guardar"
+        Me.ToolTip1.SetToolTip(Me.GuardarBTN, "Guarda el registro actual")
         Me.GuardarBTN.UseVisualStyleBackColor = True
+        '
+        'ProduccionBD
+        '
+        Me.ProduccionBD.DataSetName = "ProduccionBD"
+        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RegistrosBindingSource
+        '
+        Me.RegistrosBindingSource.DataMember = "Registros"
+        Me.RegistrosBindingSource.DataSource = Me.ProduccionBD
+        '
+        'RegistrosTableAdapter
+        '
+        Me.RegistrosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.RegistrosTableAdapter = Me.RegistrosTableAdapter
+        Me.TableAdapterManager.UpdateOrder = FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.OFTXT)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.MaquinaTXT)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.hpTXT)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.hrTXT)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.AreaTXT)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.ProgTXT)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.ClienteTXT)
+        Me.GroupBox1.Controls.Add(Me.SemTXT)
+        Me.GroupBox1.Controls.Add(Me.ProdTXT)
+        Me.GroupBox1.Controls.Add(Me.SCRAPTXT)
+        Me.GroupBox1.Controls.Add(Me.FechaTXT)
+        Me.GroupBox1.Controls.Add(Me.RechazadasTXT)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(659, 162)
+        Me.GroupBox1.TabIndex = 125
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Registro Diario"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label29)
+        Me.GroupBox2.Controls.Add(Me.TrabTXT)
+        Me.GroupBox2.Controls.Add(Me.LimpTXT)
+        Me.GroupBox2.Controls.Add(Me.Label27)
+        Me.GroupBox2.Controls.Add(Me.setupTXT)
+        Me.GroupBox2.Controls.Add(Me.Label26)
+        Me.GroupBox2.Controls.Add(Me.AjusTXT)
+        Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.MatTXT)
+        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.ProgramaTXT)
+        Me.GroupBox2.Controls.Add(Me.Label23)
+        Me.GroupBox2.Controls.Add(Me.EnerTXT)
+        Me.GroupBox2.Controls.Add(Me.Label22)
+        Me.GroupBox2.Controls.Add(Me.CalTXT)
+        Me.GroupBox2.Controls.Add(Me.Label21)
+        Me.GroupBox2.Controls.Add(Me.DescTXT)
+        Me.GroupBox2.Controls.Add(Me.Label20)
+        Me.GroupBox2.Controls.Add(Me.FofTXT)
+        Me.GroupBox2.Controls.Add(Me.Label19)
+        Me.GroupBox2.Controls.Add(Me.GasesTXT)
+        Me.GroupBox2.Controls.Add(Me.Label18)
+        Me.GroupBox2.Controls.Add(Me.FmaqTXT)
+        Me.GroupBox2.Controls.Add(Me.Label17)
+        Me.GroupBox2.Controls.Add(Me.PersoTXT)
+        Me.GroupBox2.Controls.Add(Me.Label16)
+        Me.GroupBox2.Controls.Add(Me.OtroTXT)
+        Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.DuracTXT)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.MantTXT)
+        Me.GroupBox2.Controls.Add(Me.Label13)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 184)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(470, 285)
+        Me.GroupBox2.TabIndex = 126
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Tiempos Muertos"
+        '
+        'ClientesTableAdapter
+        '
+        Me.ClientesTableAdapter.ClearBeforeFill = True
+        '
+        'VaciarBTN
+        '
+        Me.VaciarBTN.Location = New System.Drawing.Point(593, 394)
+        Me.VaciarBTN.Name = "VaciarBTN"
+        Me.VaciarBTN.Size = New System.Drawing.Size(75, 23)
+        Me.VaciarBTN.TabIndex = 127
+        Me.VaciarBTN.Text = "Vaciar"
+        Me.ToolTip1.SetToolTip(Me.VaciarBTN, "Vacia todos los campos")
+        Me.VaciarBTN.UseVisualStyleBackColor = True
         '
         'RegIndicadadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 478)
+        Me.ClientSize = New System.Drawing.Size(683, 481)
+        Me.Controls.Add(Me.VaciarBTN)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GuardarBTN)
-        Me.Controls.Add(Me.Label31)
-        Me.Controls.Add(Me.Label30)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.Label28)
-        Me.Controls.Add(Me.Label27)
-        Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox30)
-        Me.Controls.Add(Me.TextBox29)
-        Me.Controls.Add(Me.TextBox28)
-        Me.Controls.Add(Me.TextBox27)
-        Me.Controls.Add(Me.TextBox26)
-        Me.Controls.Add(Me.TextBox25)
-        Me.Controls.Add(Me.TextBox24)
-        Me.Controls.Add(Me.TextBox23)
-        Me.Controls.Add(Me.TextBox22)
-        Me.Controls.Add(Me.TextBox21)
-        Me.Controls.Add(Me.TextBox20)
-        Me.Controls.Add(Me.TextBox19)
-        Me.Controls.Add(Me.TextBox18)
-        Me.Controls.Add(Me.TextBox17)
-        Me.Controls.Add(Me.TextBox15)
-        Me.Controls.Add(Me.TextBox14)
-        Me.Controls.Add(Me.TextBox13)
-        Me.Controls.Add(Me.TextBox12)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "RegIndicadadores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro Reportes de Producción"
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label30 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents AreaTXT As ComboBox
+    Friend WithEvents ClienteTXT As ComboBox
+    Friend WithEvents FechaTXT As DateTimePicker
+    Friend WithEvents MaquinaTXT As ComboBox
     Friend WithEvents Label29 As Label
-    Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label25 As Label
@@ -692,31 +739,40 @@ Partial Class RegIndicadadores
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox30 As TextBox
-    Friend WithEvents TextBox29 As TextBox
-    Friend WithEvents TextBox28 As TextBox
-    Friend WithEvents TextBox27 As TextBox
-    Friend WithEvents TextBox26 As TextBox
-    Friend WithEvents TextBox25 As TextBox
-    Friend WithEvents TextBox24 As TextBox
-    Friend WithEvents TextBox23 As TextBox
-    Friend WithEvents TextBox22 As TextBox
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label31 As Label
+    Friend WithEvents MantTXT As TextBox
+    Friend WithEvents DuracTXT As TextBox
+    Friend WithEvents OtroTXT As TextBox
+    Friend WithEvents PersoTXT As TextBox
+    Friend WithEvents FmaqTXT As TextBox
+    Friend WithEvents GasesTXT As TextBox
+    Friend WithEvents FofTXT As TextBox
+    Friend WithEvents DescTXT As TextBox
+    Friend WithEvents CalTXT As TextBox
+    Friend WithEvents EnerTXT As TextBox
+    Friend WithEvents ProgramaTXT As TextBox
+    Friend WithEvents MatTXT As TextBox
+    Friend WithEvents AjusTXT As TextBox
+    Friend WithEvents setupTXT As TextBox
+    Friend WithEvents LimpTXT As TextBox
+    Friend WithEvents TrabTXT As TextBox
+    Friend WithEvents SemTXT As TextBox
+    Friend WithEvents SCRAPTXT As TextBox
+    Friend WithEvents RechazadasTXT As TextBox
+    Friend WithEvents ProdTXT As TextBox
+    Friend WithEvents ProgTXT As TextBox
+    Friend WithEvents hrTXT As TextBox
+    Friend WithEvents hpTXT As TextBox
+    Friend WithEvents OFTXT As TextBox
     Friend WithEvents GuardarBTN As Button
+    Friend WithEvents ProduccionBD As ProduccionBD
+    Friend WithEvents RegistrosBindingSource As BindingSource
+    Friend WithEvents RegistrosTableAdapter As ProduccionBDTableAdapters.RegistrosTableAdapter
+    Friend WithEvents TableAdapterManager As ProduccionBDTableAdapters.TableAdapterManager
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents _Base_de_datos_1_4_beDataSet As _Base_de_datos_1_4_beDataSet
+    Friend WithEvents ClientesBindingSource As BindingSource
+    Friend WithEvents ClientesTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents VaciarBTN As Button
 End Class

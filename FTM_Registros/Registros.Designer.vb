@@ -62,6 +62,10 @@ Partial Class Registros
         Me.InfoAlmacen = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.AlmacenCBX = New System.Windows.Forms.CheckBox()
+        Me.InfoPorduc = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ProducBTN = New System.Windows.Forms.Button()
+        Me.ProduccionCHBX = New System.Windows.Forms.CheckBox()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.baseFSW, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,7 +123,7 @@ Partial Class Registros
         Me.GerenciaBTN.Size = New System.Drawing.Size(90, 90)
         Me.GerenciaBTN.TabIndex = 0
         Me.GerenciaBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.GerenciaBTN, "Información Gerencia")
+        Me.ToolTip1.SetToolTip(Me.GerenciaBTN, "Gerencia")
         Me.GerenciaBTN.UseVisualStyleBackColor = True
         '
         'VentasBTN
@@ -180,12 +184,12 @@ Partial Class Registros
         Me.AlmacenBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.shipping_products_22121
         Me.AlmacenBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.AlmacenBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AlmacenBTN.Location = New System.Drawing.Point(368, 43)
+        Me.AlmacenBTN.Location = New System.Drawing.Point(359, 163)
         Me.AlmacenBTN.Name = "AlmacenBTN"
         Me.AlmacenBTN.Size = New System.Drawing.Size(90, 90)
         Me.AlmacenBTN.TabIndex = 30
         Me.AlmacenBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.AlmacenBTN, "Información Gerencia")
+        Me.ToolTip1.SetToolTip(Me.AlmacenBTN, "Almacén")
         Me.AlmacenBTN.UseVisualStyleBackColor = True
         '
         'Label1
@@ -342,7 +346,7 @@ Partial Class Registros
         '
         Me.GerenciaCHBX.AutoSize = True
         Me.GerenciaCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Gerencia", True))
-        Me.GerenciaCHBX.Location = New System.Drawing.Point(1016, 315)
+        Me.GerenciaCHBX.Location = New System.Drawing.Point(728, 208)
         Me.GerenciaCHBX.Name = "GerenciaCHBX"
         Me.GerenciaCHBX.Size = New System.Drawing.Size(69, 17)
         Me.GerenciaCHBX.TabIndex = 23
@@ -363,7 +367,7 @@ Partial Class Registros
         '
         Me.VentasCHBX.AutoSize = True
         Me.VentasCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Ventas", True))
-        Me.VentasCHBX.Location = New System.Drawing.Point(1016, 338)
+        Me.VentasCHBX.Location = New System.Drawing.Point(728, 231)
         Me.VentasCHBX.Name = "VentasCHBX"
         Me.VentasCHBX.Size = New System.Drawing.Size(59, 17)
         Me.VentasCHBX.TabIndex = 24
@@ -374,7 +378,7 @@ Partial Class Registros
         '
         Me.IngenieriaCHBX.AutoSize = True
         Me.IngenieriaCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Ingenieria", True))
-        Me.IngenieriaCHBX.Location = New System.Drawing.Point(1016, 361)
+        Me.IngenieriaCHBX.Location = New System.Drawing.Point(728, 254)
         Me.IngenieriaCHBX.Name = "IngenieriaCHBX"
         Me.IngenieriaCHBX.Size = New System.Drawing.Size(74, 17)
         Me.IngenieriaCHBX.TabIndex = 25
@@ -385,7 +389,7 @@ Partial Class Registros
         '
         Me.ControlCHBX.AutoSize = True
         Me.ControlCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "ContProyect", True))
-        Me.ControlCHBX.Location = New System.Drawing.Point(1016, 384)
+        Me.ControlCHBX.Location = New System.Drawing.Point(728, 277)
         Me.ControlCHBX.Name = "ControlCHBX"
         Me.ControlCHBX.Size = New System.Drawing.Size(124, 17)
         Me.ControlCHBX.TabIndex = 26
@@ -396,7 +400,7 @@ Partial Class Registros
         '
         Me.PlaneacionCHBX.AutoSize = True
         Me.PlaneacionCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Planeacion", True))
-        Me.PlaneacionCHBX.Location = New System.Drawing.Point(1016, 407)
+        Me.PlaneacionCHBX.Location = New System.Drawing.Point(728, 300)
         Me.PlaneacionCHBX.Name = "PlaneacionCHBX"
         Me.PlaneacionCHBX.Size = New System.Drawing.Size(79, 17)
         Me.PlaneacionCHBX.TabIndex = 27
@@ -407,7 +411,7 @@ Partial Class Registros
         '
         Me.RegistrosCHBX.AutoSize = True
         Me.RegistrosCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Registros", True))
-        Me.RegistrosCHBX.Location = New System.Drawing.Point(1016, 430)
+        Me.RegistrosCHBX.Location = New System.Drawing.Point(728, 323)
         Me.RegistrosCHBX.Name = "RegistrosCHBX"
         Me.RegistrosCHBX.Size = New System.Drawing.Size(70, 17)
         Me.RegistrosCHBX.TabIndex = 28
@@ -437,7 +441,7 @@ Partial Class Registros
         Me.ComboBox1.DataSource = Me.UsuariosPermisosBindingSource
         Me.ComboBox1.DisplayMember = "Nombre"
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(1016, 288)
+        Me.ComboBox1.Location = New System.Drawing.Point(728, 181)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 29
@@ -471,7 +475,7 @@ Partial Class Registros
         Me.InfoAlmacen.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.InfoAlmacen.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoAlmacen.ForeColor = System.Drawing.Color.Black
-        Me.InfoAlmacen.Location = New System.Drawing.Point(456, 44)
+        Me.InfoAlmacen.Location = New System.Drawing.Point(447, 164)
         Me.InfoAlmacen.Multiline = True
         Me.InfoAlmacen.Name = "InfoAlmacen"
         Me.InfoAlmacen.ReadOnly = True
@@ -488,7 +492,7 @@ Partial Class Registros
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(374, 134)
+        Me.Label6.Location = New System.Drawing.Point(365, 254)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 19)
         Me.Label6.TabIndex = 31
@@ -497,12 +501,64 @@ Partial Class Registros
         'AlmacenCBX
         '
         Me.AlmacenCBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Almacen", True))
-        Me.AlmacenCBX.Location = New System.Drawing.Point(1016, 453)
+        Me.AlmacenCBX.Location = New System.Drawing.Point(728, 372)
         Me.AlmacenCBX.Name = "AlmacenCBX"
         Me.AlmacenCBX.Size = New System.Drawing.Size(104, 24)
         Me.AlmacenCBX.TabIndex = 33
         Me.AlmacenCBX.Text = "Almacén"
         Me.AlmacenCBX.UseVisualStyleBackColor = True
+        '
+        'InfoPorduc
+        '
+        Me.InfoPorduc.BackColor = System.Drawing.Color.Gainsboro
+        Me.InfoPorduc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.InfoPorduc.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.InfoPorduc.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InfoPorduc.ForeColor = System.Drawing.Color.Black
+        Me.InfoPorduc.Location = New System.Drawing.Point(447, 44)
+        Me.InfoPorduc.Multiline = True
+        Me.InfoPorduc.Name = "InfoPorduc"
+        Me.InfoPorduc.ReadOnly = True
+        Me.InfoPorduc.Size = New System.Drawing.Size(190, 88)
+        Me.InfoPorduc.TabIndex = 36
+        Me.InfoPorduc.Text = "Herramientas correspondientes al área de Producción: Indicadores producción."
+        Me.InfoPorduc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.InfoPorduc.Visible = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(355, 134)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(98, 19)
+        Me.Label7.TabIndex = 35
+        Me.Label7.Text = "Producción"
+        '
+        'ProducBTN
+        '
+        Me.ProducBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.production_22132
+        Me.ProducBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ProducBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProducBTN.Location = New System.Drawing.Point(359, 43)
+        Me.ProducBTN.Name = "ProducBTN"
+        Me.ProducBTN.Size = New System.Drawing.Size(90, 90)
+        Me.ProducBTN.TabIndex = 34
+        Me.ProducBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.ProducBTN, "Producción")
+        Me.ProducBTN.UseVisualStyleBackColor = True
+        '
+        'ProduccionCHBX
+        '
+        Me.ProduccionCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Almacen", True))
+        Me.ProduccionCHBX.Location = New System.Drawing.Point(728, 342)
+        Me.ProduccionCHBX.Name = "ProduccionCHBX"
+        Me.ProduccionCHBX.Size = New System.Drawing.Size(104, 24)
+        Me.ProduccionCHBX.TabIndex = 37
+        Me.ProduccionCHBX.Text = "Producción"
+        Me.ProduccionCHBX.UseVisualStyleBackColor = True
         '
         'Registros
         '
@@ -514,6 +570,10 @@ Partial Class Registros
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1604, 882)
         Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.ProduccionCHBX)
+        Me.Controls.Add(Me.InfoPorduc)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.ProducBTN)
         Me.Controls.Add(Me.AlmacenCBX)
         Me.Controls.Add(Me.InfoAlmacen)
         Me.Controls.Add(Me.Label6)
@@ -596,4 +656,8 @@ Partial Class Registros
     Friend WithEvents Label6 As Label
     Friend WithEvents AlmacenBTN As Button
     Friend WithEvents AlmacenCBX As CheckBox
+    Friend WithEvents InfoPorduc As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ProducBTN As Button
+    Friend WithEvents ProduccionCHBX As CheckBox
 End Class

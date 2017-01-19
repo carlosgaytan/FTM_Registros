@@ -54,6 +54,13 @@ Public Class Registros
         End If
 
     End Sub
+    Private Sub ProducBTN_Click(sender As Object, e As EventArgs) Handles ProducBTN.Click
+        If ProduccionCHBX.CheckState = CheckState.Checked Then
+            Produccion.Show()
+        ElseIf ProduccionCHBX.CheckState = CheckState.Unchecked Then
+            MessageBox.Show("No cuenta con los permisos para ingresar, consulte con el Administrador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 
     Private Sub Iniciobtn_Click(sender As Object, e As EventArgs) Handles Iniciobtn.Click
 
@@ -65,6 +72,7 @@ Public Class Registros
         Ingenieria.Hide()
         Planeacion.Hide()
         Control_Proyectos.Hide()
+        Produccion.Hide()
         Almacen.Hide()
         Me.Hide()
 
@@ -81,6 +89,7 @@ Public Class Registros
             Ingenieria.Close()
             Planeacion.Close()
             Control_Proyectos.Close()
+            Produccion.Close()
             Almacen.Close()
             End
         Else
@@ -128,6 +137,12 @@ Public Class Registros
 
     Private Sub ContProyectBTN_MouseLeave(sender As Object, e As EventArgs) Handles ContProyectBTN.MouseLeave
         InfoControl.Visible = False
+    End Sub
+    Private Sub ProducBTN_MouseHover(sender As Object, e As EventArgs) Handles ProducBTN.MouseHover
+        InfoPorduc.Visible = True
+    End Sub
+    Private Sub ProducBTN_MouseLeave(sender As Object, e As EventArgs) Handles ProducBTN.MouseLeave
+        InfoPorduc.Visible = False
     End Sub
     Private Sub AlmacenBTN_MouseHover(sender As Object, e As EventArgs) Handles AlmacenBTN.MouseHover
         InfoAlmacen.Visible = True
