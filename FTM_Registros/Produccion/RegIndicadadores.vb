@@ -160,9 +160,18 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles VaciarBTN.Click
-        Dim resVac = MessageBox.Show("¿Desea vaciar campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        Dim resVac = MessageBox.Show("¿Desea vaciar los campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         If resVac = DialogResult.Yes Then
             Vaciar()
+        End If
+    End Sub
+
+    Private Sub RegIndicadadores_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim cerrar = MessageBox.Show("¿Seguro que desea salir?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If cerrar = DialogResult.Yes Then
+            e.Cancel = False
+        ElseIf cerrar = DialogResult.No Then
+            e.Cancel = True
         End If
     End Sub
 End Class

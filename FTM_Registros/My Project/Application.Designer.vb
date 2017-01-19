@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.FTM_Registros.RegIndicadadores
+            Me.MainForm = Global.FTM_Registros.Inicio
         End Sub
     End Class
 End Namespace

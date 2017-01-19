@@ -450,6 +450,7 @@
     <EmbeddedResource Include="Produccion\RegIndicadadores.resx">
       <DependentUpon>RegIndicadadores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\R_Mensual.rdlc" />
     <EmbeddedResource Include="Ventas\Corregir_costos.resx">
       <DependentUpon>Corregir_costos.vb</DependentUpon>
     </EmbeddedResource>
