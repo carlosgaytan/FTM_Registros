@@ -6,13 +6,14 @@
         Me.EntradasMaterialTableAdapter.Fill(Me.AlmacenBD.Entradas_Material)
         'TODO: esta línea de código carga datos en la tabla 'AlmacenBD.Salidas_Material' Puede moverla o quitarla según sea necesario.
         Me.SalidasMaterialTableAdapter.Fill(Me.AlmacenBD.Salidas_Material)
+        Label30.Text = DateTime.Now.ToShortDateString & " " & DateTime.Now.ToLongTimeString
     End Sub
 
 #Region "Registro Entradas"
     Private Sub GuardarBTN_Click(sender As Object, e As EventArgs) Handles GuardarBTN.Click
 
         'Genera registro
-        If FechaTXT.Text = "" Or ClienteCMB.Text = "" Or FacturaTXT.Text = "" Or OCTXT.Text = "" Or CalidadTXT.Text = "" Or LargoTXT.Text = "" Or AnchoTXT.Text = "" Or CalibreCMX.Text = "" Or MaterialTXT.Text = "" Or UnidadTXT.Text = "" Or CostoTXT.Text = "" Or CostokgTXT.Text = "" Or RackTXT.Text = "" Or NivelTXT.Text = "" Then
+        If ClienteCMB.Text = "" Or FacturaTXT.Text = "" Or OCTXT.Text = "" Or CalidadTXT.Text = "" Or LargoTXT.Text = "" Or AnchoTXT.Text = "" Or CalibreCMX.Text = "" Or MaterialTXT.Text = "" Or UnidadTXT.Text = "" Or CostoTXT.Text = "" Or CostokgTXT.Text = "" Or RackTXT.Text = "" Or NivelTXT.Text = "" Then
             MessageBox.Show("Hay campos vacios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             'Cambia color de los campos vacios o llenos
@@ -56,12 +57,6 @@
                 MaterialTXT.BackColor = System.Drawing.Color.White
             End If
             '----------------
-            'If CantidadTXT.Text = "" Then
-            '    CantidadTXT.BackColor = System.Drawing.Color.LightCoral
-            'Else
-            '    CantidadTXT.BackColor = System.Drawing.Color.White
-            'End If
-            '----------------
             If UnidadTXT.Text = "" Then
                 UnidadTXT.BackColor = System.Drawing.Color.LightCoral
             Else
@@ -99,7 +94,7 @@
             NuevoRegistro = AlmacenBD.Entradas_Material.NewEntradas_MaterialRow
 
             'Rellena fila
-            NuevoRegistro.FECHA = FechaTXT.Text
+            NuevoRegistro.FECHA = Label30.Text
             NuevoRegistro.CLIENTE = ClienteCMB.Text
             NuevoRegistro.FACTURA_O_REMISION = FacturaTXT.Text
             NuevoRegistro.ORDEN_DE_COMPRA = OCTXT.Text
@@ -108,7 +103,6 @@
             NuevoRegistro.ANCHO = AnchoTXT.Text
             NuevoRegistro.CALIBRE = CalibreCMX.Text
             NuevoRegistro.MATERIAL = MaterialTXT.Text
-            'NuevoRegistro.CANTIDAD = CantidadTXT.Text
             NuevoRegistro.UNIDAD = UnidadTXT.Text
             NuevoRegistro.COSTO = CostoTXT.Text
             NuevoRegistro.COSTO_KG = CostokgTXT.Text
@@ -236,10 +230,19 @@
         End If
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+#End Region
+
+    Private Sub EntradasSalidas_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        'Confirmación de cierre
+        If MessageBox.Show("¿Seguro que desea salir?", "Salida",
+        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+        = DialogResult.Yes Then
+            Me.Close()
+            End
+        Else
+            e.Cancel = True
+        End If
 
     End Sub
-
-#End Region
 
 End Class

@@ -26,8 +26,11 @@ Partial Class EntradasSalidas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EntradasSalidas))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CalibreCMX = New System.Windows.Forms.ComboBox()
         Me.ClienteCMB = New System.Windows.Forms.ComboBox()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
         Me.GuardarBTN = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -37,7 +40,6 @@ Partial Class EntradasSalidas
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -47,7 +49,6 @@ Partial Class EntradasSalidas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.FechaTXT = New System.Windows.Forms.DateTimePicker()
         Me.noParteTXT = New System.Windows.Forms.TextBox()
         Me.ComentarioTXT = New System.Windows.Forms.TextBox()
         Me.NivelTXT = New System.Windows.Forms.TextBox()
@@ -55,8 +56,6 @@ Partial Class EntradasSalidas
         Me.CostokgTXT = New System.Windows.Forms.TextBox()
         Me.CostoTXT = New System.Windows.Forms.TextBox()
         Me.UnidadTXT = New System.Windows.Forms.TextBox()
-        Me.CantidadTXT = New System.Windows.Forms.TextBox()
-        Me.MaterialTXT = New System.Windows.Forms.TextBox()
         Me.AnchoTXT = New System.Windows.Forms.TextBox()
         Me.LargoTXT = New System.Windows.Forms.TextBox()
         Me.CalidadTXT = New System.Windows.Forms.TextBox()
@@ -64,7 +63,10 @@ Partial Class EntradasSalidas
         Me.FacturaTXT = New System.Windows.Forms.TextBox()
         Me.LoteTXT = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.EntradaTXT = New System.Windows.Forms.ComboBox()
+        Me.Entradas_MaterialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AlmacenBD = New FTM_Registros.AlmacenBD()
         Me.Guardar2BTN = New System.Windows.Forms.Button()
         Me.Fecha2TXT = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -87,27 +89,23 @@ Partial Class EntradasSalidas
         Me.piTXT = New System.Windows.Forms.TextBox()
         Me.oc2TXT = New System.Windows.Forms.TextBox()
         Me.SalidaTXT = New System.Windows.Forms.TextBox()
-        Me.AlmacenBD = New FTM_Registros.AlmacenBD()
-        Me.Entradas_MaterialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EntradasMaterialTableAdapter = New FTM_Registros.AlmacenBDTableAdapters.EntradasMaterialTableAdapter()
         Me.TableAdapterManager = New FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager()
-        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
         Me.ClientesTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter()
         Me.Salidas_MaterialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalidasMaterialTableAdapter = New FTM_Registros.AlmacenBDTableAdapters.SalidasMaterialTableAdapter()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.MaterialTXT = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.AlmacenBD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Entradas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Salidas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Entradas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlmacenBD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Salidas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -122,6 +120,8 @@ Partial Class EntradasSalidas
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.MaterialTXT)
+        Me.TabPage1.Controls.Add(Me.Label30)
         Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.CalibreCMX)
         Me.TabPage1.Controls.Add(Me.ClienteCMB)
@@ -134,7 +134,6 @@ Partial Class EntradasSalidas
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.Label12)
-        Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -144,7 +143,6 @@ Partial Class EntradasSalidas
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.FechaTXT)
         Me.TabPage1.Controls.Add(Me.noParteTXT)
         Me.TabPage1.Controls.Add(Me.ComentarioTXT)
         Me.TabPage1.Controls.Add(Me.NivelTXT)
@@ -152,8 +150,6 @@ Partial Class EntradasSalidas
         Me.TabPage1.Controls.Add(Me.CostokgTXT)
         Me.TabPage1.Controls.Add(Me.CostoTXT)
         Me.TabPage1.Controls.Add(Me.UnidadTXT)
-        Me.TabPage1.Controls.Add(Me.CantidadTXT)
-        Me.TabPage1.Controls.Add(Me.MaterialTXT)
         Me.TabPage1.Controls.Add(Me.AnchoTXT)
         Me.TabPage1.Controls.Add(Me.LargoTXT)
         Me.TabPage1.Controls.Add(Me.CalidadTXT)
@@ -167,6 +163,16 @@ Partial Class EntradasSalidas
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Entradas"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_archive
+        Me.PictureBox1.Location = New System.Drawing.Point(489, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 82
+        Me.PictureBox1.TabStop = False
         '
         'CalibreCMX
         '
@@ -188,6 +194,16 @@ Partial Class EntradasSalidas
         Me.ClienteCMB.Name = "ClienteCMB"
         Me.ClienteCMB.Size = New System.Drawing.Size(115, 21)
         Me.ClienteCMB.TabIndex = 2
+        '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
+        '
+        '_Base_de_datos_1_4_beDataSet
+        '
+        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
+        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GuardarBTN
         '
@@ -270,16 +286,6 @@ Partial Class EntradasSalidas
         Me.Label12.TabIndex = 71
         Me.Label12.Text = "Unidad:"
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 256)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(52, 13)
-        Me.Label11.TabIndex = 70
-        Me.Label11.Text = "Cantidad:"
-        Me.Label11.Visible = False
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -355,19 +361,12 @@ Partial Class EntradasSalidas
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 19)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 13)
+        Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 61
         Me.Label2.Text = "Fecha:"
-        '
-        'FechaTXT
-        '
-        Me.FechaTXT.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaTXT.Location = New System.Drawing.Point(107, 16)
-        Me.FechaTXT.Name = "FechaTXT"
-        Me.FechaTXT.Size = New System.Drawing.Size(115, 20)
-        Me.FechaTXT.TabIndex = 1
         '
         'noParteTXT
         '
@@ -426,23 +425,6 @@ Partial Class EntradasSalidas
         Me.UnidadTXT.Size = New System.Drawing.Size(115, 20)
         Me.UnidadTXT.TabIndex = 10
         Me.UnidadTXT.Text = "PZA"
-        '
-        'CantidadTXT
-        '
-        Me.CantidadTXT.BackColor = System.Drawing.SystemColors.Control
-        Me.CantidadTXT.Location = New System.Drawing.Point(107, 253)
-        Me.CantidadTXT.Name = "CantidadTXT"
-        Me.CantidadTXT.Size = New System.Drawing.Size(115, 20)
-        Me.CantidadTXT.TabIndex = 52
-        Me.CantidadTXT.Visible = False
-        '
-        'MaterialTXT
-        '
-        Me.MaterialTXT.BackColor = System.Drawing.SystemColors.Control
-        Me.MaterialTXT.Location = New System.Drawing.Point(107, 224)
-        Me.MaterialTXT.Name = "MaterialTXT"
-        Me.MaterialTXT.Size = New System.Drawing.Size(115, 20)
-        Me.MaterialTXT.TabIndex = 9
         '
         'AnchoTXT
         '
@@ -526,6 +508,16 @@ Partial Class EntradasSalidas
         Me.TabPage2.Text = "Salidas"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Delete_archive
+        Me.PictureBox2.Location = New System.Drawing.Point(489, 6)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 83
+        Me.PictureBox2.TabStop = False
+        '
         'EntradaTXT
         '
         Me.EntradaTXT.BackColor = System.Drawing.SystemColors.Control
@@ -536,6 +528,16 @@ Partial Class EntradasSalidas
         Me.EntradaTXT.Name = "EntradaTXT"
         Me.EntradaTXT.Size = New System.Drawing.Size(121, 21)
         Me.EntradaTXT.TabIndex = 3
+        '
+        'Entradas_MaterialBindingSource
+        '
+        Me.Entradas_MaterialBindingSource.DataMember = "Entradas_Material"
+        Me.Entradas_MaterialBindingSource.DataSource = Me.AlmacenBD
+        '
+        'AlmacenBD
+        '
+        Me.AlmacenBD.DataSetName = "AlmacenBD"
+        Me.AlmacenBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Guardar2BTN
         '
@@ -725,16 +727,6 @@ Partial Class EntradasSalidas
         Me.SalidaTXT.Size = New System.Drawing.Size(121, 20)
         Me.SalidaTXT.TabIndex = 1
         '
-        'AlmacenBD
-        '
-        Me.AlmacenBD.DataSetName = "AlmacenBD"
-        Me.AlmacenBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Entradas_MaterialBindingSource
-        '
-        Me.Entradas_MaterialBindingSource.DataMember = "Entradas_Material"
-        Me.Entradas_MaterialBindingSource.DataSource = Me.AlmacenBD
-        '
         'EntradasMaterialTableAdapter
         '
         Me.EntradasMaterialTableAdapter.ClearBeforeFill = True
@@ -750,16 +742,6 @@ Partial Class EntradasSalidas
         Me.TableAdapterManager.SalidasMaterialTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FTM_Registros.AlmacenBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'ClientesBindingSource
-        '
-        Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
-        '
-        '_Base_de_datos_1_4_beDataSet
-        '
-        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
-        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ClientesTableAdapter
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
@@ -773,25 +755,25 @@ Partial Class EntradasSalidas
         '
         Me.SalidasMaterialTableAdapter.ClearBeforeFill = True
         '
-        'PictureBox1
+        'Label30
         '
-        Me.PictureBox1.Image = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_New_archive
-        Me.PictureBox1.Location = New System.Drawing.Point(489, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 82
-        Me.PictureBox1.TabStop = False
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(52, 19)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(46, 13)
+        Me.Label30.TabIndex = 83
+        Me.Label30.Text = "Fecha:"
         '
-        'PictureBox2
+        'MaterialTXT
         '
-        Me.PictureBox2.Image = Global.FTM_Registros.My.Resources.Resources.Jonas_Rask_Danish_Royalty_Free_Delete_archive
-        Me.PictureBox2.Location = New System.Drawing.Point(489, 6)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 83
-        Me.PictureBox2.TabStop = False
+        Me.MaterialTXT.BackColor = System.Drawing.SystemColors.Control
+        Me.MaterialTXT.FormattingEnabled = True
+        Me.MaterialTXT.Items.AddRange(New Object() {"ACERO/CARBÓN", "ACERO/GALV.", "ACERO/ALUMINIO", "ACERO/GRANALLADO", "ACERO/DECAPADO", "INOX 304", "INOX 316", "INOX 403", "ALUMINIO"})
+        Me.MaterialTXT.Location = New System.Drawing.Point(107, 224)
+        Me.MaterialTXT.Name = "MaterialTXT"
+        Me.MaterialTXT.Size = New System.Drawing.Size(115, 21)
+        Me.MaterialTXT.TabIndex = 84
         '
         'EntradasSalidas
         '
@@ -803,19 +785,20 @@ Partial Class EntradasSalidas
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EntradasSalidas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Entradas y Salidas"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.AlmacenBD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Entradas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Salidas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Entradas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlmacenBD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Salidas_MaterialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -834,7 +817,6 @@ Partial Class EntradasSalidas
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -844,7 +826,6 @@ Partial Class EntradasSalidas
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents FechaTXT As DateTimePicker
     Friend WithEvents noParteTXT As TextBox
     Friend WithEvents ComentarioTXT As TextBox
     Friend WithEvents NivelTXT As TextBox
@@ -852,8 +833,6 @@ Partial Class EntradasSalidas
     Friend WithEvents CostokgTXT As TextBox
     Friend WithEvents CostoTXT As TextBox
     Friend WithEvents UnidadTXT As TextBox
-    Friend WithEvents CantidadTXT As TextBox
-    Friend WithEvents MaterialTXT As TextBox
     Friend WithEvents AnchoTXT As TextBox
     Friend WithEvents LargoTXT As TextBox
     Friend WithEvents CalidadTXT As TextBox
@@ -894,4 +873,6 @@ Partial Class EntradasSalidas
     Friend WithEvents SalidasMaterialTableAdapter As AlmacenBDTableAdapters.SalidasMaterialTableAdapter
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents MaterialTXT As ComboBox
 End Class

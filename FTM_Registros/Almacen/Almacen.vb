@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub EntradasBTN_Click(sender As Object, e As EventArgs) Handles EntradasBTN.Click
-        EntradaMP.Show()
+        EntradasSalidas.Show()
     End Sub
 
     Private Sub SalidasBTN_Click(sender As Object, e As EventArgs) Handles SalidasBTN.Click
@@ -15,4 +15,5 @@
 
         Me.ReportViewer1.RefreshReport()
     End Sub
+
 End Class

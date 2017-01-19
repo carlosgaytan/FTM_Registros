@@ -262,18 +262,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BuscarCBX.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Ventas\Buscar_Cotizacion.Designer.vb">
-      <DependentUpon>Buscar_Cotizacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Buscar_Cotizacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Busqueda.Designer.vb">
-      <DependentUpon>Busqueda.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Busqueda.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Ventas\Corregir_costos.Designer.vb">
       <DependentUpon>Corregir_costos.vb</DependentUpon>
     </Compile>
@@ -284,12 +272,6 @@
       <DependentUpon>Cotizaciones.vb</DependentUpon>
     </Compile>
     <Compile Include="Ventas\Cotizaciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas\Cotizador.Designer.vb">
-      <DependentUpon>Cotizador.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas\Cotizador.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio.Designer.vb">
@@ -445,20 +427,11 @@
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingeniería\Reporte_ControlPlanos.rdlc" />
-    <EmbeddedResource Include="Ventas\Buscar_Cotizacion.resx">
-      <DependentUpon>Buscar_Cotizacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Busqueda.resx">
-      <DependentUpon>Busqueda.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Corregir_costos.resx">
       <DependentUpon>Corregir_costos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Cotizaciones.resx">
       <DependentUpon>Cotizaciones.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventas\Cotizador.resx">
-      <DependentUpon>Cotizador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
