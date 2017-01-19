@@ -249,6 +249,23 @@
     <Compile Include="Ingeniería\Ingenieria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Produccion\Produccion.Designer.vb">
+      <DependentUpon>Produccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\Produccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\ProduccionBD.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProduccionBD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\RegIndicadadores.Designer.vb">
+      <DependentUpon>RegIndicadadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\RegIndicadadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\BuscaOrden.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -427,6 +444,12 @@
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingeniería\Reporte_ControlPlanos.rdlc" />
+    <EmbeddedResource Include="Produccion\Produccion.resx">
+      <DependentUpon>Produccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\RegIndicadadores.resx">
+      <DependentUpon>RegIndicadadores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\Corregir_costos.resx">
       <DependentUpon>Corregir_costos.vb</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +545,17 @@
       <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Produccion\ProduccionBD.xsc">
+      <DependentUpon>ProduccionBD.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ProduccionBD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProduccionBD.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\ProduccionBD.xss">
+      <DependentUpon>ProduccionBD.xsd</DependentUpon>
+    </None>
     <None Include="Ventas\BuscaOrden.xsc">
       <DependentUpon>BuscaOrden.xsd</DependentUpon>
     </None>
