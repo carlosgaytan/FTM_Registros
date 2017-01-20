@@ -4,10 +4,11 @@
         Me.RegistrosTableAdapter.Fill(Me.ProduccionBD.Registros)
 
         Me.ReportViewer1.RefreshReport()
-        Me.ReportViewer1.RefreshReport()
+        Me.ReportViewer2.RefreshReport()
     End Sub
 
     Private Sub invmpBTN_Click(sender As Object, e As EventArgs) Handles invmpBTN.Click
         RegIndicadadores.Show()
     End Sub
+
 End Class

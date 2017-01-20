@@ -23,35 +23,39 @@ Partial Class Produccion
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Produccion))
-        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
         Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
         Me.RegistrosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.RegistrosTableAdapter()
         Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.invmpBTN = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.invmpBTN = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'ProduccionBD
-        '
-        Me.ProduccionBD.DataSetName = "ProduccionBD"
-        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RegistrosBindingSource
         '
         Me.RegistrosBindingSource.DataMember = "Registros"
         Me.RegistrosBindingSource.DataSource = Me.ProduccionBD
+        '
+        'ProduccionBD
+        '
+        Me.ProduccionBD.DataSetName = "ProduccionBD"
+        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RegistrosTableAdapter
         '
@@ -65,12 +69,24 @@ Partial Class Produccion
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.invmpBTN)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(177, 633)
         Me.Panel1.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(24, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 54)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "Procesos " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Producción"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'invmpBTN
         '
@@ -86,26 +102,25 @@ Partial Class Produccion
         Me.ToolTip1.SetToolTip(Me.invmpBTN, "Registro Reportes de Producción")
         Me.invmpBTN.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(24, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(131, 54)
-        Me.Label4.TabIndex = 25
-        Me.Label4.Text = "Procesos " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Producción"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.ReportViewer2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(924, 583)
+        Me.TabPage2.Size = New System.Drawing.Size(1170, 583)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Indicadores Semanales"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'ReportViewer2
+        '
+        Me.ReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Semanal.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(3, 3)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.Size = New System.Drawing.Size(1164, 577)
+        Me.ReportViewer2.TabIndex = 0
         '
         'TabPage1
         '
@@ -113,7 +128,7 @@ Partial Class Produccion
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(924, 583)
+        Me.TabPage1.Size = New System.Drawing.Size(1170, 583)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Indicadores Mensuales"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -121,9 +136,13 @@ Partial Class Produccion
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "Mensual"
+        ReportDataSource1.Value = Me.RegistrosBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Mensual.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(3, 3)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(918, 577)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1164, 577)
         Me.ReportViewer1.TabIndex = 0
         '
         'TabControl1
@@ -133,8 +152,22 @@ Partial Class Produccion
         Me.TabControl1.Location = New System.Drawing.Point(186, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(932, 609)
+        Me.TabControl1.Size = New System.Drawing.Size(1178, 609)
         Me.TabControl1.TabIndex = 1
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.edit_22164
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(53, 222)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 75)
+        Me.Button1.TabIndex = 26
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.ToolTip1.SetToolTip(Me.Button1, "Registro Reportes de Producción")
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Produccion
         '
@@ -142,17 +175,18 @@ Partial Class Produccion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1130, 633)
+        Me.ClientSize = New System.Drawing.Size(1376, 633)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Produccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producción"
-        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -171,4 +205,6 @@ Partial Class Produccion
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents Button1 As Button
 End Class

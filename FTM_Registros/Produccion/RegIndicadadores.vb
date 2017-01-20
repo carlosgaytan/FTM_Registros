@@ -44,7 +44,7 @@
         ElseIf MantTXT.Text = "" Or TrabTXT.Text = "" Or TrabTXT.Text = "" Or LimpTXT.Text = "" Or
                 setupTXT.Text = "" Or AjusTXT.Text = "" Or MatTXT.Text = "" Or ProgramaTXT.Text = "" Or EnerTXT.Text = "" Or CalTXT.Text = "" Or DescTXT.Text = "" Or
                 FofTXT.Text = "" Or GasesTXT.Text = "" Or FmaqTXT.Text = "" Or PersoTXT.Text = "" Or OtroTXT.Text = "" Or OtroTXT.Text = "" Or DuracTXT.Text = "" Then
-            Dim respuesta = MessageBox.Show("Desea continuar sin agregar Tiempos Muertos", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+            Dim respuesta = MessageBox.Show("¿Desea continuar sin agregar más Tiempos Muertos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
             If respuesta = DialogResult.Yes Then
                 'Crea fila de registro
                 Dim NuevoRegistro As ProduccionBD.RegistrosRow
@@ -94,6 +94,58 @@
                 'Vacia los campos
                 Vaciar()
             End If
+        ElseIf OFTXT.Text <> "" Or MaquinaTXT.Text <> "" Or ClienteTXT.Text <> "" Or AreaTXT.Text <> "" Or hpTXT.Text <> "" Or hrTXT.Text <> "" Or ProgTXT.Text <> "" Or ProdTXT.Text <> "" Or
+                RechazadasTXT.Text <> "" Or SCRAPTXT.Text <> "" Or SemTXT.Text <> "" Or MantTXT.Text <> "" Or TrabTXT.Text <> "" Or TrabTXT.Text <> "" Or LimpTXT.Text <> "" Or
+                setupTXT.Text <> "" Or AjusTXT.Text = "" Or MatTXT.Text = "" Or ProgramaTXT.Text = "" Or EnerTXT.Text = "" Or CalTXT.Text = "" Or DescTXT.Text = "" Or
+                FofTXT.Text <> "" Or GasesTXT.Text <> "" Or FmaqTXT.Text <> "" Or PersoTXT.Text <> "" Or OtroTXT.Text <> "" Or OtroTXT.Text <> "" Or DuracTXT.Text <> "" Then
+            'Crea fila de registro
+            Dim NuevoRegistro As ProduccionBD.RegistrosRow
+            NuevoRegistro = ProduccionBD.Registros.NewRegistrosRow
+
+            'Rellena fila
+            NuevoRegistro._OF = OFTXT.Text
+            NuevoRegistro.MAQUINA = MaquinaTXT.Text
+            NuevoRegistro.FECHA = FechaTXT.Text
+            NuevoRegistro.CLIENTE = ClienteTXT.Text
+            NuevoRegistro.AREA = AreaTXT.Text
+            NuevoRegistro.HP = hpTXT.Text
+            NuevoRegistro.HR = hrTXT.Text
+            NuevoRegistro.PZA_PROG = ProgTXT.Text
+            NuevoRegistro.PZA_PROD = ProdTXT.Text
+            NuevoRegistro.PZA_RECHAZADAS = RechazadasTXT.Text
+            NuevoRegistro.SCRAP = SCRAPTXT.Text
+            NuevoRegistro.SEMANA = SemTXT.Text
+            NuevoRegistro.MANTENIMIENTO = MantTXT.Text
+            NuevoRegistro.FALTA_DE_TRABAJO = TrabTXT.Text
+            NuevoRegistro.LIMPIEZA = LimpTXT.Text
+            NuevoRegistro.SET_UP = setupTXT.Text
+            NuevoRegistro.AJUSTES = AjusTXT.Text
+            NuevoRegistro.FALTA_MATERIAL = MatTXT.Text
+            NuevoRegistro.PROGRAMA = ProgramaTXT.Text
+            NuevoRegistro.FALTA_ENERGIA = EnerTXT.Text
+            NuevoRegistro.CALIDAD = CalTXT.Text
+            NuevoRegistro.DESCARGA = DescTXT.Text
+            NuevoRegistro.FALTA_OF = FofTXT.Text
+            NuevoRegistro.GASES = GasesTXT.Text
+            NuevoRegistro.FALLA_MAQUINA = FmaqTXT.Text
+            NuevoRegistro.JUNTA_PERSONAL = PersoTXT.Text
+            NuevoRegistro.OTRA = OtroTXT.Text
+            NuevoRegistro.DURACION_OTRA = DuracTXT.Text
+            NuevoRegistro.MES = MonthName(DateTime.Now.Month)
+            NuevoRegistro.AÑO = DateTime.Now.Year
+
+            'Insertar la fila en la tabla apropiada del DataSet
+            ProduccionBD.Registros.AddRegistrosRow(NuevoRegistro)
+
+            'Enviar informacón a la base de datos
+            RegistrosTableAdapter.Update(ProduccionBD.Registros)
+
+            'Confirma proceso
+            MessageBox.Show("Registro guardado", "Registros")
+
+            'Vacia los campos
+            Vaciar()
+
         End If
     End Sub
 
