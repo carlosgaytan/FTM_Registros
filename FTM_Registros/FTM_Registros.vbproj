@@ -249,6 +249,14 @@
     <Compile Include="Ingeniería\Ingenieria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Produccion\DoblezBD1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoblezBD1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\DoblezBD1.vb">
+      <DependentUpon>DoblezBD1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Produccion\Produccion.Designer.vb">
       <DependentUpon>Produccion.vb</DependentUpon>
     </Compile>
@@ -451,6 +459,7 @@
       <DependentUpon>RegIndicadadores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produccion\R_Mensual.rdlc" />
+    <EmbeddedResource Include="Produccion\R_Mensual1.rdlc" />
     <EmbeddedResource Include="Produccion\R_Semanal.rdlc" />
     <EmbeddedResource Include="Ventas\Corregir_costos.resx">
       <DependentUpon>Corregir_costos.vb</DependentUpon>
@@ -547,6 +556,17 @@
       <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Produccion\DoblezBD1.xsc">
+      <DependentUpon>DoblezBD1.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\DoblezBD1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoblezBD1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\DoblezBD1.xss">
+      <DependentUpon>DoblezBD1.xsd</DependentUpon>
+    </None>
     <None Include="Produccion\ProduccionBD.xsc">
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
     </None>

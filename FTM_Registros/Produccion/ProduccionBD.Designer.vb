@@ -27,6 +27,12 @@ Partial Public Class ProduccionBD
     
     Private tableRegistros As RegistrosDataTable
     
+    Private tableRegistros_Doblez As Registros_DoblezDataTable
+    
+    Private tableRegistros_Maquinados As Registros_MaquinadosDataTable
+    
+    Private tableRegistros_Punzonado As Registros_PunzonadoDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -59,6 +65,15 @@ Partial Public Class ProduccionBD
             If (Not (ds.Tables("Registros")) Is Nothing) Then
                 MyBase.Tables.Add(New RegistrosDataTable(ds.Tables("Registros")))
             End If
+            If (Not (ds.Tables("Registros_Doblez")) Is Nothing) Then
+                MyBase.Tables.Add(New Registros_DoblezDataTable(ds.Tables("Registros_Doblez")))
+            End If
+            If (Not (ds.Tables("Registros_Maquinados")) Is Nothing) Then
+                MyBase.Tables.Add(New Registros_MaquinadosDataTable(ds.Tables("Registros_Maquinados")))
+            End If
+            If (Not (ds.Tables("Registros_Punzonado")) Is Nothing) Then
+                MyBase.Tables.Add(New Registros_PunzonadoDataTable(ds.Tables("Registros_Punzonado")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -83,6 +98,36 @@ Partial Public Class ProduccionBD
     Public ReadOnly Property Registros() As RegistrosDataTable
         Get
             Return Me.tableRegistros
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property Registros_Doblez() As Registros_DoblezDataTable
+        Get
+            Return Me.tableRegistros_Doblez
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property Registros_Maquinados() As Registros_MaquinadosDataTable
+        Get
+            Return Me.tableRegistros_Maquinados
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property Registros_Punzonado() As Registros_PunzonadoDataTable
+        Get
+            Return Me.tableRegistros_Punzonado
         End Get
     End Property
     
@@ -156,6 +201,15 @@ Partial Public Class ProduccionBD
             If (Not (ds.Tables("Registros")) Is Nothing) Then
                 MyBase.Tables.Add(New RegistrosDataTable(ds.Tables("Registros")))
             End If
+            If (Not (ds.Tables("Registros_Doblez")) Is Nothing) Then
+                MyBase.Tables.Add(New Registros_DoblezDataTable(ds.Tables("Registros_Doblez")))
+            End If
+            If (Not (ds.Tables("Registros_Maquinados")) Is Nothing) Then
+                MyBase.Tables.Add(New Registros_MaquinadosDataTable(ds.Tables("Registros_Maquinados")))
+            End If
+            If (Not (ds.Tables("Registros_Punzonado")) Is Nothing) Then
+                MyBase.Tables.Add(New Registros_PunzonadoDataTable(ds.Tables("Registros_Punzonado")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -194,6 +248,24 @@ Partial Public Class ProduccionBD
                 Me.tableRegistros.InitVars
             End If
         End If
+        Me.tableRegistros_Doblez = CType(MyBase.Tables("Registros_Doblez"),Registros_DoblezDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableRegistros_Doblez) Is Nothing) Then
+                Me.tableRegistros_Doblez.InitVars
+            End If
+        End If
+        Me.tableRegistros_Maquinados = CType(MyBase.Tables("Registros_Maquinados"),Registros_MaquinadosDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableRegistros_Maquinados) Is Nothing) Then
+                Me.tableRegistros_Maquinados.InitVars
+            End If
+        End If
+        Me.tableRegistros_Punzonado = CType(MyBase.Tables("Registros_Punzonado"),Registros_PunzonadoDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableRegistros_Punzonado) Is Nothing) Then
+                Me.tableRegistros_Punzonado.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -206,11 +278,35 @@ Partial Public Class ProduccionBD
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableRegistros = New RegistrosDataTable()
         MyBase.Tables.Add(Me.tableRegistros)
+        Me.tableRegistros_Doblez = New Registros_DoblezDataTable()
+        MyBase.Tables.Add(Me.tableRegistros_Doblez)
+        Me.tableRegistros_Maquinados = New Registros_MaquinadosDataTable()
+        MyBase.Tables.Add(Me.tableRegistros_Maquinados)
+        Me.tableRegistros_Punzonado = New Registros_PunzonadoDataTable()
+        MyBase.Tables.Add(Me.tableRegistros_Punzonado)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializeRegistros() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeRegistros_Doblez() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeRegistros_Maquinados() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeRegistros_Punzonado() As Boolean
         Return false
     End Function
     
@@ -274,6 +370,15 @@ Partial Public Class ProduccionBD
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub RegistrosRowChangeEventHandler(ByVal sender As Object, ByVal e As RegistrosRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub Registros_DoblezRowChangeEventHandler(ByVal sender As Object, ByVal e As Registros_DoblezRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub Registros_MaquinadosRowChangeEventHandler(ByVal sender As Object, ByVal e As Registros_MaquinadosRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub Registros_PunzonadoRowChangeEventHandler(ByVal sender As Object, ByVal e As Registros_PunzonadoRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -925,6 +1030,2085 @@ Partial Public Class ProduccionBD
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "RegistrosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class Registros_DoblezDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Registros_DoblezRow)
+        
+        Private columnNO As Global.System.Data.DataColumn
+        
+        Private columnOF As Global.System.Data.DataColumn
+        
+        Private columnMAQUINA As Global.System.Data.DataColumn
+        
+        Private columnFECHA As Global.System.Data.DataColumn
+        
+        Private columnCLIENTE As Global.System.Data.DataColumn
+        
+        Private columnAREA As Global.System.Data.DataColumn
+        
+        Private columnHP As Global.System.Data.DataColumn
+        
+        Private columnHR As Global.System.Data.DataColumn
+        
+        Private columnPZA_PROG As Global.System.Data.DataColumn
+        
+        Private columnPZA_PROD As Global.System.Data.DataColumn
+        
+        Private columnPZA_RECHAZADAS As Global.System.Data.DataColumn
+        
+        Private columnSCRAP As Global.System.Data.DataColumn
+        
+        Private columnSEMANA As Global.System.Data.DataColumn
+        
+        Private columnMANTENIMIENTO As Global.System.Data.DataColumn
+        
+        Private columnFALTA_DE_TRABAJO As Global.System.Data.DataColumn
+        
+        Private columnLIMPIEZA As Global.System.Data.DataColumn
+        
+        Private columnSET_UP As Global.System.Data.DataColumn
+        
+        Private columnAJUSTES As Global.System.Data.DataColumn
+        
+        Private columnFALTA_MATERIAL As Global.System.Data.DataColumn
+        
+        Private columnPROGRAMA As Global.System.Data.DataColumn
+        
+        Private columnFALTA_ENERGIA As Global.System.Data.DataColumn
+        
+        Private columnCALIDAD As Global.System.Data.DataColumn
+        
+        Private columnDESCARGA As Global.System.Data.DataColumn
+        
+        Private columnFALTA_OF As Global.System.Data.DataColumn
+        
+        Private columnGASES As Global.System.Data.DataColumn
+        
+        Private columnFALLA_MAQUINA As Global.System.Data.DataColumn
+        
+        Private columnJUNTA_PERSONAL As Global.System.Data.DataColumn
+        
+        Private columnOTRA As Global.System.Data.DataColumn
+        
+        Private columnDURACION_OTRA As Global.System.Data.DataColumn
+        
+        Private columnMES As Global.System.Data.DataColumn
+        
+        Private columnAÑO As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "Registros_Doblez"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MAQUINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMAQUINA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FECHAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFECHA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CLIENTEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCLIENTE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AREAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAREA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HRColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHR
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_PROGColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_PROG
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_PRODColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_PROD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_RECHAZADASColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_RECHAZADAS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SCRAPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSCRAP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SEMANAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSEMANA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MANTENIMIENTOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMANTENIMIENTO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_DE_TRABAJOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_DE_TRABAJO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LIMPIEZAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLIMPIEZA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SET_UPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSET_UP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AJUSTESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAJUSTES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_MATERIALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_MATERIAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PROGRAMAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPROGRAMA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_ENERGIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_ENERGIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CALIDADColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCALIDAD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DESCARGAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDESCARGA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_OFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_OF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property GASESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnGASES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALLA_MAQUINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALLA_MAQUINA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property JUNTA_PERSONALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnJUNTA_PERSONAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OTRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOTRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DURACION_OTRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDURACION_OTRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAÑO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Registros_DoblezRow
+            Get
+                Return CType(Me.Rows(index),Registros_DoblezRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_DoblezRowChanging As Registros_DoblezRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_DoblezRowChanged As Registros_DoblezRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_DoblezRowDeleting As Registros_DoblezRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_DoblezRowDeleted As Registros_DoblezRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddRegistros_DoblezRow(ByVal row As Registros_DoblezRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddRegistros_DoblezRow( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Date,  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Integer,  _
+                    ByVal HR As Integer,  _
+                    ByVal PZA_PROG As Integer,  _
+                    ByVal PZA_PROD As Integer,  _
+                    ByVal PZA_RECHAZADAS As Integer,  _
+                    ByVal SCRAP As Integer,  _
+                    ByVal SEMANA As Integer,  _
+                    ByVal MANTENIMIENTO As Integer,  _
+                    ByVal FALTA_DE_TRABAJO As Integer,  _
+                    ByVal LIMPIEZA As Integer,  _
+                    ByVal SET_UP As Integer,  _
+                    ByVal AJUSTES As Integer,  _
+                    ByVal FALTA_MATERIAL As Integer,  _
+                    ByVal PROGRAMA As Integer,  _
+                    ByVal FALTA_ENERGIA As Integer,  _
+                    ByVal CALIDAD As Integer,  _
+                    ByVal DESCARGA As Integer,  _
+                    ByVal FALTA_OF As Integer,  _
+                    ByVal GASES As Integer,  _
+                    ByVal FALLA_MAQUINA As Integer,  _
+                    ByVal JUNTA_PERSONAL As Integer,  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Integer,  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Integer) As Registros_DoblezRow
+            Dim rowRegistros_DoblezRow As Registros_DoblezRow = CType(Me.NewRow,Registros_DoblezRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, AÑO}
+            rowRegistros_DoblezRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowRegistros_DoblezRow)
+            Return rowRegistros_DoblezRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByNO(ByVal NO As Integer) As Registros_DoblezRow
+            Return CType(Me.Rows.Find(New Object() {NO}),Registros_DoblezRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As Registros_DoblezDataTable = CType(MyBase.Clone,Registros_DoblezDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New Registros_DoblezDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnNO = MyBase.Columns("NO")
+            Me.columnOF = MyBase.Columns("OF")
+            Me.columnMAQUINA = MyBase.Columns("MAQUINA")
+            Me.columnFECHA = MyBase.Columns("FECHA")
+            Me.columnCLIENTE = MyBase.Columns("CLIENTE")
+            Me.columnAREA = MyBase.Columns("AREA")
+            Me.columnHP = MyBase.Columns("HP")
+            Me.columnHR = MyBase.Columns("HR")
+            Me.columnPZA_PROG = MyBase.Columns("PZA_PROG")
+            Me.columnPZA_PROD = MyBase.Columns("PZA_PROD")
+            Me.columnPZA_RECHAZADAS = MyBase.Columns("PZA_RECHAZADAS")
+            Me.columnSCRAP = MyBase.Columns("SCRAP")
+            Me.columnSEMANA = MyBase.Columns("SEMANA")
+            Me.columnMANTENIMIENTO = MyBase.Columns("MANTENIMIENTO")
+            Me.columnFALTA_DE_TRABAJO = MyBase.Columns("FALTA_DE_TRABAJO")
+            Me.columnLIMPIEZA = MyBase.Columns("LIMPIEZA")
+            Me.columnSET_UP = MyBase.Columns("SET_UP")
+            Me.columnAJUSTES = MyBase.Columns("AJUSTES")
+            Me.columnFALTA_MATERIAL = MyBase.Columns("FALTA_MATERIAL")
+            Me.columnPROGRAMA = MyBase.Columns("PROGRAMA")
+            Me.columnFALTA_ENERGIA = MyBase.Columns("FALTA_ENERGIA")
+            Me.columnCALIDAD = MyBase.Columns("CALIDAD")
+            Me.columnDESCARGA = MyBase.Columns("DESCARGA")
+            Me.columnFALTA_OF = MyBase.Columns("FALTA_OF")
+            Me.columnGASES = MyBase.Columns("GASES")
+            Me.columnFALLA_MAQUINA = MyBase.Columns("FALLA_MAQUINA")
+            Me.columnJUNTA_PERSONAL = MyBase.Columns("JUNTA_PERSONAL")
+            Me.columnOTRA = MyBase.Columns("OTRA")
+            Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
+            Me.columnMES = MyBase.Columns("MES")
+            Me.columnAÑO = MyBase.Columns("AÑO")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnNO = New Global.System.Data.DataColumn("NO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNO)
+            Me.columnOF = New Global.System.Data.DataColumn("OF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnOF.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "OFColumn")
+            Me.columnOF.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnOF")
+            Me.columnOF.ExtendedProperties.Add("Generator_UserColumnName", "OF")
+            MyBase.Columns.Add(Me.columnOF)
+            Me.columnMAQUINA = New Global.System.Data.DataColumn("MAQUINA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMAQUINA)
+            Me.columnFECHA = New Global.System.Data.DataColumn("FECHA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFECHA)
+            Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCLIENTE)
+            Me.columnAREA = New Global.System.Data.DataColumn("AREA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAREA)
+            Me.columnHP = New Global.System.Data.DataColumn("HP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHP)
+            Me.columnHR = New Global.System.Data.DataColumn("HR", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHR)
+            Me.columnPZA_PROG = New Global.System.Data.DataColumn("PZA_PROG", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_PROG)
+            Me.columnPZA_PROD = New Global.System.Data.DataColumn("PZA_PROD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_PROD)
+            Me.columnPZA_RECHAZADAS = New Global.System.Data.DataColumn("PZA_RECHAZADAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_RECHAZADAS)
+            Me.columnSCRAP = New Global.System.Data.DataColumn("SCRAP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSCRAP)
+            Me.columnSEMANA = New Global.System.Data.DataColumn("SEMANA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSEMANA)
+            Me.columnMANTENIMIENTO = New Global.System.Data.DataColumn("MANTENIMIENTO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMANTENIMIENTO)
+            Me.columnFALTA_DE_TRABAJO = New Global.System.Data.DataColumn("FALTA_DE_TRABAJO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_DE_TRABAJO)
+            Me.columnLIMPIEZA = New Global.System.Data.DataColumn("LIMPIEZA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLIMPIEZA)
+            Me.columnSET_UP = New Global.System.Data.DataColumn("SET_UP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSET_UP)
+            Me.columnAJUSTES = New Global.System.Data.DataColumn("AJUSTES", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAJUSTES)
+            Me.columnFALTA_MATERIAL = New Global.System.Data.DataColumn("FALTA_MATERIAL", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_MATERIAL)
+            Me.columnPROGRAMA = New Global.System.Data.DataColumn("PROGRAMA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPROGRAMA)
+            Me.columnFALTA_ENERGIA = New Global.System.Data.DataColumn("FALTA_ENERGIA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_ENERGIA)
+            Me.columnCALIDAD = New Global.System.Data.DataColumn("CALIDAD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCALIDAD)
+            Me.columnDESCARGA = New Global.System.Data.DataColumn("DESCARGA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDESCARGA)
+            Me.columnFALTA_OF = New Global.System.Data.DataColumn("FALTA_OF", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_OF)
+            Me.columnGASES = New Global.System.Data.DataColumn("GASES", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnGASES)
+            Me.columnFALLA_MAQUINA = New Global.System.Data.DataColumn("FALLA_MAQUINA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALLA_MAQUINA)
+            Me.columnJUNTA_PERSONAL = New Global.System.Data.DataColumn("JUNTA_PERSONAL", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnJUNTA_PERSONAL)
+            Me.columnOTRA = New Global.System.Data.DataColumn("OTRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOTRA)
+            Me.columnDURACION_OTRA = New Global.System.Data.DataColumn("DURACION_OTRA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDURACION_OTRA)
+            Me.columnMES = New Global.System.Data.DataColumn("MES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMES)
+            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAÑO)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
+            Me.columnNO.AutoIncrement = true
+            Me.columnNO.AutoIncrementSeed = -1
+            Me.columnNO.AutoIncrementStep = -1
+            Me.columnNO.AllowDBNull = false
+            Me.columnNO.Unique = true
+            Me.columnOF.MaxLength = 536870910
+            Me.columnMAQUINA.MaxLength = 536870910
+            Me.columnCLIENTE.MaxLength = 536870910
+            Me.columnAREA.MaxLength = 536870910
+            Me.columnOTRA.MaxLength = 536870910
+            Me.columnMES.MaxLength = 536870910
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewRegistros_DoblezRow() As Registros_DoblezRow
+            Return CType(Me.NewRow,Registros_DoblezRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New Registros_DoblezRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(Registros_DoblezRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.Registros_DoblezRowChangedEvent) Is Nothing) Then
+                RaiseEvent Registros_DoblezRowChanged(Me, New Registros_DoblezRowChangeEvent(CType(e.Row,Registros_DoblezRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.Registros_DoblezRowChangingEvent) Is Nothing) Then
+                RaiseEvent Registros_DoblezRowChanging(Me, New Registros_DoblezRowChangeEvent(CType(e.Row,Registros_DoblezRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.Registros_DoblezRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Registros_DoblezRowDeleted(Me, New Registros_DoblezRowChangeEvent(CType(e.Row,Registros_DoblezRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.Registros_DoblezRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Registros_DoblezRowDeleting(Me, New Registros_DoblezRowChangeEvent(CType(e.Row,Registros_DoblezRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveRegistros_DoblezRow(ByVal row As Registros_DoblezRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As ProduccionBD = New ProduccionBD()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "Registros_DoblezDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class Registros_MaquinadosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Registros_MaquinadosRow)
+        
+        Private columnNO As Global.System.Data.DataColumn
+        
+        Private columnOF As Global.System.Data.DataColumn
+        
+        Private columnMAQUINA As Global.System.Data.DataColumn
+        
+        Private columnFECHA As Global.System.Data.DataColumn
+        
+        Private columnCLIENTE As Global.System.Data.DataColumn
+        
+        Private columnAREA As Global.System.Data.DataColumn
+        
+        Private columnHP As Global.System.Data.DataColumn
+        
+        Private columnHR As Global.System.Data.DataColumn
+        
+        Private columnPZA_PROG As Global.System.Data.DataColumn
+        
+        Private columnPZA_PROD As Global.System.Data.DataColumn
+        
+        Private columnPZA_RECHAZADAS As Global.System.Data.DataColumn
+        
+        Private columnSCRAP As Global.System.Data.DataColumn
+        
+        Private columnSEMANA As Global.System.Data.DataColumn
+        
+        Private columnMANTENIMIENTO As Global.System.Data.DataColumn
+        
+        Private columnFALTA_DE_TRABAJO As Global.System.Data.DataColumn
+        
+        Private columnLIMPIEZA As Global.System.Data.DataColumn
+        
+        Private columnSET_UP As Global.System.Data.DataColumn
+        
+        Private columnAJUSTES As Global.System.Data.DataColumn
+        
+        Private columnFALTA_MATERIAL As Global.System.Data.DataColumn
+        
+        Private columnPROGRAMA As Global.System.Data.DataColumn
+        
+        Private columnFALTA_ENERGIA As Global.System.Data.DataColumn
+        
+        Private columnCALIDAD As Global.System.Data.DataColumn
+        
+        Private columnDESCARGA As Global.System.Data.DataColumn
+        
+        Private columnFALTA_OF As Global.System.Data.DataColumn
+        
+        Private columnGASES As Global.System.Data.DataColumn
+        
+        Private columnFALLA_MAQUINA As Global.System.Data.DataColumn
+        
+        Private columnJUNTA_PERSONAL As Global.System.Data.DataColumn
+        
+        Private columnOTRA As Global.System.Data.DataColumn
+        
+        Private columnDURACION_OTRA As Global.System.Data.DataColumn
+        
+        Private columnMES As Global.System.Data.DataColumn
+        
+        Private columnAÑO As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "Registros_Maquinados"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MAQUINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMAQUINA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FECHAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFECHA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CLIENTEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCLIENTE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AREAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAREA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HRColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHR
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_PROGColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_PROG
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_PRODColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_PROD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_RECHAZADASColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_RECHAZADAS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SCRAPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSCRAP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SEMANAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSEMANA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MANTENIMIENTOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMANTENIMIENTO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_DE_TRABAJOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_DE_TRABAJO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LIMPIEZAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLIMPIEZA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SET_UPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSET_UP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AJUSTESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAJUSTES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_MATERIALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_MATERIAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PROGRAMAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPROGRAMA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_ENERGIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_ENERGIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CALIDADColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCALIDAD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DESCARGAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDESCARGA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_OFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_OF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property GASESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnGASES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALLA_MAQUINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALLA_MAQUINA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property JUNTA_PERSONALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnJUNTA_PERSONAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OTRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOTRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DURACION_OTRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDURACION_OTRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAÑO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Registros_MaquinadosRow
+            Get
+                Return CType(Me.Rows(index),Registros_MaquinadosRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_MaquinadosRowChanging As Registros_MaquinadosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_MaquinadosRowChanged As Registros_MaquinadosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_MaquinadosRowDeleting As Registros_MaquinadosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_MaquinadosRowDeleted As Registros_MaquinadosRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddRegistros_MaquinadosRow(ByVal row As Registros_MaquinadosRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddRegistros_MaquinadosRow( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Date,  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Integer,  _
+                    ByVal HR As Integer,  _
+                    ByVal PZA_PROG As Integer,  _
+                    ByVal PZA_PROD As Integer,  _
+                    ByVal PZA_RECHAZADAS As Integer,  _
+                    ByVal SCRAP As Integer,  _
+                    ByVal SEMANA As Integer,  _
+                    ByVal MANTENIMIENTO As Integer,  _
+                    ByVal FALTA_DE_TRABAJO As Integer,  _
+                    ByVal LIMPIEZA As Integer,  _
+                    ByVal SET_UP As Integer,  _
+                    ByVal AJUSTES As Integer,  _
+                    ByVal FALTA_MATERIAL As Integer,  _
+                    ByVal PROGRAMA As Integer,  _
+                    ByVal FALTA_ENERGIA As Integer,  _
+                    ByVal CALIDAD As Integer,  _
+                    ByVal DESCARGA As Integer,  _
+                    ByVal FALTA_OF As Integer,  _
+                    ByVal GASES As Integer,  _
+                    ByVal FALLA_MAQUINA As Integer,  _
+                    ByVal JUNTA_PERSONAL As Integer,  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Integer,  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Integer) As Registros_MaquinadosRow
+            Dim rowRegistros_MaquinadosRow As Registros_MaquinadosRow = CType(Me.NewRow,Registros_MaquinadosRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, AÑO}
+            rowRegistros_MaquinadosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowRegistros_MaquinadosRow)
+            Return rowRegistros_MaquinadosRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByNO(ByVal NO As Integer) As Registros_MaquinadosRow
+            Return CType(Me.Rows.Find(New Object() {NO}),Registros_MaquinadosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As Registros_MaquinadosDataTable = CType(MyBase.Clone,Registros_MaquinadosDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New Registros_MaquinadosDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnNO = MyBase.Columns("NO")
+            Me.columnOF = MyBase.Columns("OF")
+            Me.columnMAQUINA = MyBase.Columns("MAQUINA")
+            Me.columnFECHA = MyBase.Columns("FECHA")
+            Me.columnCLIENTE = MyBase.Columns("CLIENTE")
+            Me.columnAREA = MyBase.Columns("AREA")
+            Me.columnHP = MyBase.Columns("HP")
+            Me.columnHR = MyBase.Columns("HR")
+            Me.columnPZA_PROG = MyBase.Columns("PZA_PROG")
+            Me.columnPZA_PROD = MyBase.Columns("PZA_PROD")
+            Me.columnPZA_RECHAZADAS = MyBase.Columns("PZA_RECHAZADAS")
+            Me.columnSCRAP = MyBase.Columns("SCRAP")
+            Me.columnSEMANA = MyBase.Columns("SEMANA")
+            Me.columnMANTENIMIENTO = MyBase.Columns("MANTENIMIENTO")
+            Me.columnFALTA_DE_TRABAJO = MyBase.Columns("FALTA_DE_TRABAJO")
+            Me.columnLIMPIEZA = MyBase.Columns("LIMPIEZA")
+            Me.columnSET_UP = MyBase.Columns("SET_UP")
+            Me.columnAJUSTES = MyBase.Columns("AJUSTES")
+            Me.columnFALTA_MATERIAL = MyBase.Columns("FALTA_MATERIAL")
+            Me.columnPROGRAMA = MyBase.Columns("PROGRAMA")
+            Me.columnFALTA_ENERGIA = MyBase.Columns("FALTA_ENERGIA")
+            Me.columnCALIDAD = MyBase.Columns("CALIDAD")
+            Me.columnDESCARGA = MyBase.Columns("DESCARGA")
+            Me.columnFALTA_OF = MyBase.Columns("FALTA_OF")
+            Me.columnGASES = MyBase.Columns("GASES")
+            Me.columnFALLA_MAQUINA = MyBase.Columns("FALLA_MAQUINA")
+            Me.columnJUNTA_PERSONAL = MyBase.Columns("JUNTA_PERSONAL")
+            Me.columnOTRA = MyBase.Columns("OTRA")
+            Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
+            Me.columnMES = MyBase.Columns("MES")
+            Me.columnAÑO = MyBase.Columns("AÑO")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnNO = New Global.System.Data.DataColumn("NO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNO)
+            Me.columnOF = New Global.System.Data.DataColumn("OF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnOF.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "OFColumn")
+            Me.columnOF.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnOF")
+            Me.columnOF.ExtendedProperties.Add("Generator_UserColumnName", "OF")
+            MyBase.Columns.Add(Me.columnOF)
+            Me.columnMAQUINA = New Global.System.Data.DataColumn("MAQUINA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMAQUINA)
+            Me.columnFECHA = New Global.System.Data.DataColumn("FECHA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFECHA)
+            Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCLIENTE)
+            Me.columnAREA = New Global.System.Data.DataColumn("AREA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAREA)
+            Me.columnHP = New Global.System.Data.DataColumn("HP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHP)
+            Me.columnHR = New Global.System.Data.DataColumn("HR", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHR)
+            Me.columnPZA_PROG = New Global.System.Data.DataColumn("PZA_PROG", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_PROG)
+            Me.columnPZA_PROD = New Global.System.Data.DataColumn("PZA_PROD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_PROD)
+            Me.columnPZA_RECHAZADAS = New Global.System.Data.DataColumn("PZA_RECHAZADAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_RECHAZADAS)
+            Me.columnSCRAP = New Global.System.Data.DataColumn("SCRAP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSCRAP)
+            Me.columnSEMANA = New Global.System.Data.DataColumn("SEMANA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSEMANA)
+            Me.columnMANTENIMIENTO = New Global.System.Data.DataColumn("MANTENIMIENTO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMANTENIMIENTO)
+            Me.columnFALTA_DE_TRABAJO = New Global.System.Data.DataColumn("FALTA_DE_TRABAJO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_DE_TRABAJO)
+            Me.columnLIMPIEZA = New Global.System.Data.DataColumn("LIMPIEZA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLIMPIEZA)
+            Me.columnSET_UP = New Global.System.Data.DataColumn("SET_UP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSET_UP)
+            Me.columnAJUSTES = New Global.System.Data.DataColumn("AJUSTES", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAJUSTES)
+            Me.columnFALTA_MATERIAL = New Global.System.Data.DataColumn("FALTA_MATERIAL", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_MATERIAL)
+            Me.columnPROGRAMA = New Global.System.Data.DataColumn("PROGRAMA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPROGRAMA)
+            Me.columnFALTA_ENERGIA = New Global.System.Data.DataColumn("FALTA_ENERGIA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_ENERGIA)
+            Me.columnCALIDAD = New Global.System.Data.DataColumn("CALIDAD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCALIDAD)
+            Me.columnDESCARGA = New Global.System.Data.DataColumn("DESCARGA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDESCARGA)
+            Me.columnFALTA_OF = New Global.System.Data.DataColumn("FALTA_OF", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_OF)
+            Me.columnGASES = New Global.System.Data.DataColumn("GASES", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnGASES)
+            Me.columnFALLA_MAQUINA = New Global.System.Data.DataColumn("FALLA_MAQUINA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALLA_MAQUINA)
+            Me.columnJUNTA_PERSONAL = New Global.System.Data.DataColumn("JUNTA_PERSONAL", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnJUNTA_PERSONAL)
+            Me.columnOTRA = New Global.System.Data.DataColumn("OTRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOTRA)
+            Me.columnDURACION_OTRA = New Global.System.Data.DataColumn("DURACION_OTRA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDURACION_OTRA)
+            Me.columnMES = New Global.System.Data.DataColumn("MES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMES)
+            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAÑO)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
+            Me.columnNO.AutoIncrement = true
+            Me.columnNO.AutoIncrementSeed = -1
+            Me.columnNO.AutoIncrementStep = -1
+            Me.columnNO.AllowDBNull = false
+            Me.columnNO.Unique = true
+            Me.columnOF.MaxLength = 536870910
+            Me.columnMAQUINA.MaxLength = 536870910
+            Me.columnCLIENTE.MaxLength = 536870910
+            Me.columnAREA.MaxLength = 536870910
+            Me.columnOTRA.MaxLength = 536870910
+            Me.columnMES.MaxLength = 536870910
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewRegistros_MaquinadosRow() As Registros_MaquinadosRow
+            Return CType(Me.NewRow,Registros_MaquinadosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New Registros_MaquinadosRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(Registros_MaquinadosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.Registros_MaquinadosRowChangedEvent) Is Nothing) Then
+                RaiseEvent Registros_MaquinadosRowChanged(Me, New Registros_MaquinadosRowChangeEvent(CType(e.Row,Registros_MaquinadosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.Registros_MaquinadosRowChangingEvent) Is Nothing) Then
+                RaiseEvent Registros_MaquinadosRowChanging(Me, New Registros_MaquinadosRowChangeEvent(CType(e.Row,Registros_MaquinadosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.Registros_MaquinadosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Registros_MaquinadosRowDeleted(Me, New Registros_MaquinadosRowChangeEvent(CType(e.Row,Registros_MaquinadosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.Registros_MaquinadosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Registros_MaquinadosRowDeleting(Me, New Registros_MaquinadosRowChangeEvent(CType(e.Row,Registros_MaquinadosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveRegistros_MaquinadosRow(ByVal row As Registros_MaquinadosRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As ProduccionBD = New ProduccionBD()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "Registros_MaquinadosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class Registros_PunzonadoDataTable
+        Inherits Global.System.Data.TypedTableBase(Of Registros_PunzonadoRow)
+        
+        Private columnNO As Global.System.Data.DataColumn
+        
+        Private columnOF As Global.System.Data.DataColumn
+        
+        Private columnMAQUINA As Global.System.Data.DataColumn
+        
+        Private columnFECHA As Global.System.Data.DataColumn
+        
+        Private columnCLIENTE As Global.System.Data.DataColumn
+        
+        Private columnAREA As Global.System.Data.DataColumn
+        
+        Private columnHP As Global.System.Data.DataColumn
+        
+        Private columnHR As Global.System.Data.DataColumn
+        
+        Private columnPZA_PROG As Global.System.Data.DataColumn
+        
+        Private columnPZA_PROD As Global.System.Data.DataColumn
+        
+        Private columnPZA_RECHAZADAS As Global.System.Data.DataColumn
+        
+        Private columnSCRAP As Global.System.Data.DataColumn
+        
+        Private columnSEMANA As Global.System.Data.DataColumn
+        
+        Private columnMANTENIMIENTO As Global.System.Data.DataColumn
+        
+        Private columnFALTA_DE_TRABAJO As Global.System.Data.DataColumn
+        
+        Private columnLIMPIEZA As Global.System.Data.DataColumn
+        
+        Private columnSET_UP As Global.System.Data.DataColumn
+        
+        Private columnAJUSTES As Global.System.Data.DataColumn
+        
+        Private columnFALTA_MATERIAL As Global.System.Data.DataColumn
+        
+        Private columnPROGRAMA As Global.System.Data.DataColumn
+        
+        Private columnFALTA_ENERGIA As Global.System.Data.DataColumn
+        
+        Private columnCALIDAD As Global.System.Data.DataColumn
+        
+        Private columnDESCARGA As Global.System.Data.DataColumn
+        
+        Private columnFALTA_OF As Global.System.Data.DataColumn
+        
+        Private columnGASES As Global.System.Data.DataColumn
+        
+        Private columnFALLA_MAQUINA As Global.System.Data.DataColumn
+        
+        Private columnJUNTA_PERSONAL As Global.System.Data.DataColumn
+        
+        Private columnOTRA As Global.System.Data.DataColumn
+        
+        Private columnDURACION_OTRA As Global.System.Data.DataColumn
+        
+        Private columnMES As Global.System.Data.DataColumn
+        
+        Private columnAÑO As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "Registros_Punzonado"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MAQUINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMAQUINA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FECHAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFECHA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CLIENTEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCLIENTE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AREAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAREA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HRColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHR
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_PROGColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_PROG
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_PRODColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_PROD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PZA_RECHAZADASColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPZA_RECHAZADAS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SCRAPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSCRAP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SEMANAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSEMANA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MANTENIMIENTOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMANTENIMIENTO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_DE_TRABAJOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_DE_TRABAJO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LIMPIEZAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLIMPIEZA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SET_UPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSET_UP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AJUSTESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAJUSTES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_MATERIALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_MATERIAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PROGRAMAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPROGRAMA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_ENERGIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_ENERGIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CALIDADColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCALIDAD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DESCARGAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDESCARGA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALTA_OFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALTA_OF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property GASESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnGASES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property FALLA_MAQUINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFALLA_MAQUINA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property JUNTA_PERSONALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnJUNTA_PERSONAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OTRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOTRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DURACION_OTRAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDURACION_OTRA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAÑO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As Registros_PunzonadoRow
+            Get
+                Return CType(Me.Rows(index),Registros_PunzonadoRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_PunzonadoRowChanging As Registros_PunzonadoRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_PunzonadoRowChanged As Registros_PunzonadoRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_PunzonadoRowDeleting As Registros_PunzonadoRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event Registros_PunzonadoRowDeleted As Registros_PunzonadoRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddRegistros_PunzonadoRow(ByVal row As Registros_PunzonadoRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddRegistros_PunzonadoRow( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Date,  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Integer,  _
+                    ByVal HR As Integer,  _
+                    ByVal PZA_PROG As Integer,  _
+                    ByVal PZA_PROD As Integer,  _
+                    ByVal PZA_RECHAZADAS As Integer,  _
+                    ByVal SCRAP As Integer,  _
+                    ByVal SEMANA As Integer,  _
+                    ByVal MANTENIMIENTO As Integer,  _
+                    ByVal FALTA_DE_TRABAJO As Integer,  _
+                    ByVal LIMPIEZA As Integer,  _
+                    ByVal SET_UP As Integer,  _
+                    ByVal AJUSTES As Integer,  _
+                    ByVal FALTA_MATERIAL As Integer,  _
+                    ByVal PROGRAMA As Integer,  _
+                    ByVal FALTA_ENERGIA As Integer,  _
+                    ByVal CALIDAD As Integer,  _
+                    ByVal DESCARGA As Integer,  _
+                    ByVal FALTA_OF As Integer,  _
+                    ByVal GASES As Integer,  _
+                    ByVal FALLA_MAQUINA As Integer,  _
+                    ByVal JUNTA_PERSONAL As Integer,  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Integer,  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Integer) As Registros_PunzonadoRow
+            Dim rowRegistros_PunzonadoRow As Registros_PunzonadoRow = CType(Me.NewRow,Registros_PunzonadoRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, AÑO}
+            rowRegistros_PunzonadoRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowRegistros_PunzonadoRow)
+            Return rowRegistros_PunzonadoRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByNO(ByVal NO As Integer) As Registros_PunzonadoRow
+            Return CType(Me.Rows.Find(New Object() {NO}),Registros_PunzonadoRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As Registros_PunzonadoDataTable = CType(MyBase.Clone,Registros_PunzonadoDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New Registros_PunzonadoDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnNO = MyBase.Columns("NO")
+            Me.columnOF = MyBase.Columns("OF")
+            Me.columnMAQUINA = MyBase.Columns("MAQUINA")
+            Me.columnFECHA = MyBase.Columns("FECHA")
+            Me.columnCLIENTE = MyBase.Columns("CLIENTE")
+            Me.columnAREA = MyBase.Columns("AREA")
+            Me.columnHP = MyBase.Columns("HP")
+            Me.columnHR = MyBase.Columns("HR")
+            Me.columnPZA_PROG = MyBase.Columns("PZA_PROG")
+            Me.columnPZA_PROD = MyBase.Columns("PZA_PROD")
+            Me.columnPZA_RECHAZADAS = MyBase.Columns("PZA_RECHAZADAS")
+            Me.columnSCRAP = MyBase.Columns("SCRAP")
+            Me.columnSEMANA = MyBase.Columns("SEMANA")
+            Me.columnMANTENIMIENTO = MyBase.Columns("MANTENIMIENTO")
+            Me.columnFALTA_DE_TRABAJO = MyBase.Columns("FALTA_DE_TRABAJO")
+            Me.columnLIMPIEZA = MyBase.Columns("LIMPIEZA")
+            Me.columnSET_UP = MyBase.Columns("SET_UP")
+            Me.columnAJUSTES = MyBase.Columns("AJUSTES")
+            Me.columnFALTA_MATERIAL = MyBase.Columns("FALTA_MATERIAL")
+            Me.columnPROGRAMA = MyBase.Columns("PROGRAMA")
+            Me.columnFALTA_ENERGIA = MyBase.Columns("FALTA_ENERGIA")
+            Me.columnCALIDAD = MyBase.Columns("CALIDAD")
+            Me.columnDESCARGA = MyBase.Columns("DESCARGA")
+            Me.columnFALTA_OF = MyBase.Columns("FALTA_OF")
+            Me.columnGASES = MyBase.Columns("GASES")
+            Me.columnFALLA_MAQUINA = MyBase.Columns("FALLA_MAQUINA")
+            Me.columnJUNTA_PERSONAL = MyBase.Columns("JUNTA_PERSONAL")
+            Me.columnOTRA = MyBase.Columns("OTRA")
+            Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
+            Me.columnMES = MyBase.Columns("MES")
+            Me.columnAÑO = MyBase.Columns("AÑO")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnNO = New Global.System.Data.DataColumn("NO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNO)
+            Me.columnOF = New Global.System.Data.DataColumn("OF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnOF.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "OFColumn")
+            Me.columnOF.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnOF")
+            Me.columnOF.ExtendedProperties.Add("Generator_UserColumnName", "OF")
+            MyBase.Columns.Add(Me.columnOF)
+            Me.columnMAQUINA = New Global.System.Data.DataColumn("MAQUINA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMAQUINA)
+            Me.columnFECHA = New Global.System.Data.DataColumn("FECHA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFECHA)
+            Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCLIENTE)
+            Me.columnAREA = New Global.System.Data.DataColumn("AREA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAREA)
+            Me.columnHP = New Global.System.Data.DataColumn("HP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHP)
+            Me.columnHR = New Global.System.Data.DataColumn("HR", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHR)
+            Me.columnPZA_PROG = New Global.System.Data.DataColumn("PZA_PROG", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_PROG)
+            Me.columnPZA_PROD = New Global.System.Data.DataColumn("PZA_PROD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_PROD)
+            Me.columnPZA_RECHAZADAS = New Global.System.Data.DataColumn("PZA_RECHAZADAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPZA_RECHAZADAS)
+            Me.columnSCRAP = New Global.System.Data.DataColumn("SCRAP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSCRAP)
+            Me.columnSEMANA = New Global.System.Data.DataColumn("SEMANA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSEMANA)
+            Me.columnMANTENIMIENTO = New Global.System.Data.DataColumn("MANTENIMIENTO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMANTENIMIENTO)
+            Me.columnFALTA_DE_TRABAJO = New Global.System.Data.DataColumn("FALTA_DE_TRABAJO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_DE_TRABAJO)
+            Me.columnLIMPIEZA = New Global.System.Data.DataColumn("LIMPIEZA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLIMPIEZA)
+            Me.columnSET_UP = New Global.System.Data.DataColumn("SET_UP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSET_UP)
+            Me.columnAJUSTES = New Global.System.Data.DataColumn("AJUSTES", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAJUSTES)
+            Me.columnFALTA_MATERIAL = New Global.System.Data.DataColumn("FALTA_MATERIAL", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_MATERIAL)
+            Me.columnPROGRAMA = New Global.System.Data.DataColumn("PROGRAMA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPROGRAMA)
+            Me.columnFALTA_ENERGIA = New Global.System.Data.DataColumn("FALTA_ENERGIA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_ENERGIA)
+            Me.columnCALIDAD = New Global.System.Data.DataColumn("CALIDAD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCALIDAD)
+            Me.columnDESCARGA = New Global.System.Data.DataColumn("DESCARGA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDESCARGA)
+            Me.columnFALTA_OF = New Global.System.Data.DataColumn("FALTA_OF", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALTA_OF)
+            Me.columnGASES = New Global.System.Data.DataColumn("GASES", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnGASES)
+            Me.columnFALLA_MAQUINA = New Global.System.Data.DataColumn("FALLA_MAQUINA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFALLA_MAQUINA)
+            Me.columnJUNTA_PERSONAL = New Global.System.Data.DataColumn("JUNTA_PERSONAL", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnJUNTA_PERSONAL)
+            Me.columnOTRA = New Global.System.Data.DataColumn("OTRA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOTRA)
+            Me.columnDURACION_OTRA = New Global.System.Data.DataColumn("DURACION_OTRA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDURACION_OTRA)
+            Me.columnMES = New Global.System.Data.DataColumn("MES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMES)
+            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAÑO)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
+            Me.columnNO.AutoIncrement = true
+            Me.columnNO.AutoIncrementSeed = -1
+            Me.columnNO.AutoIncrementStep = -1
+            Me.columnNO.AllowDBNull = false
+            Me.columnNO.Unique = true
+            Me.columnOF.MaxLength = 536870910
+            Me.columnMAQUINA.MaxLength = 536870910
+            Me.columnCLIENTE.MaxLength = 536870910
+            Me.columnAREA.MaxLength = 536870910
+            Me.columnOTRA.MaxLength = 536870910
+            Me.columnMES.MaxLength = 536870910
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewRegistros_PunzonadoRow() As Registros_PunzonadoRow
+            Return CType(Me.NewRow,Registros_PunzonadoRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New Registros_PunzonadoRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(Registros_PunzonadoRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.Registros_PunzonadoRowChangedEvent) Is Nothing) Then
+                RaiseEvent Registros_PunzonadoRowChanged(Me, New Registros_PunzonadoRowChangeEvent(CType(e.Row,Registros_PunzonadoRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.Registros_PunzonadoRowChangingEvent) Is Nothing) Then
+                RaiseEvent Registros_PunzonadoRowChanging(Me, New Registros_PunzonadoRowChangeEvent(CType(e.Row,Registros_PunzonadoRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.Registros_PunzonadoRowDeletedEvent) Is Nothing) Then
+                RaiseEvent Registros_PunzonadoRowDeleted(Me, New Registros_PunzonadoRowChangeEvent(CType(e.Row,Registros_PunzonadoRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.Registros_PunzonadoRowDeletingEvent) Is Nothing) Then
+                RaiseEvent Registros_PunzonadoRowDeleting(Me, New Registros_PunzonadoRowChangeEvent(CType(e.Row,Registros_PunzonadoRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveRegistros_PunzonadoRow(ByVal row As Registros_PunzonadoRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As ProduccionBD = New ProduccionBD()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "Registros_PunzonadoDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -1806,6 +3990,2537 @@ Partial Public Class ProduccionBD
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class Registros_DoblezRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableRegistros_Doblez As Registros_DoblezDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableRegistros_Doblez = CType(Me.Table,Registros_DoblezDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NO() As Integer
+            Get
+                Return CType(Me(Me.tableRegistros_Doblez.NOColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.NOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _OF() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.OFColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OF' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.OFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MAQUINA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.MAQUINAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.MAQUINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FECHA() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.FECHAColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.FECHAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CLIENTE() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.CLIENTEColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.CLIENTEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AREA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.AREAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.AREAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property HP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.HPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HP' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.HPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property HR() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.HRColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HR' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.HRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_PROG() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.PZA_PROGColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROG' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.PZA_PROGColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_PROD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.PZA_PRODColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROD' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.PZA_PRODColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_RECHAZADAS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.PZA_RECHAZADASColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_RECHAZADAS' de la tabla 'Registros_Doblez' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.PZA_RECHAZADASColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SCRAP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.SCRAPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SCRAP' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.SCRAPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SEMANA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.SEMANAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SEMANA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.SEMANAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MANTENIMIENTO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.MANTENIMIENTOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MANTENIMIENTO' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.MANTENIMIENTOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_DE_TRABAJO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.FALTA_DE_TRABAJOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_DE_TRABAJO' de la tabla 'Registros_Doblez' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.FALTA_DE_TRABAJOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property LIMPIEZA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.LIMPIEZAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LIMPIEZA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.LIMPIEZAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SET_UP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.SET_UPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SET_UP' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.SET_UPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AJUSTES() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.AJUSTESColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AJUSTES' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.AJUSTESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_MATERIAL() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.FALTA_MATERIALColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_MATERIAL' de la tabla 'Registros_Doblez' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.FALTA_MATERIALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PROGRAMA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.PROGRAMAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROGRAMA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.PROGRAMAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_ENERGIA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.FALTA_ENERGIAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_ENERGIA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.FALTA_ENERGIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CALIDAD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.CALIDADColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIDAD' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.CALIDADColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DESCARGA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.DESCARGAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DESCARGA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.DESCARGAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_OF() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.FALTA_OFColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_OF' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.FALTA_OFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property GASES() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.GASESColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'GASES' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.GASESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALLA_MAQUINA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.FALLA_MAQUINAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALLA_MAQUINA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.FALLA_MAQUINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property JUNTA_PERSONAL() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.JUNTA_PERSONALColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'JUNTA_PERSONAL' de la tabla 'Registros_Doblez' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.JUNTA_PERSONALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property OTRA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.OTRAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OTRA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.OTRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DURACION_OTRA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.DURACION_OTRAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DURACION_OTRA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.DURACION_OTRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MES() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.MESColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MES' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.MESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AÑO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.AÑOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.AÑOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_OFNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.OFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_OFNull()
+            Me(Me.tableRegistros_Doblez.OFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMAQUINANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.MAQUINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMAQUINANull()
+            Me(Me.tableRegistros_Doblez.MAQUINAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFECHANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.FECHAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFECHANull()
+            Me(Me.tableRegistros_Doblez.FECHAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCLIENTENull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.CLIENTEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCLIENTENull()
+            Me(Me.tableRegistros_Doblez.CLIENTEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAREANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.AREAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAREANull()
+            Me(Me.tableRegistros_Doblez.AREAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.HPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHPNull()
+            Me(Me.tableRegistros_Doblez.HPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHRNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.HRColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHRNull()
+            Me(Me.tableRegistros_Doblez.HRColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_PROGNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.PZA_PROGColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_PROGNull()
+            Me(Me.tableRegistros_Doblez.PZA_PROGColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_PRODNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.PZA_PRODColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_PRODNull()
+            Me(Me.tableRegistros_Doblez.PZA_PRODColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_RECHAZADASNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.PZA_RECHAZADASColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_RECHAZADASNull()
+            Me(Me.tableRegistros_Doblez.PZA_RECHAZADASColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSCRAPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.SCRAPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSCRAPNull()
+            Me(Me.tableRegistros_Doblez.SCRAPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSEMANANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.SEMANAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSEMANANull()
+            Me(Me.tableRegistros_Doblez.SEMANAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMANTENIMIENTONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.MANTENIMIENTOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMANTENIMIENTONull()
+            Me(Me.tableRegistros_Doblez.MANTENIMIENTOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_DE_TRABAJONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.FALTA_DE_TRABAJOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_DE_TRABAJONull()
+            Me(Me.tableRegistros_Doblez.FALTA_DE_TRABAJOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsLIMPIEZANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.LIMPIEZAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetLIMPIEZANull()
+            Me(Me.tableRegistros_Doblez.LIMPIEZAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSET_UPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.SET_UPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSET_UPNull()
+            Me(Me.tableRegistros_Doblez.SET_UPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAJUSTESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.AJUSTESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAJUSTESNull()
+            Me(Me.tableRegistros_Doblez.AJUSTESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_MATERIALNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.FALTA_MATERIALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_MATERIALNull()
+            Me(Me.tableRegistros_Doblez.FALTA_MATERIALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPROGRAMANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.PROGRAMAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPROGRAMANull()
+            Me(Me.tableRegistros_Doblez.PROGRAMAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_ENERGIANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.FALTA_ENERGIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_ENERGIANull()
+            Me(Me.tableRegistros_Doblez.FALTA_ENERGIAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCALIDADNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.CALIDADColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCALIDADNull()
+            Me(Me.tableRegistros_Doblez.CALIDADColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDESCARGANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.DESCARGAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDESCARGANull()
+            Me(Me.tableRegistros_Doblez.DESCARGAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_OFNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.FALTA_OFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_OFNull()
+            Me(Me.tableRegistros_Doblez.FALTA_OFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsGASESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.GASESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetGASESNull()
+            Me(Me.tableRegistros_Doblez.GASESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALLA_MAQUINANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.FALLA_MAQUINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALLA_MAQUINANull()
+            Me(Me.tableRegistros_Doblez.FALLA_MAQUINAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsJUNTA_PERSONALNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.JUNTA_PERSONALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetJUNTA_PERSONALNull()
+            Me(Me.tableRegistros_Doblez.JUNTA_PERSONALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOTRANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.OTRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOTRANull()
+            Me(Me.tableRegistros_Doblez.OTRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDURACION_OTRANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.DURACION_OTRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDURACION_OTRANull()
+            Me(Me.tableRegistros_Doblez.DURACION_OTRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.MESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMESNull()
+            Me(Me.tableRegistros_Doblez.MESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAÑONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.AÑOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAÑONull()
+            Me(Me.tableRegistros_Doblez.AÑOColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class Registros_MaquinadosRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableRegistros_Maquinados As Registros_MaquinadosDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableRegistros_Maquinados = CType(Me.Table,Registros_MaquinadosDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NO() As Integer
+            Get
+                Return CType(Me(Me.tableRegistros_Maquinados.NOColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.NOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _OF() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.OFColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OF' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.OFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MAQUINA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.MAQUINAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.MAQUINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FECHA() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.FECHAColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.FECHAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CLIENTE() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.CLIENTEColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.CLIENTEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AREA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.AREAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.AREAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property HP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.HPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HP' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.HPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property HR() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.HRColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HR' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.HRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_PROG() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.PZA_PROGColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROG' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.PZA_PROGColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_PROD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.PZA_PRODColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROD' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.PZA_PRODColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_RECHAZADAS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.PZA_RECHAZADASColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_RECHAZADAS' de la tabla 'Registros_Maquinados' es DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.PZA_RECHAZADASColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SCRAP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.SCRAPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SCRAP' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.SCRAPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SEMANA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.SEMANAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SEMANA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.SEMANAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MANTENIMIENTO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.MANTENIMIENTOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MANTENIMIENTO' de la tabla 'Registros_Maquinados' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.MANTENIMIENTOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_DE_TRABAJO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.FALTA_DE_TRABAJOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_DE_TRABAJO' de la tabla 'Registros_Maquinados' es D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.FALTA_DE_TRABAJOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property LIMPIEZA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.LIMPIEZAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LIMPIEZA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.LIMPIEZAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SET_UP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.SET_UPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SET_UP' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.SET_UPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AJUSTES() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.AJUSTESColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AJUSTES' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.AJUSTESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_MATERIAL() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.FALTA_MATERIALColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_MATERIAL' de la tabla 'Registros_Maquinados' es DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.FALTA_MATERIALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PROGRAMA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.PROGRAMAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROGRAMA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.PROGRAMAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_ENERGIA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.FALTA_ENERGIAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_ENERGIA' de la tabla 'Registros_Maquinados' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.FALTA_ENERGIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CALIDAD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.CALIDADColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIDAD' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.CALIDADColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DESCARGA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.DESCARGAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DESCARGA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.DESCARGAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_OF() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.FALTA_OFColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_OF' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.FALTA_OFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property GASES() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.GASESColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'GASES' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.GASESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALLA_MAQUINA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.FALLA_MAQUINAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALLA_MAQUINA' de la tabla 'Registros_Maquinados' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.FALLA_MAQUINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property JUNTA_PERSONAL() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.JUNTA_PERSONALColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'JUNTA_PERSONAL' de la tabla 'Registros_Maquinados' es DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.JUNTA_PERSONALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property OTRA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.OTRAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OTRA' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.OTRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DURACION_OTRA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.DURACION_OTRAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DURACION_OTRA' de la tabla 'Registros_Maquinados' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.DURACION_OTRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MES() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.MESColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MES' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.MESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AÑO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.AÑOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.AÑOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_OFNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.OFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_OFNull()
+            Me(Me.tableRegistros_Maquinados.OFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMAQUINANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.MAQUINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMAQUINANull()
+            Me(Me.tableRegistros_Maquinados.MAQUINAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFECHANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.FECHAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFECHANull()
+            Me(Me.tableRegistros_Maquinados.FECHAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCLIENTENull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.CLIENTEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCLIENTENull()
+            Me(Me.tableRegistros_Maquinados.CLIENTEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAREANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.AREAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAREANull()
+            Me(Me.tableRegistros_Maquinados.AREAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.HPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHPNull()
+            Me(Me.tableRegistros_Maquinados.HPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHRNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.HRColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHRNull()
+            Me(Me.tableRegistros_Maquinados.HRColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_PROGNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.PZA_PROGColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_PROGNull()
+            Me(Me.tableRegistros_Maquinados.PZA_PROGColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_PRODNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.PZA_PRODColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_PRODNull()
+            Me(Me.tableRegistros_Maquinados.PZA_PRODColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_RECHAZADASNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.PZA_RECHAZADASColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_RECHAZADASNull()
+            Me(Me.tableRegistros_Maquinados.PZA_RECHAZADASColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSCRAPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.SCRAPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSCRAPNull()
+            Me(Me.tableRegistros_Maquinados.SCRAPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSEMANANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.SEMANAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSEMANANull()
+            Me(Me.tableRegistros_Maquinados.SEMANAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMANTENIMIENTONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.MANTENIMIENTOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMANTENIMIENTONull()
+            Me(Me.tableRegistros_Maquinados.MANTENIMIENTOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_DE_TRABAJONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.FALTA_DE_TRABAJOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_DE_TRABAJONull()
+            Me(Me.tableRegistros_Maquinados.FALTA_DE_TRABAJOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsLIMPIEZANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.LIMPIEZAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetLIMPIEZANull()
+            Me(Me.tableRegistros_Maquinados.LIMPIEZAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSET_UPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.SET_UPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSET_UPNull()
+            Me(Me.tableRegistros_Maquinados.SET_UPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAJUSTESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.AJUSTESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAJUSTESNull()
+            Me(Me.tableRegistros_Maquinados.AJUSTESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_MATERIALNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.FALTA_MATERIALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_MATERIALNull()
+            Me(Me.tableRegistros_Maquinados.FALTA_MATERIALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPROGRAMANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.PROGRAMAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPROGRAMANull()
+            Me(Me.tableRegistros_Maquinados.PROGRAMAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_ENERGIANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.FALTA_ENERGIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_ENERGIANull()
+            Me(Me.tableRegistros_Maquinados.FALTA_ENERGIAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCALIDADNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.CALIDADColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCALIDADNull()
+            Me(Me.tableRegistros_Maquinados.CALIDADColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDESCARGANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.DESCARGAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDESCARGANull()
+            Me(Me.tableRegistros_Maquinados.DESCARGAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_OFNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.FALTA_OFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_OFNull()
+            Me(Me.tableRegistros_Maquinados.FALTA_OFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsGASESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.GASESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetGASESNull()
+            Me(Me.tableRegistros_Maquinados.GASESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALLA_MAQUINANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.FALLA_MAQUINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALLA_MAQUINANull()
+            Me(Me.tableRegistros_Maquinados.FALLA_MAQUINAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsJUNTA_PERSONALNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.JUNTA_PERSONALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetJUNTA_PERSONALNull()
+            Me(Me.tableRegistros_Maquinados.JUNTA_PERSONALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOTRANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.OTRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOTRANull()
+            Me(Me.tableRegistros_Maquinados.OTRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDURACION_OTRANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.DURACION_OTRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDURACION_OTRANull()
+            Me(Me.tableRegistros_Maquinados.DURACION_OTRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.MESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMESNull()
+            Me(Me.tableRegistros_Maquinados.MESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAÑONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.AÑOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAÑONull()
+            Me(Me.tableRegistros_Maquinados.AÑOColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class Registros_PunzonadoRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableRegistros_Punzonado As Registros_PunzonadoDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableRegistros_Punzonado = CType(Me.Table,Registros_PunzonadoDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NO() As Integer
+            Get
+                Return CType(Me(Me.tableRegistros_Punzonado.NOColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.NOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _OF() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.OFColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OF' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.OFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MAQUINA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.MAQUINAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.MAQUINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FECHA() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.FECHAColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.FECHAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CLIENTE() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.CLIENTEColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.CLIENTEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AREA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.AREAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.AREAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property HP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.HPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HP' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.HPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property HR() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.HRColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HR' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.HRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_PROG() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.PZA_PROGColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROG' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.PZA_PROGColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_PROD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.PZA_PRODColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROD' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.PZA_PRODColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PZA_RECHAZADAS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.PZA_RECHAZADASColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_RECHAZADAS' de la tabla 'Registros_Punzonado' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.PZA_RECHAZADASColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SCRAP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.SCRAPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SCRAP' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.SCRAPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SEMANA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.SEMANAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SEMANA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.SEMANAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MANTENIMIENTO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.MANTENIMIENTOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MANTENIMIENTO' de la tabla 'Registros_Punzonado' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.MANTENIMIENTOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_DE_TRABAJO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.FALTA_DE_TRABAJOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_DE_TRABAJO' de la tabla 'Registros_Punzonado' es DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.FALTA_DE_TRABAJOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property LIMPIEZA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.LIMPIEZAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LIMPIEZA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.LIMPIEZAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SET_UP() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.SET_UPColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SET_UP' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.SET_UPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AJUSTES() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.AJUSTESColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AJUSTES' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.AJUSTESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_MATERIAL() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.FALTA_MATERIALColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_MATERIAL' de la tabla 'Registros_Punzonado' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.FALTA_MATERIALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PROGRAMA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.PROGRAMAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROGRAMA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.PROGRAMAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_ENERGIA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.FALTA_ENERGIAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_ENERGIA' de la tabla 'Registros_Punzonado' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.FALTA_ENERGIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CALIDAD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.CALIDADColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIDAD' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.CALIDADColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DESCARGA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.DESCARGAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DESCARGA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.DESCARGAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALTA_OF() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.FALTA_OFColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_OF' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.FALTA_OFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property GASES() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.GASESColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'GASES' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.GASESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FALLA_MAQUINA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.FALLA_MAQUINAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALLA_MAQUINA' de la tabla 'Registros_Punzonado' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.FALLA_MAQUINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property JUNTA_PERSONAL() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.JUNTA_PERSONALColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'JUNTA_PERSONAL' de la tabla 'Registros_Punzonado' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.JUNTA_PERSONALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property OTRA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.OTRAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OTRA' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.OTRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DURACION_OTRA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.DURACION_OTRAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DURACION_OTRA' de la tabla 'Registros_Punzonado' es DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.DURACION_OTRAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MES() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.MESColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MES' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.MESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AÑO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Punzonado.AÑOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Punzonado.AÑOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_OFNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.OFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_OFNull()
+            Me(Me.tableRegistros_Punzonado.OFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMAQUINANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.MAQUINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMAQUINANull()
+            Me(Me.tableRegistros_Punzonado.MAQUINAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFECHANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.FECHAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFECHANull()
+            Me(Me.tableRegistros_Punzonado.FECHAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCLIENTENull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.CLIENTEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCLIENTENull()
+            Me(Me.tableRegistros_Punzonado.CLIENTEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAREANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.AREAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAREANull()
+            Me(Me.tableRegistros_Punzonado.AREAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.HPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHPNull()
+            Me(Me.tableRegistros_Punzonado.HPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHRNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.HRColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHRNull()
+            Me(Me.tableRegistros_Punzonado.HRColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_PROGNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.PZA_PROGColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_PROGNull()
+            Me(Me.tableRegistros_Punzonado.PZA_PROGColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_PRODNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.PZA_PRODColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_PRODNull()
+            Me(Me.tableRegistros_Punzonado.PZA_PRODColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPZA_RECHAZADASNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.PZA_RECHAZADASColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPZA_RECHAZADASNull()
+            Me(Me.tableRegistros_Punzonado.PZA_RECHAZADASColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSCRAPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.SCRAPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSCRAPNull()
+            Me(Me.tableRegistros_Punzonado.SCRAPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSEMANANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.SEMANAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSEMANANull()
+            Me(Me.tableRegistros_Punzonado.SEMANAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMANTENIMIENTONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.MANTENIMIENTOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMANTENIMIENTONull()
+            Me(Me.tableRegistros_Punzonado.MANTENIMIENTOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_DE_TRABAJONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.FALTA_DE_TRABAJOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_DE_TRABAJONull()
+            Me(Me.tableRegistros_Punzonado.FALTA_DE_TRABAJOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsLIMPIEZANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.LIMPIEZAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetLIMPIEZANull()
+            Me(Me.tableRegistros_Punzonado.LIMPIEZAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSET_UPNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.SET_UPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSET_UPNull()
+            Me(Me.tableRegistros_Punzonado.SET_UPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAJUSTESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.AJUSTESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAJUSTESNull()
+            Me(Me.tableRegistros_Punzonado.AJUSTESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_MATERIALNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.FALTA_MATERIALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_MATERIALNull()
+            Me(Me.tableRegistros_Punzonado.FALTA_MATERIALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPROGRAMANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.PROGRAMAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPROGRAMANull()
+            Me(Me.tableRegistros_Punzonado.PROGRAMAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_ENERGIANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.FALTA_ENERGIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_ENERGIANull()
+            Me(Me.tableRegistros_Punzonado.FALTA_ENERGIAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCALIDADNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.CALIDADColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCALIDADNull()
+            Me(Me.tableRegistros_Punzonado.CALIDADColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDESCARGANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.DESCARGAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDESCARGANull()
+            Me(Me.tableRegistros_Punzonado.DESCARGAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALTA_OFNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.FALTA_OFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALTA_OFNull()
+            Me(Me.tableRegistros_Punzonado.FALTA_OFColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsGASESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.GASESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetGASESNull()
+            Me(Me.tableRegistros_Punzonado.GASESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFALLA_MAQUINANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.FALLA_MAQUINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFALLA_MAQUINANull()
+            Me(Me.tableRegistros_Punzonado.FALLA_MAQUINAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsJUNTA_PERSONALNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.JUNTA_PERSONALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetJUNTA_PERSONALNull()
+            Me(Me.tableRegistros_Punzonado.JUNTA_PERSONALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOTRANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.OTRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOTRANull()
+            Me(Me.tableRegistros_Punzonado.OTRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDURACION_OTRANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.DURACION_OTRAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDURACION_OTRANull()
+            Me(Me.tableRegistros_Punzonado.DURACION_OTRAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMESNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.MESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMESNull()
+            Me(Me.tableRegistros_Punzonado.MESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAÑONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.AÑOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAÑONull()
+            Me(Me.tableRegistros_Punzonado.AÑOColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1827,6 +6542,114 @@ Partial Public Class ProduccionBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As RegistrosRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class Registros_DoblezRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As Registros_DoblezRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As Registros_DoblezRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As Registros_DoblezRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class Registros_MaquinadosRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As Registros_MaquinadosRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As Registros_MaquinadosRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As Registros_MaquinadosRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class Registros_PunzonadoRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As Registros_PunzonadoRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As Registros_PunzonadoRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As Registros_PunzonadoRow
             Get
                 Return Me.eventRow
             End Get
@@ -2230,11 +7053,22 @@ Namespace ProduccionBDTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Registros.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        [NO], [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PR"& _ 
+                "OD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "               LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGI"& _ 
+                "A, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "                 OTRA, DURACION_OTRA, MES, AÑO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE"& _ 
+                "        (MES = ?) AND (AÑO = ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.WChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2256,6 +7090,50 @@ Namespace ProduccionBDTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As ProduccionBD.RegistrosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ProduccionBD.RegistrosDataTable = New ProduccionBD.RegistrosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function LaserFillBy(ByVal dataTable As ProduccionBD.RegistrosDataTable, ByVal MES As String, ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (MES Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal MES As String, ByVal AÑO As Global.System.Nullable(Of Integer)) As ProduccionBD.RegistrosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (MES Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
             Dim dataTable As ProduccionBD.RegistrosDataTable = New ProduccionBD.RegistrosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -3099,6 +7977,3779 @@ Namespace ProduccionBDTableAdapters
     End Class
     
     '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class Registros_DoblezTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
+        
+        Private _connection As Global.System.Data.OleDb.OleDbConnection
+        
+        Private _transaction As Global.System.Data.OleDb.OleDbTransaction
+        
+        Private _commandCollection() As Global.System.Data.OleDb.OleDbCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.OleDb.OleDbDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.OleDb.OleDbConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.OleDb.OleDbCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.OleDb.OleDbTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.OleDb.OleDbCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "Registros_Doblez"
+            tableMapping.ColumnMappings.Add("NO", "NO")
+            tableMapping.ColumnMappings.Add("OF", "OF")
+            tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
+            tableMapping.ColumnMappings.Add("FECHA", "FECHA")
+            tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE")
+            tableMapping.ColumnMappings.Add("AREA", "AREA")
+            tableMapping.ColumnMappings.Add("HP", "HP")
+            tableMapping.ColumnMappings.Add("HR", "HR")
+            tableMapping.ColumnMappings.Add("PZA_PROG", "PZA_PROG")
+            tableMapping.ColumnMappings.Add("PZA_PROD", "PZA_PROD")
+            tableMapping.ColumnMappings.Add("PZA_RECHAZADAS", "PZA_RECHAZADAS")
+            tableMapping.ColumnMappings.Add("SCRAP", "SCRAP")
+            tableMapping.ColumnMappings.Add("SEMANA", "SEMANA")
+            tableMapping.ColumnMappings.Add("MANTENIMIENTO", "MANTENIMIENTO")
+            tableMapping.ColumnMappings.Add("FALTA_DE_TRABAJO", "FALTA_DE_TRABAJO")
+            tableMapping.ColumnMappings.Add("LIMPIEZA", "LIMPIEZA")
+            tableMapping.ColumnMappings.Add("SET_UP", "SET_UP")
+            tableMapping.ColumnMappings.Add("AJUSTES", "AJUSTES")
+            tableMapping.ColumnMappings.Add("FALTA_MATERIAL", "FALTA_MATERIAL")
+            tableMapping.ColumnMappings.Add("PROGRAMA", "PROGRAMA")
+            tableMapping.ColumnMappings.Add("FALTA_ENERGIA", "FALTA_ENERGIA")
+            tableMapping.ColumnMappings.Add("CALIDAD", "CALIDAD")
+            tableMapping.ColumnMappings.Add("DESCARGA", "DESCARGA")
+            tableMapping.ColumnMappings.Add("FALTA_OF", "FALTA_OF")
+            tableMapping.ColumnMappings.Add("GASES", "GASES")
+            tableMapping.ColumnMappings.Add("FALLA_MAQUINA", "FALLA_MAQUINA")
+            tableMapping.ColumnMappings.Add("JUNTA_PERSONAL", "JUNTA_PERSONAL")
+            tableMapping.ColumnMappings.Add("OTRA", "OTRA")
+            tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
+            tableMapping.ColumnMappings.Add("MES", "MES")
+            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Registros_Doblez` WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL)"& _ 
+                " OR (`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND "& _ 
+                "`HR` IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` "& _ 
+                "= ?)) AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `"& _ 
+                "PZA_RECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS N"& _ 
+                "ULL) OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND "& _ 
+                "((? = 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `"& _ 
+                "FALTA_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZ"& _ 
+                "A` IS NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` "& _ 
+                "= ?)) AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FA"& _ 
+                "LTA_MATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS "& _ 
+                "NULL) OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_E"& _ 
+                "NERGIA` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1"& _ 
+                " AND `DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL"& _ 
+                ") OR (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND (("& _ 
+                "? = 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JU"& _ 
+                "NTA_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA"& _ 
+                "` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = "& _ 
+                "?)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Doblez` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, `HP`"& _ 
+                ", `HR`, `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTENIMIE"& _ 
+                "NTO`, `FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`, `PR"& _ 
+                "OGRAMA`, `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA_MAQ"& _ 
+                "UINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?, ?,"& _ 
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                ")"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros_Doblez` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE` = ?"& _ 
+                ", `AREA` = ?, `HP` = ?, `HR` = ?, `PZA_PROG` = ?, `PZA_PROD` = ?, `PZA_RECHAZADA"& _ 
+                "S` = ?, `SCRAP` = ?, `SEMANA` = ?, `MANTENIMIENTO` = ?, `FALTA_DE_TRABAJO` = ?, "& _ 
+                "`LIMPIEZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA` = "& _ 
+                "?, `FALTA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASES` ="& _ 
+                " ?, `FALLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` = ?, "& _ 
+                "`MES` = ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FEC"& _ 
+                "HA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` IS N"& _ 
+                "ULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) AND"& _ 
+                " ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_RECHA"& _ 
+                "ZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) OR ("& _ 
+                "`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = 1 A"& _ 
+                "ND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_DE_"& _ 
+                "TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS NUL"& _ 
+                "L) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) AND"& _ 
+                " ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MATER"& _ 
+                "IAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) OR "& _ 
+                "(`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA` ="& _ 
+                " ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `DES"& _ 
+                "CARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR (`FA"& _ 
+                "LTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 AND"& _ 
+                " `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PERSO"& _ 
+                "NAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS NULL"& _ 
+                ") OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.OleDb.OleDbConnection()
+            Me._connection.ConnectionString = Global.FTM_Registros.My.MySettings.Default.ProducciónConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        Registros_Doblez.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Doblez"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function DoblezFill(ByVal dataTable As ProduccionBD.Registros_DoblezDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As ProduccionBD.Registros_DoblezDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ProduccionBD.Registros_DoblezDataTable = New ProduccionBD.Registros_DoblezDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As ProduccionBD.Registros_DoblezDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As ProduccionBD) As Integer
+            Return Me.Adapter.Update(dataSet, "Registros_Doblez")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete( _
+                    ByVal Original_NO As Integer,  _
+                    ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal Original_HP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_HR As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_HP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HR.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_HR.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROG.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SCRAP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_SCRAP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SEMANA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_SEMANA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (Original_MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LIMPIEZA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SET_UP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_SET_UP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AJUSTES.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PROGRAMA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
+            If (Original_CALIDAD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DESCARGA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_OF.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_GASES.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_GASES.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal HR As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+            If (_OF Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(_OF,String)
+            End If
+            If (MAQUINA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(MAQUINA,String)
+            End If
+            If (FECHA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(FECHA.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLIENTE Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(CLIENTE,String)
+            End If
+            If (AREA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(AREA,String)
+            End If
+            If (HP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(HP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (HR.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(HR.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROG.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (SCRAP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(SCRAP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (SEMANA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(SEMANA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (LIMPIEZA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SET_UP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(SET_UP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (AJUSTES.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PROGRAMA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (CALIDAD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (DESCARGA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_OF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (GASES.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(GASES.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (OTRA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(OTRA,String)
+            End If
+            If (DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(27).Value = CType(DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
+            End If
+            If (MES Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal HR As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_NO As Integer,  _
+                    ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal Original_HP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_HR As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+            If (_OF Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(_OF,String)
+            End If
+            If (MAQUINA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(MAQUINA,String)
+            End If
+            If (FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLIENTE Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CLIENTE,String)
+            End If
+            If (AREA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AREA,String)
+            End If
+            If (HP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(HP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (HR.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(HR.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (SCRAP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(SCRAP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (SEMANA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(SEMANA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (LIMPIEZA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SET_UP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SET_UP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (AJUSTES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PROGRAMA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (CALIDAD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (DESCARGA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_OF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (GASES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(GASES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (OTRA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(OTRA,String)
+            End If
+            If (DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+            End If
+            If (MES Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_NO,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_HP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HR.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_HR.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SCRAP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_SCRAP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SEMANA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_SEMANA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LIMPIEZA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SET_UP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_SET_UP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AJUSTES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PROGRAMA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
+            End If
+            If (Original_CALIDAD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DESCARGA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_OF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
+            End If
+            If (Original_GASES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_GASES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
+            End If
+            If (Original_JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class Registros_MaquinadosTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
+        
+        Private _connection As Global.System.Data.OleDb.OleDbConnection
+        
+        Private _transaction As Global.System.Data.OleDb.OleDbTransaction
+        
+        Private _commandCollection() As Global.System.Data.OleDb.OleDbCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.OleDb.OleDbDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.OleDb.OleDbConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.OleDb.OleDbCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.OleDb.OleDbTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.OleDb.OleDbCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "Registros_Maquinados"
+            tableMapping.ColumnMappings.Add("NO", "NO")
+            tableMapping.ColumnMappings.Add("OF", "OF")
+            tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
+            tableMapping.ColumnMappings.Add("FECHA", "FECHA")
+            tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE")
+            tableMapping.ColumnMappings.Add("AREA", "AREA")
+            tableMapping.ColumnMappings.Add("HP", "HP")
+            tableMapping.ColumnMappings.Add("HR", "HR")
+            tableMapping.ColumnMappings.Add("PZA_PROG", "PZA_PROG")
+            tableMapping.ColumnMappings.Add("PZA_PROD", "PZA_PROD")
+            tableMapping.ColumnMappings.Add("PZA_RECHAZADAS", "PZA_RECHAZADAS")
+            tableMapping.ColumnMappings.Add("SCRAP", "SCRAP")
+            tableMapping.ColumnMappings.Add("SEMANA", "SEMANA")
+            tableMapping.ColumnMappings.Add("MANTENIMIENTO", "MANTENIMIENTO")
+            tableMapping.ColumnMappings.Add("FALTA_DE_TRABAJO", "FALTA_DE_TRABAJO")
+            tableMapping.ColumnMappings.Add("LIMPIEZA", "LIMPIEZA")
+            tableMapping.ColumnMappings.Add("SET_UP", "SET_UP")
+            tableMapping.ColumnMappings.Add("AJUSTES", "AJUSTES")
+            tableMapping.ColumnMappings.Add("FALTA_MATERIAL", "FALTA_MATERIAL")
+            tableMapping.ColumnMappings.Add("PROGRAMA", "PROGRAMA")
+            tableMapping.ColumnMappings.Add("FALTA_ENERGIA", "FALTA_ENERGIA")
+            tableMapping.ColumnMappings.Add("CALIDAD", "CALIDAD")
+            tableMapping.ColumnMappings.Add("DESCARGA", "DESCARGA")
+            tableMapping.ColumnMappings.Add("FALTA_OF", "FALTA_OF")
+            tableMapping.ColumnMappings.Add("GASES", "GASES")
+            tableMapping.ColumnMappings.Add("FALLA_MAQUINA", "FALLA_MAQUINA")
+            tableMapping.ColumnMappings.Add("JUNTA_PERSONAL", "JUNTA_PERSONAL")
+            tableMapping.ColumnMappings.Add("OTRA", "OTRA")
+            tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
+            tableMapping.ColumnMappings.Add("MES", "MES")
+            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Registros_Maquinados` WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS N"& _ 
+                "ULL) OR (`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 "& _ 
+                "AND `HR` IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PR"& _ 
+                "OG` = ?)) AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 A"& _ 
+                "ND `PZA_RECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` "& _ 
+                "IS NULL) OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) "& _ 
+                "AND ((? = 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 A"& _ 
+                "ND `FALTA_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIM"& _ 
+                "PIEZA` IS NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_"& _ 
+                "UP` = ?)) AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND"& _ 
+                " `FALTA_MATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA`"& _ 
+                " IS NULL) OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FAL"& _ 
+                "TA_ENERGIA` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((?"& _ 
+                " = 1 AND `DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS "& _ 
+                "NULL) OR (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AN"& _ 
+                "D ((? = 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND"& _ 
+                " `JUNTA_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_"& _ 
+                "OTRA` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO"& _ 
+                "` = ?)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Maquinados` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, "& _ 
+                "`HP`, `HR`, `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTEN"& _ 
+                "IMIENTO`, `FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`,"& _ 
+                " `PROGRAMA`, `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA"& _ 
+                "_MAQUINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
+                "?, ?)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros_Maquinados` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE`"& _ 
+                " = ?, `AREA` = ?, `HP` = ?, `HR` = ?, `PZA_PROG` = ?, `PZA_PROD` = ?, `PZA_RECHA"& _ 
+                "ZADAS` = ?, `SCRAP` = ?, `SEMANA` = ?, `MANTENIMIENTO` = ?, `FALTA_DE_TRABAJO` ="& _ 
+                " ?, `LIMPIEZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA"& _ 
+                "` = ?, `FALTA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASE"& _ 
+                "S` = ?, `FALLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` ="& _ 
+                " ?, `MES` = ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR ("& _ 
+                "`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` "& _ 
+                "IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?))"& _ 
+                " AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_R"& _ 
+                "ECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) "& _ 
+                "OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? ="& _ 
+                " 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA"& _ 
+                "_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS"& _ 
+                " NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?))"& _ 
+                " AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_M"& _ 
+                "ATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL)"& _ 
+                " OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGI"& _ 
+                "A` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND "& _ 
+                "`DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR "& _ 
+                "(`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1"& _ 
+                " AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_P"& _ 
+                "ERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS "& _ 
+                "NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.OleDb.OleDbConnection()
+            Me._connection.ConnectionString = Global.FTM_Registros.My.MySettings.Default.ProducciónConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        Registros_Maquinados.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Maquinados"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function MaquinadosFill(ByVal dataTable As ProduccionBD.Registros_MaquinadosDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As ProduccionBD.Registros_MaquinadosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ProduccionBD.Registros_MaquinadosDataTable = New ProduccionBD.Registros_MaquinadosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As ProduccionBD.Registros_MaquinadosDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As ProduccionBD) As Integer
+            Return Me.Adapter.Update(dataSet, "Registros_Maquinados")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete( _
+                    ByVal Original_NO As Integer,  _
+                    ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal Original_HP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_HR As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_HP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HR.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_HR.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROG.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SCRAP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_SCRAP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SEMANA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_SEMANA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (Original_MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LIMPIEZA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SET_UP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_SET_UP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AJUSTES.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PROGRAMA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
+            If (Original_CALIDAD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DESCARGA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_OF.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_GASES.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_GASES.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal HR As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+            If (_OF Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(_OF,String)
+            End If
+            If (MAQUINA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(MAQUINA,String)
+            End If
+            If (FECHA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(FECHA.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLIENTE Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(CLIENTE,String)
+            End If
+            If (AREA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(AREA,String)
+            End If
+            If (HP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(HP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (HR.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(HR.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROG.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (SCRAP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(SCRAP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (SEMANA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(SEMANA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (LIMPIEZA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SET_UP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(SET_UP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (AJUSTES.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PROGRAMA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (CALIDAD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (DESCARGA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_OF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (GASES.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(GASES.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (OTRA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(OTRA,String)
+            End If
+            If (DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(27).Value = CType(DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
+            End If
+            If (MES Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal HR As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_NO As Integer,  _
+                    ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal Original_HP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_HR As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+            If (_OF Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(_OF,String)
+            End If
+            If (MAQUINA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(MAQUINA,String)
+            End If
+            If (FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLIENTE Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CLIENTE,String)
+            End If
+            If (AREA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AREA,String)
+            End If
+            If (HP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(HP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (HR.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(HR.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (SCRAP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(SCRAP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (SEMANA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(SEMANA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (LIMPIEZA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SET_UP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SET_UP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (AJUSTES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PROGRAMA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (CALIDAD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (DESCARGA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_OF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (GASES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(GASES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (OTRA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(OTRA,String)
+            End If
+            If (DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+            End If
+            If (MES Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_NO,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_HP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HR.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_HR.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SCRAP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_SCRAP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SEMANA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_SEMANA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LIMPIEZA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SET_UP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_SET_UP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AJUSTES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PROGRAMA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
+            End If
+            If (Original_CALIDAD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DESCARGA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_OF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
+            End If
+            If (Original_GASES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_GASES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
+            End If
+            If (Original_JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class Registros_PunzonadoTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
+        
+        Private _connection As Global.System.Data.OleDb.OleDbConnection
+        
+        Private _transaction As Global.System.Data.OleDb.OleDbTransaction
+        
+        Private _commandCollection() As Global.System.Data.OleDb.OleDbCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.OleDb.OleDbDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.OleDb.OleDbConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.OleDb.OleDbCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.OleDb.OleDbTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.OleDb.OleDbCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "Registros_Punzonado"
+            tableMapping.ColumnMappings.Add("NO", "NO")
+            tableMapping.ColumnMappings.Add("OF", "OF")
+            tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
+            tableMapping.ColumnMappings.Add("FECHA", "FECHA")
+            tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE")
+            tableMapping.ColumnMappings.Add("AREA", "AREA")
+            tableMapping.ColumnMappings.Add("HP", "HP")
+            tableMapping.ColumnMappings.Add("HR", "HR")
+            tableMapping.ColumnMappings.Add("PZA_PROG", "PZA_PROG")
+            tableMapping.ColumnMappings.Add("PZA_PROD", "PZA_PROD")
+            tableMapping.ColumnMappings.Add("PZA_RECHAZADAS", "PZA_RECHAZADAS")
+            tableMapping.ColumnMappings.Add("SCRAP", "SCRAP")
+            tableMapping.ColumnMappings.Add("SEMANA", "SEMANA")
+            tableMapping.ColumnMappings.Add("MANTENIMIENTO", "MANTENIMIENTO")
+            tableMapping.ColumnMappings.Add("FALTA_DE_TRABAJO", "FALTA_DE_TRABAJO")
+            tableMapping.ColumnMappings.Add("LIMPIEZA", "LIMPIEZA")
+            tableMapping.ColumnMappings.Add("SET_UP", "SET_UP")
+            tableMapping.ColumnMappings.Add("AJUSTES", "AJUSTES")
+            tableMapping.ColumnMappings.Add("FALTA_MATERIAL", "FALTA_MATERIAL")
+            tableMapping.ColumnMappings.Add("PROGRAMA", "PROGRAMA")
+            tableMapping.ColumnMappings.Add("FALTA_ENERGIA", "FALTA_ENERGIA")
+            tableMapping.ColumnMappings.Add("CALIDAD", "CALIDAD")
+            tableMapping.ColumnMappings.Add("DESCARGA", "DESCARGA")
+            tableMapping.ColumnMappings.Add("FALTA_OF", "FALTA_OF")
+            tableMapping.ColumnMappings.Add("GASES", "GASES")
+            tableMapping.ColumnMappings.Add("FALLA_MAQUINA", "FALLA_MAQUINA")
+            tableMapping.ColumnMappings.Add("JUNTA_PERSONAL", "JUNTA_PERSONAL")
+            tableMapping.ColumnMappings.Add("OTRA", "OTRA")
+            tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
+            tableMapping.ColumnMappings.Add("MES", "MES")
+            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Registros_Punzonado` WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NU"& _ 
+                "LL) OR (`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 A"& _ 
+                "ND `HR` IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PRO"& _ 
+                "G` = ?)) AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AN"& _ 
+                "D `PZA_RECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` I"& _ 
+                "S NULL) OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) A"& _ 
+                "ND ((? = 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AN"& _ 
+                "D `FALTA_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMP"& _ 
+                "IEZA` IS NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_U"& _ 
+                "P` = ?)) AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND "& _ 
+                "`FALTA_MATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` "& _ 
+                "IS NULL) OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALT"& _ 
+                "A_ENERGIA` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? "& _ 
+                "= 1 AND `DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS N"& _ 
+                "ULL) OR (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND"& _ 
+                " ((? = 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND "& _ 
+                "`JUNTA_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_O"& _ 
+                "TRA` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO`"& _ 
+                " = ?)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Punzonado` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, `"& _ 
+                "HP`, `HR`, `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTENI"& _ 
+                "MIENTO`, `FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`, "& _ 
+                "`PROGRAMA`, `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA_"& _ 
+                "MAQUINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?,"& _ 
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                ", ?)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros_Punzonado` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE` "& _ 
+                "= ?, `AREA` = ?, `HP` = ?, `HR` = ?, `PZA_PROG` = ?, `PZA_PROD` = ?, `PZA_RECHAZ"& _ 
+                "ADAS` = ?, `SCRAP` = ?, `SEMANA` = ?, `MANTENIMIENTO` = ?, `FALTA_DE_TRABAJO` = "& _ 
+                "?, `LIMPIEZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA`"& _ 
+                " = ?, `FALTA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASES"& _ 
+                "` = ?, `FALLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` = "& _ 
+                "?, `MES` = ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`"& _ 
+                "FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` I"& _ 
+                "S NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) "& _ 
+                "AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_RE"& _ 
+                "CHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) O"& _ 
+                "R (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = "& _ 
+                "1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_"& _ 
+                "DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS "& _ 
+                "NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) "& _ 
+                "AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MA"& _ 
+                "TERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) "& _ 
+                "OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA"& _ 
+                "` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `"& _ 
+                "DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR ("& _ 
+                "`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 "& _ 
+                "AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PE"& _ 
+                "RSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS N"& _ 
+                "ULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PZA_RECHAZADAS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_RECHAZADAS", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SCRAP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SCRAP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SEMANA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SEMANA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_MANTENIMIENTO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MANTENIMIENTO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_DE_TRABAJO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_DE_TRABAJO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LIMPIEZA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LIMPIEZA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SET_UP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SET_UP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AJUSTES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AJUSTES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_MATERIAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_MATERIAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PROGRAMA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PROGRAMA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_ENERGIA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_ENERGIA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CALIDAD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CALIDAD", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DESCARGA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DESCARGA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALTA_OF", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALTA_OF", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_GASES", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "GASES", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FALLA_MAQUINA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FALLA_MAQUINA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.OleDb.OleDbConnection()
+            Me._connection.ConnectionString = Global.FTM_Registros.My.MySettings.Default.ProducciónConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        [NO], [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PR"& _ 
+                "OD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "               LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGI"& _ 
+                "A, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "                 OTRA, DURACION_OTRA, MES, AÑO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Punzon"& _ 
+                "ado"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function PunzonadoFill(ByVal dataTable As ProduccionBD.Registros_PunzonadoDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As ProduccionBD.Registros_PunzonadoDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ProduccionBD.Registros_PunzonadoDataTable = New ProduccionBD.Registros_PunzonadoDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As ProduccionBD.Registros_PunzonadoDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As ProduccionBD) As Integer
+            Return Me.Adapter.Update(dataSet, "Registros_Punzonado")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete( _
+                    ByVal Original_NO As Integer,  _
+                    ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal Original_HP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_HR As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_HP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HR.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_HR.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROG.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SCRAP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_SCRAP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SEMANA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_SEMANA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (Original_MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LIMPIEZA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SET_UP.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_SET_UP.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AJUSTES.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PROGRAMA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
+            If (Original_CALIDAD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DESCARGA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_OF.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_GASES.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_GASES.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal HR As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+            If (_OF Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(_OF,String)
+            End If
+            If (MAQUINA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(MAQUINA,String)
+            End If
+            If (FECHA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(FECHA.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLIENTE Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(CLIENTE,String)
+            End If
+            If (AREA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(AREA,String)
+            End If
+            If (HP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(HP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (HR.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(HR.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROG.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (SCRAP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(SCRAP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (SEMANA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(SEMANA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (LIMPIEZA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SET_UP.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(SET_UP.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (AJUSTES.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PROGRAMA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (CALIDAD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (DESCARGA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_OF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (GASES.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(GASES.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (OTRA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(OTRA,String)
+            End If
+            If (DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(27).Value = CType(DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
+            End If
+            If (MES Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal _OF As String,  _
+                    ByVal MAQUINA As String,  _
+                    ByVal FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal CLIENTE As String,  _
+                    ByVal AREA As String,  _
+                    ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal HR As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal OTRA As String,  _
+                    ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal MES As String,  _
+                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_NO As Integer,  _
+                    ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
+                    ByVal Original_HP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_HR As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROG As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_PROD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PZA_RECHAZADAS As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SCRAP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SEMANA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_MANTENIMIENTO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_DE_TRABAJO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LIMPIEZA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_SET_UP As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AJUSTES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_MATERIAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PROGRAMA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_ENERGIA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_CALIDAD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DESCARGA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALTA_OF As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GASES As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+            If (_OF Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(_OF,String)
+            End If
+            If (MAQUINA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(MAQUINA,String)
+            End If
+            If (FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLIENTE Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CLIENTE,String)
+            End If
+            If (AREA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AREA,String)
+            End If
+            If (HP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(HP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (HR.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(HR.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_PROD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (SCRAP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(SCRAP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (SEMANA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(SEMANA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (LIMPIEZA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SET_UP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SET_UP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (AJUSTES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PROGRAMA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (CALIDAD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (DESCARGA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (FALTA_OF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (GASES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(GASES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (OTRA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(OTRA,String)
+            End If
+            If (DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+            End If
+            If (MES Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
+            End If
+            If (AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_NO,Integer)
+            If (Original_FECHA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_FECHA.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_HP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HR.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_HR.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROG.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_PZA_PROG.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_PROD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_PZA_PROD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PZA_RECHAZADAS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_PZA_RECHAZADAS.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SCRAP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_SCRAP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SEMANA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_SEMANA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_MANTENIMIENTO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_MANTENIMIENTO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_DE_TRABAJO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_FALTA_DE_TRABAJO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LIMPIEZA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_LIMPIEZA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
+            End If
+            If (Original_SET_UP.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_SET_UP.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AJUSTES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_AJUSTES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_MATERIAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_FALTA_MATERIAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PROGRAMA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_PROGRAMA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_ENERGIA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_FALTA_ENERGIA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
+            End If
+            If (Original_CALIDAD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_CALIDAD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DESCARGA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_DESCARGA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALTA_OF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_FALTA_OF.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
+            End If
+            If (Original_GASES.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_GASES.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
+            End If
+            If (Original_FALLA_MAQUINA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_FALLA_MAQUINA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
+            End If
+            If (Original_JUNTA_PERSONAL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_JUNTA_PERSONAL.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DURACION_OTRA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_DURACION_OTRA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
+            End If
+            If (Original_AÑO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+    End Class
+    
+    '''<summary>
     '''TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     '''</summary>
     <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
@@ -3112,6 +11763,12 @@ Namespace ProduccionBDTableAdapters
         Private _updateOrder As UpdateOrderOption
         
         Private _registrosTableAdapter As RegistrosTableAdapter
+        
+        Private _registros_DoblezTableAdapter As Registros_DoblezTableAdapter
+        
+        Private _registros_MaquinadosTableAdapter As Registros_MaquinadosTableAdapter
+        
+        Private _registros_PunzonadoTableAdapter As Registros_PunzonadoTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -3143,6 +11800,48 @@ Namespace ProduccionBDTableAdapters
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property Registros_DoblezTableAdapter() As Registros_DoblezTableAdapter
+            Get
+                Return Me._registros_DoblezTableAdapter
+            End Get
+            Set
+                Me._registros_DoblezTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property Registros_MaquinadosTableAdapter() As Registros_MaquinadosTableAdapter
+            Get
+                Return Me._registros_MaquinadosTableAdapter
+            End Get
+            Set
+                Me._registros_MaquinadosTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property Registros_PunzonadoTableAdapter() As Registros_PunzonadoTableAdapter
+            Get
+                Return Me._registros_PunzonadoTableAdapter
+            End Get
+            Set
+                Me._registros_PunzonadoTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property BackupDataSetBeforeUpdate() As Boolean
             Get
@@ -3165,6 +11864,18 @@ Namespace ProduccionBDTableAdapters
                             AndAlso (Not (Me._registrosTableAdapter.Connection) Is Nothing)) Then
                     Return Me._registrosTableAdapter.Connection
                 End If
+                If ((Not (Me._registros_DoblezTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._registros_DoblezTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._registros_DoblezTableAdapter.Connection
+                End If
+                If ((Not (Me._registros_MaquinadosTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._registros_MaquinadosTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._registros_MaquinadosTableAdapter.Connection
+                End If
+                If ((Not (Me._registros_PunzonadoTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._registros_PunzonadoTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._registros_PunzonadoTableAdapter.Connection
+                End If
                 Return Nothing
             End Get
             Set
@@ -3179,6 +11890,15 @@ Namespace ProduccionBDTableAdapters
             Get
                 Dim count As Integer = 0
                 If (Not (Me._registrosTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._registros_DoblezTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._registros_MaquinadosTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._registros_PunzonadoTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -3201,6 +11921,33 @@ Namespace ProduccionBDTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
+            If (Not (Me._registros_DoblezTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Registros_Doblez.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._registros_DoblezTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._registros_MaquinadosTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Registros_Maquinados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._registros_MaquinadosTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._registros_PunzonadoTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Registros_Punzonado.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._registros_PunzonadoTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -3219,6 +11966,30 @@ Namespace ProduccionBDTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
+            If (Not (Me._registros_DoblezTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Registros_Doblez.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._registros_DoblezTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._registros_MaquinadosTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Registros_Maquinados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._registros_MaquinadosTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._registros_PunzonadoTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Registros_Punzonado.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._registros_PunzonadoTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -3229,6 +12000,30 @@ Namespace ProduccionBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As ProduccionBD, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._registros_PunzonadoTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Registros_Punzonado.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._registros_PunzonadoTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._registros_MaquinadosTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Registros_Maquinados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._registros_MaquinadosTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._registros_DoblezTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Registros_Doblez.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._registros_DoblezTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._registrosTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Registros.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -3283,6 +12078,21 @@ Namespace ProduccionBDTableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
+            If ((Not (Me._registros_DoblezTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._registros_DoblezTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
+                        "sma cadena de conexión.")
+            End If
+            If ((Not (Me._registros_MaquinadosTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._registros_MaquinadosTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
+                        "sma cadena de conexión.")
+            End If
+            If ((Not (Me._registros_PunzonadoTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._registros_PunzonadoTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
+                        "sma cadena de conexión.")
+            End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
             If (workConnection Is Nothing) Then
                 Throw New Global.System.ApplicationException("TableAdapterManager no contiene información de conexión. Establezca cada propieda"& _ 
@@ -3322,6 +12132,33 @@ Namespace ProduccionBDTableAdapters
                     If Me._registrosTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._registrosTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._registrosTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._registros_DoblezTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._registros_DoblezTableAdapter, Me._registros_DoblezTableAdapter.Connection)
+                    Me._registros_DoblezTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._registros_DoblezTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._registros_DoblezTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._registros_DoblezTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._registros_DoblezTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._registros_MaquinadosTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._registros_MaquinadosTableAdapter, Me._registros_MaquinadosTableAdapter.Connection)
+                    Me._registros_MaquinadosTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._registros_MaquinadosTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._registros_MaquinadosTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._registros_MaquinadosTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._registros_MaquinadosTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._registros_PunzonadoTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._registros_PunzonadoTableAdapter, Me._registros_PunzonadoTableAdapter.Connection)
+                    Me._registros_PunzonadoTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._registros_PunzonadoTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._registros_PunzonadoTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._registros_PunzonadoTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._registros_PunzonadoTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -3387,6 +12224,18 @@ Namespace ProduccionBDTableAdapters
                 If (Not (Me._registrosTableAdapter) Is Nothing) Then
                     Me._registrosTableAdapter.Connection = CType(revertConnections(Me._registrosTableAdapter),Global.System.Data.OleDb.OleDbConnection)
                     Me._registrosTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._registros_DoblezTableAdapter) Is Nothing) Then
+                    Me._registros_DoblezTableAdapter.Connection = CType(revertConnections(Me._registros_DoblezTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._registros_DoblezTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._registros_MaquinadosTableAdapter) Is Nothing) Then
+                    Me._registros_MaquinadosTableAdapter.Connection = CType(revertConnections(Me._registros_MaquinadosTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._registros_MaquinadosTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._registros_PunzonadoTableAdapter) Is Nothing) Then
+                    Me._registros_PunzonadoTableAdapter.Connection = CType(revertConnections(Me._registros_PunzonadoTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._registros_PunzonadoTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

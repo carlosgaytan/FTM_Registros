@@ -54,4 +54,3 @@ S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Salida
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.EntradasSalidas.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.Produccion.resources
 S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.RegIndicadadores.resources
-S:\Base de datos\Base\FTM_Registros\FTM_Registros\obj\Debug\FTM_Registros.RegIndProd.resources

@@ -92,12 +92,21 @@ Partial Class RegIndicadadores
         Me.ClientesTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter()
         Me.VaciarBTN = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Registros_DoblezBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Registros_DoblezTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.Registros_DoblezTableAdapter()
+        Me.Registros_MaquinadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Registros_MaquinadosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.Registros_MaquinadosTableAdapter()
+        Me.Registros_PunzonadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Registros_PunzonadoTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.Registros_PunzonadoTableAdapter()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.Registros_DoblezBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Registros_MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Registros_PunzonadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AreaTXT
@@ -592,6 +601,9 @@ Partial Class RegIndicadadores
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Registros_DoblezTableAdapter = Nothing
+        Me.TableAdapterManager.Registros_MaquinadosTableAdapter = Nothing
+        Me.TableAdapterManager.Registros_PunzonadoTableAdapter = Nothing
         Me.TableAdapterManager.RegistrosTableAdapter = Me.RegistrosTableAdapter
         Me.TableAdapterManager.UpdateOrder = FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -683,6 +695,33 @@ Partial Class RegIndicadadores
         Me.ToolTip1.SetToolTip(Me.VaciarBTN, "Vacia todos los campos")
         Me.VaciarBTN.UseVisualStyleBackColor = True
         '
+        'Registros_DoblezBindingSource
+        '
+        Me.Registros_DoblezBindingSource.DataMember = "Registros_Doblez"
+        Me.Registros_DoblezBindingSource.DataSource = Me.ProduccionBD
+        '
+        'Registros_DoblezTableAdapter
+        '
+        Me.Registros_DoblezTableAdapter.ClearBeforeFill = True
+        '
+        'Registros_MaquinadosBindingSource
+        '
+        Me.Registros_MaquinadosBindingSource.DataMember = "Registros_Maquinados"
+        Me.Registros_MaquinadosBindingSource.DataSource = Me.ProduccionBD
+        '
+        'Registros_MaquinadosTableAdapter
+        '
+        Me.Registros_MaquinadosTableAdapter.ClearBeforeFill = True
+        '
+        'Registros_PunzonadoBindingSource
+        '
+        Me.Registros_PunzonadoBindingSource.DataMember = "Registros_Punzonado"
+        Me.Registros_PunzonadoBindingSource.DataSource = Me.ProduccionBD
+        '
+        'Registros_PunzonadoTableAdapter
+        '
+        Me.Registros_PunzonadoTableAdapter.ClearBeforeFill = True
+        '
         'RegIndicadadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -704,6 +743,9 @@ Partial Class RegIndicadadores
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.Registros_DoblezBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Registros_MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Registros_PunzonadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -775,4 +817,10 @@ Partial Class RegIndicadadores
     Friend WithEvents ClientesTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents VaciarBTN As Button
+    Friend WithEvents Registros_DoblezBindingSource As BindingSource
+    Friend WithEvents Registros_DoblezTableAdapter As ProduccionBDTableAdapters.Registros_DoblezTableAdapter
+    Friend WithEvents Registros_MaquinadosBindingSource As BindingSource
+    Friend WithEvents Registros_MaquinadosTableAdapter As ProduccionBDTableAdapters.Registros_MaquinadosTableAdapter
+    Friend WithEvents Registros_PunzonadoBindingSource As BindingSource
+    Friend WithEvents Registros_PunzonadoTableAdapter As ProduccionBDTableAdapters.Registros_PunzonadoTableAdapter
 End Class

@@ -25,11 +25,11 @@ Partial Class Produccion
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Produccion))
-        Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
-        Me.RegistrosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.RegistrosTableAdapter()
-        Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MesBTN = New System.Windows.Forms.Button()
+        Me.YearCBX = New System.Windows.Forms.ComboBox()
+        Me.MesCBX = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.invmpBTN = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -38,37 +38,31 @@ Partial Class Produccion
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Registros_DoblezBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DoblezBD1 = New FTM_Registros.DoblezBD1()
+        Me.Registros_DoblezTableAdapter = New FTM_Registros.DoblezBD1TableAdapters.Registros_DoblezTableAdapter()
+        Me.TableAdapterManager1 = New FTM_Registros.DoblezBD1TableAdapters.TableAdapterManager()
+        Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
+        Me.RegistrosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.RegistrosTableAdapter()
+        Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
+        Me.RegistrosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        CType(Me.Registros_DoblezBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DoblezBD1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'RegistrosBindingSource
-        '
-        Me.RegistrosBindingSource.DataMember = "Registros"
-        Me.RegistrosBindingSource.DataSource = Me.ProduccionBD
-        '
-        'ProduccionBD
-        '
-        Me.ProduccionBD.DataSetName = "ProduccionBD"
-        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'RegistrosTableAdapter
-        '
-        Me.RegistrosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.RegistrosTableAdapter = Me.RegistrosTableAdapter
-        Me.TableAdapterManager.UpdateOrder = FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.MesBTN)
+        Me.Panel1.Controls.Add(Me.YearCBX)
+        Me.Panel1.Controls.Add(Me.MesCBX)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.invmpBTN)
@@ -76,6 +70,46 @@ Partial Class Produccion
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(177, 633)
         Me.Panel1.TabIndex = 0
+        '
+        'MesBTN
+        '
+        Me.MesBTN.Location = New System.Drawing.Point(53, 389)
+        Me.MesBTN.Name = "MesBTN"
+        Me.MesBTN.Size = New System.Drawing.Size(75, 23)
+        Me.MesBTN.TabIndex = 2
+        Me.MesBTN.Text = "Buscar"
+        Me.MesBTN.UseVisualStyleBackColor = True
+        '
+        'YearCBX
+        '
+        Me.YearCBX.FormattingEnabled = True
+        Me.YearCBX.Location = New System.Drawing.Point(29, 335)
+        Me.YearCBX.Name = "YearCBX"
+        Me.YearCBX.Size = New System.Drawing.Size(124, 21)
+        Me.YearCBX.TabIndex = 3
+        '
+        'MesCBX
+        '
+        Me.MesCBX.FormattingEnabled = True
+        Me.MesCBX.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
+        Me.MesCBX.Location = New System.Drawing.Point(29, 362)
+        Me.MesCBX.Name = "MesCBX"
+        Me.MesCBX.Size = New System.Drawing.Size(124, 21)
+        Me.MesCBX.TabIndex = 1
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.edit_22164
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(53, 222)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 75)
+        Me.Button1.TabIndex = 26
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.ToolTip1.SetToolTip(Me.Button1, "Registro Reportes de Producción")
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -124,6 +158,7 @@ Partial Class Produccion
         '
         'TabPage1
         '
+        Me.TabPage1.AutoScroll = True
         Me.TabPage1.Controls.Add(Me.ReportViewer1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -135,14 +170,13 @@ Partial Class Produccion
         '
         'ReportViewer1
         '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "Mensual"
+        ReportDataSource1.Name = "LaserBD"
         ReportDataSource1.Value = Me.RegistrosBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Mensual.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(3, 3)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Mensual1.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(3, 46)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(1164, 577)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1164, 534)
         Me.ReportViewer1.TabIndex = 0
         '
         'TabControl1
@@ -155,19 +189,53 @@ Partial Class Produccion
         Me.TabControl1.Size = New System.Drawing.Size(1178, 609)
         Me.TabControl1.TabIndex = 1
         '
-        'Button1
+        'Registros_DoblezBindingSource
         '
-        Me.Button1.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.edit_22164
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(53, 222)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 75)
-        Me.Button1.TabIndex = 26
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.ToolTip1.SetToolTip(Me.Button1, "Registro Reportes de Producción")
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Registros_DoblezBindingSource.DataMember = "Registros_Doblez"
+        Me.Registros_DoblezBindingSource.DataSource = Me.DoblezBD1
+        '
+        'DoblezBD1
+        '
+        Me.DoblezBD1.DataSetName = "DoblezBD1"
+        Me.DoblezBD1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Registros_DoblezTableAdapter
+        '
+        Me.Registros_DoblezTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.Registros_DoblezTableAdapter = Me.Registros_DoblezTableAdapter
+        Me.TableAdapterManager1.UpdateOrder = FTM_Registros.DoblezBD1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'RegistrosBindingSource
+        '
+        Me.RegistrosBindingSource.DataMember = "Registros"
+        Me.RegistrosBindingSource.DataSource = Me.ProduccionBD
+        '
+        'ProduccionBD
+        '
+        Me.ProduccionBD.DataSetName = "ProduccionBD"
+        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RegistrosTableAdapter
+        '
+        Me.RegistrosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Registros_DoblezTableAdapter = Nothing
+        Me.TableAdapterManager.Registros_MaquinadosTableAdapter = Nothing
+        Me.TableAdapterManager.Registros_PunzonadoTableAdapter = Nothing
+        Me.TableAdapterManager.RegistrosTableAdapter = Me.RegistrosTableAdapter
+        Me.TableAdapterManager.UpdateOrder = FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'RegistrosBindingSource1
+        '
+        Me.RegistrosBindingSource1.DataMember = "Registros"
+        Me.RegistrosBindingSource1.DataSource = Me.ProduccionBD
         '
         'Produccion
         '
@@ -182,13 +250,16 @@ Partial Class Produccion
         Me.Name = "Produccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producción"
-        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
+        CType(Me.Registros_DoblezBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DoblezBD1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -207,4 +278,12 @@ Partial Class Produccion
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Button1 As Button
+    Friend WithEvents MesBTN As Button
+    Friend WithEvents MesCBX As ComboBox
+    Friend WithEvents YearCBX As ComboBox
+    Friend WithEvents RegistrosBindingSource1 As BindingSource
+    Friend WithEvents DoblezBD1 As DoblezBD1
+    Friend WithEvents Registros_DoblezBindingSource As BindingSource
+    Friend WithEvents Registros_DoblezTableAdapter As DoblezBD1TableAdapters.Registros_DoblezTableAdapter
+    Friend WithEvents TableAdapterManager1 As DoblezBD1TableAdapters.TableAdapterManager
 End Class
