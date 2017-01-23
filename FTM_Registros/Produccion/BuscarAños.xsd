@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BuscarAños" targetNamespace="http://tempuri.org/BuscarAños.xsd" xmlns:mstns="http://tempuri.org/BuscarAños.xsd" xmlns="http://tempuri.org/BuscarAños.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ProducciónConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProducciónConnectionString (MySettings)" PropertyReference="ApplicationSettings.FTM_Registros.My.MySettings.GlobalReference.Default.ProducciónConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RegistrosTableAdapter" GeneratorDataComponentClassName="RegistrosTableAdapter" Name="Registros" UserDataComponentName="RegistrosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Años" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Años" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Años">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT AÑO
+FROM            Registros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AÑO" DataSetColumn="AÑO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BuscarAños" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BuscarAños" msprop:Generator_UserDSName="BuscarAños">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Registros" msprop:Generator_TableClassName="RegistrosDataTable" msprop:Generator_TableVarName="tableRegistros" msprop:Generator_TablePropName="Registros" msprop:Generator_RowDeletingName="RegistrosRowDeleting" msprop:Generator_RowChangingName="RegistrosRowChanging" msprop:Generator_RowEvHandlerName="RegistrosRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrosRowDeleted" msprop:Generator_UserTableName="Registros" msprop:Generator_RowChangedName="RegistrosRowChanged" msprop:Generator_RowEvArgName="RegistrosRowChangeEvent" msprop:Generator_RowClassName="RegistrosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AÑO" msprop:Generator_ColumnVarNameInTable="columnAÑO" msprop:Generator_ColumnPropNameInRow="AÑO" msprop:Generator_ColumnPropNameInTable="AÑOColumn" msprop:Generator_UserColumnName="AÑO" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

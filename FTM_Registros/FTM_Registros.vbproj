@@ -249,6 +249,11 @@
     <Compile Include="Ingeniería\Ingenieria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Produccion\BuscarAños.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuscarAños.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Produccion\DoblezBD1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -556,6 +561,17 @@
       <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Produccion\BuscarAños.xsc">
+      <DependentUpon>BuscarAños.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\BuscarAños.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BuscarAños.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\BuscarAños.xss">
+      <DependentUpon>BuscarAños.xsd</DependentUpon>
+    </None>
     <None Include="Produccion\DoblezBD1.xsc">
       <DependentUpon>DoblezBD1.xsd</DependentUpon>
     </None>

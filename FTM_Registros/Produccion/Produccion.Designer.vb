@@ -29,7 +29,6 @@ Partial Class Produccion
         Me.MesBTN = New System.Windows.Forms.Button()
         Me.YearCBX = New System.Windows.Forms.ComboBox()
         Me.MesCBX = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.invmpBTN = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -47,6 +46,9 @@ Partial Class Produccion
         Me.RegistrosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.RegistrosTableAdapter()
         Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
         Me.RegistrosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BuscarAños = New FTM_Registros.BuscarAños()
+        Me.RegistrosBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RegistrosTableAdapter1 = New FTM_Registros.BuscarAñosTableAdapters.RegistrosTableAdapter()
         Me.Panel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -56,6 +58,8 @@ Partial Class Produccion
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistrosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -63,7 +67,6 @@ Partial Class Produccion
         Me.Panel1.Controls.Add(Me.MesBTN)
         Me.Panel1.Controls.Add(Me.YearCBX)
         Me.Panel1.Controls.Add(Me.MesCBX)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.invmpBTN)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -82,6 +85,10 @@ Partial Class Produccion
         '
         'YearCBX
         '
+        Me.YearCBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.YearCBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.YearCBX.DataSource = Me.RegistrosBindingSource2
+        Me.YearCBX.DisplayMember = "AÑO"
         Me.YearCBX.FormattingEnabled = True
         Me.YearCBX.Location = New System.Drawing.Point(29, 335)
         Me.YearCBX.Name = "YearCBX"
@@ -90,26 +97,14 @@ Partial Class Produccion
         '
         'MesCBX
         '
+        Me.MesCBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.MesCBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.MesCBX.FormattingEnabled = True
         Me.MesCBX.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
         Me.MesCBX.Location = New System.Drawing.Point(29, 362)
         Me.MesCBX.Name = "MesCBX"
         Me.MesCBX.Size = New System.Drawing.Size(124, 21)
         Me.MesCBX.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.edit_22164
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(53, 222)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 75)
-        Me.Button1.TabIndex = 26
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.ToolTip1.SetToolTip(Me.Button1, "Registro Reportes de Producción")
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -237,6 +232,20 @@ Partial Class Produccion
         Me.RegistrosBindingSource1.DataMember = "Registros"
         Me.RegistrosBindingSource1.DataSource = Me.ProduccionBD
         '
+        'BuscarAños
+        '
+        Me.BuscarAños.DataSetName = "BuscarAños"
+        Me.BuscarAños.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RegistrosBindingSource2
+        '
+        Me.RegistrosBindingSource2.DataMember = "Registros"
+        Me.RegistrosBindingSource2.DataSource = Me.BuscarAños
+        '
+        'RegistrosTableAdapter1
+        '
+        Me.RegistrosTableAdapter1.ClearBeforeFill = True
+        '
         'Produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -260,6 +269,8 @@ Partial Class Produccion
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistrosBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -277,7 +288,6 @@ Partial Class Produccion
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents Button1 As Button
     Friend WithEvents MesBTN As Button
     Friend WithEvents MesCBX As ComboBox
     Friend WithEvents YearCBX As ComboBox
@@ -286,4 +296,7 @@ Partial Class Produccion
     Friend WithEvents Registros_DoblezBindingSource As BindingSource
     Friend WithEvents Registros_DoblezTableAdapter As DoblezBD1TableAdapters.Registros_DoblezTableAdapter
     Friend WithEvents TableAdapterManager1 As DoblezBD1TableAdapters.TableAdapterManager
+    Friend WithEvents BuscarAños As BuscarAños
+    Friend WithEvents RegistrosBindingSource2 As BindingSource
+    Friend WithEvents RegistrosTableAdapter1 As BuscarAñosTableAdapters.RegistrosTableAdapter
 End Class

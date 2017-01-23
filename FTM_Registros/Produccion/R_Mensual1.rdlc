@@ -16,7 +16,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -200,7 +202,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
+                <Value>=Sum(Fields!PZA_PROG.Value, "LaserBD")/Sum(Fields!PZA_PROD.Value, "LaserBD")</Value>
                 <Style>
                   <Format>0.00%</Format>
                 </Style>

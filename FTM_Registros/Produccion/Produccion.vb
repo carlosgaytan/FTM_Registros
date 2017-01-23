@@ -1,5 +1,7 @@
 ﻿Public Class Produccion
     Private Sub Produccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BuscarAños.Registros' Puede moverla o quitarla según sea necesario.
+        Me.RegistrosTableAdapter1.Años(Me.BuscarAños.Registros)
         'TODO: esta línea de código carga datos en la tabla 'DoblezBD1.Registros_Doblez' Puede moverla o quitarla según sea necesario.
         Me.Registros_DoblezTableAdapter.Doblez(Me.DoblezBD1.Registros_Doblez)
         'TODO: esta línea de código carga datos en la tabla 'ProduccionBD.Registros' Puede moverla o quitarla según sea necesario.
