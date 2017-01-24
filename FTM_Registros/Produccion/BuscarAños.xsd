@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RegistrosTableAdapter" GeneratorDataComponentClassName="RegistrosTableAdapter" Name="Registros" UserDataComponentName="RegistrosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Años" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Años" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Años">
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="YEARS" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="YEARS" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="YEARS">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT DISTINCT AÑO
+                    <CommandText>SELECT DISTINCT YEARS
 FROM            Registros</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -20,7 +20,7 @@ FROM            Registros</CommandText>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="AÑO" DataSetColumn="AÑO" />
+              <Mapping SourceColumn="YEARS" DataSetColumn="YEARS" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -32,10 +32,10 @@ FROM            Registros</CommandText>
   <xs:element name="BuscarAños" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BuscarAños" msprop:Generator_UserDSName="BuscarAños">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Registros" msprop:Generator_TableClassName="RegistrosDataTable" msprop:Generator_TableVarName="tableRegistros" msprop:Generator_TablePropName="Registros" msprop:Generator_RowDeletingName="RegistrosRowDeleting" msprop:Generator_RowChangingName="RegistrosRowChanging" msprop:Generator_RowEvHandlerName="RegistrosRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrosRowDeleted" msprop:Generator_UserTableName="Registros" msprop:Generator_RowChangedName="RegistrosRowChanged" msprop:Generator_RowEvArgName="RegistrosRowChangeEvent" msprop:Generator_RowClassName="RegistrosRow">
+        <xs:element name="Registros" msprop:Generator_TableClassName="RegistrosDataTable" msprop:Generator_TableVarName="tableRegistros" msprop:Generator_RowChangedName="RegistrosRowChanged" msprop:Generator_TablePropName="Registros" msprop:Generator_RowDeletingName="RegistrosRowDeleting" msprop:Generator_RowChangingName="RegistrosRowChanging" msprop:Generator_RowEvHandlerName="RegistrosRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrosRowDeleted" msprop:Generator_RowClassName="RegistrosRow" msprop:Generator_UserTableName="Registros" msprop:Generator_RowEvArgName="RegistrosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="AÑO" msprop:Generator_ColumnVarNameInTable="columnAÑO" msprop:Generator_ColumnPropNameInRow="AÑO" msprop:Generator_ColumnPropNameInTable="AÑOColumn" msprop:Generator_UserColumnName="AÑO" type="xs:int" minOccurs="0" />
+              <xs:element name="YEARS" msprop:Generator_ColumnVarNameInTable="columnYEARS" msprop:Generator_ColumnPropNameInRow="YEARS" msprop:Generator_ColumnPropNameInTable="YEARSColumn" msprop:Generator_UserColumnName="YEARS" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

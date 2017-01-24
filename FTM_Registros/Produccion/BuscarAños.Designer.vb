@@ -283,7 +283,7 @@ Partial Public Class BuscarAños
     Partial Public Class RegistrosDataTable
         Inherits Global.System.Data.TypedTableBase(Of RegistrosRow)
         
-        Private columnAÑO As Global.System.Data.DataColumn
+        Private columnYEARS As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -322,9 +322,9 @@ Partial Public Class BuscarAños
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property YEARSColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAÑO
+                Return Me.columnYEARS
             End Get
         End Property
         
@@ -365,9 +365,9 @@ Partial Public Class BuscarAños
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddRegistrosRow(ByVal AÑO As Integer) As RegistrosRow
+        Public Overloads Function AddRegistrosRow(ByVal YEARS As Integer) As RegistrosRow
             Dim rowRegistrosRow As RegistrosRow = CType(Me.NewRow,RegistrosRow)
-            Dim columnValuesArray() As Object = New Object() {AÑO}
+            Dim columnValuesArray() As Object = New Object() {YEARS}
             rowRegistrosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRegistrosRow)
             Return rowRegistrosRow
@@ -390,14 +390,14 @@ Partial Public Class BuscarAños
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnAÑO = MyBase.Columns("AÑO")
+            Me.columnYEARS = MyBase.Columns("YEARS")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAÑO)
+            Me.columnYEARS = New Global.System.Data.DataColumn("YEARS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYEARS)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -544,29 +544,29 @@ Partial Public Class BuscarAños
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AÑO() As Integer
+        Public Property YEARS() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableRegistros.AÑOColumn),Integer)
+                    Return CType(Me(Me.tableRegistros.YEARSColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'Registros' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRegistros.AÑOColumn) = value
+                Me(Me.tableRegistros.YEARSColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAÑONull() As Boolean
-            Return Me.IsNull(Me.tableRegistros.AÑOColumn)
+        Public Function IsYEARSNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros.YEARSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAÑONull()
-            Me(Me.tableRegistros.AÑOColumn) = Global.System.Convert.DBNull
+        Public Sub SetYEARSNull()
+            Me(Me.tableRegistros.YEARSColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -736,7 +736,7 @@ Namespace BuscarAñosTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Registros"
-            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            tableMapping.ColumnMappings.Add("YEARS", "YEARS")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -753,7 +753,7 @@ Namespace BuscarAñosTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT DISTINCT AÑO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"
+            Me._commandCollection(0).CommandText = "SELECT DISTINCT YEARS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -761,7 +761,7 @@ Namespace BuscarAñosTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Años(ByVal dataTable As BuscarAños.RegistrosDataTable) As Integer
+        Public Overloads Overridable Function YEARS(ByVal dataTable As BuscarAños.RegistrosDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear

@@ -25,9 +25,13 @@ Partial Class Produccion
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Produccion))
+        Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MesBTN = New System.Windows.Forms.Button()
         Me.YearCBX = New System.Windows.Forms.ComboBox()
+        Me.RegistrosBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BuscarAños = New FTM_Registros.BuscarAños()
         Me.MesCBX = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.invmpBTN = New System.Windows.Forms.Button()
@@ -37,30 +41,35 @@ Partial Class Produccion
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Registros_DoblezBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DoblezBD1 = New FTM_Registros.DoblezBD1()
-        Me.Registros_DoblezTableAdapter = New FTM_Registros.DoblezBD1TableAdapters.Registros_DoblezTableAdapter()
-        Me.TableAdapterManager1 = New FTM_Registros.DoblezBD1TableAdapters.TableAdapterManager()
-        Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProduccionBD = New FTM_Registros.ProduccionBD()
         Me.RegistrosTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.RegistrosTableAdapter()
         Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
         Me.RegistrosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BuscarAños = New FTM_Registros.BuscarAños()
-        Me.RegistrosBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.RegistrosTableAdapter1 = New FTM_Registros.BuscarAñosTableAdapters.RegistrosTableAdapter()
+        Me.ReporteLaser = New FTM_Registros.ReporteLaser()
+        Me.ReporteLaserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReporteLaserTableAdapter = New FTM_Registros.ReporteLaserTableAdapters.ReporteLaserTableAdapter()
+        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.RegistrosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        CType(Me.Registros_DoblezBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DoblezBD1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RegistrosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteLaser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteLaserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'RegistrosBindingSource
+        '
+        Me.RegistrosBindingSource.DataMember = "Registros"
+        Me.RegistrosBindingSource.DataSource = Me.ProduccionBD
+        '
+        'ProduccionBD
+        '
+        Me.ProduccionBD.DataSetName = "ProduccionBD"
+        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panel1
         '
@@ -88,12 +97,22 @@ Partial Class Produccion
         Me.YearCBX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.YearCBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.YearCBX.DataSource = Me.RegistrosBindingSource2
-        Me.YearCBX.DisplayMember = "AÑO"
+        Me.YearCBX.DisplayMember = "YEARS"
         Me.YearCBX.FormattingEnabled = True
         Me.YearCBX.Location = New System.Drawing.Point(29, 335)
         Me.YearCBX.Name = "YearCBX"
         Me.YearCBX.Size = New System.Drawing.Size(124, 21)
         Me.YearCBX.TabIndex = 3
+        '
+        'RegistrosBindingSource2
+        '
+        Me.RegistrosBindingSource2.DataMember = "Registros"
+        Me.RegistrosBindingSource2.DataSource = Me.BuscarAños
+        '
+        'BuscarAños
+        '
+        Me.BuscarAños.DataSetName = "BuscarAños"
+        Me.BuscarAños.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MesCBX
         '
@@ -165,10 +184,10 @@ Partial Class Produccion
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "LaserBD"
-        ReportDataSource1.Value = Me.RegistrosBindingSource
+        ReportDataSource1.Name = "Laser"
+        ReportDataSource1.Value = Me.ReporteLaserBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Mensual1.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.Report1.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(3, 46)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(1164, 534)
@@ -183,36 +202,6 @@ Partial Class Produccion
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1178, 609)
         Me.TabControl1.TabIndex = 1
-        '
-        'Registros_DoblezBindingSource
-        '
-        Me.Registros_DoblezBindingSource.DataMember = "Registros_Doblez"
-        Me.Registros_DoblezBindingSource.DataSource = Me.DoblezBD1
-        '
-        'DoblezBD1
-        '
-        Me.DoblezBD1.DataSetName = "DoblezBD1"
-        Me.DoblezBD1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Registros_DoblezTableAdapter
-        '
-        Me.Registros_DoblezTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.Registros_DoblezTableAdapter = Me.Registros_DoblezTableAdapter
-        Me.TableAdapterManager1.UpdateOrder = FTM_Registros.DoblezBD1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'RegistrosBindingSource
-        '
-        Me.RegistrosBindingSource.DataMember = "Registros"
-        Me.RegistrosBindingSource.DataSource = Me.ProduccionBD
-        '
-        'ProduccionBD
-        '
-        Me.ProduccionBD.DataSetName = "ProduccionBD"
-        Me.ProduccionBD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RegistrosTableAdapter
         '
@@ -232,19 +221,23 @@ Partial Class Produccion
         Me.RegistrosBindingSource1.DataMember = "Registros"
         Me.RegistrosBindingSource1.DataSource = Me.ProduccionBD
         '
-        'BuscarAños
-        '
-        Me.BuscarAños.DataSetName = "BuscarAños"
-        Me.BuscarAños.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'RegistrosBindingSource2
-        '
-        Me.RegistrosBindingSource2.DataMember = "Registros"
-        Me.RegistrosBindingSource2.DataSource = Me.BuscarAños
-        '
         'RegistrosTableAdapter1
         '
         Me.RegistrosTableAdapter1.ClearBeforeFill = True
+        '
+        'ReporteLaser
+        '
+        Me.ReporteLaser.DataSetName = "ReporteLaser"
+        Me.ReporteLaser.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ReporteLaserBindingSource
+        '
+        Me.ReporteLaserBindingSource.DataMember = "ReporteLaser"
+        Me.ReporteLaserBindingSource.DataSource = Me.ReporteLaser
+        '
+        'ReporteLaserTableAdapter
+        '
+        Me.ReporteLaserTableAdapter.ClearBeforeFill = True
         '
         'Produccion
         '
@@ -259,18 +252,18 @@ Partial Class Produccion
         Me.Name = "Produccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producción"
+        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.RegistrosBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
-        CType(Me.Registros_DoblezBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DoblezBD1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RegistrosBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteLaser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteLaserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -292,11 +285,10 @@ Partial Class Produccion
     Friend WithEvents MesCBX As ComboBox
     Friend WithEvents YearCBX As ComboBox
     Friend WithEvents RegistrosBindingSource1 As BindingSource
-    Friend WithEvents DoblezBD1 As DoblezBD1
-    Friend WithEvents Registros_DoblezBindingSource As BindingSource
-    Friend WithEvents Registros_DoblezTableAdapter As DoblezBD1TableAdapters.Registros_DoblezTableAdapter
-    Friend WithEvents TableAdapterManager1 As DoblezBD1TableAdapters.TableAdapterManager
     Friend WithEvents BuscarAños As BuscarAños
     Friend WithEvents RegistrosBindingSource2 As BindingSource
     Friend WithEvents RegistrosTableAdapter1 As BuscarAñosTableAdapters.RegistrosTableAdapter
+    Friend WithEvents ReporteLaserBindingSource As BindingSource
+    Friend WithEvents ReporteLaser As ReporteLaser
+    Friend WithEvents ReporteLaserTableAdapter As ReporteLaserTableAdapters.ReporteLaserTableAdapter
 End Class

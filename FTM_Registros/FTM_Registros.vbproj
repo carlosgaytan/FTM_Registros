@@ -27,8 +27,8 @@
     <UpdateUrl>\\SERVER\2012 LASER\Base de datos\Base\FTM_Registros\Actualizaciones\</UpdateUrl>
     <MinimumRequiredVersion>1.4.0.1</MinimumRequiredVersion>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.5.4.%2a</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.5.5.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -254,14 +254,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BuscarAños.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Produccion\DoblezBD1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DoblezBD1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Produccion\DoblezBD1.vb">
-      <DependentUpon>DoblezBD1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Produccion\Produccion.Designer.vb">
       <DependentUpon>Produccion.vb</DependentUpon>
     </Compile>
@@ -278,6 +270,16 @@
     </Compile>
     <Compile Include="Produccion\RegIndicadadores.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\ReporteDoblez1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteDoblez1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\ReporteLaser.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteLaser.xsd</DependentUpon>
     </Compile>
     <Compile Include="Ventas\BuscaOrden.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -572,17 +574,6 @@
     <None Include="Produccion\BuscarAños.xss">
       <DependentUpon>BuscarAños.xsd</DependentUpon>
     </None>
-    <None Include="Produccion\DoblezBD1.xsc">
-      <DependentUpon>DoblezBD1.xsd</DependentUpon>
-    </None>
-    <None Include="Produccion\DoblezBD1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DoblezBD1.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="Produccion\DoblezBD1.xss">
-      <DependentUpon>DoblezBD1.xsd</DependentUpon>
-    </None>
     <None Include="Produccion\ProduccionBD.xsc">
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
     </None>
@@ -593,6 +584,28 @@
     </None>
     <None Include="Produccion\ProduccionBD.xss">
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReporteDoblez1.xsc">
+      <DependentUpon>ReporteDoblez1.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReporteDoblez1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteDoblez1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\ReporteDoblez1.xss">
+      <DependentUpon>ReporteDoblez1.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReporteLaser.xsc">
+      <DependentUpon>ReporteLaser.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReporteLaser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteLaser.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\ReporteLaser.xss">
+      <DependentUpon>ReporteLaser.xsd</DependentUpon>
     </None>
     <None Include="Ventas\BuscaOrden.xsc">
       <DependentUpon>BuscaOrden.xsd</DependentUpon>

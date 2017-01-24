@@ -450,6 +450,8 @@ Partial Public Class ProduccionBD
         
         Private columnDURACION_OTRA As Global.System.Data.DataColumn
         
+        Private columnYEARS As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -734,6 +736,14 @@ Partial Public Class ProduccionBD
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property YEARSColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnYEARS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -800,9 +810,10 @@ Partial Public Class ProduccionBD
                     ByVal FALTA_OF As Integer,  _
                     ByVal FALLA_MAQUINA As Integer,  _
                     ByVal JUNTA_PERSONAL As Integer,  _
-                    ByVal DURACION_OTRA As Integer) As RegistrosRow
+                    ByVal DURACION_OTRA As Integer,  _
+                    ByVal YEARS As Integer) As RegistrosRow
             Dim rowRegistrosRow As RegistrosRow = CType(Me.NewRow,RegistrosRow)
-            Dim columnValuesArray() As Object = New Object() {HP, HR, SCRAP, SEMANA, MANTENIMIENTO, LIMPIEZA, AJUSTES, PROGRAMA, CALIDAD, DESCARGA, GASES, OTRA, MES, AÑO, Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, FALTA_DE_TRABAJO, SET_UP, FALTA_MATERIAL, FALTA_ENERGIA, FALTA_OF, FALLA_MAQUINA, JUNTA_PERSONAL, DURACION_OTRA}
+            Dim columnValuesArray() As Object = New Object() {HP, HR, SCRAP, SEMANA, MANTENIMIENTO, LIMPIEZA, AJUSTES, PROGRAMA, CALIDAD, DESCARGA, GASES, OTRA, MES, AÑO, Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, FALTA_DE_TRABAJO, SET_UP, FALTA_MATERIAL, FALTA_ENERGIA, FALTA_OF, FALLA_MAQUINA, JUNTA_PERSONAL, DURACION_OTRA, YEARS}
             rowRegistrosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRegistrosRow)
             Return rowRegistrosRow
@@ -862,6 +873,7 @@ Partial Public Class ProduccionBD
             Me.columnFALLA_MAQUINA = MyBase.Columns("FALLA_MAQUINA")
             Me.columnJUNTA_PERSONAL = MyBase.Columns("JUNTA_PERSONAL")
             Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
+            Me.columnYEARS = MyBase.Columns("YEARS")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -932,6 +944,8 @@ Partial Public Class ProduccionBD
             MyBase.Columns.Add(Me.columnJUNTA_PERSONAL)
             Me.columnDURACION_OTRA = New Global.System.Data.DataColumn("DURACION_OTRA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDURACION_OTRA)
+            Me.columnYEARS = New Global.System.Data.DataColumn("YEARS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYEARS)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
             Me.columnOTRA.MaxLength = 536870910
             Me.columnMES.MaxLength = 536870910
@@ -1091,9 +1105,9 @@ Partial Public Class ProduccionBD
         
         Private columnCLIENTE As Global.System.Data.DataColumn
         
-        Private columnAREA As Global.System.Data.DataColumn
-        
         Private columnHP As Global.System.Data.DataColumn
+        
+        Private columnAREA As Global.System.Data.DataColumn
         
         Private columnHR As Global.System.Data.DataColumn
         
@@ -1141,7 +1155,7 @@ Partial Public Class ProduccionBD
         
         Private columnMES As Global.System.Data.DataColumn
         
-        Private columnAÑO As Global.System.Data.DataColumn
+        Private columnYEARS As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1220,17 +1234,17 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AREAColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property HPColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAREA
+                Return Me.columnHP
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property HPColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property AREAColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnHP
+                Return Me.columnAREA
             End Get
         End Property
         
@@ -1420,9 +1434,9 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property YEARSColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAÑO
+                Return Me.columnYEARS
             End Get
         End Property
         
@@ -1468,8 +1482,8 @@ Partial Public Class ProduccionBD
                     ByVal MAQUINA As String,  _
                     ByVal FECHA As Date,  _
                     ByVal CLIENTE As String,  _
-                    ByVal AREA As String,  _
                     ByVal HP As Integer,  _
+                    ByVal AREA As String,  _
                     ByVal HR As Integer,  _
                     ByVal PZA_PROG As Integer,  _
                     ByVal PZA_PROD As Integer,  _
@@ -1493,9 +1507,9 @@ Partial Public Class ProduccionBD
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Integer,  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Integer) As Registros_DoblezRow
+                    ByVal YEARS As Integer) As Registros_DoblezRow
             Dim rowRegistros_DoblezRow As Registros_DoblezRow = CType(Me.NewRow,Registros_DoblezRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, AÑO}
+            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, HP, AREA, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, YEARS}
             rowRegistros_DoblezRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRegistros_DoblezRow)
             Return rowRegistros_DoblezRow
@@ -1529,8 +1543,8 @@ Partial Public Class ProduccionBD
             Me.columnMAQUINA = MyBase.Columns("MAQUINA")
             Me.columnFECHA = MyBase.Columns("FECHA")
             Me.columnCLIENTE = MyBase.Columns("CLIENTE")
-            Me.columnAREA = MyBase.Columns("AREA")
             Me.columnHP = MyBase.Columns("HP")
+            Me.columnAREA = MyBase.Columns("AREA")
             Me.columnHR = MyBase.Columns("HR")
             Me.columnPZA_PROG = MyBase.Columns("PZA_PROG")
             Me.columnPZA_PROD = MyBase.Columns("PZA_PROD")
@@ -1554,7 +1568,7 @@ Partial Public Class ProduccionBD
             Me.columnOTRA = MyBase.Columns("OTRA")
             Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
             Me.columnMES = MyBase.Columns("MES")
-            Me.columnAÑO = MyBase.Columns("AÑO")
+            Me.columnYEARS = MyBase.Columns("YEARS")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1573,10 +1587,10 @@ Partial Public Class ProduccionBD
             MyBase.Columns.Add(Me.columnFECHA)
             Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCLIENTE)
-            Me.columnAREA = New Global.System.Data.DataColumn("AREA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAREA)
             Me.columnHP = New Global.System.Data.DataColumn("HP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHP)
+            Me.columnAREA = New Global.System.Data.DataColumn("AREA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAREA)
             Me.columnHR = New Global.System.Data.DataColumn("HR", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHR)
             Me.columnPZA_PROG = New Global.System.Data.DataColumn("PZA_PROG", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -1623,8 +1637,8 @@ Partial Public Class ProduccionBD
             MyBase.Columns.Add(Me.columnDURACION_OTRA)
             Me.columnMES = New Global.System.Data.DataColumn("MES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMES)
-            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAÑO)
+            Me.columnYEARS = New Global.System.Data.DataColumn("YEARS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYEARS)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
             Me.columnNO.AutoIncrement = true
             Me.columnNO.AutoIncrementSeed = -1
@@ -1776,6 +1790,8 @@ Partial Public Class ProduccionBD
         
         Private columnNO As Global.System.Data.DataColumn
         
+        Private columnAÑO As Global.System.Data.DataColumn
+        
         Private columnOF As Global.System.Data.DataColumn
         
         Private columnMAQUINA As Global.System.Data.DataColumn
@@ -1834,7 +1850,7 @@ Partial Public Class ProduccionBD
         
         Private columnMES As Global.System.Data.DataColumn
         
-        Private columnAÑO As Global.System.Data.DataColumn
+        Private columnYEARS As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1876,6 +1892,14 @@ Partial Public Class ProduccionBD
         Public ReadOnly Property NOColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAÑO
             End Get
         End Property
         
@@ -2113,9 +2137,9 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property YEARSColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAÑO
+                Return Me.columnYEARS
             End Get
         End Property
         
@@ -2157,6 +2181,7 @@ Partial Public Class ProduccionBD
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddRegistros_MaquinadosRow( _
+                    ByVal AÑO As Integer,  _
                     ByVal _OF As String,  _
                     ByVal MAQUINA As String,  _
                     ByVal FECHA As Date,  _
@@ -2186,9 +2211,9 @@ Partial Public Class ProduccionBD
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Integer,  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Integer) As Registros_MaquinadosRow
+                    ByVal YEARS As Integer) As Registros_MaquinadosRow
             Dim rowRegistros_MaquinadosRow As Registros_MaquinadosRow = CType(Me.NewRow,Registros_MaquinadosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, AÑO}
+            Dim columnValuesArray() As Object = New Object() {Nothing, AÑO, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, YEARS}
             rowRegistros_MaquinadosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRegistros_MaquinadosRow)
             Return rowRegistros_MaquinadosRow
@@ -2218,6 +2243,7 @@ Partial Public Class ProduccionBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnNO = MyBase.Columns("NO")
+            Me.columnAÑO = MyBase.Columns("AÑO")
             Me.columnOF = MyBase.Columns("OF")
             Me.columnMAQUINA = MyBase.Columns("MAQUINA")
             Me.columnFECHA = MyBase.Columns("FECHA")
@@ -2247,7 +2273,7 @@ Partial Public Class ProduccionBD
             Me.columnOTRA = MyBase.Columns("OTRA")
             Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
             Me.columnMES = MyBase.Columns("MES")
-            Me.columnAÑO = MyBase.Columns("AÑO")
+            Me.columnYEARS = MyBase.Columns("YEARS")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2255,6 +2281,8 @@ Partial Public Class ProduccionBD
         Private Sub InitClass()
             Me.columnNO = New Global.System.Data.DataColumn("NO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNO)
+            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAÑO)
             Me.columnOF = New Global.System.Data.DataColumn("OF", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             Me.columnOF.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "OFColumn")
             Me.columnOF.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnOF")
@@ -2316,8 +2344,8 @@ Partial Public Class ProduccionBD
             MyBase.Columns.Add(Me.columnDURACION_OTRA)
             Me.columnMES = New Global.System.Data.DataColumn("MES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMES)
-            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAÑO)
+            Me.columnYEARS = New Global.System.Data.DataColumn("YEARS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYEARS)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
             Me.columnNO.AutoIncrement = true
             Me.columnNO.AutoIncrementSeed = -1
@@ -2527,7 +2555,7 @@ Partial Public Class ProduccionBD
         
         Private columnMES As Global.System.Data.DataColumn
         
-        Private columnAÑO As Global.System.Data.DataColumn
+        Private columnYEARS As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2806,9 +2834,9 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AÑOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property YEARSColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAÑO
+                Return Me.columnYEARS
             End Get
         End Property
         
@@ -2879,9 +2907,9 @@ Partial Public Class ProduccionBD
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Integer,  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Integer) As Registros_PunzonadoRow
+                    ByVal YEARS As Integer) As Registros_PunzonadoRow
             Dim rowRegistros_PunzonadoRow As Registros_PunzonadoRow = CType(Me.NewRow,Registros_PunzonadoRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, AÑO}
+            Dim columnValuesArray() As Object = New Object() {Nothing, _OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, YEARS}
             rowRegistros_PunzonadoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowRegistros_PunzonadoRow)
             Return rowRegistros_PunzonadoRow
@@ -2940,7 +2968,7 @@ Partial Public Class ProduccionBD
             Me.columnOTRA = MyBase.Columns("OTRA")
             Me.columnDURACION_OTRA = MyBase.Columns("DURACION_OTRA")
             Me.columnMES = MyBase.Columns("MES")
-            Me.columnAÑO = MyBase.Columns("AÑO")
+            Me.columnYEARS = MyBase.Columns("YEARS")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3009,8 +3037,8 @@ Partial Public Class ProduccionBD
             MyBase.Columns.Add(Me.columnDURACION_OTRA)
             Me.columnMES = New Global.System.Data.DataColumn("MES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMES)
-            Me.columnAÑO = New Global.System.Data.DataColumn("AÑO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAÑO)
+            Me.columnYEARS = New Global.System.Data.DataColumn("YEARS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYEARS)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNO}, true))
             Me.columnNO.AutoIncrement = true
             Me.columnNO.AutoIncrementSeed = -1
@@ -3630,6 +3658,21 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property YEARS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros.YEARSColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'Registros' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros.YEARSColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHPNull() As Boolean
             Return Me.IsNull(Me.tableRegistros.HPColumn)
         End Function
@@ -3987,6 +4030,18 @@ Partial Public Class ProduccionBD
         Public Sub SetDURACION_OTRANull()
             Me(Me.tableRegistros.DURACION_OTRAColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsYEARSNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros.YEARSColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetYEARSNull()
+            Me(Me.tableRegistros.YEARSColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -4077,21 +4132,6 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AREA() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableRegistros_Doblez.AREAColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'Registros_Doblez' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableRegistros_Doblez.AREAColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property HP() As Integer
             Get
                 Try 
@@ -4102,6 +4142,21 @@ Partial Public Class ProduccionBD
             End Get
             Set
                 Me(Me.tableRegistros_Doblez.HPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AREA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Doblez.AREAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'Registros_Doblez' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Doblez.AREAColumn) = value
             End Set
         End Property
         
@@ -4456,16 +4511,16 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AÑO() As Integer
+        Public Property YEARS() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableRegistros_Doblez.AÑOColumn),Integer)
+                    Return CType(Me(Me.tableRegistros_Doblez.YEARSColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Doblez' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'Registros_Doblez' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRegistros_Doblez.AÑOColumn) = value
+                Me(Me.tableRegistros_Doblez.YEARSColumn) = value
             End Set
         End Property
         
@@ -4519,18 +4574,6 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAREANull() As Boolean
-            Return Me.IsNull(Me.tableRegistros_Doblez.AREAColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAREANull()
-            Me(Me.tableRegistros_Doblez.AREAColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHPNull() As Boolean
             Return Me.IsNull(Me.tableRegistros_Doblez.HPColumn)
         End Function
@@ -4539,6 +4582,18 @@ Partial Public Class ProduccionBD
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetHPNull()
             Me(Me.tableRegistros_Doblez.HPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAREANull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.AREAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAREANull()
+            Me(Me.tableRegistros_Doblez.AREAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4819,14 +4874,14 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAÑONull() As Boolean
-            Return Me.IsNull(Me.tableRegistros_Doblez.AÑOColumn)
+        Public Function IsYEARSNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Doblez.YEARSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAÑONull()
-            Me(Me.tableRegistros_Doblez.AÑOColumn) = Global.System.Convert.DBNull
+        Public Sub SetYEARSNull()
+            Me(Me.tableRegistros_Doblez.YEARSColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4853,6 +4908,21 @@ Partial Public Class ProduccionBD
             End Get
             Set
                 Me(Me.tableRegistros_Maquinados.NOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AÑO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableRegistros_Maquinados.AÑOColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableRegistros_Maquinados.AÑOColumn) = value
             End Set
         End Property
         
@@ -5301,18 +5371,30 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AÑO() As Integer
+        Public Property YEARS() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableRegistros_Maquinados.AÑOColumn),Integer)
+                    Return CType(Me(Me.tableRegistros_Maquinados.YEARSColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Maquinados' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'Registros_Maquinados' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRegistros_Maquinados.AÑOColumn) = value
+                Me(Me.tableRegistros_Maquinados.YEARSColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAÑONull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.AÑOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAÑONull()
+            Me(Me.tableRegistros_Maquinados.AÑOColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -5664,14 +5746,14 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAÑONull() As Boolean
-            Return Me.IsNull(Me.tableRegistros_Maquinados.AÑOColumn)
+        Public Function IsYEARSNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Maquinados.YEARSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAÑONull()
-            Me(Me.tableRegistros_Maquinados.AÑOColumn) = Global.System.Convert.DBNull
+        Public Sub SetYEARSNull()
+            Me(Me.tableRegistros_Maquinados.YEARSColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -6146,16 +6228,16 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AÑO() As Integer
+        Public Property YEARS() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableRegistros_Punzonado.AÑOColumn),Integer)
+                    Return CType(Me(Me.tableRegistros_Punzonado.YEARSColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AÑO' de la tabla 'Registros_Punzonado' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'Registros_Punzonado' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableRegistros_Punzonado.AÑOColumn) = value
+                Me(Me.tableRegistros_Punzonado.YEARSColumn) = value
             End Set
         End Property
         
@@ -6509,14 +6591,14 @@ Partial Public Class ProduccionBD
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAÑONull() As Boolean
-            Return Me.IsNull(Me.tableRegistros_Punzonado.AÑOColumn)
+        Public Function IsYEARSNull() As Boolean
+            Return Me.IsNull(Me.tableRegistros_Punzonado.YEARSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAÑONull()
-            Me(Me.tableRegistros_Punzonado.AÑOColumn) = Global.System.Convert.DBNull
+        Public Sub SetYEARSNull()
+            Me(Me.tableRegistros_Punzonado.YEARSColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -6825,6 +6907,7 @@ Namespace ProduccionBDTableAdapters
             tableMapping.ColumnMappings.Add("FALLA_MAQUINA", "FALLA_MAQUINA")
             tableMapping.ColumnMappings.Add("JUNTA_PERSONAL", "JUNTA_PERSONAL")
             tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
+            tableMapping.ColumnMappings.Add("YEARS", "YEARS")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -6845,7 +6928,8 @@ Namespace ProduccionBDTableAdapters
                 "FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 A"& _ 
                 "ND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PER"& _ 
                 "SONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS NU"& _ 
-                "LL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                "LL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YEARS` = ?))"& _ 
+                ")"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -6894,16 +6978,16 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, `HP`, `HR`,"& _ 
                 " `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTENIMIENTO`, `"& _ 
                 "FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`, `PROGRAMA`"& _ 
                 ", `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA_MAQUINA`, "& _ 
-                "`JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?, ?, ?, ?, "& _ 
-                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "`JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `YEARS`) VALUES (?, ?, ?, ?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6934,7 +7018,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE` = ?, `AREA"& _ 
@@ -6943,24 +7027,24 @@ Namespace ProduccionBDTableAdapters
                 "ZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA` = ?, `FAL"& _ 
                 "TA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASES` = ?, `FA"& _ 
                 "LLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` = ?, `MES` ="& _ 
-                " ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` = ?"& _ 
-                ")) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` IS NULL) OR"& _ 
-                " (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) AND ((? = "& _ 
-                "1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_RECHAZADAS` "& _ 
-                "IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) OR (`SCRAP`"& _ 
-                " = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = 1 AND `MAN"& _ 
-                "TENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_DE_TRABAJO"& _ 
-                "` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS NULL) OR ("& _ 
-                "`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) AND ((? = "& _ 
-                "1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MATERIAL` IS"& _ 
-                " NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) OR (`PROGR"& _ 
-                "AMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA` = ?)) AN"& _ 
-                "D ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `DESCARGA` "& _ 
-                "IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR (`FALTA_OF`"& _ 
-                " = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 AND `FALLA"& _ 
-                "_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PERSONAL` IS"& _ 
-                " NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS NULL) OR (`"& _ 
-                "DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                " ?, `YEARS` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FECHA` ="& _ 
+                " ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` IS NULL) "& _ 
+                "OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) AND ((? "& _ 
+                "= 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_RECHAZADAS"& _ 
+                "` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) OR (`SCRA"& _ 
+                "P` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = 1 AND `M"& _ 
+                "ANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_DE_TRABA"& _ 
+                "JO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS NULL) OR"& _ 
+                " (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) AND ((? "& _ 
+                "= 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MATERIAL` "& _ 
+                "IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) OR (`PRO"& _ 
+                "GRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA` = ?)) "& _ 
+                "AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `DESCARGA"& _ 
+                "` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR (`FALTA_O"& _ 
+                "F` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 AND `FAL"& _ 
+                "LA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PERSONAL` "& _ 
+                "IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS NULL) OR "& _ 
+                "(`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YEARS` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6991,7 +7075,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -7039,8 +7123,8 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7056,19 +7140,22 @@ Namespace ProduccionBDTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        Registros.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
-            Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        [NO], [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PR"& _ 
+            Me._commandCollection(0).CommandText = "SELECT        [NO], [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PR"& _ 
                 "OD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
                 "               LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGI"& _ 
                 "A, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "                 OTRA, DURACION_OTRA, MES, AÑO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE"& _ 
-                "        (MES = ?) AND (AÑO = ?)"
+                "                 OTRA, DURACION_OTRA, MES, YEARS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT AJUSTES, AREA, CALIDAD, CLIENTE, DESCARGA, DURACION_OTRA, FALLA_MAQUINA, F"& _ 
+                "ALTA_DE_TRABAJO, FALTA_ENERGIA, FALTA_MATERIAL, FALTA_OF, FECHA, GASES, HP, HR, "& _ 
+                "JUNTA_PERSONAL, LIMPIEZA, MANTENIMIENTO, MAQUINA, MES, [NO], [OF], OTRA, PROGRAM"& _ 
+                "A, PZA_PROD, PZA_PROG, PZA_RECHAZADAS, SCRAP, SEMANA, SET_UP, YEARS FROM Registr"& _ 
+                "os WHERE (MES = ?) AND (YEARS = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.WChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7099,15 +7186,15 @@ Namespace ProduccionBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function LaserFillBy(ByVal dataTable As ProduccionBD.RegistrosDataTable, ByVal MES As String, ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function LaserFillBy(ByVal dataTable As ProduccionBD.RegistrosDataTable, ByVal MES As String, ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (MES Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
@@ -7122,15 +7209,15 @@ Namespace ProduccionBDTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal MES As String, ByVal AÑO As Global.System.Nullable(Of Integer)) As ProduccionBD.RegistrosDataTable
+        Public Overloads Overridable Function GetDataBy(ByVal MES As String, ByVal YEARS As Global.System.Nullable(Of Integer)) As ProduccionBD.RegistrosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (MES Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
@@ -7196,7 +7283,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
             If (Original_FECHA.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -7359,9 +7446,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
@@ -7415,7 +7502,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -7561,8 +7648,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -7615,7 +7702,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal YEARS As Global.System.Nullable(Of Integer),  _
                     ByVal Original_NO As Integer,  _
                     ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
                     ByVal Original_HP As Global.System.Nullable(Of Integer),  _
@@ -7640,7 +7727,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -7786,8 +7873,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -7953,9 +8040,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
@@ -8108,8 +8195,8 @@ Namespace ProduccionBDTableAdapters
             tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
             tableMapping.ColumnMappings.Add("FECHA", "FECHA")
             tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE")
-            tableMapping.ColumnMappings.Add("AREA", "AREA")
             tableMapping.ColumnMappings.Add("HP", "HP")
+            tableMapping.ColumnMappings.Add("AREA", "AREA")
             tableMapping.ColumnMappings.Add("HR", "HR")
             tableMapping.ColumnMappings.Add("PZA_PROG", "PZA_PROG")
             tableMapping.ColumnMappings.Add("PZA_PROD", "PZA_PROD")
@@ -8133,7 +8220,7 @@ Namespace ProduccionBDTableAdapters
             tableMapping.ColumnMappings.Add("OTRA", "OTRA")
             tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
             tableMapping.ColumnMappings.Add("MES", "MES")
-            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            tableMapping.ColumnMappings.Add("YEARS", "YEARS")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -8154,8 +8241,8 @@ Namespace ProduccionBDTableAdapters
                 ") OR (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND (("& _ 
                 "? = 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JU"& _ 
                 "NTA_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA"& _ 
-                "` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = "& _ 
-                "?)))"
+                "` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YEARS"& _ 
+                "` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -8204,24 +8291,24 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Doblez` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, `HP`"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Doblez` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `HP`, `AREA`"& _ 
                 ", `HR`, `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTENIMIE"& _ 
                 "NTO`, `FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`, `PR"& _ 
                 "OGRAMA`, `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA_MAQ"& _ 
-                "UINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
-                ")"
+                "UINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `YEARS`) VALUES (?, ?, "& _ 
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
+                " ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -8245,40 +8332,41 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros_Doblez` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE` = ?"& _ 
-                ", `AREA` = ?, `HP` = ?, `HR` = ?, `PZA_PROG` = ?, `PZA_PROD` = ?, `PZA_RECHAZADA"& _ 
+                ", `HP` = ?, `AREA` = ?, `HR` = ?, `PZA_PROG` = ?, `PZA_PROD` = ?, `PZA_RECHAZADA"& _ 
                 "S` = ?, `SCRAP` = ?, `SEMANA` = ?, `MANTENIMIENTO` = ?, `FALTA_DE_TRABAJO` = ?, "& _ 
                 "`LIMPIEZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA` = "& _ 
                 "?, `FALTA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASES` ="& _ 
                 " ?, `FALLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` = ?, "& _ 
-                "`MES` = ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`FEC"& _ 
-                "HA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` IS N"& _ 
-                "ULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) AND"& _ 
-                " ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_RECHA"& _ 
-                "ZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) OR ("& _ 
-                "`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = 1 A"& _ 
-                "ND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_DE_"& _ 
-                "TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS NUL"& _ 
-                "L) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) AND"& _ 
-                " ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MATER"& _ 
-                "IAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) OR "& _ 
-                "(`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA` ="& _ 
-                " ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `DES"& _ 
-                "CARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR (`FA"& _ 
-                "LTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 AND"& _ 
-                " `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PERSO"& _ 
-                "NAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS NULL"& _ 
-                ") OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                "`MES` = ?, `YEARS` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`F"& _ 
+                "ECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` IS"& _ 
+                " NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) A"& _ 
+                "ND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_REC"& _ 
+                "HAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) OR"& _ 
+                " (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = 1"& _ 
+                " AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_D"& _ 
+                "E_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS N"& _ 
+                "ULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) A"& _ 
+                "ND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MAT"& _ 
+                "ERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) O"& _ 
+                "R (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA`"& _ 
+                " = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `D"& _ 
+                "ESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR (`"& _ 
+                "FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 A"& _ 
+                "ND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PER"& _ 
+                "SONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS NU"& _ 
+                "LL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YEARS` = ?))"& _ 
+                ")"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLIENTE", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AREA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AREA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("HR", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "HR", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROG", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROG", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PZA_PROD", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PZA_PROD", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -8302,7 +8390,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -8350,8 +8438,8 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8367,7 +8455,12 @@ Namespace ProduccionBDTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        Registros_Doblez.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Doblez"
+            Me._commandCollection(0).CommandText = "SELECT        [NO], [OF], MAQUINA, FECHA, CLIENTE, HP, AREA, HR, PZA_PROG, PZA_PR"& _ 
+                "OD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "               LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGI"& _ 
+                "A, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "                 OTRA, DURACION_OTRA, MES, YEARS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Dobl"& _ 
+                "ez"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -8452,7 +8545,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
             If (Original_FECHA.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -8615,9 +8708,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
@@ -8646,8 +8739,8 @@ Namespace ProduccionBDTableAdapters
                     ByVal MAQUINA As String,  _
                     ByVal FECHA As Global.System.Nullable(Of Date),  _
                     ByVal CLIENTE As String,  _
-                    ByVal AREA As String,  _
                     ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal AREA As String,  _
                     ByVal HR As Global.System.Nullable(Of Integer),  _
                     ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
                     ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
@@ -8671,7 +8764,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -8692,15 +8785,15 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = CType(CLIENTE,String)
             End If
-            If (AREA Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(AREA,String)
-            End If
             If (HP.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(HP.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(HP.Value,Integer)
             Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (AREA Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(AREA,String)
             End If
             If (HR.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(6).Value = CType(HR.Value,Integer)
@@ -8817,8 +8910,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -8846,8 +8939,8 @@ Namespace ProduccionBDTableAdapters
                     ByVal MAQUINA As String,  _
                     ByVal FECHA As Global.System.Nullable(Of Date),  _
                     ByVal CLIENTE As String,  _
-                    ByVal AREA As String,  _
                     ByVal HP As Global.System.Nullable(Of Integer),  _
+                    ByVal AREA As String,  _
                     ByVal HR As Global.System.Nullable(Of Integer),  _
                     ByVal PZA_PROG As Global.System.Nullable(Of Integer),  _
                     ByVal PZA_PROD As Global.System.Nullable(Of Integer),  _
@@ -8871,7 +8964,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal YEARS As Global.System.Nullable(Of Integer),  _
                     ByVal Original_NO As Integer,  _
                     ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
                     ByVal Original_HP As Global.System.Nullable(Of Integer),  _
@@ -8896,7 +8989,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -8917,15 +9010,15 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CLIENTE,String)
             End If
-            If (AREA Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AREA,String)
-            End If
             If (HP.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(HP.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(HP.Value,Integer)
             Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (AREA Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(AREA,String)
             End If
             If (HR.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(HR.Value,Integer)
@@ -9042,8 +9135,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -9209,9 +9302,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
@@ -9360,6 +9453,7 @@ Namespace ProduccionBDTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Registros_Maquinados"
             tableMapping.ColumnMappings.Add("NO", "NO")
+            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
             tableMapping.ColumnMappings.Add("OF", "OF")
             tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
             tableMapping.ColumnMappings.Add("FECHA", "FECHA")
@@ -9389,7 +9483,7 @@ Namespace ProduccionBDTableAdapters
             tableMapping.ColumnMappings.Add("OTRA", "OTRA")
             tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
             tableMapping.ColumnMappings.Add("MES", "MES")
-            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            tableMapping.ColumnMappings.Add("YEARS", "YEARS")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -9410,8 +9504,8 @@ Namespace ProduccionBDTableAdapters
                 "NULL) OR (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AN"& _ 
                 "D ((? = 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND"& _ 
                 " `JUNTA_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_"& _ 
-                "OTRA` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO"& _ 
-                "` = ?)))"
+                "OTRA` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`Y"& _ 
+                "EARS` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -9460,17 +9554,17 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Maquinados` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, "& _ 
                 "`HP`, `HR`, `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTEN"& _ 
                 "IMIENTO`, `FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`,"& _ 
                 " `PROGRAMA`, `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA"& _ 
-                "_MAQUINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?"& _ 
-                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
-                "?, ?)"
+                "_MAQUINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `YEARS`) VALUES (?,"& _ 
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                ", ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9501,7 +9595,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros_Maquinados` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE`"& _ 
@@ -9510,24 +9604,25 @@ Namespace ProduccionBDTableAdapters
                 " ?, `LIMPIEZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA"& _ 
                 "` = ?, `FALTA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASE"& _ 
                 "S` = ?, `FALLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` ="& _ 
-                " ?, `MES` = ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR ("& _ 
-                "`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` "& _ 
-                "IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?))"& _ 
-                " AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_R"& _ 
-                "ECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) "& _ 
-                "OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? ="& _ 
-                " 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA"& _ 
-                "_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS"& _ 
-                " NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?))"& _ 
-                " AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_M"& _ 
-                "ATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL)"& _ 
-                " OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGI"& _ 
-                "A` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND "& _ 
-                "`DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR "& _ 
-                "(`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1"& _ 
-                " AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_P"& _ 
-                "ERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS "& _ 
-                "NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                " ?, `MES` = ?, `YEARS` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR"& _ 
+                " (`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR"& _ 
+                "` IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?"& _ 
+                ")) AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA"& _ 
+                "_RECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL"& _ 
+                ") OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((?"& _ 
+                " = 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FAL"& _ 
+                "TA_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` "& _ 
+                "IS NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?"& _ 
+                ")) AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA"& _ 
+                "_MATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NUL"& _ 
+                "L) OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENER"& _ 
+                "GIA` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AN"& _ 
+                "D `DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) O"& _ 
+                "R (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? ="& _ 
+                " 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA"& _ 
+                "_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` I"& _ 
+                "S NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YEARS` ="& _ 
+                " ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9558,7 +9653,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -9606,8 +9701,8 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9623,7 +9718,12 @@ Namespace ProduccionBDTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        Registros_Maquinados.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Maquinados"
+            Me._commandCollection(0).CommandText = "SELECT        [NO], [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PR"& _ 
+                "OD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "               LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGI"& _ 
+                "A, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "                 OTRA, DURACION_OTRA, MES, YEARS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Maqu"& _ 
+                "inados"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -9708,7 +9808,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
             If (Original_FECHA.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -9871,9 +9971,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
@@ -9927,7 +10027,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -10073,8 +10173,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -10127,7 +10227,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal YEARS As Global.System.Nullable(Of Integer),  _
                     ByVal Original_NO As Integer,  _
                     ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
                     ByVal Original_HP As Global.System.Nullable(Of Integer),  _
@@ -10152,7 +10252,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -10298,8 +10398,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -10465,9 +10565,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
@@ -10645,7 +10745,7 @@ Namespace ProduccionBDTableAdapters
             tableMapping.ColumnMappings.Add("OTRA", "OTRA")
             tableMapping.ColumnMappings.Add("DURACION_OTRA", "DURACION_OTRA")
             tableMapping.ColumnMappings.Add("MES", "MES")
-            tableMapping.ColumnMappings.Add("AÑO", "AÑO")
+            tableMapping.ColumnMappings.Add("YEARS", "YEARS")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -10666,8 +10766,8 @@ Namespace ProduccionBDTableAdapters
                 "ULL) OR (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND"& _ 
                 " ((? = 1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND "& _ 
                 "`JUNTA_PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_O"& _ 
-                "TRA` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO`"& _ 
-                " = ?)))"
+                "TRA` IS NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YE"& _ 
+                "ARS` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -10716,17 +10816,17 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Registros_Punzonado` (`OF`, `MAQUINA`, `FECHA`, `CLIENTE`, `AREA`, `"& _ 
                 "HP`, `HR`, `PZA_PROG`, `PZA_PROD`, `PZA_RECHAZADAS`, `SCRAP`, `SEMANA`, `MANTENI"& _ 
                 "MIENTO`, `FALTA_DE_TRABAJO`, `LIMPIEZA`, `SET_UP`, `AJUSTES`, `FALTA_MATERIAL`, "& _ 
                 "`PROGRAMA`, `FALTA_ENERGIA`, `CALIDAD`, `DESCARGA`, `FALTA_OF`, `GASES`, `FALLA_"& _ 
-                "MAQUINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `AÑO`) VALUES (?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
-                ", ?)"
+                "MAQUINA`, `JUNTA_PERSONAL`, `OTRA`, `DURACION_OTRA`, `MES`, `YEARS`) VALUES (?, "& _ 
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
+                " ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -10757,7 +10857,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Registros_Punzonado` SET `OF` = ?, `MAQUINA` = ?, `FECHA` = ?, `CLIENTE` "& _ 
@@ -10766,24 +10866,25 @@ Namespace ProduccionBDTableAdapters
                 "?, `LIMPIEZA` = ?, `SET_UP` = ?, `AJUSTES` = ?, `FALTA_MATERIAL` = ?, `PROGRAMA`"& _ 
                 " = ?, `FALTA_ENERGIA` = ?, `CALIDAD` = ?, `DESCARGA` = ?, `FALTA_OF` = ?, `GASES"& _ 
                 "` = ?, `FALLA_MAQUINA` = ?, `JUNTA_PERSONAL` = ?, `OTRA` = ?, `DURACION_OTRA` = "& _ 
-                "?, `MES` = ?, `AÑO` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR (`"& _ 
-                "FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR` I"& _ 
-                "S NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)) "& _ 
-                "AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_RE"& _ 
-                "CHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL) O"& _ 
-                "R (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? = "& _ 
-                "1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALTA_"& _ 
-                "DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` IS "& _ 
-                "NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)) "& _ 
-                "AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_MA"& _ 
-                "TERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL) "& _ 
-                "OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERGIA"& _ 
-                "` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND `"& _ 
-                "DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR ("& _ 
-                "`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = 1 "& _ 
-                "AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_PE"& _ 
-                "RSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS N"& _ 
-                "ULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `AÑO` IS NULL) OR (`AÑO` = ?)))"
+                "?, `MES` = ?, `YEARS` = ? WHERE ((`NO` = ?) AND ((? = 1 AND `FECHA` IS NULL) OR "& _ 
+                "(`FECHA` = ?)) AND ((? = 1 AND `HP` IS NULL) OR (`HP` = ?)) AND ((? = 1 AND `HR`"& _ 
+                " IS NULL) OR (`HR` = ?)) AND ((? = 1 AND `PZA_PROG` IS NULL) OR (`PZA_PROG` = ?)"& _ 
+                ") AND ((? = 1 AND `PZA_PROD` IS NULL) OR (`PZA_PROD` = ?)) AND ((? = 1 AND `PZA_"& _ 
+                "RECHAZADAS` IS NULL) OR (`PZA_RECHAZADAS` = ?)) AND ((? = 1 AND `SCRAP` IS NULL)"& _ 
+                " OR (`SCRAP` = ?)) AND ((? = 1 AND `SEMANA` IS NULL) OR (`SEMANA` = ?)) AND ((? "& _ 
+                "= 1 AND `MANTENIMIENTO` IS NULL) OR (`MANTENIMIENTO` = ?)) AND ((? = 1 AND `FALT"& _ 
+                "A_DE_TRABAJO` IS NULL) OR (`FALTA_DE_TRABAJO` = ?)) AND ((? = 1 AND `LIMPIEZA` I"& _ 
+                "S NULL) OR (`LIMPIEZA` = ?)) AND ((? = 1 AND `SET_UP` IS NULL) OR (`SET_UP` = ?)"& _ 
+                ") AND ((? = 1 AND `AJUSTES` IS NULL) OR (`AJUSTES` = ?)) AND ((? = 1 AND `FALTA_"& _ 
+                "MATERIAL` IS NULL) OR (`FALTA_MATERIAL` = ?)) AND ((? = 1 AND `PROGRAMA` IS NULL"& _ 
+                ") OR (`PROGRAMA` = ?)) AND ((? = 1 AND `FALTA_ENERGIA` IS NULL) OR (`FALTA_ENERG"& _ 
+                "IA` = ?)) AND ((? = 1 AND `CALIDAD` IS NULL) OR (`CALIDAD` = ?)) AND ((? = 1 AND"& _ 
+                " `DESCARGA` IS NULL) OR (`DESCARGA` = ?)) AND ((? = 1 AND `FALTA_OF` IS NULL) OR"& _ 
+                " (`FALTA_OF` = ?)) AND ((? = 1 AND `GASES` IS NULL) OR (`GASES` = ?)) AND ((? = "& _ 
+                "1 AND `FALLA_MAQUINA` IS NULL) OR (`FALLA_MAQUINA` = ?)) AND ((? = 1 AND `JUNTA_"& _ 
+                "PERSONAL` IS NULL) OR (`JUNTA_PERSONAL` = ?)) AND ((? = 1 AND `DURACION_OTRA` IS"& _ 
+                " NULL) OR (`DURACION_OTRA` = ?)) AND ((? = 1 AND `YEARS` IS NULL) OR (`YEARS` = "& _ 
+                "?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OF", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OF", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MAQUINA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MAQUINA", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -10814,7 +10915,7 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OTRA", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MES", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MES", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_NO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NO", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FECHA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FECHA", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FECHA", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -10862,8 +10963,8 @@ Namespace ProduccionBDTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_JUNTA_PERSONAL", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "JUNTA_PERSONAL", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DURACION_OTRA", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DURACION_OTRA", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AÑO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AÑO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_YEARS", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YEARS", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10883,8 +10984,8 @@ Namespace ProduccionBDTableAdapters
                 "OD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
                 "               LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGI"& _ 
                 "A, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "                 OTRA, DURACION_OTRA, MES, AÑO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Punzon"& _ 
-                "ado"
+                "                 OTRA, DURACION_OTRA, MES, YEARS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registros_Punz"& _ 
+                "onado"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10969,7 +11070,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_NO,Integer)
             If (Original_FECHA.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -11132,9 +11233,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
@@ -11188,7 +11289,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -11334,8 +11435,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -11388,7 +11489,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Global.System.Nullable(Of Integer),  _
                     ByVal MES As String,  _
-                    ByVal AÑO As Global.System.Nullable(Of Integer),  _
+                    ByVal YEARS As Global.System.Nullable(Of Integer),  _
                     ByVal Original_NO As Integer,  _
                     ByVal Original_FECHA As Global.System.Nullable(Of Date),  _
                     ByVal Original_HP As Global.System.Nullable(Of Integer),  _
@@ -11413,7 +11514,7 @@ Namespace ProduccionBDTableAdapters
                     ByVal Original_FALLA_MAQUINA As Global.System.Nullable(Of Integer),  _
                     ByVal Original_JUNTA_PERSONAL As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DURACION_OTRA As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AÑO As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_YEARS As Global.System.Nullable(Of Integer)) As Integer
             If (_OF Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -11559,8 +11660,8 @@ Namespace ProduccionBDTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(MES,String)
             End If
-            If (AÑO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(AÑO.Value,Integer)
+            If (YEARS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
@@ -11726,9 +11827,9 @@ Namespace ProduccionBDTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
             End If
-            If (Original_AÑO.HasValue = true) Then
+            If (Original_YEARS.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_AÑO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_YEARS.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value

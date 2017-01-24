@@ -61,7 +61,7 @@
         NuevoRegistro.OTRA = OtroTXT.Text
         NuevoRegistro.DURACION_OTRA = DuracTXT.Text
         NuevoRegistro.MES = MonthName(DateTime.Now.Month)
-        NuevoRegistro.AÑO = DateTime.Now.Year
+        NuevoRegistro.YEARS = DateTime.Now.Year
 
         'Insertar la fila en la tabla apropiada del DataSet
         ProduccionBD.Registros.AddRegistrosRow(NuevoRegistro)
@@ -109,7 +109,7 @@
         RegistroDoblez.OTRA = OtroTXT.Text
         RegistroDoblez.DURACION_OTRA = DuracTXT.Text
         RegistroDoblez.MES = MonthName(DateTime.Now.Month)
-        RegistroDoblez.AÑO = DateTime.Now.Year
+        RegistroDoblez.YEARS = DateTime.Now.Year
 
         'Insertar la fila en la tabla apropiada del DataSet
         ProduccionBD.Registros_Doblez.AddRegistros_DoblezRow(RegistroDoblez)
@@ -157,7 +157,7 @@
         RegistroMaquinados.OTRA = OtroTXT.Text
         RegistroMaquinados.DURACION_OTRA = DuracTXT.Text
         RegistroMaquinados.MES = MonthName(DateTime.Now.Month)
-        RegistroMaquinados.AÑO = DateTime.Now.Year
+        RegistroMaquinados.YEARS = DateTime.Now.Year
 
         'Insertar la fila en la tabla apropiada del DataSet
         ProduccionBD.Registros_Maquinados.AddRegistros_MaquinadosRow(RegistroMaquinados)
@@ -206,7 +206,7 @@
         RegistroPunzonado.OTRA = OtroTXT.Text
         RegistroPunzonado.DURACION_OTRA = DuracTXT.Text
         RegistroPunzonado.MES = MonthName(DateTime.Now.Month)
-        RegistroPunzonado.AÑO = DateTime.Now.Year
+        RegistroPunzonado.YEARS = DateTime.Now.Year
 
         'Insertar la fila en la tabla apropiada del DataSet
         ProduccionBD.Registros_Punzonado.AddRegistros_PunzonadoRow(RegistroPunzonado)
