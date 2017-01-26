@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ProducciónConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProducciónConnectionString (MySettings)" PropertyReference="ApplicationSettings.FTM_Registros.My.MySettings.GlobalReference.Default.ProducciónConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteLaserTableAdapter" GeneratorDataComponentClassName="ReporteLaserTableAdapter" Name="ReporteLaser" UserDataComponentName="ReporteLaserTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LaserTableAdapter" GeneratorDataComponentClassName="LaserTableAdapter" Name="Laser" UserDataComponentName="LaserTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="VerLaser" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="VerLaser" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="VerLaser">
                 <SelectCommand>
@@ -79,7 +79,7 @@ WHERE        (MES = ?) AND (YEARS = ?)</CommandText>
   <xs:element name="ReporteLaser" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReporteLaser" msprop:Generator_UserDSName="ReporteLaser">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ReporteLaser" msprop:Generator_TableClassName="ReporteLaserDataTable" msprop:Generator_TableVarName="tableReporteLaser" msprop:Generator_TablePropName="_ReporteLaser" msprop:Generator_RowDeletingName="ReporteLaserRowDeleting" msprop:Generator_RowChangingName="ReporteLaserRowChanging" msprop:Generator_RowEvHandlerName="ReporteLaserRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteLaserRowDeleted" msprop:Generator_UserTableName="ReporteLaser" msprop:Generator_RowChangedName="ReporteLaserRowChanged" msprop:Generator_RowEvArgName="ReporteLaserRowChangeEvent" msprop:Generator_RowClassName="ReporteLaserRow">
+        <xs:element name="Laser" msprop:Generator_TableClassName="LaserDataTable" msprop:Generator_TableVarName="tableLaser" msprop:Generator_TablePropName="Laser" msprop:Generator_RowDeletingName="LaserRowDeleting" msprop:Generator_RowChangingName="LaserRowChanging" msprop:Generator_RowEvHandlerName="LaserRowChangeEventHandler" msprop:Generator_RowDeletedName="LaserRowDeleted" msprop:Generator_UserTableName="Laser" msprop:Generator_RowChangedName="LaserRowChanged" msprop:Generator_RowEvArgName="LaserRowChangeEvent" msprop:Generator_RowClassName="LaserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="OF" msprop:Generator_ColumnVarNameInTable="columnOF" msprop:Generator_ColumnPropNameInRow="_OF" msprop:Generator_ColumnPropNameInTable="OFColumn" msprop:Generator_UserColumnName="OF" minOccurs="0">

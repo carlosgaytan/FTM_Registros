@@ -271,15 +271,28 @@
     <Compile Include="Produccion\RegIndicadadores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Produccion\ReporteDoblez1.Designer.vb">
+    <Compile Include="Produccion\ReporteDoblez.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteDoblez1.xsd</DependentUpon>
+      <DependentUpon>ReporteDoblez.xsd</DependentUpon>
     </Compile>
     <Compile Include="Produccion\ReporteLaser.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteLaser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\ReporteLaser.vb">
+      <DependentUpon>ReporteLaser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\ReporteMaquinados.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMaquinados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\ReportePunzonado.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePunzonado.xsd</DependentUpon>
     </Compile>
     <Compile Include="Ventas\BuscaOrden.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -585,16 +598,16 @@
     <None Include="Produccion\ProduccionBD.xss">
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
     </None>
-    <None Include="Produccion\ReporteDoblez1.xsc">
-      <DependentUpon>ReporteDoblez1.xsd</DependentUpon>
+    <None Include="Produccion\ReporteDoblez.xsc">
+      <DependentUpon>ReporteDoblez.xsd</DependentUpon>
     </None>
-    <None Include="Produccion\ReporteDoblez1.xsd">
+    <None Include="Produccion\ReporteDoblez.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReporteDoblez1.Designer.vb</LastGenOutput>
+      <LastGenOutput>ReporteDoblez.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Produccion\ReporteDoblez1.xss">
-      <DependentUpon>ReporteDoblez1.xsd</DependentUpon>
+    <None Include="Produccion\ReporteDoblez.xss">
+      <DependentUpon>ReporteDoblez.xsd</DependentUpon>
     </None>
     <None Include="Produccion\ReporteLaser.xsc">
       <DependentUpon>ReporteLaser.xsd</DependentUpon>
@@ -606,6 +619,28 @@
     </None>
     <None Include="Produccion\ReporteLaser.xss">
       <DependentUpon>ReporteLaser.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReporteMaquinados.xsc">
+      <DependentUpon>ReporteMaquinados.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReporteMaquinados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteMaquinados.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\ReporteMaquinados.xss">
+      <DependentUpon>ReporteMaquinados.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReportePunzonado.xsc">
+      <DependentUpon>ReportePunzonado.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\ReportePunzonado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportePunzonado.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\ReportePunzonado.xss">
+      <DependentUpon>ReportePunzonado.xsd</DependentUpon>
     </None>
     <None Include="Ventas\BuscaOrden.xsc">
       <DependentUpon>BuscaOrden.xsd</DependentUpon>

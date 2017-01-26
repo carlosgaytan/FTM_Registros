@@ -25,7 +25,7 @@ Option Explicit On
 Partial Public Class ReporteLaser
     Inherits Global.System.Data.DataSet
     
-    Private tableReporteLaser As ReporteLaserDataTable
+    Private tableLaser As LaserDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class ReporteLaser
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("ReporteLaser")) Is Nothing) Then
-                MyBase.Tables.Add(New ReporteLaserDataTable(ds.Tables("ReporteLaser")))
+            If (Not (ds.Tables("Laser")) Is Nothing) Then
+                MyBase.Tables.Add(New LaserDataTable(ds.Tables("Laser")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class ReporteLaser
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property _ReporteLaser() As ReporteLaserDataTable
+    Public ReadOnly Property Laser() As LaserDataTable
         Get
-            Return Me.tableReporteLaser
+            Return Me.tableLaser
         End Get
     End Property
     
@@ -153,8 +153,8 @@ Partial Public Class ReporteLaser
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("ReporteLaser")) Is Nothing) Then
-                MyBase.Tables.Add(New ReporteLaserDataTable(ds.Tables("ReporteLaser")))
+            If (Not (ds.Tables("Laser")) Is Nothing) Then
+                MyBase.Tables.Add(New LaserDataTable(ds.Tables("Laser")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class ReporteLaser
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tableReporteLaser = CType(MyBase.Tables("ReporteLaser"),ReporteLaserDataTable)
+        Me.tableLaser = CType(MyBase.Tables("Laser"),LaserDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableReporteLaser) Is Nothing) Then
-                Me.tableReporteLaser.InitVars
+            If (Not (Me.tableLaser) Is Nothing) Then
+                Me.tableLaser.InitVars
             End If
         End If
     End Sub
@@ -204,13 +204,13 @@ Partial Public Class ReporteLaser
         Me.Namespace = "http://tempuri.org/ReporteLaser.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tableReporteLaser = New ReporteLaserDataTable()
-        MyBase.Tables.Add(Me.tableReporteLaser)
+        Me.tableLaser = New LaserDataTable()
+        MyBase.Tables.Add(Me.tableLaser)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerialize_ReporteLaser() As Boolean
+    Private Function ShouldSerializeLaser() As Boolean
         Return false
     End Function
     
@@ -273,15 +273,15 @@ Partial Public Class ReporteLaser
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub ReporteLaserRowChangeEventHandler(ByVal sender As Object, ByVal e As ReporteLaserRowChangeEvent)
+    Public Delegate Sub LaserRowChangeEventHandler(ByVal sender As Object, ByVal e As LaserRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class ReporteLaserDataTable
-        Inherits Global.System.Data.TypedTableBase(Of ReporteLaserRow)
+    Partial Public Class LaserDataTable
+        Inherits Global.System.Data.TypedTableBase(Of LaserRow)
         
         Private columnOF As Global.System.Data.DataColumn
         
@@ -347,7 +347,7 @@ Partial Public Class ReporteLaser
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "ReporteLaser"
+            Me.TableName = "Laser"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -629,33 +629,33 @@ Partial Public Class ReporteLaser
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As ReporteLaserRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As LaserRow
             Get
-                Return CType(Me.Rows(index),ReporteLaserRow)
+                Return CType(Me.Rows(index),LaserRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event ReporteLaserRowChanging As ReporteLaserRowChangeEventHandler
+        Public Event LaserRowChanging As LaserRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event ReporteLaserRowChanged As ReporteLaserRowChangeEventHandler
+        Public Event LaserRowChanged As LaserRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event ReporteLaserRowDeleting As ReporteLaserRowChangeEventHandler
+        Public Event LaserRowDeleting As LaserRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event ReporteLaserRowDeleted As ReporteLaserRowChangeEventHandler
+        Public Event LaserRowDeleted As LaserRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddReporteLaserRow(ByVal row As ReporteLaserRow)
+        Public Overloads Sub AddLaserRow(ByVal row As LaserRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddReporteLaserRow( _
+        Public Overloads Function AddLaserRow( _
                     ByVal _OF As String,  _
                     ByVal MAQUINA As String,  _
                     ByVal FECHA As Date,  _
@@ -685,18 +685,18 @@ Partial Public Class ReporteLaser
                     ByVal OTRA As String,  _
                     ByVal DURACION_OTRA As Integer,  _
                     ByVal MES As String,  _
-                    ByVal YEARS As Integer) As ReporteLaserRow
-            Dim rowReporteLaserRow As ReporteLaserRow = CType(Me.NewRow,ReporteLaserRow)
+                    ByVal YEARS As Integer) As LaserRow
+            Dim rowLaserRow As LaserRow = CType(Me.NewRow,LaserRow)
             Dim columnValuesArray() As Object = New Object() {_OF, MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, DURACION_OTRA, MES, YEARS}
-            rowReporteLaserRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowReporteLaserRow)
-            Return rowReporteLaserRow
+            rowLaserRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowLaserRow)
+            Return rowLaserRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As ReporteLaserDataTable = CType(MyBase.Clone,ReporteLaserDataTable)
+            Dim cln As LaserDataTable = CType(MyBase.Clone,LaserDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -704,7 +704,7 @@ Partial Public Class ReporteLaser
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New ReporteLaserDataTable()
+            Return New LaserDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -814,34 +814,32 @@ Partial Public Class ReporteLaser
             Me.columnAREA.MaxLength = 536870910
             Me.columnOTRA.MaxLength = 536870910
             Me.columnMES.MaxLength = 536870910
-            Me.ExtendedProperties.Add("Generator_TablePropName", "_ReporteLaser")
-            Me.ExtendedProperties.Add("Generator_UserTableName", "ReporteLaser")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewReporteLaserRow() As ReporteLaserRow
-            Return CType(Me.NewRow,ReporteLaserRow)
+        Public Function NewLaserRow() As LaserRow
+            Return CType(Me.NewRow,LaserRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New ReporteLaserRow(builder)
+            Return New LaserRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(ReporteLaserRow)
+            Return GetType(LaserRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.ReporteLaserRowChangedEvent) Is Nothing) Then
-                RaiseEvent ReporteLaserRowChanged(Me, New ReporteLaserRowChangeEvent(CType(e.Row,ReporteLaserRow), e.Action))
+            If (Not (Me.LaserRowChangedEvent) Is Nothing) Then
+                RaiseEvent LaserRowChanged(Me, New LaserRowChangeEvent(CType(e.Row,LaserRow), e.Action))
             End If
         End Sub
         
@@ -849,8 +847,8 @@ Partial Public Class ReporteLaser
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.ReporteLaserRowChangingEvent) Is Nothing) Then
-                RaiseEvent ReporteLaserRowChanging(Me, New ReporteLaserRowChangeEvent(CType(e.Row,ReporteLaserRow), e.Action))
+            If (Not (Me.LaserRowChangingEvent) Is Nothing) Then
+                RaiseEvent LaserRowChanging(Me, New LaserRowChangeEvent(CType(e.Row,LaserRow), e.Action))
             End If
         End Sub
         
@@ -858,8 +856,8 @@ Partial Public Class ReporteLaser
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.ReporteLaserRowDeletedEvent) Is Nothing) Then
-                RaiseEvent ReporteLaserRowDeleted(Me, New ReporteLaserRowChangeEvent(CType(e.Row,ReporteLaserRow), e.Action))
+            If (Not (Me.LaserRowDeletedEvent) Is Nothing) Then
+                RaiseEvent LaserRowDeleted(Me, New LaserRowChangeEvent(CType(e.Row,LaserRow), e.Action))
             End If
         End Sub
         
@@ -867,14 +865,14 @@ Partial Public Class ReporteLaser
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.ReporteLaserRowDeletingEvent) Is Nothing) Then
-                RaiseEvent ReporteLaserRowDeleting(Me, New ReporteLaserRowChangeEvent(CType(e.Row,ReporteLaserRow), e.Action))
+            If (Not (Me.LaserRowDeletingEvent) Is Nothing) Then
+                RaiseEvent LaserRowDeleting(Me, New LaserRowChangeEvent(CType(e.Row,LaserRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveReporteLaserRow(ByVal row As ReporteLaserRow)
+        Public Sub RemoveLaserRow(ByVal row As LaserRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -901,7 +899,7 @@ Partial Public Class ReporteLaser
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "ReporteLaserDataTable"
+            attribute2.FixedValue = "LaserDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -948,16 +946,16 @@ Partial Public Class ReporteLaser
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class ReporteLaserRow
+    Partial Public Class LaserRow
         Inherits Global.System.Data.DataRow
         
-        Private tableReporteLaser As ReporteLaserDataTable
+        Private tableLaser As LaserDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableReporteLaser = CType(Me.Table,ReporteLaserDataTable)
+            Me.tableLaser = CType(Me.Table,LaserDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -965,13 +963,13 @@ Partial Public Class ReporteLaser
         Public Property _OF() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.OFColumn),String)
+                    Return CType(Me(Me.tableLaser.OFColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OF' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OF' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.OFColumn) = value
+                Me(Me.tableLaser.OFColumn) = value
             End Set
         End Property
         
@@ -980,13 +978,13 @@ Partial Public Class ReporteLaser
         Public Property MAQUINA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.MAQUINAColumn),String)
+                    Return CType(Me(Me.tableLaser.MAQUINAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MAQUINA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.MAQUINAColumn) = value
+                Me(Me.tableLaser.MAQUINAColumn) = value
             End Set
         End Property
         
@@ -995,13 +993,13 @@ Partial Public Class ReporteLaser
         Public Property FECHA() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.FECHAColumn),Date)
+                    Return CType(Me(Me.tableLaser.FECHAColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.FECHAColumn) = value
+                Me(Me.tableLaser.FECHAColumn) = value
             End Set
         End Property
         
@@ -1010,13 +1008,13 @@ Partial Public Class ReporteLaser
         Public Property CLIENTE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.CLIENTEColumn),String)
+                    Return CType(Me(Me.tableLaser.CLIENTEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.CLIENTEColumn) = value
+                Me(Me.tableLaser.CLIENTEColumn) = value
             End Set
         End Property
         
@@ -1025,13 +1023,13 @@ Partial Public Class ReporteLaser
         Public Property AREA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.AREAColumn),String)
+                    Return CType(Me(Me.tableLaser.AREAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AREA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.AREAColumn) = value
+                Me(Me.tableLaser.AREAColumn) = value
             End Set
         End Property
         
@@ -1040,13 +1038,13 @@ Partial Public Class ReporteLaser
         Public Property HP() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.HPColumn),Integer)
+                    Return CType(Me(Me.tableLaser.HPColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HP' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HP' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.HPColumn) = value
+                Me(Me.tableLaser.HPColumn) = value
             End Set
         End Property
         
@@ -1055,13 +1053,13 @@ Partial Public Class ReporteLaser
         Public Property HR() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.HRColumn),Integer)
+                    Return CType(Me(Me.tableLaser.HRColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HR' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'HR' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.HRColumn) = value
+                Me(Me.tableLaser.HRColumn) = value
             End Set
         End Property
         
@@ -1070,13 +1068,13 @@ Partial Public Class ReporteLaser
         Public Property PZA_PROG() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.PZA_PROGColumn),Integer)
+                    Return CType(Me(Me.tableLaser.PZA_PROGColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROG' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROG' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.PZA_PROGColumn) = value
+                Me(Me.tableLaser.PZA_PROGColumn) = value
             End Set
         End Property
         
@@ -1085,13 +1083,13 @@ Partial Public Class ReporteLaser
         Public Property PZA_PROD() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.PZA_PRODColumn),Integer)
+                    Return CType(Me(Me.tableLaser.PZA_PRODColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROD' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_PROD' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.PZA_PRODColumn) = value
+                Me(Me.tableLaser.PZA_PRODColumn) = value
             End Set
         End Property
         
@@ -1100,13 +1098,13 @@ Partial Public Class ReporteLaser
         Public Property PZA_RECHAZADAS() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.PZA_RECHAZADASColumn),Integer)
+                    Return CType(Me(Me.tableLaser.PZA_RECHAZADASColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_RECHAZADAS' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PZA_RECHAZADAS' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.PZA_RECHAZADASColumn) = value
+                Me(Me.tableLaser.PZA_RECHAZADASColumn) = value
             End Set
         End Property
         
@@ -1115,13 +1113,13 @@ Partial Public Class ReporteLaser
         Public Property SCRAP() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.SCRAPColumn),Integer)
+                    Return CType(Me(Me.tableLaser.SCRAPColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SCRAP' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SCRAP' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.SCRAPColumn) = value
+                Me(Me.tableLaser.SCRAPColumn) = value
             End Set
         End Property
         
@@ -1130,13 +1128,13 @@ Partial Public Class ReporteLaser
         Public Property SEMANA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.SEMANAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.SEMANAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SEMANA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SEMANA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.SEMANAColumn) = value
+                Me(Me.tableLaser.SEMANAColumn) = value
             End Set
         End Property
         
@@ -1145,13 +1143,13 @@ Partial Public Class ReporteLaser
         Public Property MANTENIMIENTO() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.MANTENIMIENTOColumn),Integer)
+                    Return CType(Me(Me.tableLaser.MANTENIMIENTOColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MANTENIMIENTO' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MANTENIMIENTO' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.MANTENIMIENTOColumn) = value
+                Me(Me.tableLaser.MANTENIMIENTOColumn) = value
             End Set
         End Property
         
@@ -1160,13 +1158,13 @@ Partial Public Class ReporteLaser
         Public Property FALTA_DE_TRABAJO() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.FALTA_DE_TRABAJOColumn),Integer)
+                    Return CType(Me(Me.tableLaser.FALTA_DE_TRABAJOColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_DE_TRABAJO' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_DE_TRABAJO' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.FALTA_DE_TRABAJOColumn) = value
+                Me(Me.tableLaser.FALTA_DE_TRABAJOColumn) = value
             End Set
         End Property
         
@@ -1175,13 +1173,13 @@ Partial Public Class ReporteLaser
         Public Property LIMPIEZA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.LIMPIEZAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.LIMPIEZAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LIMPIEZA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LIMPIEZA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.LIMPIEZAColumn) = value
+                Me(Me.tableLaser.LIMPIEZAColumn) = value
             End Set
         End Property
         
@@ -1190,13 +1188,13 @@ Partial Public Class ReporteLaser
         Public Property SET_UP() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.SET_UPColumn),Integer)
+                    Return CType(Me(Me.tableLaser.SET_UPColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SET_UP' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SET_UP' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.SET_UPColumn) = value
+                Me(Me.tableLaser.SET_UPColumn) = value
             End Set
         End Property
         
@@ -1205,13 +1203,13 @@ Partial Public Class ReporteLaser
         Public Property AJUSTES() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.AJUSTESColumn),Integer)
+                    Return CType(Me(Me.tableLaser.AJUSTESColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AJUSTES' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'AJUSTES' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.AJUSTESColumn) = value
+                Me(Me.tableLaser.AJUSTESColumn) = value
             End Set
         End Property
         
@@ -1220,13 +1218,13 @@ Partial Public Class ReporteLaser
         Public Property FALTA_MATERIAL() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.FALTA_MATERIALColumn),Integer)
+                    Return CType(Me(Me.tableLaser.FALTA_MATERIALColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_MATERIAL' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_MATERIAL' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.FALTA_MATERIALColumn) = value
+                Me(Me.tableLaser.FALTA_MATERIALColumn) = value
             End Set
         End Property
         
@@ -1235,13 +1233,13 @@ Partial Public Class ReporteLaser
         Public Property PROGRAMA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.PROGRAMAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.PROGRAMAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROGRAMA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROGRAMA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.PROGRAMAColumn) = value
+                Me(Me.tableLaser.PROGRAMAColumn) = value
             End Set
         End Property
         
@@ -1250,13 +1248,13 @@ Partial Public Class ReporteLaser
         Public Property FALTA_ENERGIA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.FALTA_ENERGIAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.FALTA_ENERGIAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_ENERGIA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_ENERGIA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.FALTA_ENERGIAColumn) = value
+                Me(Me.tableLaser.FALTA_ENERGIAColumn) = value
             End Set
         End Property
         
@@ -1265,13 +1263,13 @@ Partial Public Class ReporteLaser
         Public Property CALIDAD() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.CALIDADColumn),Integer)
+                    Return CType(Me(Me.tableLaser.CALIDADColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIDAD' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CALIDAD' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.CALIDADColumn) = value
+                Me(Me.tableLaser.CALIDADColumn) = value
             End Set
         End Property
         
@@ -1280,13 +1278,13 @@ Partial Public Class ReporteLaser
         Public Property DESCARGA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.DESCARGAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.DESCARGAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DESCARGA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DESCARGA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.DESCARGAColumn) = value
+                Me(Me.tableLaser.DESCARGAColumn) = value
             End Set
         End Property
         
@@ -1295,13 +1293,13 @@ Partial Public Class ReporteLaser
         Public Property FALTA_OF() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.FALTA_OFColumn),Integer)
+                    Return CType(Me(Me.tableLaser.FALTA_OFColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_OF' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALTA_OF' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.FALTA_OFColumn) = value
+                Me(Me.tableLaser.FALTA_OFColumn) = value
             End Set
         End Property
         
@@ -1310,13 +1308,13 @@ Partial Public Class ReporteLaser
         Public Property GASES() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.GASESColumn),Integer)
+                    Return CType(Me(Me.tableLaser.GASESColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'GASES' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'GASES' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.GASESColumn) = value
+                Me(Me.tableLaser.GASESColumn) = value
             End Set
         End Property
         
@@ -1325,13 +1323,13 @@ Partial Public Class ReporteLaser
         Public Property FALLA_MAQUINA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.FALLA_MAQUINAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.FALLA_MAQUINAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALLA_MAQUINA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FALLA_MAQUINA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.FALLA_MAQUINAColumn) = value
+                Me(Me.tableLaser.FALLA_MAQUINAColumn) = value
             End Set
         End Property
         
@@ -1340,13 +1338,13 @@ Partial Public Class ReporteLaser
         Public Property JUNTA_PERSONAL() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.JUNTA_PERSONALColumn),Integer)
+                    Return CType(Me(Me.tableLaser.JUNTA_PERSONALColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'JUNTA_PERSONAL' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'JUNTA_PERSONAL' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.JUNTA_PERSONALColumn) = value
+                Me(Me.tableLaser.JUNTA_PERSONALColumn) = value
             End Set
         End Property
         
@@ -1355,13 +1353,13 @@ Partial Public Class ReporteLaser
         Public Property OTRA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.OTRAColumn),String)
+                    Return CType(Me(Me.tableLaser.OTRAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OTRA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OTRA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.OTRAColumn) = value
+                Me(Me.tableLaser.OTRAColumn) = value
             End Set
         End Property
         
@@ -1370,13 +1368,13 @@ Partial Public Class ReporteLaser
         Public Property DURACION_OTRA() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.DURACION_OTRAColumn),Integer)
+                    Return CType(Me(Me.tableLaser.DURACION_OTRAColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DURACION_OTRA' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DURACION_OTRA' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.DURACION_OTRAColumn) = value
+                Me(Me.tableLaser.DURACION_OTRAColumn) = value
             End Set
         End Property
         
@@ -1385,13 +1383,13 @@ Partial Public Class ReporteLaser
         Public Property MES() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.MESColumn),String)
+                    Return CType(Me(Me.tableLaser.MESColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MES' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MES' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.MESColumn) = value
+                Me(Me.tableLaser.MESColumn) = value
             End Set
         End Property
         
@@ -1400,374 +1398,374 @@ Partial Public Class ReporteLaser
         Public Property YEARS() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableReporteLaser.YEARSColumn),Integer)
+                    Return CType(Me(Me.tableLaser.YEARSColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'ReporteLaser' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'YEARS' de la tabla 'Laser' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableReporteLaser.YEARSColumn) = value
+                Me(Me.tableLaser.YEARSColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_OFNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.OFColumn)
+            Return Me.IsNull(Me.tableLaser.OFColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_OFNull()
-            Me(Me.tableReporteLaser.OFColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.OFColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsMAQUINANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.MAQUINAColumn)
+            Return Me.IsNull(Me.tableLaser.MAQUINAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMAQUINANull()
-            Me(Me.tableReporteLaser.MAQUINAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.MAQUINAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFECHANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.FECHAColumn)
+            Return Me.IsNull(Me.tableLaser.FECHAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFECHANull()
-            Me(Me.tableReporteLaser.FECHAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.FECHAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCLIENTENull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.CLIENTEColumn)
+            Return Me.IsNull(Me.tableLaser.CLIENTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCLIENTENull()
-            Me(Me.tableReporteLaser.CLIENTEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.CLIENTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsAREANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.AREAColumn)
+            Return Me.IsNull(Me.tableLaser.AREAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetAREANull()
-            Me(Me.tableReporteLaser.AREAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.AREAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHPNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.HPColumn)
+            Return Me.IsNull(Me.tableLaser.HPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetHPNull()
-            Me(Me.tableReporteLaser.HPColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.HPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsHRNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.HRColumn)
+            Return Me.IsNull(Me.tableLaser.HRColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetHRNull()
-            Me(Me.tableReporteLaser.HRColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.HRColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsPZA_PROGNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.PZA_PROGColumn)
+            Return Me.IsNull(Me.tableLaser.PZA_PROGColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPZA_PROGNull()
-            Me(Me.tableReporteLaser.PZA_PROGColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.PZA_PROGColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsPZA_PRODNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.PZA_PRODColumn)
+            Return Me.IsNull(Me.tableLaser.PZA_PRODColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPZA_PRODNull()
-            Me(Me.tableReporteLaser.PZA_PRODColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.PZA_PRODColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsPZA_RECHAZADASNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.PZA_RECHAZADASColumn)
+            Return Me.IsNull(Me.tableLaser.PZA_RECHAZADASColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPZA_RECHAZADASNull()
-            Me(Me.tableReporteLaser.PZA_RECHAZADASColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.PZA_RECHAZADASColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsSCRAPNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.SCRAPColumn)
+            Return Me.IsNull(Me.tableLaser.SCRAPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetSCRAPNull()
-            Me(Me.tableReporteLaser.SCRAPColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.SCRAPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsSEMANANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.SEMANAColumn)
+            Return Me.IsNull(Me.tableLaser.SEMANAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetSEMANANull()
-            Me(Me.tableReporteLaser.SEMANAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.SEMANAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsMANTENIMIENTONull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.MANTENIMIENTOColumn)
+            Return Me.IsNull(Me.tableLaser.MANTENIMIENTOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMANTENIMIENTONull()
-            Me(Me.tableReporteLaser.MANTENIMIENTOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.MANTENIMIENTOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFALTA_DE_TRABAJONull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.FALTA_DE_TRABAJOColumn)
+            Return Me.IsNull(Me.tableLaser.FALTA_DE_TRABAJOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFALTA_DE_TRABAJONull()
-            Me(Me.tableReporteLaser.FALTA_DE_TRABAJOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.FALTA_DE_TRABAJOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsLIMPIEZANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.LIMPIEZAColumn)
+            Return Me.IsNull(Me.tableLaser.LIMPIEZAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetLIMPIEZANull()
-            Me(Me.tableReporteLaser.LIMPIEZAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.LIMPIEZAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsSET_UPNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.SET_UPColumn)
+            Return Me.IsNull(Me.tableLaser.SET_UPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetSET_UPNull()
-            Me(Me.tableReporteLaser.SET_UPColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.SET_UPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsAJUSTESNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.AJUSTESColumn)
+            Return Me.IsNull(Me.tableLaser.AJUSTESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetAJUSTESNull()
-            Me(Me.tableReporteLaser.AJUSTESColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.AJUSTESColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFALTA_MATERIALNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.FALTA_MATERIALColumn)
+            Return Me.IsNull(Me.tableLaser.FALTA_MATERIALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFALTA_MATERIALNull()
-            Me(Me.tableReporteLaser.FALTA_MATERIALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.FALTA_MATERIALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsPROGRAMANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.PROGRAMAColumn)
+            Return Me.IsNull(Me.tableLaser.PROGRAMAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPROGRAMANull()
-            Me(Me.tableReporteLaser.PROGRAMAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.PROGRAMAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFALTA_ENERGIANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.FALTA_ENERGIAColumn)
+            Return Me.IsNull(Me.tableLaser.FALTA_ENERGIAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFALTA_ENERGIANull()
-            Me(Me.tableReporteLaser.FALTA_ENERGIAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.FALTA_ENERGIAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCALIDADNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.CALIDADColumn)
+            Return Me.IsNull(Me.tableLaser.CALIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCALIDADNull()
-            Me(Me.tableReporteLaser.CALIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.CALIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsDESCARGANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.DESCARGAColumn)
+            Return Me.IsNull(Me.tableLaser.DESCARGAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetDESCARGANull()
-            Me(Me.tableReporteLaser.DESCARGAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.DESCARGAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFALTA_OFNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.FALTA_OFColumn)
+            Return Me.IsNull(Me.tableLaser.FALTA_OFColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFALTA_OFNull()
-            Me(Me.tableReporteLaser.FALTA_OFColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.FALTA_OFColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsGASESNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.GASESColumn)
+            Return Me.IsNull(Me.tableLaser.GASESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetGASESNull()
-            Me(Me.tableReporteLaser.GASESColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.GASESColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFALLA_MAQUINANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.FALLA_MAQUINAColumn)
+            Return Me.IsNull(Me.tableLaser.FALLA_MAQUINAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFALLA_MAQUINANull()
-            Me(Me.tableReporteLaser.FALLA_MAQUINAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.FALLA_MAQUINAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsJUNTA_PERSONALNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.JUNTA_PERSONALColumn)
+            Return Me.IsNull(Me.tableLaser.JUNTA_PERSONALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetJUNTA_PERSONALNull()
-            Me(Me.tableReporteLaser.JUNTA_PERSONALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.JUNTA_PERSONALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsOTRANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.OTRAColumn)
+            Return Me.IsNull(Me.tableLaser.OTRAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetOTRANull()
-            Me(Me.tableReporteLaser.OTRAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.OTRAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsDURACION_OTRANull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.DURACION_OTRAColumn)
+            Return Me.IsNull(Me.tableLaser.DURACION_OTRAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetDURACION_OTRANull()
-            Me(Me.tableReporteLaser.DURACION_OTRAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.DURACION_OTRAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsMESNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.MESColumn)
+            Return Me.IsNull(Me.tableLaser.MESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMESNull()
-            Me(Me.tableReporteLaser.MESColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.MESColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsYEARSNull() As Boolean
-            Return Me.IsNull(Me.tableReporteLaser.YEARSColumn)
+            Return Me.IsNull(Me.tableLaser.YEARSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetYEARSNull()
-            Me(Me.tableReporteLaser.YEARSColumn) = Global.System.Convert.DBNull
+            Me(Me.tableLaser.YEARSColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1775,16 +1773,16 @@ Partial Public Class ReporteLaser
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class ReporteLaserRowChangeEvent
+    Public Class LaserRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As ReporteLaserRow
+        Private eventRow As LaserRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As ReporteLaserRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As LaserRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -1792,7 +1790,7 @@ Partial Public Class ReporteLaser
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As ReporteLaserRow
+        Public ReadOnly Property Row() As LaserRow
             Get
                 Return Me.eventRow
             End Get
@@ -1819,7 +1817,7 @@ Namespace ReporteLaserTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class ReporteLaserTableAdapter
+    Partial Public Class LaserTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -1936,7 +1934,7 @@ Namespace ReporteLaserTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "ReporteLaser"
+            tableMapping.DataSetTable = "Laser"
             tableMapping.ColumnMappings.Add("OF", "OF")
             tableMapping.ColumnMappings.Add("MAQUINA", "MAQUINA")
             tableMapping.ColumnMappings.Add("FECHA", "FECHA")
@@ -2006,7 +2004,7 @@ Namespace ReporteLaserTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function VerLaser(ByVal dataTable As ReporteLaser.ReporteLaserDataTable) As Integer
+        Public Overloads Overridable Function VerLaser(ByVal dataTable As ReporteLaser.LaserDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -2019,9 +2017,9 @@ Namespace ReporteLaserTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ReporteLaser.ReporteLaserDataTable
+        Public Overloads Overridable Function GetData() As ReporteLaser.LaserDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ReporteLaser.ReporteLaserDataTable = New ReporteLaser.ReporteLaserDataTable()
+            Dim dataTable As ReporteLaser.LaserDataTable = New ReporteLaser.LaserDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -2030,7 +2028,7 @@ Namespace ReporteLaserTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function MostrarLaser(ByVal dataTable As ReporteLaser.ReporteLaserDataTable, ByVal MES As String, ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function MostrarLaser(ByVal dataTable As ReporteLaser.LaserDataTable, ByVal MES As String, ByVal YEARS As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (MES Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
@@ -2053,7 +2051,7 @@ Namespace ReporteLaserTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal MES As String, ByVal YEARS As Global.System.Nullable(Of Integer)) As ReporteLaser.ReporteLaserDataTable
+        Public Overloads Overridable Function GetDataBy(ByVal MES As String, ByVal YEARS As Global.System.Nullable(Of Integer)) As ReporteLaser.LaserDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (MES Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
@@ -2065,7 +2063,7 @@ Namespace ReporteLaserTableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            Dim dataTable As ReporteLaser.ReporteLaserDataTable = New ReporteLaser.ReporteLaserDataTable()
+            Dim dataTable As ReporteLaser.LaserDataTable = New ReporteLaser.LaserDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

@@ -2167,67 +2167,67 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1">
+<member name="T:FTM_Registros.ReporteDoblez">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1.Registros_DoblezDataTable">
+<member name="T:FTM_Registros.ReporteDoblez.DoblezDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1.Registros_DoblezRow">
+<member name="T:FTM_Registros.ReporteDoblez.DoblezRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1.Registros_DoblezRowChangeEvent">
+<member name="T:FTM_Registros.ReporteDoblez.DoblezRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1TableAdapters.Registros_DoblezTableAdapter">
+<member name="T:FTM_Registros.ReporteDoblezTableAdapters.DoblezTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager">
+<member name="T:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager">
 <summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
-<member name="M:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReporteDoblez1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReporteDoblez,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Update rows in top-down order.
 </summary>
 </member>
-<member name="M:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReporteDoblez1,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReporteDoblez,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Insert rows in top-down order.
 </summary>
 </member>
-<member name="M:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReporteDoblez1,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReporteDoblez,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Delete rows in bottom-up order.
 </summary>
 </member>
-<member name="M:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
 </member>
-<member name="M:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReporteDoblez1)">
+<member name="M:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReporteDoblez)">
 <summary>
 Update all changes to the dataset.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<member name="T:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.UpdateOrderOption">
 <summary>
 Update Order Option
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteDoblez1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<member name="T:FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>
@@ -2237,22 +2237,22 @@ Used to sort self-referenced table's rows
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteLaser.ReporteLaserDataTable">
+<member name="T:FTM_Registros.ReporteLaser.LaserDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteLaser.ReporteLaserRow">
+<member name="T:FTM_Registros.ReporteLaser.LaserRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteLaser.ReporteLaserRowChangeEvent">
+<member name="T:FTM_Registros.ReporteLaser.LaserRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:FTM_Registros.ReporteLaserTableAdapters.ReporteLaserTableAdapter">
+<member name="T:FTM_Registros.ReporteLaserTableAdapters.LaserTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -2293,6 +2293,136 @@ Update Order Option
 </summary>
 </member>
 <member name="T:FTM_Registros.ReporteLaserTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinados">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinados.MaquinadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinados.MaquinadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinados.MaquinadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinadosTableAdapters.MaquinadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReporteMaquinados,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReporteMaquinados,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReporteMaquinados,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReporteMaquinados)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.ReporteMaquinadosTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonado">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonado.Registros_PunzonadoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonado.Registros_PunzonadoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonado.Registros_PunzonadoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonadoTableAdapters.Registros_PunzonadoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.ReportePunzonado,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.ReportePunzonado,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.ReportePunzonado,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.ReportePunzonado)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.ReportePunzonadoTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

@@ -16,7 +16,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -51,7 +53,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>1.08161cm</Top>
+        <Top>2.08161cm</Top>
         <Left>0.76412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -83,7 +85,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>1.08161cm</Top>
+        <Top>2.08161cm</Top>
         <Left>3.26412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.97625cm</Width>
@@ -115,7 +117,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>1.08161cm</Top>
+        <Top>2.08161cm</Top>
         <Left>6.24037cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -147,7 +149,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>1.58161cm</Top>
+        <Top>2.58161cm</Top>
         <Left>0.76412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -179,7 +181,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>1.58161cm</Top>
+        <Top>2.58161cm</Top>
         <Left>3.26412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.97625cm</Width>
@@ -201,7 +203,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
+                <Value>=Sum(Fields!PZA_PROG.Value, "Laser")/Sum(Fields!PZA_PROD.Value, "Laser")</Value>
                 <Style>
                   <Format>0.00%</Format>
                 </Style>
@@ -213,7 +215,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>1.58161cm</Top>
+        <Top>2.58161cm</Top>
         <Left>6.24037cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -245,7 +247,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>2.08161cm</Top>
+        <Top>3.08161cm</Top>
         <Left>0.76412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -277,7 +279,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>2.58161cm</Top>
+        <Top>3.58161cm</Top>
         <Left>0.76412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -309,7 +311,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>3.08161cm</Top>
+        <Top>4.08161cm</Top>
         <Left>0.76412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -341,7 +343,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>2.08161cm</Top>
+        <Top>3.08161cm</Top>
         <Left>3.26412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.97625cm</Width>
@@ -363,8 +365,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
-                <Style />
+                <Value>=Sum(Fields!PZA_PROG.Value, "Doblez")/Sum(Fields!PZA_PROD.Value, "Doblez")</Value>
+                <Style>
+                  <Format>0.00%</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -373,7 +377,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>2.08161cm</Top>
+        <Top>3.08161cm</Top>
         <Left>6.24037cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -405,7 +409,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>2.58161cm</Top>
+        <Top>3.58161cm</Top>
         <Left>3.26412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.97625cm</Width>
@@ -427,8 +431,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
-                <Style />
+                <Value>=Sum(Fields!PZA_PROG.Value, "Maquinados")/Sum(Fields!PZA_PROD.Value, "Maquinados")</Value>
+                <Style>
+                  <Format>0.00%</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -437,7 +443,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>2.58161cm</Top>
+        <Top>3.58161cm</Top>
         <Left>6.24037cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -469,7 +475,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>3.08161cm</Top>
+        <Top>4.08161cm</Top>
         <Left>3.26412cm</Left>
         <Height>0.5cm</Height>
         <Width>2.97625cm</Width>
@@ -491,8 +497,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
-                <Style />
+                <Value>=Sum(Fields!PZA_PROG.Value, "Laser")/Sum(Fields!PZA_PROD.Value, "Laser")</Value>
+                <Style>
+                  <Format>0.00%</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -501,7 +509,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox107</rd:DefaultName>
-        <Top>3.08161cm</Top>
+        <Top>4.08161cm</Top>
         <Left>6.24037cm</Left>
         <Height>0.5cm</Height>
         <Width>2.5cm</Width>
@@ -517,7 +525,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>5.08333in</Height>
+    <Height>5.32142in</Height>
     <Style>
       <Border>
         <Style>Solid</Style>
@@ -875,81 +883,42 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ProduccionBD">
+    <DataSource Name="ReporteLaser">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>66da11aa-5e47-495f-abc0-fe2767660f92</rd:DataSourceID>
+      <rd:DataSourceID>5bbe69ca-c899-4486-a1a4-92e4a1ee2b39</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="ReporteMaquinados">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>aa08a54a-eee2-4de6-b3b6-83ffaf1d1a85</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="ReportePunzonado">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>820ceaac-70e2-4a18-8034-f7a96f70aab7</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="ReporteDoblez">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>7a6dfdb3-1f7f-47f6-9dad-a7235e6fd17d</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="LaserBD">
+    <DataSet Name="Laser">
       <Query>
-        <DataSourceName>ProduccionBD</DataSourceName>
+        <DataSourceName>ReporteLaser</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="HP">
-          <DataField>HP</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="HR">
-          <DataField>HR</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="SCRAP">
-          <DataField>SCRAP</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="SEMANA">
-          <DataField>SEMANA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MANTENIMIENTO">
-          <DataField>MANTENIMIENTO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="LIMPIEZA">
-          <DataField>LIMPIEZA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="AJUSTES">
-          <DataField>AJUSTES</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PROGRAMA">
-          <DataField>PROGRAMA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="CALIDAD">
-          <DataField>CALIDAD</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="DESCARGA">
-          <DataField>DESCARGA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="GASES">
-          <DataField>GASES</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="OTRA">
-          <DataField>OTRA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MES">
-          <DataField>MES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="AÑO">
-          <DataField>AÑO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="NO">
-          <DataField>NO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="OF">
           <DataField>OF</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -970,6 +939,14 @@
           <DataField>AREA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="HP">
+          <DataField>HP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HR">
+          <DataField>HR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="PZA_PROG">
           <DataField>PZA_PROG</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -982,24 +959,60 @@
           <DataField>PZA_RECHAZADAS</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="SCRAP">
+          <DataField>SCRAP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEMANA">
+          <DataField>SEMANA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MANTENIMIENTO">
+          <DataField>MANTENIMIENTO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="FALTA_DE_TRABAJO">
           <DataField>FALTA_DE_TRABAJO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LIMPIEZA">
+          <DataField>LIMPIEZA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="SET_UP">
           <DataField>SET_UP</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="AJUSTES">
+          <DataField>AJUSTES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="FALTA_MATERIAL">
           <DataField>FALTA_MATERIAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PROGRAMA">
+          <DataField>PROGRAMA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="FALTA_ENERGIA">
           <DataField>FALTA_ENERGIA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="CALIDAD">
+          <DataField>CALIDAD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DESCARGA">
+          <DataField>DESCARGA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="FALTA_OF">
           <DataField>FALTA_OF</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="GASES">
+          <DataField>GASES</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="FALLA_MAQUINA">
@@ -1010,18 +1023,438 @@
           <DataField>JUNTA_PERSONAL</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="OTRA">
+          <DataField>OTRA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="DURACION_OTRA">
           <DataField>DURACION_OTRA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="MES">
+          <DataField>MES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YEARS">
+          <DataField>YEARS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ProduccionBD</rd:DataSetName>
-        <rd:SchemaPath>S:\Base de datos\Base\FTM_Registros\FTM_Registros\Produccion\ProduccionBD.xsd</rd:SchemaPath>
-        <rd:TableName>Registros</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:DataSetName>ReporteLaser</rd:DataSetName>
+        <rd:SchemaPath>S:\Base de datos\Base\FTM_Registros\FTM_Registros\Produccion\ReporteLaser.xsd</rd:SchemaPath>
+        <rd:TableName>Laser</rd:TableName>
+        <rd:TableAdapterFillMethod>VerLaser</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>RegistrosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>LaserTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Maquinados">
+      <Query>
+        <DataSourceName>ReporteMaquinados</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OF">
+          <DataField>OF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHA">
+          <DataField>FECHA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MAQUINA">
+          <DataField>MAQUINA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CLIENTE">
+          <DataField>CLIENTE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AREA">
+          <DataField>AREA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HP">
+          <DataField>HP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HR">
+          <DataField>HR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_PROG">
+          <DataField>PZA_PROG</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_PROD">
+          <DataField>PZA_PROD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_RECHAZADAS">
+          <DataField>PZA_RECHAZADAS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEMANA">
+          <DataField>SEMANA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SCRAP">
+          <DataField>SCRAP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MANTENIMIENTO">
+          <DataField>MANTENIMIENTO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_DE_TRABAJO">
+          <DataField>FALTA_DE_TRABAJO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LIMPIEZA">
+          <DataField>LIMPIEZA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SET_UP">
+          <DataField>SET_UP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AJUSTES">
+          <DataField>AJUSTES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_MATERIAL">
+          <DataField>FALTA_MATERIAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_ENERGIA">
+          <DataField>FALTA_ENERGIA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PROGRAMA">
+          <DataField>PROGRAMA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CALIDAD">
+          <DataField>CALIDAD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DESCARGA">
+          <DataField>DESCARGA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_OF">
+          <DataField>FALTA_OF</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="GASES">
+          <DataField>GASES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALLA_MAQUINA">
+          <DataField>FALLA_MAQUINA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JUNTA_PERSONAL">
+          <DataField>JUNTA_PERSONAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OTRA">
+          <DataField>OTRA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DURACION_OTRA">
+          <DataField>DURACION_OTRA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MES">
+          <DataField>MES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YEARS">
+          <DataField>YEARS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ReporteMaquinados</rd:DataSetName>
+        <rd:SchemaPath>S:\Base de datos\Base\FTM_Registros\FTM_Registros\Produccion\ReporteMaquinados.xsd</rd:SchemaPath>
+        <rd:TableName>Maquinados</rd:TableName>
+        <rd:TableAdapterFillMethod>VerMaqui</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>MaquinadosTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Punzonado">
+      <Query>
+        <DataSourceName>ReportePunzonado</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OF">
+          <DataField>OF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MAQUINA">
+          <DataField>MAQUINA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHA">
+          <DataField>FECHA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CLIENTE">
+          <DataField>CLIENTE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AREA">
+          <DataField>AREA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HP">
+          <DataField>HP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HR">
+          <DataField>HR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_PROD">
+          <DataField>PZA_PROD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_PROG">
+          <DataField>PZA_PROG</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_RECHAZADAS">
+          <DataField>PZA_RECHAZADAS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SCRAP">
+          <DataField>SCRAP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEMANA">
+          <DataField>SEMANA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MANTENIMIENTO">
+          <DataField>MANTENIMIENTO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_DE_TRABAJO">
+          <DataField>FALTA_DE_TRABAJO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LIMPIEZA">
+          <DataField>LIMPIEZA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SET_UP">
+          <DataField>SET_UP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AJUSTES">
+          <DataField>AJUSTES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_MATERIAL">
+          <DataField>FALTA_MATERIAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PROGRAMA">
+          <DataField>PROGRAMA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_ENERGIA">
+          <DataField>FALTA_ENERGIA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CALIDAD">
+          <DataField>CALIDAD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DESCARGA">
+          <DataField>DESCARGA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_OF">
+          <DataField>FALTA_OF</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="GASES">
+          <DataField>GASES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALLA_MAQUINA">
+          <DataField>FALLA_MAQUINA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JUNTA_PERSONAL">
+          <DataField>JUNTA_PERSONAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OTRA">
+          <DataField>OTRA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DURACION_OTRA">
+          <DataField>DURACION_OTRA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MES">
+          <DataField>MES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YEARS">
+          <DataField>YEARS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ReportePunzonado</rd:DataSetName>
+        <rd:SchemaPath>S:\Base de datos\Base\FTM_Registros\FTM_Registros\Produccion\ReportePunzonado.xsd</rd:SchemaPath>
+        <rd:TableName>Registros_Punzonado</rd:TableName>
+        <rd:TableAdapterFillMethod>VerPunzo</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>Registros_PunzonadoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Doblez">
+      <Query>
+        <DataSourceName>ReporteDoblez</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OF">
+          <DataField>OF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MAQUINA">
+          <DataField>MAQUINA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHA">
+          <DataField>FECHA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CLIENTE">
+          <DataField>CLIENTE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AREA">
+          <DataField>AREA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HP">
+          <DataField>HP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_PROG">
+          <DataField>PZA_PROG</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HR">
+          <DataField>HR</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_PROD">
+          <DataField>PZA_PROD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PZA_RECHAZADAS">
+          <DataField>PZA_RECHAZADAS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SCRAP">
+          <DataField>SCRAP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEMANA">
+          <DataField>SEMANA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MANTENIMIENTO">
+          <DataField>MANTENIMIENTO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_DE_TRABAJO">
+          <DataField>FALTA_DE_TRABAJO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LIMPIEZA">
+          <DataField>LIMPIEZA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SET_UP">
+          <DataField>SET_UP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AJUSTES">
+          <DataField>AJUSTES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_MATERIAL">
+          <DataField>FALTA_MATERIAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PROGRAMA">
+          <DataField>PROGRAMA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_ENERGIA">
+          <DataField>FALTA_ENERGIA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CALIDAD">
+          <DataField>CALIDAD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DESCARGA">
+          <DataField>DESCARGA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALTA_OF">
+          <DataField>FALTA_OF</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="GASES">
+          <DataField>GASES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FALLA_MAQUINA">
+          <DataField>FALLA_MAQUINA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JUNTA_PERSONAL">
+          <DataField>JUNTA_PERSONAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OTRA">
+          <DataField>OTRA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DURACION_OTRA">
+          <DataField>DURACION_OTRA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MES">
+          <DataField>MES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="YEARS">
+          <DataField>YEARS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ReporteDoblez</rd:DataSetName>
+        <rd:SchemaPath>S:\Base de datos\Base\FTM_Registros\FTM_Registros\Produccion\ReporteDoblez.xsd</rd:SchemaPath>
+        <rd:TableName>Doblez</rd:TableName>
+        <rd:TableAdapterFillMethod>VerDoblez</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>DoblezTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

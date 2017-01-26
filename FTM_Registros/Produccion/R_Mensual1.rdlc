@@ -879,13 +879,6 @@
       </ConnectionProperties>
       <rd:DataSourceID>7ecd3093-a7aa-4e80-b66e-3095b4120297</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="ReporteLaser">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>6e9b21c0-b40c-4f8a-a4a1-af8936a4da36</rd:DataSourceID>
-    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="LaserBD">
