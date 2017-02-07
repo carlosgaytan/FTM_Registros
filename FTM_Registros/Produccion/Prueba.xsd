@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Prueba" targetNamespace="http://tempuri.org/Prueba.xsd" xmlns:mstns="http://tempuri.org/Prueba.xsd" xmlns="http://tempuri.org/Prueba.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ProducciónConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProducciónConnectionString (MySettings)" PropertyReference="ApplicationSettings.FTM_Registros.My.MySettings.GlobalReference.Default.ProducciónConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GrafLaserTableAdapter" GeneratorDataComponentClassName="GrafLaserTableAdapter" Name="GrafLaser" UserDataComponentName="GrafLaserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="L_Graf" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="L_Graf" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="L_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, 
+                         SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, 
+                         DURACION_OTRA, MES, YEARS
+FROM            Registros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OF" DataSetColumn="OF" />
+              <Mapping SourceColumn="MAQUINA" DataSetColumn="MAQUINA" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="CLIENTE" DataSetColumn="CLIENTE" />
+              <Mapping SourceColumn="AREA" DataSetColumn="AREA" />
+              <Mapping SourceColumn="HP" DataSetColumn="HP" />
+              <Mapping SourceColumn="HR" DataSetColumn="HR" />
+              <Mapping SourceColumn="PZA_PROG" DataSetColumn="PZA_PROG" />
+              <Mapping SourceColumn="PZA_PROD" DataSetColumn="PZA_PROD" />
+              <Mapping SourceColumn="PZA_RECHAZADAS" DataSetColumn="PZA_RECHAZADAS" />
+              <Mapping SourceColumn="SCRAP" DataSetColumn="SCRAP" />
+              <Mapping SourceColumn="SEMANA" DataSetColumn="SEMANA" />
+              <Mapping SourceColumn="MANTENIMIENTO" DataSetColumn="MANTENIMIENTO" />
+              <Mapping SourceColumn="FALTA_DE_TRABAJO" DataSetColumn="FALTA_DE_TRABAJO" />
+              <Mapping SourceColumn="LIMPIEZA" DataSetColumn="LIMPIEZA" />
+              <Mapping SourceColumn="SET_UP" DataSetColumn="SET_UP" />
+              <Mapping SourceColumn="AJUSTES" DataSetColumn="AJUSTES" />
+              <Mapping SourceColumn="FALTA_MATERIAL" DataSetColumn="FALTA_MATERIAL" />
+              <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="FALTA_ENERGIA" DataSetColumn="FALTA_ENERGIA" />
+              <Mapping SourceColumn="CALIDAD" DataSetColumn="CALIDAD" />
+              <Mapping SourceColumn="DESCARGA" DataSetColumn="DESCARGA" />
+              <Mapping SourceColumn="FALTA_OF" DataSetColumn="FALTA_OF" />
+              <Mapping SourceColumn="GASES" DataSetColumn="GASES" />
+              <Mapping SourceColumn="FALLA_MAQUINA" DataSetColumn="FALLA_MAQUINA" />
+              <Mapping SourceColumn="JUNTA_PERSONAL" DataSetColumn="JUNTA_PERSONAL" />
+              <Mapping SourceColumn="OTRA" DataSetColumn="OTRA" />
+              <Mapping SourceColumn="DURACION_OTRA" DataSetColumn="DURACION_OTRA" />
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="YEARS" DataSetColumn="YEARS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Laser_Graf" Modifier="Public" Name="Laser_Graf" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Laser_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(PZA_PROG) AS L_PROG, SUM(PZA_PROD) AS L_PROD, COUNT(MES) AS L_MES, COUNT(YEARS) AS L_YEARS
+FROM            Registros
+WHERE        (MES = ?) AND (YEARS = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="MES" DataSourceName="Registros" DataTypeServer="DbType.StringFixedLength" DbType="String" Direction="Input" ParameterName="MES" Precision="0" ProviderType="WChar" Scale="0" Size="1024" SourceColumn="MES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="YEARS" DataSourceName="Registros" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="YEARS" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="YEARS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GrafDoblezTableAdapter" GeneratorDataComponentClassName="GrafDoblezTableAdapter" Name="GrafDoblez" UserDataComponentName="GrafDoblezTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros_Doblez" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="D_Graf" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="D_Graf" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="D_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, 
+                         SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, 
+                         DURACION_OTRA, MES, YEARS
+FROM            Registros_Doblez</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OF" DataSetColumn="OF" />
+              <Mapping SourceColumn="MAQUINA" DataSetColumn="MAQUINA" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="CLIENTE" DataSetColumn="CLIENTE" />
+              <Mapping SourceColumn="AREA" DataSetColumn="AREA" />
+              <Mapping SourceColumn="HP" DataSetColumn="HP" />
+              <Mapping SourceColumn="HR" DataSetColumn="HR" />
+              <Mapping SourceColumn="PZA_PROG" DataSetColumn="PZA_PROG" />
+              <Mapping SourceColumn="PZA_PROD" DataSetColumn="PZA_PROD" />
+              <Mapping SourceColumn="PZA_RECHAZADAS" DataSetColumn="PZA_RECHAZADAS" />
+              <Mapping SourceColumn="SCRAP" DataSetColumn="SCRAP" />
+              <Mapping SourceColumn="SEMANA" DataSetColumn="SEMANA" />
+              <Mapping SourceColumn="MANTENIMIENTO" DataSetColumn="MANTENIMIENTO" />
+              <Mapping SourceColumn="FALTA_DE_TRABAJO" DataSetColumn="FALTA_DE_TRABAJO" />
+              <Mapping SourceColumn="LIMPIEZA" DataSetColumn="LIMPIEZA" />
+              <Mapping SourceColumn="SET_UP" DataSetColumn="SET_UP" />
+              <Mapping SourceColumn="AJUSTES" DataSetColumn="AJUSTES" />
+              <Mapping SourceColumn="FALTA_MATERIAL" DataSetColumn="FALTA_MATERIAL" />
+              <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="FALTA_ENERGIA" DataSetColumn="FALTA_ENERGIA" />
+              <Mapping SourceColumn="CALIDAD" DataSetColumn="CALIDAD" />
+              <Mapping SourceColumn="DESCARGA" DataSetColumn="DESCARGA" />
+              <Mapping SourceColumn="FALTA_OF" DataSetColumn="FALTA_OF" />
+              <Mapping SourceColumn="GASES" DataSetColumn="GASES" />
+              <Mapping SourceColumn="FALLA_MAQUINA" DataSetColumn="FALLA_MAQUINA" />
+              <Mapping SourceColumn="JUNTA_PERSONAL" DataSetColumn="JUNTA_PERSONAL" />
+              <Mapping SourceColumn="OTRA" DataSetColumn="OTRA" />
+              <Mapping SourceColumn="DURACION_OTRA" DataSetColumn="DURACION_OTRA" />
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="YEARS" DataSetColumn="YEARS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros_Doblez" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Doblez_Graf" Modifier="Public" Name="Doblez_Graf" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Doblez_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(PZA_PROG) AS D_PROG, SUM(PZA_PROD) AS D_PROD, MES AS D_MES, YEARS AS D_YEARS
+FROM            Registros_Doblez
+WHERE        (MES = ?) AND (YEARS = ?)
+GROUP BY MES, YEARS</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="MES" DataSourceName="Registros_Doblez" DataTypeServer="DbType.StringFixedLength" DbType="String" Direction="Input" ParameterName="MES" Precision="0" ProviderType="WChar" Scale="0" Size="1024" SourceColumn="D_MES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="YEARS" DataSourceName="Registros_Doblez" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="YEARS" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="D_YEARS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GrafMaquinadosTableAdapter" GeneratorDataComponentClassName="GrafMaquinadosTableAdapter" Name="GrafMaquinados" UserDataComponentName="GrafMaquinadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros_Maquinados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="M_Graf" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="M_Graf" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="M_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, 
+                         SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, 
+                         DURACION_OTRA, MES, YEARS
+FROM            Registros_Maquinados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OF" DataSetColumn="OF" />
+              <Mapping SourceColumn="MAQUINA" DataSetColumn="MAQUINA" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="CLIENTE" DataSetColumn="CLIENTE" />
+              <Mapping SourceColumn="AREA" DataSetColumn="AREA" />
+              <Mapping SourceColumn="HP" DataSetColumn="HP" />
+              <Mapping SourceColumn="HR" DataSetColumn="HR" />
+              <Mapping SourceColumn="PZA_PROG" DataSetColumn="PZA_PROG" />
+              <Mapping SourceColumn="PZA_PROD" DataSetColumn="PZA_PROD" />
+              <Mapping SourceColumn="PZA_RECHAZADAS" DataSetColumn="PZA_RECHAZADAS" />
+              <Mapping SourceColumn="SCRAP" DataSetColumn="SCRAP" />
+              <Mapping SourceColumn="SEMANA" DataSetColumn="SEMANA" />
+              <Mapping SourceColumn="MANTENIMIENTO" DataSetColumn="MANTENIMIENTO" />
+              <Mapping SourceColumn="FALTA_DE_TRABAJO" DataSetColumn="FALTA_DE_TRABAJO" />
+              <Mapping SourceColumn="LIMPIEZA" DataSetColumn="LIMPIEZA" />
+              <Mapping SourceColumn="SET_UP" DataSetColumn="SET_UP" />
+              <Mapping SourceColumn="AJUSTES" DataSetColumn="AJUSTES" />
+              <Mapping SourceColumn="FALTA_MATERIAL" DataSetColumn="FALTA_MATERIAL" />
+              <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="FALTA_ENERGIA" DataSetColumn="FALTA_ENERGIA" />
+              <Mapping SourceColumn="CALIDAD" DataSetColumn="CALIDAD" />
+              <Mapping SourceColumn="DESCARGA" DataSetColumn="DESCARGA" />
+              <Mapping SourceColumn="FALTA_OF" DataSetColumn="FALTA_OF" />
+              <Mapping SourceColumn="GASES" DataSetColumn="GASES" />
+              <Mapping SourceColumn="FALLA_MAQUINA" DataSetColumn="FALLA_MAQUINA" />
+              <Mapping SourceColumn="JUNTA_PERSONAL" DataSetColumn="JUNTA_PERSONAL" />
+              <Mapping SourceColumn="OTRA" DataSetColumn="OTRA" />
+              <Mapping SourceColumn="DURACION_OTRA" DataSetColumn="DURACION_OTRA" />
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="YEARS" DataSetColumn="YEARS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros_Maquinados" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Maqui_Graf" Modifier="Public" Name="Maqui_Graf" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Maqui_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(PZA_PROG) AS M_PROG, SUM(PZA_PROD) AS M_PROD, MES AS M_MES, YEARS AS M_YEARS
+FROM            Registros_Maquinados
+WHERE        (MES = ?) AND (YEARS = ?)
+GROUP BY MES, YEARS</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="MES" DataSourceName="Registros_Maquinados" DataTypeServer="DbType.StringFixedLength" DbType="String" Direction="Input" ParameterName="MES" Precision="0" ProviderType="WChar" Scale="0" Size="1024" SourceColumn="M_MES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="YEARS" DataSourceName="Registros_Maquinados" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="YEARS" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="M_YEARS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GrafPunzonadoTableAdapter" GeneratorDataComponentClassName="GrafPunzonadoTableAdapter" Name="GrafPunzonado" UserDataComponentName="GrafPunzonadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros_Punzonado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="P_Graf" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="P_Graf" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="P_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [OF], MAQUINA, FECHA, CLIENTE, AREA, HP, HR, PZA_PROG, PZA_PROD, PZA_RECHAZADAS, SCRAP, SEMANA, MANTENIMIENTO, FALTA_DE_TRABAJO, LIMPIEZA, 
+                         SET_UP, AJUSTES, FALTA_MATERIAL, PROGRAMA, FALTA_ENERGIA, CALIDAD, DESCARGA, FALTA_OF, GASES, FALLA_MAQUINA, JUNTA_PERSONAL, OTRA, 
+                         DURACION_OTRA, MES, YEARS
+FROM            Registros_Punzonado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OF" DataSetColumn="OF" />
+              <Mapping SourceColumn="MAQUINA" DataSetColumn="MAQUINA" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="CLIENTE" DataSetColumn="CLIENTE" />
+              <Mapping SourceColumn="AREA" DataSetColumn="AREA" />
+              <Mapping SourceColumn="HP" DataSetColumn="HP" />
+              <Mapping SourceColumn="HR" DataSetColumn="HR" />
+              <Mapping SourceColumn="PZA_PROG" DataSetColumn="PZA_PROG" />
+              <Mapping SourceColumn="PZA_PROD" DataSetColumn="PZA_PROD" />
+              <Mapping SourceColumn="PZA_RECHAZADAS" DataSetColumn="PZA_RECHAZADAS" />
+              <Mapping SourceColumn="SCRAP" DataSetColumn="SCRAP" />
+              <Mapping SourceColumn="SEMANA" DataSetColumn="SEMANA" />
+              <Mapping SourceColumn="MANTENIMIENTO" DataSetColumn="MANTENIMIENTO" />
+              <Mapping SourceColumn="FALTA_DE_TRABAJO" DataSetColumn="FALTA_DE_TRABAJO" />
+              <Mapping SourceColumn="LIMPIEZA" DataSetColumn="LIMPIEZA" />
+              <Mapping SourceColumn="SET_UP" DataSetColumn="SET_UP" />
+              <Mapping SourceColumn="AJUSTES" DataSetColumn="AJUSTES" />
+              <Mapping SourceColumn="FALTA_MATERIAL" DataSetColumn="FALTA_MATERIAL" />
+              <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="FALTA_ENERGIA" DataSetColumn="FALTA_ENERGIA" />
+              <Mapping SourceColumn="CALIDAD" DataSetColumn="CALIDAD" />
+              <Mapping SourceColumn="DESCARGA" DataSetColumn="DESCARGA" />
+              <Mapping SourceColumn="FALTA_OF" DataSetColumn="FALTA_OF" />
+              <Mapping SourceColumn="GASES" DataSetColumn="GASES" />
+              <Mapping SourceColumn="FALLA_MAQUINA" DataSetColumn="FALLA_MAQUINA" />
+              <Mapping SourceColumn="JUNTA_PERSONAL" DataSetColumn="JUNTA_PERSONAL" />
+              <Mapping SourceColumn="OTRA" DataSetColumn="OTRA" />
+              <Mapping SourceColumn="DURACION_OTRA" DataSetColumn="DURACION_OTRA" />
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="YEARS" DataSetColumn="YEARS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ProducciónConnectionString (MySettings)" DbObjectName="Registros_Punzonado" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Punzo_Graf" Modifier="Public" Name="Punzo_Graf" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Punzo_Graf">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(PZA_PROG) AS P_PROG, SUM(PZA_PROD) AS P_PROD, MES AS P_MES, YEARS AS P_YEARS
+FROM            Registros_Punzonado
+WHERE        (MES = ?) AND (YEARS = ?)
+GROUP BY MES, YEARS</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="MES" DataSourceName="Registros_Punzonado" DataTypeServer="DbType.StringFixedLength" DbType="String" Direction="Input" ParameterName="MES" Precision="0" ProviderType="WChar" Scale="0" Size="1024" SourceColumn="P_MES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="YEARS" DataSourceName="Registros_Punzonado" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="YEARS" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="P_YEARS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Prueba" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Prueba" msprop:Generator_UserDSName="Prueba">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GrafLaser" msprop:Generator_TableClassName="GrafLaserDataTable" msprop:Generator_TableVarName="tableGrafLaser" msprop:Generator_TablePropName="GrafLaser" msprop:Generator_RowDeletingName="GrafLaserRowDeleting" msprop:Generator_RowChangingName="GrafLaserRowChanging" msprop:Generator_RowEvHandlerName="GrafLaserRowChangeEventHandler" msprop:Generator_RowDeletedName="GrafLaserRowDeleted" msprop:Generator_UserTableName="GrafLaser" msprop:Generator_RowChangedName="GrafLaserRowChanged" msprop:Generator_RowEvArgName="GrafLaserRowChangeEvent" msprop:Generator_RowClassName="GrafLaserRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OF" msprop:Generator_ColumnVarNameInTable="columnOF" msprop:Generator_ColumnPropNameInRow="_OF" msprop:Generator_ColumnPropNameInTable="OFColumn" msprop:Generator_UserColumnName="OF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAQUINA" msprop:Generator_ColumnVarNameInTable="columnMAQUINA" msprop:Generator_ColumnPropNameInRow="MAQUINA" msprop:Generator_ColumnPropNameInTable="MAQUINAColumn" msprop:Generator_UserColumnName="MAQUINA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" msprop:Generator_UserColumnName="CLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" msprop:Generator_UserColumnName="AREA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HP" msprop:Generator_ColumnVarNameInTable="columnHP" msprop:Generator_ColumnPropNameInRow="HP" msprop:Generator_ColumnPropNameInTable="HPColumn" msprop:Generator_UserColumnName="HP" type="xs:int" minOccurs="0" />
+              <xs:element name="HR" msprop:Generator_ColumnVarNameInTable="columnHR" msprop:Generator_ColumnPropNameInRow="HR" msprop:Generator_ColumnPropNameInTable="HRColumn" msprop:Generator_UserColumnName="HR" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROG" msprop:Generator_ColumnVarNameInTable="columnPZA_PROG" msprop:Generator_ColumnPropNameInRow="PZA_PROG" msprop:Generator_ColumnPropNameInTable="PZA_PROGColumn" msprop:Generator_UserColumnName="PZA_PROG" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROD" msprop:Generator_ColumnVarNameInTable="columnPZA_PROD" msprop:Generator_ColumnPropNameInRow="PZA_PROD" msprop:Generator_ColumnPropNameInTable="PZA_PRODColumn" msprop:Generator_UserColumnName="PZA_PROD" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_RECHAZADAS" msprop:Generator_ColumnVarNameInTable="columnPZA_RECHAZADAS" msprop:Generator_ColumnPropNameInRow="PZA_RECHAZADAS" msprop:Generator_ColumnPropNameInTable="PZA_RECHAZADASColumn" msprop:Generator_UserColumnName="PZA_RECHAZADAS" type="xs:int" minOccurs="0" />
+              <xs:element name="SCRAP" msprop:Generator_ColumnVarNameInTable="columnSCRAP" msprop:Generator_ColumnPropNameInRow="SCRAP" msprop:Generator_ColumnPropNameInTable="SCRAPColumn" msprop:Generator_UserColumnName="SCRAP" type="xs:int" minOccurs="0" />
+              <xs:element name="SEMANA" msprop:Generator_ColumnVarNameInTable="columnSEMANA" msprop:Generator_ColumnPropNameInRow="SEMANA" msprop:Generator_ColumnPropNameInTable="SEMANAColumn" msprop:Generator_UserColumnName="SEMANA" type="xs:int" minOccurs="0" />
+              <xs:element name="MANTENIMIENTO" msprop:Generator_ColumnVarNameInTable="columnMANTENIMIENTO" msprop:Generator_ColumnPropNameInRow="MANTENIMIENTO" msprop:Generator_ColumnPropNameInTable="MANTENIMIENTOColumn" msprop:Generator_UserColumnName="MANTENIMIENTO" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_DE_TRABAJO" msprop:Generator_ColumnVarNameInTable="columnFALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInRow="FALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInTable="FALTA_DE_TRABAJOColumn" msprop:Generator_UserColumnName="FALTA_DE_TRABAJO" type="xs:int" minOccurs="0" />
+              <xs:element name="LIMPIEZA" msprop:Generator_ColumnVarNameInTable="columnLIMPIEZA" msprop:Generator_ColumnPropNameInRow="LIMPIEZA" msprop:Generator_ColumnPropNameInTable="LIMPIEZAColumn" msprop:Generator_UserColumnName="LIMPIEZA" type="xs:int" minOccurs="0" />
+              <xs:element name="SET_UP" msprop:Generator_ColumnVarNameInTable="columnSET_UP" msprop:Generator_ColumnPropNameInRow="SET_UP" msprop:Generator_ColumnPropNameInTable="SET_UPColumn" msprop:Generator_UserColumnName="SET_UP" type="xs:int" minOccurs="0" />
+              <xs:element name="AJUSTES" msprop:Generator_ColumnVarNameInTable="columnAJUSTES" msprop:Generator_ColumnPropNameInRow="AJUSTES" msprop:Generator_ColumnPropNameInTable="AJUSTESColumn" msprop:Generator_UserColumnName="AJUSTES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_MATERIAL" msprop:Generator_ColumnVarNameInTable="columnFALTA_MATERIAL" msprop:Generator_ColumnPropNameInRow="FALTA_MATERIAL" msprop:Generator_ColumnPropNameInTable="FALTA_MATERIALColumn" msprop:Generator_UserColumnName="FALTA_MATERIAL" type="xs:int" minOccurs="0" />
+              <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_ENERGIA" msprop:Generator_ColumnVarNameInTable="columnFALTA_ENERGIA" msprop:Generator_ColumnPropNameInRow="FALTA_ENERGIA" msprop:Generator_ColumnPropNameInTable="FALTA_ENERGIAColumn" msprop:Generator_UserColumnName="FALTA_ENERGIA" type="xs:int" minOccurs="0" />
+              <xs:element name="CALIDAD" msprop:Generator_ColumnVarNameInTable="columnCALIDAD" msprop:Generator_ColumnPropNameInRow="CALIDAD" msprop:Generator_ColumnPropNameInTable="CALIDADColumn" msprop:Generator_UserColumnName="CALIDAD" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCARGA" msprop:Generator_ColumnVarNameInTable="columnDESCARGA" msprop:Generator_ColumnPropNameInRow="DESCARGA" msprop:Generator_ColumnPropNameInTable="DESCARGAColumn" msprop:Generator_UserColumnName="DESCARGA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_OF" msprop:Generator_ColumnVarNameInTable="columnFALTA_OF" msprop:Generator_ColumnPropNameInRow="FALTA_OF" msprop:Generator_ColumnPropNameInTable="FALTA_OFColumn" msprop:Generator_UserColumnName="FALTA_OF" type="xs:int" minOccurs="0" />
+              <xs:element name="GASES" msprop:Generator_ColumnVarNameInTable="columnGASES" msprop:Generator_ColumnPropNameInRow="GASES" msprop:Generator_ColumnPropNameInTable="GASESColumn" msprop:Generator_UserColumnName="GASES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALLA_MAQUINA" msprop:Generator_ColumnVarNameInTable="columnFALLA_MAQUINA" msprop:Generator_ColumnPropNameInRow="FALLA_MAQUINA" msprop:Generator_ColumnPropNameInTable="FALLA_MAQUINAColumn" msprop:Generator_UserColumnName="FALLA_MAQUINA" type="xs:int" minOccurs="0" />
+              <xs:element name="JUNTA_PERSONAL" msprop:Generator_ColumnVarNameInTable="columnJUNTA_PERSONAL" msprop:Generator_ColumnPropNameInRow="JUNTA_PERSONAL" msprop:Generator_ColumnPropNameInTable="JUNTA_PERSONALColumn" msprop:Generator_UserColumnName="JUNTA_PERSONAL" type="xs:int" minOccurs="0" />
+              <xs:element name="OTRA" msprop:Generator_ColumnVarNameInTable="columnOTRA" msprop:Generator_ColumnPropNameInRow="OTRA" msprop:Generator_ColumnPropNameInTable="OTRAColumn" msprop:Generator_UserColumnName="OTRA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DURACION_OTRA" msprop:Generator_ColumnVarNameInTable="columnDURACION_OTRA" msprop:Generator_ColumnPropNameInRow="DURACION_OTRA" msprop:Generator_ColumnPropNameInTable="DURACION_OTRAColumn" msprop:Generator_UserColumnName="DURACION_OTRA" type="xs:int" minOccurs="0" />
+              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YEARS" msprop:Generator_ColumnVarNameInTable="columnYEARS" msprop:Generator_ColumnPropNameInRow="YEARS" msprop:Generator_ColumnPropNameInTable="YEARSColumn" msprop:Generator_UserColumnName="YEARS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GrafDoblez" msprop:Generator_TableClassName="GrafDoblezDataTable" msprop:Generator_TableVarName="tableGrafDoblez" msprop:Generator_TablePropName="GrafDoblez" msprop:Generator_RowDeletingName="GrafDoblezRowDeleting" msprop:Generator_RowChangingName="GrafDoblezRowChanging" msprop:Generator_RowEvHandlerName="GrafDoblezRowChangeEventHandler" msprop:Generator_RowDeletedName="GrafDoblezRowDeleted" msprop:Generator_UserTableName="GrafDoblez" msprop:Generator_RowChangedName="GrafDoblezRowChanged" msprop:Generator_RowEvArgName="GrafDoblezRowChangeEvent" msprop:Generator_RowClassName="GrafDoblezRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OF" msprop:Generator_ColumnVarNameInTable="columnOF" msprop:Generator_ColumnPropNameInRow="_OF" msprop:Generator_ColumnPropNameInTable="OFColumn" msprop:Generator_UserColumnName="OF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAQUINA" msprop:Generator_ColumnVarNameInTable="columnMAQUINA" msprop:Generator_ColumnPropNameInRow="MAQUINA" msprop:Generator_ColumnPropNameInTable="MAQUINAColumn" msprop:Generator_UserColumnName="MAQUINA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" msprop:Generator_UserColumnName="CLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" msprop:Generator_UserColumnName="AREA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HP" msprop:Generator_ColumnVarNameInTable="columnHP" msprop:Generator_ColumnPropNameInRow="HP" msprop:Generator_ColumnPropNameInTable="HPColumn" msprop:Generator_UserColumnName="HP" type="xs:int" minOccurs="0" />
+              <xs:element name="HR" msprop:Generator_ColumnVarNameInTable="columnHR" msprop:Generator_ColumnPropNameInRow="HR" msprop:Generator_ColumnPropNameInTable="HRColumn" msprop:Generator_UserColumnName="HR" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROG" msprop:Generator_ColumnVarNameInTable="columnPZA_PROG" msprop:Generator_ColumnPropNameInRow="PZA_PROG" msprop:Generator_ColumnPropNameInTable="PZA_PROGColumn" msprop:Generator_UserColumnName="PZA_PROG" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROD" msprop:Generator_ColumnVarNameInTable="columnPZA_PROD" msprop:Generator_ColumnPropNameInRow="PZA_PROD" msprop:Generator_ColumnPropNameInTable="PZA_PRODColumn" msprop:Generator_UserColumnName="PZA_PROD" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_RECHAZADAS" msprop:Generator_ColumnVarNameInTable="columnPZA_RECHAZADAS" msprop:Generator_ColumnPropNameInRow="PZA_RECHAZADAS" msprop:Generator_ColumnPropNameInTable="PZA_RECHAZADASColumn" msprop:Generator_UserColumnName="PZA_RECHAZADAS" type="xs:int" minOccurs="0" />
+              <xs:element name="SCRAP" msprop:Generator_ColumnVarNameInTable="columnSCRAP" msprop:Generator_ColumnPropNameInRow="SCRAP" msprop:Generator_ColumnPropNameInTable="SCRAPColumn" msprop:Generator_UserColumnName="SCRAP" type="xs:int" minOccurs="0" />
+              <xs:element name="SEMANA" msprop:Generator_ColumnVarNameInTable="columnSEMANA" msprop:Generator_ColumnPropNameInRow="SEMANA" msprop:Generator_ColumnPropNameInTable="SEMANAColumn" msprop:Generator_UserColumnName="SEMANA" type="xs:int" minOccurs="0" />
+              <xs:element name="MANTENIMIENTO" msprop:Generator_ColumnVarNameInTable="columnMANTENIMIENTO" msprop:Generator_ColumnPropNameInRow="MANTENIMIENTO" msprop:Generator_ColumnPropNameInTable="MANTENIMIENTOColumn" msprop:Generator_UserColumnName="MANTENIMIENTO" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_DE_TRABAJO" msprop:Generator_ColumnVarNameInTable="columnFALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInRow="FALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInTable="FALTA_DE_TRABAJOColumn" msprop:Generator_UserColumnName="FALTA_DE_TRABAJO" type="xs:int" minOccurs="0" />
+              <xs:element name="LIMPIEZA" msprop:Generator_ColumnVarNameInTable="columnLIMPIEZA" msprop:Generator_ColumnPropNameInRow="LIMPIEZA" msprop:Generator_ColumnPropNameInTable="LIMPIEZAColumn" msprop:Generator_UserColumnName="LIMPIEZA" type="xs:int" minOccurs="0" />
+              <xs:element name="SET_UP" msprop:Generator_ColumnVarNameInTable="columnSET_UP" msprop:Generator_ColumnPropNameInRow="SET_UP" msprop:Generator_ColumnPropNameInTable="SET_UPColumn" msprop:Generator_UserColumnName="SET_UP" type="xs:int" minOccurs="0" />
+              <xs:element name="AJUSTES" msprop:Generator_ColumnVarNameInTable="columnAJUSTES" msprop:Generator_ColumnPropNameInRow="AJUSTES" msprop:Generator_ColumnPropNameInTable="AJUSTESColumn" msprop:Generator_UserColumnName="AJUSTES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_MATERIAL" msprop:Generator_ColumnVarNameInTable="columnFALTA_MATERIAL" msprop:Generator_ColumnPropNameInRow="FALTA_MATERIAL" msprop:Generator_ColumnPropNameInTable="FALTA_MATERIALColumn" msprop:Generator_UserColumnName="FALTA_MATERIAL" type="xs:int" minOccurs="0" />
+              <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_ENERGIA" msprop:Generator_ColumnVarNameInTable="columnFALTA_ENERGIA" msprop:Generator_ColumnPropNameInRow="FALTA_ENERGIA" msprop:Generator_ColumnPropNameInTable="FALTA_ENERGIAColumn" msprop:Generator_UserColumnName="FALTA_ENERGIA" type="xs:int" minOccurs="0" />
+              <xs:element name="CALIDAD" msprop:Generator_ColumnVarNameInTable="columnCALIDAD" msprop:Generator_ColumnPropNameInRow="CALIDAD" msprop:Generator_ColumnPropNameInTable="CALIDADColumn" msprop:Generator_UserColumnName="CALIDAD" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCARGA" msprop:Generator_ColumnVarNameInTable="columnDESCARGA" msprop:Generator_ColumnPropNameInRow="DESCARGA" msprop:Generator_ColumnPropNameInTable="DESCARGAColumn" msprop:Generator_UserColumnName="DESCARGA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_OF" msprop:Generator_ColumnVarNameInTable="columnFALTA_OF" msprop:Generator_ColumnPropNameInRow="FALTA_OF" msprop:Generator_ColumnPropNameInTable="FALTA_OFColumn" msprop:Generator_UserColumnName="FALTA_OF" type="xs:int" minOccurs="0" />
+              <xs:element name="GASES" msprop:Generator_ColumnVarNameInTable="columnGASES" msprop:Generator_ColumnPropNameInRow="GASES" msprop:Generator_ColumnPropNameInTable="GASESColumn" msprop:Generator_UserColumnName="GASES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALLA_MAQUINA" msprop:Generator_ColumnVarNameInTable="columnFALLA_MAQUINA" msprop:Generator_ColumnPropNameInRow="FALLA_MAQUINA" msprop:Generator_ColumnPropNameInTable="FALLA_MAQUINAColumn" msprop:Generator_UserColumnName="FALLA_MAQUINA" type="xs:int" minOccurs="0" />
+              <xs:element name="JUNTA_PERSONAL" msprop:Generator_ColumnVarNameInTable="columnJUNTA_PERSONAL" msprop:Generator_ColumnPropNameInRow="JUNTA_PERSONAL" msprop:Generator_ColumnPropNameInTable="JUNTA_PERSONALColumn" msprop:Generator_UserColumnName="JUNTA_PERSONAL" type="xs:int" minOccurs="0" />
+              <xs:element name="OTRA" msprop:Generator_ColumnVarNameInTable="columnOTRA" msprop:Generator_ColumnPropNameInRow="OTRA" msprop:Generator_ColumnPropNameInTable="OTRAColumn" msprop:Generator_UserColumnName="OTRA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DURACION_OTRA" msprop:Generator_ColumnVarNameInTable="columnDURACION_OTRA" msprop:Generator_ColumnPropNameInRow="DURACION_OTRA" msprop:Generator_ColumnPropNameInTable="DURACION_OTRAColumn" msprop:Generator_UserColumnName="DURACION_OTRA" type="xs:int" minOccurs="0" />
+              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YEARS" msprop:Generator_ColumnVarNameInTable="columnYEARS" msprop:Generator_ColumnPropNameInRow="YEARS" msprop:Generator_ColumnPropNameInTable="YEARSColumn" msprop:Generator_UserColumnName="YEARS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GrafMaquinados" msprop:Generator_TableClassName="GrafMaquinadosDataTable" msprop:Generator_TableVarName="tableGrafMaquinados" msprop:Generator_TablePropName="GrafMaquinados" msprop:Generator_RowDeletingName="GrafMaquinadosRowDeleting" msprop:Generator_RowChangingName="GrafMaquinadosRowChanging" msprop:Generator_RowEvHandlerName="GrafMaquinadosRowChangeEventHandler" msprop:Generator_RowDeletedName="GrafMaquinadosRowDeleted" msprop:Generator_UserTableName="GrafMaquinados" msprop:Generator_RowChangedName="GrafMaquinadosRowChanged" msprop:Generator_RowEvArgName="GrafMaquinadosRowChangeEvent" msprop:Generator_RowClassName="GrafMaquinadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OF" msprop:Generator_ColumnVarNameInTable="columnOF" msprop:Generator_ColumnPropNameInRow="_OF" msprop:Generator_ColumnPropNameInTable="OFColumn" msprop:Generator_UserColumnName="OF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAQUINA" msprop:Generator_ColumnVarNameInTable="columnMAQUINA" msprop:Generator_ColumnPropNameInRow="MAQUINA" msprop:Generator_ColumnPropNameInTable="MAQUINAColumn" msprop:Generator_UserColumnName="MAQUINA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" msprop:Generator_UserColumnName="CLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" msprop:Generator_UserColumnName="AREA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HP" msprop:Generator_ColumnVarNameInTable="columnHP" msprop:Generator_ColumnPropNameInRow="HP" msprop:Generator_ColumnPropNameInTable="HPColumn" msprop:Generator_UserColumnName="HP" type="xs:int" minOccurs="0" />
+              <xs:element name="HR" msprop:Generator_ColumnVarNameInTable="columnHR" msprop:Generator_ColumnPropNameInRow="HR" msprop:Generator_ColumnPropNameInTable="HRColumn" msprop:Generator_UserColumnName="HR" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROG" msprop:Generator_ColumnVarNameInTable="columnPZA_PROG" msprop:Generator_ColumnPropNameInRow="PZA_PROG" msprop:Generator_ColumnPropNameInTable="PZA_PROGColumn" msprop:Generator_UserColumnName="PZA_PROG" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROD" msprop:Generator_ColumnVarNameInTable="columnPZA_PROD" msprop:Generator_ColumnPropNameInRow="PZA_PROD" msprop:Generator_ColumnPropNameInTable="PZA_PRODColumn" msprop:Generator_UserColumnName="PZA_PROD" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_RECHAZADAS" msprop:Generator_ColumnVarNameInTable="columnPZA_RECHAZADAS" msprop:Generator_ColumnPropNameInRow="PZA_RECHAZADAS" msprop:Generator_ColumnPropNameInTable="PZA_RECHAZADASColumn" msprop:Generator_UserColumnName="PZA_RECHAZADAS" type="xs:int" minOccurs="0" />
+              <xs:element name="SCRAP" msprop:Generator_ColumnVarNameInTable="columnSCRAP" msprop:Generator_ColumnPropNameInRow="SCRAP" msprop:Generator_ColumnPropNameInTable="SCRAPColumn" msprop:Generator_UserColumnName="SCRAP" type="xs:int" minOccurs="0" />
+              <xs:element name="SEMANA" msprop:Generator_ColumnVarNameInTable="columnSEMANA" msprop:Generator_ColumnPropNameInRow="SEMANA" msprop:Generator_ColumnPropNameInTable="SEMANAColumn" msprop:Generator_UserColumnName="SEMANA" type="xs:int" minOccurs="0" />
+              <xs:element name="MANTENIMIENTO" msprop:Generator_ColumnVarNameInTable="columnMANTENIMIENTO" msprop:Generator_ColumnPropNameInRow="MANTENIMIENTO" msprop:Generator_ColumnPropNameInTable="MANTENIMIENTOColumn" msprop:Generator_UserColumnName="MANTENIMIENTO" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_DE_TRABAJO" msprop:Generator_ColumnVarNameInTable="columnFALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInRow="FALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInTable="FALTA_DE_TRABAJOColumn" msprop:Generator_UserColumnName="FALTA_DE_TRABAJO" type="xs:int" minOccurs="0" />
+              <xs:element name="LIMPIEZA" msprop:Generator_ColumnVarNameInTable="columnLIMPIEZA" msprop:Generator_ColumnPropNameInRow="LIMPIEZA" msprop:Generator_ColumnPropNameInTable="LIMPIEZAColumn" msprop:Generator_UserColumnName="LIMPIEZA" type="xs:int" minOccurs="0" />
+              <xs:element name="SET_UP" msprop:Generator_ColumnVarNameInTable="columnSET_UP" msprop:Generator_ColumnPropNameInRow="SET_UP" msprop:Generator_ColumnPropNameInTable="SET_UPColumn" msprop:Generator_UserColumnName="SET_UP" type="xs:int" minOccurs="0" />
+              <xs:element name="AJUSTES" msprop:Generator_ColumnVarNameInTable="columnAJUSTES" msprop:Generator_ColumnPropNameInRow="AJUSTES" msprop:Generator_ColumnPropNameInTable="AJUSTESColumn" msprop:Generator_UserColumnName="AJUSTES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_MATERIAL" msprop:Generator_ColumnVarNameInTable="columnFALTA_MATERIAL" msprop:Generator_ColumnPropNameInRow="FALTA_MATERIAL" msprop:Generator_ColumnPropNameInTable="FALTA_MATERIALColumn" msprop:Generator_UserColumnName="FALTA_MATERIAL" type="xs:int" minOccurs="0" />
+              <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_ENERGIA" msprop:Generator_ColumnVarNameInTable="columnFALTA_ENERGIA" msprop:Generator_ColumnPropNameInRow="FALTA_ENERGIA" msprop:Generator_ColumnPropNameInTable="FALTA_ENERGIAColumn" msprop:Generator_UserColumnName="FALTA_ENERGIA" type="xs:int" minOccurs="0" />
+              <xs:element name="CALIDAD" msprop:Generator_ColumnVarNameInTable="columnCALIDAD" msprop:Generator_ColumnPropNameInRow="CALIDAD" msprop:Generator_ColumnPropNameInTable="CALIDADColumn" msprop:Generator_UserColumnName="CALIDAD" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCARGA" msprop:Generator_ColumnVarNameInTable="columnDESCARGA" msprop:Generator_ColumnPropNameInRow="DESCARGA" msprop:Generator_ColumnPropNameInTable="DESCARGAColumn" msprop:Generator_UserColumnName="DESCARGA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_OF" msprop:Generator_ColumnVarNameInTable="columnFALTA_OF" msprop:Generator_ColumnPropNameInRow="FALTA_OF" msprop:Generator_ColumnPropNameInTable="FALTA_OFColumn" msprop:Generator_UserColumnName="FALTA_OF" type="xs:int" minOccurs="0" />
+              <xs:element name="GASES" msprop:Generator_ColumnVarNameInTable="columnGASES" msprop:Generator_ColumnPropNameInRow="GASES" msprop:Generator_ColumnPropNameInTable="GASESColumn" msprop:Generator_UserColumnName="GASES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALLA_MAQUINA" msprop:Generator_ColumnVarNameInTable="columnFALLA_MAQUINA" msprop:Generator_ColumnPropNameInRow="FALLA_MAQUINA" msprop:Generator_ColumnPropNameInTable="FALLA_MAQUINAColumn" msprop:Generator_UserColumnName="FALLA_MAQUINA" type="xs:int" minOccurs="0" />
+              <xs:element name="JUNTA_PERSONAL" msprop:Generator_ColumnVarNameInTable="columnJUNTA_PERSONAL" msprop:Generator_ColumnPropNameInRow="JUNTA_PERSONAL" msprop:Generator_ColumnPropNameInTable="JUNTA_PERSONALColumn" msprop:Generator_UserColumnName="JUNTA_PERSONAL" type="xs:int" minOccurs="0" />
+              <xs:element name="OTRA" msprop:Generator_ColumnVarNameInTable="columnOTRA" msprop:Generator_ColumnPropNameInRow="OTRA" msprop:Generator_ColumnPropNameInTable="OTRAColumn" msprop:Generator_UserColumnName="OTRA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DURACION_OTRA" msprop:Generator_ColumnVarNameInTable="columnDURACION_OTRA" msprop:Generator_ColumnPropNameInRow="DURACION_OTRA" msprop:Generator_ColumnPropNameInTable="DURACION_OTRAColumn" msprop:Generator_UserColumnName="DURACION_OTRA" type="xs:int" minOccurs="0" />
+              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YEARS" msprop:Generator_ColumnVarNameInTable="columnYEARS" msprop:Generator_ColumnPropNameInRow="YEARS" msprop:Generator_ColumnPropNameInTable="YEARSColumn" msprop:Generator_UserColumnName="YEARS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GrafPunzonado" msprop:Generator_TableClassName="GrafPunzonadoDataTable" msprop:Generator_TableVarName="tableGrafPunzonado" msprop:Generator_TablePropName="GrafPunzonado" msprop:Generator_RowDeletingName="GrafPunzonadoRowDeleting" msprop:Generator_RowChangingName="GrafPunzonadoRowChanging" msprop:Generator_RowEvHandlerName="GrafPunzonadoRowChangeEventHandler" msprop:Generator_RowDeletedName="GrafPunzonadoRowDeleted" msprop:Generator_UserTableName="GrafPunzonado" msprop:Generator_RowChangedName="GrafPunzonadoRowChanged" msprop:Generator_RowEvArgName="GrafPunzonadoRowChangeEvent" msprop:Generator_RowClassName="GrafPunzonadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OF" msprop:Generator_ColumnVarNameInTable="columnOF" msprop:Generator_ColumnPropNameInRow="_OF" msprop:Generator_ColumnPropNameInTable="OFColumn" msprop:Generator_UserColumnName="OF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAQUINA" msprop:Generator_ColumnVarNameInTable="columnMAQUINA" msprop:Generator_ColumnPropNameInRow="MAQUINA" msprop:Generator_ColumnPropNameInTable="MAQUINAColumn" msprop:Generator_UserColumnName="MAQUINA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" msprop:Generator_UserColumnName="CLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" msprop:Generator_UserColumnName="AREA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HP" msprop:Generator_ColumnVarNameInTable="columnHP" msprop:Generator_ColumnPropNameInRow="HP" msprop:Generator_ColumnPropNameInTable="HPColumn" msprop:Generator_UserColumnName="HP" type="xs:int" minOccurs="0" />
+              <xs:element name="HR" msprop:Generator_ColumnVarNameInTable="columnHR" msprop:Generator_ColumnPropNameInRow="HR" msprop:Generator_ColumnPropNameInTable="HRColumn" msprop:Generator_UserColumnName="HR" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROG" msprop:Generator_ColumnVarNameInTable="columnPZA_PROG" msprop:Generator_ColumnPropNameInRow="PZA_PROG" msprop:Generator_ColumnPropNameInTable="PZA_PROGColumn" msprop:Generator_UserColumnName="PZA_PROG" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_PROD" msprop:Generator_ColumnVarNameInTable="columnPZA_PROD" msprop:Generator_ColumnPropNameInRow="PZA_PROD" msprop:Generator_ColumnPropNameInTable="PZA_PRODColumn" msprop:Generator_UserColumnName="PZA_PROD" type="xs:int" minOccurs="0" />
+              <xs:element name="PZA_RECHAZADAS" msprop:Generator_ColumnVarNameInTable="columnPZA_RECHAZADAS" msprop:Generator_ColumnPropNameInRow="PZA_RECHAZADAS" msprop:Generator_ColumnPropNameInTable="PZA_RECHAZADASColumn" msprop:Generator_UserColumnName="PZA_RECHAZADAS" type="xs:int" minOccurs="0" />
+              <xs:element name="SCRAP" msprop:Generator_ColumnVarNameInTable="columnSCRAP" msprop:Generator_ColumnPropNameInRow="SCRAP" msprop:Generator_ColumnPropNameInTable="SCRAPColumn" msprop:Generator_UserColumnName="SCRAP" type="xs:int" minOccurs="0" />
+              <xs:element name="SEMANA" msprop:Generator_ColumnVarNameInTable="columnSEMANA" msprop:Generator_ColumnPropNameInRow="SEMANA" msprop:Generator_ColumnPropNameInTable="SEMANAColumn" msprop:Generator_UserColumnName="SEMANA" type="xs:int" minOccurs="0" />
+              <xs:element name="MANTENIMIENTO" msprop:Generator_ColumnVarNameInTable="columnMANTENIMIENTO" msprop:Generator_ColumnPropNameInRow="MANTENIMIENTO" msprop:Generator_ColumnPropNameInTable="MANTENIMIENTOColumn" msprop:Generator_UserColumnName="MANTENIMIENTO" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_DE_TRABAJO" msprop:Generator_ColumnVarNameInTable="columnFALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInRow="FALTA_DE_TRABAJO" msprop:Generator_ColumnPropNameInTable="FALTA_DE_TRABAJOColumn" msprop:Generator_UserColumnName="FALTA_DE_TRABAJO" type="xs:int" minOccurs="0" />
+              <xs:element name="LIMPIEZA" msprop:Generator_ColumnVarNameInTable="columnLIMPIEZA" msprop:Generator_ColumnPropNameInRow="LIMPIEZA" msprop:Generator_ColumnPropNameInTable="LIMPIEZAColumn" msprop:Generator_UserColumnName="LIMPIEZA" type="xs:int" minOccurs="0" />
+              <xs:element name="SET_UP" msprop:Generator_ColumnVarNameInTable="columnSET_UP" msprop:Generator_ColumnPropNameInRow="SET_UP" msprop:Generator_ColumnPropNameInTable="SET_UPColumn" msprop:Generator_UserColumnName="SET_UP" type="xs:int" minOccurs="0" />
+              <xs:element name="AJUSTES" msprop:Generator_ColumnVarNameInTable="columnAJUSTES" msprop:Generator_ColumnPropNameInRow="AJUSTES" msprop:Generator_ColumnPropNameInTable="AJUSTESColumn" msprop:Generator_UserColumnName="AJUSTES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_MATERIAL" msprop:Generator_ColumnVarNameInTable="columnFALTA_MATERIAL" msprop:Generator_ColumnPropNameInRow="FALTA_MATERIAL" msprop:Generator_ColumnPropNameInTable="FALTA_MATERIALColumn" msprop:Generator_UserColumnName="FALTA_MATERIAL" type="xs:int" minOccurs="0" />
+              <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_ENERGIA" msprop:Generator_ColumnVarNameInTable="columnFALTA_ENERGIA" msprop:Generator_ColumnPropNameInRow="FALTA_ENERGIA" msprop:Generator_ColumnPropNameInTable="FALTA_ENERGIAColumn" msprop:Generator_UserColumnName="FALTA_ENERGIA" type="xs:int" minOccurs="0" />
+              <xs:element name="CALIDAD" msprop:Generator_ColumnVarNameInTable="columnCALIDAD" msprop:Generator_ColumnPropNameInRow="CALIDAD" msprop:Generator_ColumnPropNameInTable="CALIDADColumn" msprop:Generator_UserColumnName="CALIDAD" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCARGA" msprop:Generator_ColumnVarNameInTable="columnDESCARGA" msprop:Generator_ColumnPropNameInRow="DESCARGA" msprop:Generator_ColumnPropNameInTable="DESCARGAColumn" msprop:Generator_UserColumnName="DESCARGA" type="xs:int" minOccurs="0" />
+              <xs:element name="FALTA_OF" msprop:Generator_ColumnVarNameInTable="columnFALTA_OF" msprop:Generator_ColumnPropNameInRow="FALTA_OF" msprop:Generator_ColumnPropNameInTable="FALTA_OFColumn" msprop:Generator_UserColumnName="FALTA_OF" type="xs:int" minOccurs="0" />
+              <xs:element name="GASES" msprop:Generator_ColumnVarNameInTable="columnGASES" msprop:Generator_ColumnPropNameInRow="GASES" msprop:Generator_ColumnPropNameInTable="GASESColumn" msprop:Generator_UserColumnName="GASES" type="xs:int" minOccurs="0" />
+              <xs:element name="FALLA_MAQUINA" msprop:Generator_ColumnVarNameInTable="columnFALLA_MAQUINA" msprop:Generator_ColumnPropNameInRow="FALLA_MAQUINA" msprop:Generator_ColumnPropNameInTable="FALLA_MAQUINAColumn" msprop:Generator_UserColumnName="FALLA_MAQUINA" type="xs:int" minOccurs="0" />
+              <xs:element name="JUNTA_PERSONAL" msprop:Generator_ColumnVarNameInTable="columnJUNTA_PERSONAL" msprop:Generator_ColumnPropNameInRow="JUNTA_PERSONAL" msprop:Generator_ColumnPropNameInTable="JUNTA_PERSONALColumn" msprop:Generator_UserColumnName="JUNTA_PERSONAL" type="xs:int" minOccurs="0" />
+              <xs:element name="OTRA" msprop:Generator_ColumnVarNameInTable="columnOTRA" msprop:Generator_ColumnPropNameInRow="OTRA" msprop:Generator_ColumnPropNameInTable="OTRAColumn" msprop:Generator_UserColumnName="OTRA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DURACION_OTRA" msprop:Generator_ColumnVarNameInTable="columnDURACION_OTRA" msprop:Generator_ColumnPropNameInRow="DURACION_OTRA" msprop:Generator_ColumnPropNameInTable="DURACION_OTRAColumn" msprop:Generator_UserColumnName="DURACION_OTRA" type="xs:int" minOccurs="0" />
+              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YEARS" msprop:Generator_ColumnVarNameInTable="columnYEARS" msprop:Generator_ColumnPropNameInRow="YEARS" msprop:Generator_ColumnPropNameInTable="YEARSColumn" msprop:Generator_UserColumnName="YEARS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

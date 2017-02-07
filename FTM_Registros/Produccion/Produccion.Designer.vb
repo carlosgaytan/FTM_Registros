@@ -27,11 +27,25 @@ Partial Class Produccion
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource5 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource6 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource7 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource8 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource9 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Produccion))
         Me.LaserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReporteLaser = New FTM_Registros.ReporteLaser()
+        Me.MaquinadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReporteMaquinados = New FTM_Registros.ReporteMaquinados()
+        Me.Registros_PunzonadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReportePunzonado = New FTM_Registros.ReportePunzonado()
         Me.DoblezBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReporteDoblez = New FTM_Registros.ReporteDoblez()
+        Me.GrafLaserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Prueba = New FTM_Registros.Prueba()
+        Me.GrafDoblezBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GrafMaquinadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GrafPunzonadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProduccionBD = New FTM_Registros.ProduccionBD()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -54,16 +68,28 @@ Partial Class Produccion
         Me.RegistrosTableAdapter1 = New FTM_Registros.BuscarAñosTableAdapters.RegistrosTableAdapter()
         Me.LaserTableAdapter = New FTM_Registros.ReporteLaserTableAdapters.LaserTableAdapter()
         Me.DoblezTableAdapter = New FTM_Registros.ReporteDoblezTableAdapters.DoblezTableAdapter()
-        Me.ReporteMaquinados = New FTM_Registros.ReporteMaquinados()
-        Me.MaquinadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MaquinadosTableAdapter = New FTM_Registros.ReporteMaquinadosTableAdapters.MaquinadosTableAdapter()
-        Me.ReportePunzonado = New FTM_Registros.ReportePunzonado()
-        Me.Registros_PunzonadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Registros_PunzonadoTableAdapter = New FTM_Registros.ReportePunzonadoTableAdapters.Registros_PunzonadoTableAdapter()
+        Me.GrafLaserTableAdapter = New FTM_Registros.PruebaTableAdapters.GrafLaserTableAdapter()
+        Me.GrafDoblezTableAdapter = New FTM_Registros.PruebaTableAdapters.GrafDoblezTableAdapter()
+        Me.GrafMaquinadosTableAdapter = New FTM_Registros.PruebaTableAdapters.GrafMaquinadosTableAdapter()
+        Me.GrafPunzonadoTableAdapter = New FTM_Registros.PruebaTableAdapters.GrafPunzonadoTableAdapter()
+        Me.Areas = New FTM_Registros.Areas()
+        Me.AreasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AreasTableAdapter = New FTM_Registros.AreasTableAdapters.AreasTableAdapter()
         CType(Me.LaserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteLaser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteMaquinados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Registros_PunzonadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReportePunzonado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DoblezBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteDoblez, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrafLaserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Prueba, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrafDoblezBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrafMaquinadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrafPunzonadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -73,10 +99,8 @@ Partial Class Produccion
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReporteMaquinados, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReportePunzonado, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Registros_PunzonadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Areas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AreasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LaserBindingSource
@@ -89,6 +113,26 @@ Partial Class Produccion
         Me.ReporteLaser.DataSetName = "ReporteLaser"
         Me.ReporteLaser.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'MaquinadosBindingSource
+        '
+        Me.MaquinadosBindingSource.DataMember = "Maquinados"
+        Me.MaquinadosBindingSource.DataSource = Me.ReporteMaquinados
+        '
+        'ReporteMaquinados
+        '
+        Me.ReporteMaquinados.DataSetName = "ReporteMaquinados"
+        Me.ReporteMaquinados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Registros_PunzonadoBindingSource
+        '
+        Me.Registros_PunzonadoBindingSource.DataMember = "Registros_Punzonado"
+        Me.Registros_PunzonadoBindingSource.DataSource = Me.ReportePunzonado
+        '
+        'ReportePunzonado
+        '
+        Me.ReportePunzonado.DataSetName = "ReportePunzonado"
+        Me.ReportePunzonado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'DoblezBindingSource
         '
         Me.DoblezBindingSource.DataMember = "Doblez"
@@ -98,6 +142,31 @@ Partial Class Produccion
         '
         Me.ReporteDoblez.DataSetName = "ReporteDoblez"
         Me.ReporteDoblez.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GrafLaserBindingSource
+        '
+        Me.GrafLaserBindingSource.DataMember = "GrafLaser"
+        Me.GrafLaserBindingSource.DataSource = Me.Prueba
+        '
+        'Prueba
+        '
+        Me.Prueba.DataSetName = "Prueba"
+        Me.Prueba.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GrafDoblezBindingSource
+        '
+        Me.GrafDoblezBindingSource.DataMember = "GrafDoblez"
+        Me.GrafDoblezBindingSource.DataSource = Me.Prueba
+        '
+        'GrafMaquinadosBindingSource
+        '
+        Me.GrafMaquinadosBindingSource.DataMember = "GrafMaquinados"
+        Me.GrafMaquinadosBindingSource.DataSource = Me.Prueba
+        '
+        'GrafPunzonadoBindingSource
+        '
+        Me.GrafPunzonadoBindingSource.DataMember = "GrafPunzonado"
+        Me.GrafPunzonadoBindingSource.DataSource = Me.Prueba
         '
         'RegistrosBindingSource
         '
@@ -230,10 +299,25 @@ Partial Class Produccion
         ReportDataSource3.Value = Me.Registros_PunzonadoBindingSource
         ReportDataSource4.Name = "Doblez"
         ReportDataSource4.Value = Me.DoblezBindingSource
+        ReportDataSource5.Name = "G_Laser"
+        ReportDataSource5.Value = Me.GrafLaserBindingSource
+        ReportDataSource6.Name = "G_Doblez"
+        ReportDataSource6.Value = Me.GrafDoblezBindingSource
+        ReportDataSource7.Name = "G_Maquinados"
+        ReportDataSource7.Value = Me.GrafMaquinadosBindingSource
+        ReportDataSource8.Name = "G_Punzonado"
+        ReportDataSource8.Value = Me.GrafPunzonadoBindingSource
+        ReportDataSource9.Name = "Area"
+        ReportDataSource9.Value = Me.AreasBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource5)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource6)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource7)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource8)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource9)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Mensual.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(3, 46)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -280,33 +364,43 @@ Partial Class Produccion
         '
         Me.DoblezTableAdapter.ClearBeforeFill = True
         '
-        'ReporteMaquinados
-        '
-        Me.ReporteMaquinados.DataSetName = "ReporteMaquinados"
-        Me.ReporteMaquinados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MaquinadosBindingSource
-        '
-        Me.MaquinadosBindingSource.DataMember = "Maquinados"
-        Me.MaquinadosBindingSource.DataSource = Me.ReporteMaquinados
-        '
         'MaquinadosTableAdapter
         '
         Me.MaquinadosTableAdapter.ClearBeforeFill = True
         '
-        'ReportePunzonado
-        '
-        Me.ReportePunzonado.DataSetName = "ReportePunzonado"
-        Me.ReportePunzonado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Registros_PunzonadoBindingSource
-        '
-        Me.Registros_PunzonadoBindingSource.DataMember = "Registros_Punzonado"
-        Me.Registros_PunzonadoBindingSource.DataSource = Me.ReportePunzonado
-        '
         'Registros_PunzonadoTableAdapter
         '
         Me.Registros_PunzonadoTableAdapter.ClearBeforeFill = True
+        '
+        'GrafLaserTableAdapter
+        '
+        Me.GrafLaserTableAdapter.ClearBeforeFill = True
+        '
+        'GrafDoblezTableAdapter
+        '
+        Me.GrafDoblezTableAdapter.ClearBeforeFill = True
+        '
+        'GrafMaquinadosTableAdapter
+        '
+        Me.GrafMaquinadosTableAdapter.ClearBeforeFill = True
+        '
+        'GrafPunzonadoTableAdapter
+        '
+        Me.GrafPunzonadoTableAdapter.ClearBeforeFill = True
+        '
+        'Areas
+        '
+        Me.Areas.DataSetName = "Areas"
+        Me.Areas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AreasBindingSource
+        '
+        Me.AreasBindingSource.DataMember = "Areas"
+        Me.AreasBindingSource.DataSource = Me.Areas
+        '
+        'AreasTableAdapter
+        '
+        Me.AreasTableAdapter.ClearBeforeFill = True
         '
         'Produccion
         '
@@ -323,8 +417,17 @@ Partial Class Produccion
         Me.Text = "Producción"
         CType(Me.LaserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReporteLaser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteMaquinados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Registros_PunzonadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReportePunzonado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DoblezBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReporteDoblez, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrafLaserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Prueba, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrafDoblezBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrafMaquinadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrafPunzonadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -335,10 +438,8 @@ Partial Class Produccion
         Me.TabPage1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReporteMaquinados, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReportePunzonado, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Registros_PunzonadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Areas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AreasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -375,6 +476,18 @@ Partial Class Produccion
     Friend WithEvents ReportePunzonado As ReportePunzonado
     Friend WithEvents MaquinadosTableAdapter As ReporteMaquinadosTableAdapters.MaquinadosTableAdapter
     Friend WithEvents Registros_PunzonadoTableAdapter As ReportePunzonadoTableAdapters.Registros_PunzonadoTableAdapter
+    Friend WithEvents GrafLaserBindingSource As BindingSource
+    Friend WithEvents Prueba As Prueba
+    Friend WithEvents GrafDoblezBindingSource As BindingSource
+    Friend WithEvents GrafMaquinadosBindingSource As BindingSource
+    Friend WithEvents GrafPunzonadoBindingSource As BindingSource
+    Friend WithEvents GrafLaserTableAdapter As PruebaTableAdapters.GrafLaserTableAdapter
+    Friend WithEvents GrafDoblezTableAdapter As PruebaTableAdapters.GrafDoblezTableAdapter
+    Friend WithEvents GrafMaquinadosTableAdapter As PruebaTableAdapters.GrafMaquinadosTableAdapter
+    Friend WithEvents GrafPunzonadoTableAdapter As PruebaTableAdapters.GrafPunzonadoTableAdapter
+    Friend WithEvents AreasBindingSource As BindingSource
+    Friend WithEvents Areas As Areas
+    Friend WithEvents AreasTableAdapter As AreasTableAdapters.AreasTableAdapter
     'Friend WithEvents ReporteLaserBindingSource As BindingSource
     'Friend WithEvents Registros_DoblezBindingSource As BindingSource
     'Friend WithEvents ReporteLaser As FTM_Registros.ReporteLaser

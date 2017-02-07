@@ -249,10 +249,35 @@
     <Compile Include="Ingeniería\Ingenieria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Produccion\Areas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Areas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Produccion\BuscarAños.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BuscarAños.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\MaquinasBD\MaqDoblez.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaqDoblez.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\MaquinasBD\MaqLaser.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaqLaser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\MaquinasBD\MaqMaquin.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaqMaquin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\MaquinasBD\MaqPunz.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaqPunz.xsd</DependentUpon>
     </Compile>
     <Compile Include="Produccion\Produccion.Designer.vb">
       <DependentUpon>Produccion.vb</DependentUpon>
@@ -264,6 +289,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\Prueba.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prueba.xsd</DependentUpon>
     </Compile>
     <Compile Include="Produccion\RegIndicadadores.Designer.vb">
       <DependentUpon>RegIndicadadores.vb</DependentUpon>
@@ -575,7 +605,24 @@
     <None Include="Ingeniería\DescarcarNumCor.xss">
       <DependentUpon>DescarcarNumCor.xsd</DependentUpon>
     </None>
+    <None Include="My Project\DataSources\FTM_Registros.ReporteDoblezTableAdapters.DoblezTableAdapter.datasource" />
+    <None Include="My Project\DataSources\FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\FTM_Registros.ReporteDoblezTableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\FTM_Registros.ReporteLaserTableAdapters.LaserTableAdapter.datasource" />
+    <None Include="My Project\DataSources\FTM_Registros.ReporteLaserTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\FTM_Registros.ReporteLaserTableAdapters.TableAdapterManager.datasource" />
     <None Include="packages.config" />
+    <None Include="Produccion\Areas.xsc">
+      <DependentUpon>Areas.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\Areas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Areas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\Areas.xss">
+      <DependentUpon>Areas.xsd</DependentUpon>
+    </None>
     <None Include="Produccion\BuscarAños.xsc">
       <DependentUpon>BuscarAños.xsd</DependentUpon>
     </None>
@@ -587,6 +634,50 @@
     <None Include="Produccion\BuscarAños.xss">
       <DependentUpon>BuscarAños.xsd</DependentUpon>
     </None>
+    <None Include="Produccion\MaquinasBD\MaqDoblez.xsc">
+      <DependentUpon>MaqDoblez.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqDoblez.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaqDoblez.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqDoblez.xss">
+      <DependentUpon>MaqDoblez.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqLaser.xsc">
+      <DependentUpon>MaqLaser.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqLaser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaqLaser.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqLaser.xss">
+      <DependentUpon>MaqLaser.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqMaquin.xsc">
+      <DependentUpon>MaqMaquin.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqMaquin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaqMaquin.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqMaquin.xss">
+      <DependentUpon>MaqMaquin.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqPunz.xsc">
+      <DependentUpon>MaqPunz.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqPunz.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaqPunz.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\MaquinasBD\MaqPunz.xss">
+      <DependentUpon>MaqPunz.xsd</DependentUpon>
+    </None>
     <None Include="Produccion\ProduccionBD.xsc">
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
     </None>
@@ -597,6 +688,17 @@
     </None>
     <None Include="Produccion\ProduccionBD.xss">
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\Prueba.xsc">
+      <DependentUpon>Prueba.xsd</DependentUpon>
+    </None>
+    <None Include="Produccion\Prueba.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Prueba.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Produccion\Prueba.xss">
+      <DependentUpon>Prueba.xsd</DependentUpon>
     </None>
     <None Include="Produccion\ReporteDoblez.xsc">
       <DependentUpon>ReporteDoblez.xsd</DependentUpon>

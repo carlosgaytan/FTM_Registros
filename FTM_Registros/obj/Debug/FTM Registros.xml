@@ -1977,6 +1977,91 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:FTM_Registros.Areas">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.Areas.AreasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Areas.DataTable1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Areas.AreasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Areas.DataTable1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Areas.AreasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.Areas.DataTable1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.AreasTableAdapters.AreasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AreasTableAdapters.DataTable1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.AreasTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.AreasTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.Areas,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AreasTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.Areas,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AreasTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.Areas,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.AreasTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.AreasTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.Areas)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.AreasTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.AreasTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:FTM_Registros.BuscarAños">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -2163,6 +2248,131 @@ Update Order Option
 </summary>
 </member>
 <member name="T:FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafLaserDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafDoblezDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafMaquinadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafPunzonadoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafLaserRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafDoblezRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafMaquinadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafPunzonadoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafLaserRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafDoblezRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafMaquinadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.Prueba.GrafPunzonadoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.GrafLaserTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.GrafDoblezTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.GrafMaquinadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.GrafPunzonadoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros.PruebaTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros.Prueba,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.PruebaTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros.Prueba,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros.PruebaTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros.Prueba,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros.PruebaTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros.PruebaTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros.Prueba)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros.PruebaTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>
