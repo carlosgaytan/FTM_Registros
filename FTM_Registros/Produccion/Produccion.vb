@@ -10,18 +10,8 @@
         Me.Registros_PunzonadoTableAdapter.VerPunzo(Me.ReportePunzonado.Registros_Punzonado)
         'TODO: esta línea de código carga datos en la tabla 'ReporteDoblez.Doblez' Puede moverla o quitarla según sea necesario.
         Me.DoblezTableAdapter.VerDoblez(Me.ReporteDoblez.Doblez)
-        'TODO: esta línea de código carga datos en la tabla 'Prueba.GrafLaser' Puede moverla o quitarla según sea necesario.
-        Me.GrafLaserTableAdapter.L_Graf(Me.Prueba.GrafLaser)
-        'TODO: esta línea de código carga datos en la tabla 'Prueba.GrafDoblez' Puede moverla o quitarla según sea necesario.
-        Me.GrafDoblezTableAdapter.D_Graf(Me.Prueba.GrafDoblez)
-        'TODO: esta línea de código carga datos en la tabla 'Prueba.GrafMaquinados' Puede moverla o quitarla según sea necesario.
-        Me.GrafMaquinadosTableAdapter.M_Graf(Me.Prueba.GrafMaquinados)
-        'TODO: esta línea de código carga datos en la tabla 'Prueba.GrafPunzonado' Puede moverla o quitarla según sea necesario.
-        Me.GrafPunzonadoTableAdapter.P_Graf(Me.Prueba.GrafPunzonado)
         'TODO: esta línea de código carga datos en la tabla 'BuscarAños.Registros' Puede moverla o quitarla según sea necesario.
         Me.RegistrosTableAdapter1.YEARS(Me.BuscarAños.Registros)
-        'TODO: esta línea de código carga datos en la tabla 'ProduccionBD.Registros' Puede moverla o quitarla según sea necesario.
-        'Me.RegistrosTableAdapter.Fill(Me.ProduccionBD.Registros)
 
         MesCBX.Text = MonthName(DateAndTime.Now.Month)
         YearCBX.Text = DateAndTime.Now.Year
@@ -31,6 +21,9 @@
     End Sub
 
     Private Sub invmpBTN_Click(sender As Object, e As EventArgs) Handles invmpBTN.Click
+
+        Me.Días_MESTableAdapter.RegHR(Me.ProduccionBD.Días_MES)
+        Me.Días_MESTableAdapter.MesRegistro(Me.ProduccionBD.Días_MES, DateAndTime.Now.Year, MonthName(DateAndTime.Now.Month))
         RegIndicadadores.Show()
     End Sub
 
@@ -48,8 +41,23 @@
         Me.Registros_PunzonadoTableAdapter.VerPunzo(Me.ReportePunzonado.Registros_Punzonado)
         Me.Registros_PunzonadoTableAdapter.MostrarPunzo(Me.ReportePunzonado.Registros_Punzonado, MesCBX.Text, YearCBX.Text)
 
+        Me.TRUMPFTableAdapter.BuscaTRUMPF(Me.MaqLaser.TRUMPF, MesCBX.Text, YearCBX.Text)
+        Me.AMADATableAdapter.BuscaAMADA(Me.MaqLaser.AMADA, MesCBX.Text, YearCBX.Text)
+        Me.MITSUTableAdapter.BuscaMitsu(Me.MaqLaser.MITSU, MesCBX.Text, YearCBX.Text)
+        Me.AMADA_DOBLEZTableAdapter.BuscaAmaDob(Me.MaqDoblez.AMADA_DOBLEZ, MesCBX.Text, YearCBX.Text)
+        Me.TRUBENDTableAdapter.BuscaTRUBEND(Me.MaqDoblez.TRUBEND, MesCBX.Text, YearCBX.Text)
+        Me.TOYOKOKITableAdapter.BuscaTOYO(Me.MaqDoblez.TOYOKOKI, MesCBX.Text, YearCBX.Text)
+        Me.VM3TableAdapter.BuscaVM3(Me.MaqMaquin.VM3, MesCBX.Text, YearCBX.Text)
+        Me.ST30TableAdapter.BuscaST30(Me.MaqMaquin.ST30, MesCBX.Text, YearCBX.Text)
+        Me.ST10TableAdapter.BuscaST10(Me.MaqMaquin.ST10, MesCBX.Text, YearCBX.Text)
+        Me.WJTableAdapter.BuscaWJ(Me.MaqMaquin.WJ, MesCBX.Text, YearCBX.Text)
+        Me.PUNZONADOTableAdapter.BuscaPunz(Me.MaqPunz.PUNZONADO, MesCBX.Text, YearCBX.Text)
+
         Me.ReportViewer1.RefreshReport()
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Registro_MESvb.Show()
+    End Sub
 End Class

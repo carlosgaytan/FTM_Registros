@@ -269,6 +269,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaqLaser.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Produccion\MaquinasBD\MaqLaser.vb">
+      <DependentUpon>MaqLaser.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Produccion\MaquinasBD\MaqMaquin.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -299,6 +302,12 @@
       <DependentUpon>RegIndicadadores.vb</DependentUpon>
     </Compile>
     <Compile Include="Produccion\RegIndicadadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\Registro_MESvb.Designer.vb">
+      <DependentUpon>Registro_MESvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\Registro_MESvb.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Produccion\ReporteDoblez.Designer.vb">
@@ -507,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Produccion\RegIndicadadores.resx">
       <DependentUpon>RegIndicadadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\Registro_MESvb.resx">
+      <DependentUpon>Registro_MESvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produccion\R_Mensual.rdlc" />
     <EmbeddedResource Include="Produccion\R_Mensual1.rdlc" />
