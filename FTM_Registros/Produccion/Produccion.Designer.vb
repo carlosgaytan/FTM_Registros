@@ -90,7 +90,7 @@ Partial Class Produccion
         Me.RegistrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProduccionBD = New FTM_Registros.ProduccionBD()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.MesTST = New System.Windows.Forms.ListBox()
         Me.DíasMESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MesBTN = New System.Windows.Forms.Button()
@@ -138,6 +138,7 @@ Partial Class Produccion
         Me.Costos_WJTableAdapter = New FTM_Registros.MaqMaquinTableAdapters.Costos_WJTableAdapter()
         Me.Costos_PUNZTableAdapter = New FTM_Registros.MaqPunzTableAdapters.Costos_PUNZTableAdapter()
         Me.Días_MESTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.Días_MESTableAdapter()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         CType(Me.LaserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReporteLaser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaquinadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -378,27 +379,25 @@ Partial Class Produccion
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.ListBox1)
+        Me.Panel1.Controls.Add(Me.MesTST)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.MesBTN)
-        Me.Panel1.Controls.Add(Me.YearCBX)
-        Me.Panel1.Controls.Add(Me.MesCBX)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.invmpBTN)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(177, 633)
+        Me.Panel1.Size = New System.Drawing.Size(177, 822)
         Me.Panel1.TabIndex = 0
         '
-        'ListBox1
+        'MesTST
         '
-        Me.ListBox1.DataSource = Me.DíasMESBindingSource
-        Me.ListBox1.DisplayMember = "Mes"
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(29, 418)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 95)
-        Me.ListBox1.TabIndex = 27
+        Me.MesTST.DataSource = Me.DíasMESBindingSource
+        Me.MesTST.DisplayMember = "Mes"
+        Me.MesTST.FormattingEnabled = True
+        Me.MesTST.Location = New System.Drawing.Point(4, 600)
+        Me.MesTST.Name = "MesTST"
+        Me.MesTST.Size = New System.Drawing.Size(124, 30)
+        Me.MesTST.TabIndex = 27
+        Me.MesTST.Visible = False
         '
         'DíasMESBindingSource
         '
@@ -421,7 +420,7 @@ Partial Class Produccion
         '
         'MesBTN
         '
-        Me.MesBTN.Location = New System.Drawing.Point(53, 389)
+        Me.MesBTN.Location = New System.Drawing.Point(266, 3)
         Me.MesBTN.Name = "MesBTN"
         Me.MesBTN.Size = New System.Drawing.Size(75, 23)
         Me.MesBTN.TabIndex = 2
@@ -435,7 +434,7 @@ Partial Class Produccion
         Me.YearCBX.DataSource = Me.RegistrosBindingSource2
         Me.YearCBX.DisplayMember = "YEARS"
         Me.YearCBX.FormattingEnabled = True
-        Me.YearCBX.Location = New System.Drawing.Point(29, 335)
+        Me.YearCBX.Location = New System.Drawing.Point(6, 5)
         Me.YearCBX.Name = "YearCBX"
         Me.YearCBX.Size = New System.Drawing.Size(124, 21)
         Me.YearCBX.TabIndex = 3
@@ -456,7 +455,7 @@ Partial Class Produccion
         Me.MesCBX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.MesCBX.FormattingEnabled = True
         Me.MesCBX.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.MesCBX.Location = New System.Drawing.Point(29, 362)
+        Me.MesCBX.Location = New System.Drawing.Point(136, 5)
         Me.MesCBX.Name = "MesCBX"
         Me.MesCBX.Size = New System.Drawing.Size(124, 21)
         Me.MesCBX.TabIndex = 1
@@ -509,11 +508,15 @@ Partial Class Produccion
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
+        Me.TabPage1.Controls.Add(Me.MesCBX)
+        Me.TabPage1.Controls.Add(Me.YearCBX)
+        Me.TabPage1.Controls.Add(Me.MesBTN)
         Me.TabPage1.Controls.Add(Me.ReportViewer1)
+        Me.TabPage1.Controls.Add(Me.MenuStrip1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1170, 583)
+        Me.TabPage1.Size = New System.Drawing.Size(1170, 772)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Indicadores Mensuales"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -602,9 +605,9 @@ Partial Class Produccion
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource26)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource27)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "FTM_Registros.R_Mensual.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(3, 46)
+        Me.ReportViewer1.Location = New System.Drawing.Point(3, 30)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(1164, 534)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1164, 739)
         Me.ReportViewer1.TabIndex = 0
         '
         'TabControl1
@@ -614,7 +617,7 @@ Partial Class Produccion
         Me.TabControl1.Location = New System.Drawing.Point(186, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1178, 609)
+        Me.TabControl1.Size = New System.Drawing.Size(1178, 798)
         Me.TabControl1.TabIndex = 1
         '
         'RegistrosTableAdapter
@@ -752,16 +755,25 @@ Partial Class Produccion
         '
         Me.Días_MESTableAdapter.ClearBeforeFill = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Location = New System.Drawing.Point(3, 3)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1164, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
         'Produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1376, 633)
+        Me.ClientSize = New System.Drawing.Size(1376, 822)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Produccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producción"
@@ -810,6 +822,7 @@ Partial Class Produccion
         CType(Me.BuscarAños, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         CType(Me.RegistrosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -899,9 +912,10 @@ Partial Class Produccion
     Friend WithEvents Costos_ST10TableAdapter As FTM_Registros.MaqMaquinTableAdapters.Costos_ST10TableAdapter
     Friend WithEvents Costos_WJTableAdapter As FTM_Registros.MaqMaquinTableAdapters.Costos_WJTableAdapter
     Friend WithEvents Costos_PUNZTableAdapter As FTM_Registros.MaqPunzTableAdapters.Costos_PUNZTableAdapter
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents MesTST As ListBox
     Friend WithEvents DíasMESBindingSource As BindingSource
     Friend WithEvents Días_MESTableAdapter As ProduccionBDTableAdapters.Días_MESTableAdapter
+    Friend WithEvents MenuStrip1 As MenuStrip
     'Friend WithEvents ReporteLaserBindingSource As BindingSource
     'Friend WithEvents Registros_DoblezBindingSource As BindingSource
     'Friend WithEvents ReporteLaser As FTM_Registros.ReporteLaser

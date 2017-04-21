@@ -66,9 +66,39 @@ Partial Class Cotizaciones
         Dim Label23 As System.Windows.Forms.Label
         Dim Label27 As System.Windows.Forms.Label
         Dim Label8 As System.Windows.Forms.Label
+        Dim Label32 As System.Windows.Forms.Label
+        Dim Label34 As System.Windows.Forms.Label
+        Dim Label35 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cotizaciones))
+        Dim Label38 As System.Windows.Forms.Label
+        Dim Label39 As System.Windows.Forms.Label
         Me.Tabla = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.MaterialCBX = New System.Windows.Forms.ComboBox()
+        Me.MATERIALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.CONV = New System.Windows.Forms.TextBox()
+        Me.TT = New System.Windows.Forms.TextBox()
+        Me.SEGUNDOTXT = New System.Windows.Forms.TextBox()
+        Me.MINUTOTXT = New System.Windows.Forms.TextBox()
+        Me.HORATXT = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Porciento = New System.Windows.Forms.TextBox()
+        Me.CIENTXT = New System.Windows.Forms.TextBox()
+        Me.UtilidadTXT = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.PorcientoEMB = New System.Windows.Forms.TextBox()
         Me.EspRepTXT = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.CalibreCBX = New System.Windows.Forms.ComboBox()
@@ -131,6 +161,8 @@ Partial Class Cotizaciones
         Me._Cotizaciones_1_4DataSet = New FTM_Registros._Cotizaciones_1_4DataSet()
         Me.ClienteTextBox1 = New System.Windows.Forms.TextBox()
         Me.Clave_FTMComboBox = New System.Windows.Forms.ComboBox()
+        Me.CostosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AgregarClaveFTM = New FTM_Registros.AgregarClaveFTM()
         Me.P1TextBox = New System.Windows.Forms.TextBox()
         Me.P2TextBox = New System.Windows.Forms.TextBox()
         Me.X1TextBox = New System.Windows.Forms.TextBox()
@@ -155,7 +187,6 @@ Partial Class Cotizaciones
         Me.Nombre_quien_cotizaComboBox = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.CostosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
         Me.CotizacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CotizacionesTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.CotizacionesTableAdapter()
         Me.TableAdapterManager = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager()
@@ -177,9 +208,9 @@ Partial Class Cotizaciones
         Me.CostosTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.CostosTableAdapter()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.VentasTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter()
-        Me.AgregarClaveFTM = New FTM_Registros.AgregarClaveFTM()
-        Me.CostosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CostosTableAdapter1 = New FTM_Registros.AgregarClaveFTMTableAdapters.CostosTableAdapter()
+        Me.MATERIALESTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.MATERIALESTableAdapter()
+        Me.herramientaTXT = New System.Windows.Forms.TextBox()
         __de_orden_a_cotizarLabel1 = New System.Windows.Forms.Label()
         ClienteLabel1 = New System.Windows.Forms.Label()
         Clave_FTMLabel = New System.Windows.Forms.Label()
@@ -223,16 +254,23 @@ Partial Class Cotizaciones
         Label23 = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         Label8 = New System.Windows.Forms.Label()
+        Label32 = New System.Windows.Forms.Label()
+        Label34 = New System.Windows.Forms.Label()
+        Label35 = New System.Windows.Forms.Label()
+        Label38 = New System.Windows.Forms.Label()
+        Label39 = New System.Windows.Forms.Label()
         Me.Tabla.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.MATERIALESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Cotizaciones_1_4DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CostosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AgregarClaveFTM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CostosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CotizacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Costos_VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AgregarClaveFTM, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CostosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         '__de_orden_a_cotizarLabel1
@@ -337,7 +375,8 @@ Partial Class Cotizaciones
         'Precio_MP__MXN_pza_Label
         '
         Precio_MP__MXN_pza_Label.AutoSize = True
-        Precio_MP__MXN_pza_Label.Location = New System.Drawing.Point(583, 107)
+        Precio_MP__MXN_pza_Label.BackColor = System.Drawing.Color.WhiteSmoke
+        Precio_MP__MXN_pza_Label.Location = New System.Drawing.Point(655, 132)
         Precio_MP__MXN_pza_Label.Name = "Precio_MP__MXN_pza_Label"
         Precio_MP__MXN_pza_Label.Size = New System.Drawing.Size(114, 13)
         Precio_MP__MXN_pza_Label.TabIndex = 0
@@ -373,7 +412,8 @@ Partial Class Cotizaciones
         'Precio_doblez__MXN_Pza_Label
         '
         Precio_doblez__MXN_Pza_Label.AutoSize = True
-        Precio_doblez__MXN_Pza_Label.Location = New System.Drawing.Point(583, 133)
+        Precio_doblez__MXN_Pza_Label.BackColor = System.Drawing.Color.WhiteSmoke
+        Precio_doblez__MXN_Pza_Label.Location = New System.Drawing.Point(655, 158)
         Precio_doblez__MXN_Pza_Label.Name = "Precio_doblez__MXN_Pza_Label"
         Precio_doblez__MXN_Pza_Label.Size = New System.Drawing.Size(130, 13)
         Precio_doblez__MXN_Pza_Label.TabIndex = 0
@@ -391,7 +431,8 @@ Partial Class Cotizaciones
         'PinturaLabel
         '
         PinturaLabel.AutoSize = True
-        PinturaLabel.Location = New System.Drawing.Point(583, 214)
+        PinturaLabel.BackColor = System.Drawing.Color.WhiteSmoke
+        PinturaLabel.Location = New System.Drawing.Point(655, 239)
         PinturaLabel.Name = "PinturaLabel"
         PinturaLabel.Size = New System.Drawing.Size(43, 13)
         PinturaLabel.TabIndex = 0
@@ -400,7 +441,8 @@ Partial Class Cotizaciones
         'SoldaduraLabel
         '
         SoldaduraLabel.AutoSize = True
-        SoldaduraLabel.Location = New System.Drawing.Point(583, 159)
+        SoldaduraLabel.BackColor = System.Drawing.Color.WhiteSmoke
+        SoldaduraLabel.Location = New System.Drawing.Point(655, 184)
         SoldaduraLabel.Name = "SoldaduraLabel"
         SoldaduraLabel.Size = New System.Drawing.Size(58, 13)
         SoldaduraLabel.TabIndex = 0
@@ -409,7 +451,8 @@ Partial Class Cotizaciones
         'MaquinadoLabel
         '
         MaquinadoLabel.AutoSize = True
-        MaquinadoLabel.Location = New System.Drawing.Point(583, 186)
+        MaquinadoLabel.BackColor = System.Drawing.Color.WhiteSmoke
+        MaquinadoLabel.Location = New System.Drawing.Point(655, 211)
         MaquinadoLabel.Name = "MaquinadoLabel"
         MaquinadoLabel.Size = New System.Drawing.Size(63, 13)
         MaquinadoLabel.TabIndex = 0
@@ -427,7 +470,8 @@ Partial Class Cotizaciones
         'GalvanizadoLabel
         '
         GalvanizadoLabel.AutoSize = True
-        GalvanizadoLabel.Location = New System.Drawing.Point(583, 240)
+        GalvanizadoLabel.BackColor = System.Drawing.Color.WhiteSmoke
+        GalvanizadoLabel.Location = New System.Drawing.Point(655, 265)
         GalvanizadoLabel.Name = "GalvanizadoLabel"
         GalvanizadoLabel.Size = New System.Drawing.Size(69, 13)
         GalvanizadoLabel.TabIndex = 0
@@ -445,7 +489,8 @@ Partial Class Cotizaciones
         'TropicalizadoLabel
         '
         TropicalizadoLabel.AutoSize = True
-        TropicalizadoLabel.Location = New System.Drawing.Point(583, 266)
+        TropicalizadoLabel.BackColor = System.Drawing.Color.WhiteSmoke
+        TropicalizadoLabel.Location = New System.Drawing.Point(655, 291)
         TropicalizadoLabel.Name = "TropicalizadoLabel"
         TropicalizadoLabel.Size = New System.Drawing.Size(73, 13)
         TropicalizadoLabel.TabIndex = 0
@@ -472,7 +517,8 @@ Partial Class Cotizaciones
         'Precio_corte__MXN_Pza_Label
         '
         Precio_corte__MXN_Pza_Label.AutoSize = True
-        Precio_corte__MXN_Pza_Label.Location = New System.Drawing.Point(583, 292)
+        Precio_corte__MXN_Pza_Label.BackColor = System.Drawing.Color.WhiteSmoke
+        Precio_corte__MXN_Pza_Label.Location = New System.Drawing.Point(655, 317)
         Precio_corte__MXN_Pza_Label.Name = "Precio_corte__MXN_Pza_Label"
         Precio_corte__MXN_Pza_Label.Size = New System.Drawing.Size(123, 13)
         Precio_corte__MXN_Pza_Label.TabIndex = 0
@@ -499,7 +545,8 @@ Partial Class Cotizaciones
         'Precio_final__MXN_pza_Label
         '
         Precio_final__MXN_pza_Label.AutoSize = True
-        Precio_final__MXN_pza_Label.Location = New System.Drawing.Point(583, 318)
+        Precio_final__MXN_pza_Label.BackColor = System.Drawing.Color.WhiteSmoke
+        Precio_final__MXN_pza_Label.Location = New System.Drawing.Point(655, 343)
         Precio_final__MXN_pza_Label.Name = "Precio_final__MXN_pza_Label"
         Precio_final__MXN_pza_Label.Size = New System.Drawing.Size(117, 13)
         Precio_final__MXN_pza_Label.TabIndex = 0
@@ -508,7 +555,8 @@ Partial Class Cotizaciones
         'Precio_Total__MXN_Label
         '
         Precio_Total__MXN_Label.AutoSize = True
-        Precio_Total__MXN_Label.Location = New System.Drawing.Point(583, 344)
+        Precio_Total__MXN_Label.BackColor = System.Drawing.Color.WhiteSmoke
+        Precio_Total__MXN_Label.Location = New System.Drawing.Point(655, 369)
         Precio_Total__MXN_Label.Name = "Precio_Total__MXN_Label"
         Precio_Total__MXN_Label.Size = New System.Drawing.Size(100, 13)
         Precio_Total__MXN_Label.TabIndex = 0
@@ -546,7 +594,7 @@ Partial Class Cotizaciones
         'Label5
         '
         Label5.AutoSize = True
-        Label5.Location = New System.Drawing.Point(11, 375)
+        Label5.Location = New System.Drawing.Point(7, 375)
         Label5.Name = "Label5"
         Label5.Size = New System.Drawing.Size(58, 13)
         Label5.TabIndex = 0
@@ -555,7 +603,7 @@ Partial Class Cotizaciones
         'Label6
         '
         Label6.AutoSize = True
-        Label6.Location = New System.Drawing.Point(11, 402)
+        Label6.Location = New System.Drawing.Point(7, 402)
         Label6.Name = "Label6"
         Label6.Size = New System.Drawing.Size(63, 13)
         Label6.TabIndex = 0
@@ -626,18 +674,67 @@ Partial Class Cotizaciones
         Label8.Text = "Espesor:"
         Label8.Visible = False
         '
+        'Label32
+        '
+        Label32.AutoSize = True
+        Label32.BackColor = System.Drawing.Color.WhiteSmoke
+        Label32.Location = New System.Drawing.Point(655, 93)
+        Label32.Name = "Label32"
+        Label32.Size = New System.Drawing.Size(62, 13)
+        Label32.TabIndex = 147
+        Label32.Text = "Utilidad (%):"
+        '
+        'Label34
+        '
+        Label34.AutoSize = True
+        Label34.BackColor = System.Drawing.Color.WhiteSmoke
+        Label34.Location = New System.Drawing.Point(650, 396)
+        Label34.Name = "Label34"
+        Label34.Size = New System.Drawing.Size(114, 13)
+        Label34.TabIndex = 151
+        Label34.Text = "Precio Total + Utilidad:"
+        '
+        'Label35
+        '
+        Label35.AutoSize = True
+        Label35.Location = New System.Drawing.Point(301, 581)
+        Label35.Name = "Label35"
+        Label35.Size = New System.Drawing.Size(87, 13)
+        Label35.TabIndex = 159
+        Label35.Text = "Tiempo de corte:"
+        Label35.Visible = False
+        '
         'Tabla
         '
         Me.Tabla.Controls.Add(Me.TabPage2)
         Me.Tabla.Location = New System.Drawing.Point(12, 12)
         Me.Tabla.Name = "Tabla"
         Me.Tabla.SelectedIndex = 0
-        Me.Tabla.Size = New System.Drawing.Size(859, 491)
+        Me.Tabla.Size = New System.Drawing.Size(934, 679)
         Me.Tabla.TabIndex = 0
         '
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Label39)
+        Me.TabPage2.Controls.Add(Me.herramientaTXT)
+        Me.TabPage2.Controls.Add(Label38)
+        Me.TabPage2.Controls.Add(Me.MaterialCBX)
+        Me.TabPage2.Controls.Add(Me.Label37)
+        Me.TabPage2.Controls.Add(Me.Label36)
+        Me.TabPage2.Controls.Add(Label35)
+        Me.TabPage2.Controls.Add(Me.CONV)
+        Me.TabPage2.Controls.Add(Me.TT)
+        Me.TabPage2.Controls.Add(Me.SEGUNDOTXT)
+        Me.TabPage2.Controls.Add(Me.MINUTOTXT)
+        Me.TabPage2.Controls.Add(Me.HORATXT)
+        Me.TabPage2.Controls.Add(Me.Label33)
+        Me.TabPage2.Controls.Add(Label34)
+        Me.TabPage2.Controls.Add(Me.Porciento)
+        Me.TabPage2.Controls.Add(Me.CIENTXT)
+        Me.TabPage2.Controls.Add(Me.UtilidadTXT)
+        Me.TabPage2.Controls.Add(Label32)
+        Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Controls.Add(Label8)
         Me.TabPage2.Controls.Add(Me.EspRepTXT)
         Me.TabPage2.Controls.Add(Me.Label28)
@@ -767,10 +864,235 @@ Partial Class Cotizaciones
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(851, 465)
+        Me.TabPage2.Size = New System.Drawing.Size(926, 653)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Cotizador"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'MaterialCBX
+        '
+        Me.MaterialCBX.BackColor = System.Drawing.SystemColors.Control
+        Me.MaterialCBX.DataSource = Me.MATERIALESBindingSource
+        Me.MaterialCBX.DisplayMember = "MATERIAL"
+        Me.MaterialCBX.FormattingEnabled = True
+        Me.MaterialCBX.Location = New System.Drawing.Point(393, 10)
+        Me.MaterialCBX.Name = "MaterialCBX"
+        Me.MaterialCBX.Size = New System.Drawing.Size(121, 21)
+        Me.MaterialCBX.TabIndex = 162
+        '
+        'MATERIALESBindingSource
+        '
+        Me.MATERIALESBindingSource.DataMember = "MATERIALES"
+        Me.MATERIALESBindingSource.DataSource = Me._Base_de_datos_1_4_beDataSet
+        '
+        '_Base_de_datos_1_4_beDataSet
+        '
+        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
+        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(446, 375)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(10, 13)
+        Me.Label37.TabIndex = 161
+        Me.Label37.Text = ":"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(391, 375)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(10, 13)
+        Me.Label36.TabIndex = 160
+        Me.Label36.Text = ":"
+        '
+        'CONV
+        '
+        Me.CONV.Location = New System.Drawing.Point(485, 539)
+        Me.CONV.Name = "CONV"
+        Me.CONV.Size = New System.Drawing.Size(42, 20)
+        Me.CONV.TabIndex = 157
+        Me.CONV.Text = "60"
+        Me.CONV.Visible = False
+        '
+        'TT
+        '
+        Me.TT.Location = New System.Drawing.Point(358, 546)
+        Me.TT.Name = "TT"
+        Me.TT.Size = New System.Drawing.Size(42, 20)
+        Me.TT.TabIndex = 156
+        Me.TT.Visible = False
+        '
+        'SEGUNDOTXT
+        '
+        Me.SEGUNDOTXT.BackColor = System.Drawing.SystemColors.Control
+        Me.SEGUNDOTXT.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.SEGUNDOTXT.Location = New System.Drawing.Point(457, 372)
+        Me.SEGUNDOTXT.Name = "SEGUNDOTXT"
+        Me.SEGUNDOTXT.Size = New System.Drawing.Size(42, 20)
+        Me.SEGUNDOTXT.TabIndex = 155
+        '
+        'MINUTOTXT
+        '
+        Me.MINUTOTXT.BackColor = System.Drawing.SystemColors.Control
+        Me.MINUTOTXT.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.MINUTOTXT.Location = New System.Drawing.Point(402, 372)
+        Me.MINUTOTXT.Name = "MINUTOTXT"
+        Me.MINUTOTXT.Size = New System.Drawing.Size(42, 20)
+        Me.MINUTOTXT.TabIndex = 154
+        '
+        'HORATXT
+        '
+        Me.HORATXT.BackColor = System.Drawing.SystemColors.Control
+        Me.HORATXT.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.HORATXT.Location = New System.Drawing.Point(348, 372)
+        Me.HORATXT.Name = "HORATXT"
+        Me.HORATXT.Size = New System.Drawing.Size(42, 20)
+        Me.HORATXT.TabIndex = 153
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label33.Location = New System.Drawing.Point(785, 395)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(13, 13)
+        Me.Label33.TabIndex = 150
+        Me.Label33.Text = "$"
+        '
+        'Porciento
+        '
+        Me.Porciento.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Porciento.Location = New System.Drawing.Point(798, 392)
+        Me.Porciento.Name = "Porciento"
+        Me.Porciento.Size = New System.Drawing.Size(97, 20)
+        Me.Porciento.TabIndex = 152
+        Me.Porciento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'CIENTXT
+        '
+        Me.CIENTXT.Location = New System.Drawing.Point(844, 48)
+        Me.CIENTXT.Name = "CIENTXT"
+        Me.CIENTXT.Size = New System.Drawing.Size(31, 20)
+        Me.CIENTXT.TabIndex = 149
+        Me.CIENTXT.Text = "100"
+        Me.CIENTXT.Visible = False
+        '
+        'UtilidadTXT
+        '
+        Me.UtilidadTXT.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.UtilidadTXT.Location = New System.Drawing.Point(798, 90)
+        Me.UtilidadTXT.Name = "UtilidadTXT"
+        Me.UtilidadTXT.Size = New System.Drawing.Size(97, 20)
+        Me.UtilidadTXT.TabIndex = 148
+        Me.UtilidadTXT.Text = "20"
+        Me.UtilidadTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label31)
+        Me.GroupBox1.Controls.Add(Me.Label30)
+        Me.GroupBox1.Controls.Add(Me.Label29)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.Label26)
+        Me.GroupBox1.Controls.Add(Me.Label20)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.PorcientoEMB)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 486)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(207, 152)
+        Me.GroupBox1.TabIndex = 146
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Embalaje"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(12, 126)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(34, 13)
+        Me.Label31.TabIndex = 9
+        Me.Label31.Text = "Total:"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(12, 22)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(61, 13)
+        Me.Label30.TabIndex = 7
+        Me.Label30.Text = "Porcentaje:"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(12, 100)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(68, 13)
+        Me.Label29.TabIndex = 6
+        Me.Label29.Text = "Costo tarima:"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox6.Location = New System.Drawing.Point(89, 123)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox6.TabIndex = 8
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(12, 74)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(73, 13)
+        Me.Label26.TabIndex = 5
+        Me.Label26.Text = "Pzas./Tarima:"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(12, 48)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(76, 13)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Estiba max kg:"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox5.Location = New System.Drawing.Point(89, 97)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 3
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox4.Location = New System.Drawing.Point(89, 71)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 2
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox3.Location = New System.Drawing.Point(89, 45)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 1
+        '
+        'PorcientoEMB
+        '
+        Me.PorcientoEMB.BackColor = System.Drawing.SystemColors.Control
+        Me.PorcientoEMB.Location = New System.Drawing.Point(89, 19)
+        Me.PorcientoEMB.Name = "PorcientoEMB"
+        Me.PorcientoEMB.Size = New System.Drawing.Size(100, 20)
+        Me.PorcientoEMB.TabIndex = 0
         '
         'EspRepTXT
         '
@@ -881,7 +1203,7 @@ Partial Class Cotizaciones
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(753, 414)
+        Me.Button1.Location = New System.Drawing.Point(829, 441)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 40)
         Me.Button1.TabIndex = 118
@@ -921,7 +1243,7 @@ Partial Class Cotizaciones
         '
         'NuevoBtn
         '
-        Me.NuevoBtn.Location = New System.Drawing.Point(638, 430)
+        Me.NuevoBtn.Location = New System.Drawing.Point(713, 450)
         Me.NuevoBtn.Name = "NuevoBtn"
         Me.NuevoBtn.Size = New System.Drawing.Size(75, 23)
         Me.NuevoBtn.TabIndex = 25
@@ -1013,7 +1335,7 @@ Partial Class Cotizaciones
         '
         'PunzonadoCheckBox
         '
-        Me.PunzonadoCheckBox.Location = New System.Drawing.Point(464, 430)
+        Me.PunzonadoCheckBox.Location = New System.Drawing.Point(464, 457)
         Me.PunzonadoCheckBox.Name = "PunzonadoCheckBox"
         Me.PunzonadoCheckBox.Size = New System.Drawing.Size(104, 24)
         Me.PunzonadoCheckBox.TabIndex = 48
@@ -1031,7 +1353,7 @@ Partial Class Cotizaciones
         '
         'SierraCheckBox
         '
-        Me.SierraCheckBox.Location = New System.Drawing.Point(464, 410)
+        Me.SierraCheckBox.Location = New System.Drawing.Point(464, 437)
         Me.SierraCheckBox.Name = "SierraCheckBox"
         Me.SierraCheckBox.Size = New System.Drawing.Size(104, 24)
         Me.SierraCheckBox.TabIndex = 47
@@ -1040,7 +1362,7 @@ Partial Class Cotizaciones
         '
         'WJCheckBox
         '
-        Me.WJCheckBox.Location = New System.Drawing.Point(464, 390)
+        Me.WJCheckBox.Location = New System.Drawing.Point(464, 417)
         Me.WJCheckBox.Name = "WJCheckBox"
         Me.WJCheckBox.Size = New System.Drawing.Size(104, 24)
         Me.WJCheckBox.TabIndex = 46
@@ -1049,7 +1371,7 @@ Partial Class Cotizaciones
         '
         'LaserCheckBox
         '
-        Me.LaserCheckBox.Location = New System.Drawing.Point(464, 370)
+        Me.LaserCheckBox.Location = New System.Drawing.Point(464, 397)
         Me.LaserCheckBox.Name = "LaserCheckBox"
         Me.LaserCheckBox.Size = New System.Drawing.Size(104, 24)
         Me.LaserCheckBox.TabIndex = 45
@@ -1077,7 +1399,8 @@ Partial Class Cotizaciones
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(713, 159)
+        Me.Label22.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label22.Location = New System.Drawing.Point(785, 184)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(13, 13)
         Me.Label22.TabIndex = 0
@@ -1104,7 +1427,8 @@ Partial Class Cotizaciones
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(713, 107)
+        Me.Label18.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label18.Location = New System.Drawing.Point(785, 132)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(13, 13)
         Me.Label18.TabIndex = 0
@@ -1113,7 +1437,8 @@ Partial Class Cotizaciones
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(713, 133)
+        Me.Label17.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label17.Location = New System.Drawing.Point(785, 158)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(13, 13)
         Me.Label17.TabIndex = 0
@@ -1122,7 +1447,8 @@ Partial Class Cotizaciones
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(713, 214)
+        Me.Label16.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label16.Location = New System.Drawing.Point(785, 239)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(13, 13)
         Me.Label16.TabIndex = 0
@@ -1131,7 +1457,8 @@ Partial Class Cotizaciones
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(713, 238)
+        Me.Label15.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label15.Location = New System.Drawing.Point(785, 263)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(13, 13)
         Me.Label15.TabIndex = 0
@@ -1140,7 +1467,8 @@ Partial Class Cotizaciones
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(713, 266)
+        Me.Label14.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label14.Location = New System.Drawing.Point(785, 291)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(13, 13)
         Me.Label14.TabIndex = 0
@@ -1149,7 +1477,8 @@ Partial Class Cotizaciones
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(713, 292)
+        Me.Label13.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label13.Location = New System.Drawing.Point(785, 317)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(13, 13)
         Me.Label13.TabIndex = 0
@@ -1158,7 +1487,8 @@ Partial Class Cotizaciones
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(713, 318)
+        Me.Label12.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label12.Location = New System.Drawing.Point(785, 343)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(13, 13)
         Me.Label12.TabIndex = 0
@@ -1167,7 +1497,8 @@ Partial Class Cotizaciones
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(713, 344)
+        Me.Label11.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label11.Location = New System.Drawing.Point(785, 369)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(13, 13)
         Me.Label11.TabIndex = 0
@@ -1176,7 +1507,8 @@ Partial Class Cotizaciones
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(713, 186)
+        Me.Label2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label2.Location = New System.Drawing.Point(785, 211)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 0
@@ -1231,8 +1563,8 @@ Partial Class Cotizaciones
         '
         'PrecioMPTextBox
         '
-        Me.PrecioMPTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.PrecioMPTextBox.Location = New System.Drawing.Point(726, 104)
+        Me.PrecioMPTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioMPTextBox.Location = New System.Drawing.Point(798, 129)
         Me.PrecioMPTextBox.Name = "PrecioMPTextBox"
         Me.PrecioMPTextBox.Size = New System.Drawing.Size(97, 20)
         Me.PrecioMPTextBox.TabIndex = 28
@@ -1240,8 +1572,8 @@ Partial Class Cotizaciones
         '
         'PrecioDoblezTextBox
         '
-        Me.PrecioDoblezTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.PrecioDoblezTextBox.Location = New System.Drawing.Point(726, 130)
+        Me.PrecioDoblezTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioDoblezTextBox.Location = New System.Drawing.Point(798, 155)
         Me.PrecioDoblezTextBox.Name = "PrecioDoblezTextBox"
         Me.PrecioDoblezTextBox.Size = New System.Drawing.Size(97, 20)
         Me.PrecioDoblezTextBox.TabIndex = 29
@@ -1249,8 +1581,8 @@ Partial Class Cotizaciones
         '
         'PinturaTextBox
         '
-        Me.PinturaTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.PinturaTextBox.Location = New System.Drawing.Point(726, 211)
+        Me.PinturaTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PinturaTextBox.Location = New System.Drawing.Point(798, 236)
         Me.PinturaTextBox.Name = "PinturaTextBox"
         Me.PinturaTextBox.Size = New System.Drawing.Size(97, 20)
         Me.PinturaTextBox.TabIndex = 32
@@ -1258,8 +1590,8 @@ Partial Class Cotizaciones
         '
         'GalvanizadoTextBox
         '
-        Me.GalvanizadoTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.GalvanizadoTextBox.Location = New System.Drawing.Point(726, 237)
+        Me.GalvanizadoTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GalvanizadoTextBox.Location = New System.Drawing.Point(798, 262)
         Me.GalvanizadoTextBox.Name = "GalvanizadoTextBox"
         Me.GalvanizadoTextBox.Size = New System.Drawing.Size(97, 20)
         Me.GalvanizadoTextBox.TabIndex = 33
@@ -1267,8 +1599,8 @@ Partial Class Cotizaciones
         '
         'TropicalizadoTextBox
         '
-        Me.TropicalizadoTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.TropicalizadoTextBox.Location = New System.Drawing.Point(726, 263)
+        Me.TropicalizadoTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TropicalizadoTextBox.Location = New System.Drawing.Point(798, 288)
         Me.TropicalizadoTextBox.Name = "TropicalizadoTextBox"
         Me.TropicalizadoTextBox.Size = New System.Drawing.Size(97, 20)
         Me.TropicalizadoTextBox.TabIndex = 34
@@ -1276,8 +1608,8 @@ Partial Class Cotizaciones
         '
         'PrecioCorteTextBox
         '
-        Me.PrecioCorteTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.PrecioCorteTextBox.Location = New System.Drawing.Point(726, 289)
+        Me.PrecioCorteTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioCorteTextBox.Location = New System.Drawing.Point(798, 314)
         Me.PrecioCorteTextBox.Name = "PrecioCorteTextBox"
         Me.PrecioCorteTextBox.Size = New System.Drawing.Size(97, 20)
         Me.PrecioCorteTextBox.TabIndex = 34
@@ -1285,8 +1617,8 @@ Partial Class Cotizaciones
         '
         'PrecioFinalTextBox
         '
-        Me.PrecioFinalTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.PrecioFinalTextBox.Location = New System.Drawing.Point(726, 315)
+        Me.PrecioFinalTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioFinalTextBox.Location = New System.Drawing.Point(798, 340)
         Me.PrecioFinalTextBox.Name = "PrecioFinalTextBox"
         Me.PrecioFinalTextBox.Size = New System.Drawing.Size(97, 20)
         Me.PrecioFinalTextBox.TabIndex = 36
@@ -1294,8 +1626,8 @@ Partial Class Cotizaciones
         '
         'PrecioTotalTextBox
         '
-        Me.PrecioTotalTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.PrecioTotalTextBox.Location = New System.Drawing.Point(726, 341)
+        Me.PrecioTotalTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PrecioTotalTextBox.Location = New System.Drawing.Point(798, 366)
         Me.PrecioTotalTextBox.Name = "PrecioTotalTextBox"
         Me.PrecioTotalTextBox.Size = New System.Drawing.Size(97, 20)
         Me.PrecioTotalTextBox.TabIndex = 37
@@ -1303,7 +1635,7 @@ Partial Class Cotizaciones
         '
         'ordenComboBox1
         '
-        Me.ordenComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ordenComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ordenComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ordenComboBox1.BackColor = System.Drawing.SystemColors.Control
         Me.ordenComboBox1.DataSource = Me.VentasBindingSource
@@ -1346,6 +1678,16 @@ Partial Class Cotizaciones
         Me.Clave_FTMComboBox.Size = New System.Drawing.Size(121, 21)
         Me.Clave_FTMComboBox.TabIndex = 4
         '
+        'CostosBindingSource1
+        '
+        Me.CostosBindingSource1.DataMember = "Costos"
+        Me.CostosBindingSource1.DataSource = Me.AgregarClaveFTM
+        '
+        'AgregarClaveFTM
+        '
+        Me.AgregarClaveFTM.DataSetName = "AgregarClaveFTM"
+        Me.AgregarClaveFTM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'P1TextBox
         '
         Me.P1TextBox.BackColor = System.Drawing.SystemColors.Control
@@ -1353,6 +1695,7 @@ Partial Class Cotizaciones
         Me.P1TextBox.Name = "P1TextBox"
         Me.P1TextBox.Size = New System.Drawing.Size(53, 20)
         Me.P1TextBox.TabIndex = 7
+        Me.P1TextBox.Text = "0"
         '
         'P2TextBox
         '
@@ -1361,6 +1704,7 @@ Partial Class Cotizaciones
         Me.P2TextBox.Name = "P2TextBox"
         Me.P2TextBox.Size = New System.Drawing.Size(53, 20)
         Me.P2TextBox.TabIndex = 8
+        Me.P2TextBox.Text = "0"
         '
         'X1TextBox
         '
@@ -1417,10 +1761,11 @@ Partial Class Cotizaciones
         'MaterialTextBox
         '
         Me.MaterialTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.MaterialTextBox.Location = New System.Drawing.Point(394, 10)
+        Me.MaterialTextBox.Location = New System.Drawing.Point(783, 503)
         Me.MaterialTextBox.Name = "MaterialTextBox"
         Me.MaterialTextBox.Size = New System.Drawing.Size(121, 20)
         Me.MaterialTextBox.TabIndex = 9
+        Me.MaterialTextBox.Visible = False
         '
         'EspesorTextBox
         '
@@ -1460,8 +1805,8 @@ Partial Class Cotizaciones
         '
         'SoldaduraTextBox
         '
-        Me.SoldaduraTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.SoldaduraTextBox.Location = New System.Drawing.Point(727, 156)
+        Me.SoldaduraTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.SoldaduraTextBox.Location = New System.Drawing.Point(799, 181)
         Me.SoldaduraTextBox.Name = "SoldaduraTextBox"
         Me.SoldaduraTextBox.Size = New System.Drawing.Size(96, 20)
         Me.SoldaduraTextBox.TabIndex = 30
@@ -1469,8 +1814,8 @@ Partial Class Cotizaciones
         '
         'MaquinadoTextBox
         '
-        Me.MaquinadoTextBox.BackColor = System.Drawing.SystemColors.Control
-        Me.MaquinadoTextBox.Location = New System.Drawing.Point(727, 183)
+        Me.MaquinadoTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.MaquinadoTextBox.Location = New System.Drawing.Point(799, 208)
         Me.MaquinadoTextBox.Name = "MaquinadoTextBox"
         Me.MaquinadoTextBox.Size = New System.Drawing.Size(96, 20)
         Me.MaquinadoTextBox.TabIndex = 31
@@ -1497,11 +1842,12 @@ Partial Class Cotizaciones
         'TiempoCorte
         '
         Me.TiempoCorte.BackColor = System.Drawing.SystemColors.Control
-        Me.TiempoCorte.Location = New System.Drawing.Point(389, 372)
+        Me.TiempoCorte.Location = New System.Drawing.Point(387, 578)
         Me.TiempoCorte.Name = "TiempoCorte"
         Me.TiempoCorte.Size = New System.Drawing.Size(69, 20)
         Me.TiempoCorte.TabIndex = 23
         Me.TiempoCorte.Text = "0"
+        Me.TiempoCorte.Visible = False
         '
         'CostoHR
         '
@@ -1541,25 +1887,20 @@ Partial Class Cotizaciones
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
+        Me.TextBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Enabled = False
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox1.Location = New System.Drawing.Point(574, 82)
+        Me.TextBox1.Location = New System.Drawing.Point(645, 82)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(259, 299)
+        Me.TextBox1.Size = New System.Drawing.Size(259, 338)
         Me.TextBox1.TabIndex = 0
         '
         'CostosBindingSource
         '
         Me.CostosBindingSource.DataMember = "Costos"
         Me.CostosBindingSource.DataSource = Me._Cotizaciones_1_4DataSet
-        '
-        '_Base_de_datos_1_4_beDataSet
-        '
-        Me._Base_de_datos_1_4_beDataSet.DataSetName = "_Base_de_datos_1_4_beDataSet"
-        Me._Base_de_datos_1_4_beDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CotizacionesBindingSource
         '
@@ -1576,11 +1917,13 @@ Partial Class Cotizaciones
         Me.TableAdapterManager.ClientesTableAdapter = Nothing
         Me.TableAdapterManager.CotizacionesTableAdapter = Me.CotizacionesTableAdapter
         Me.TableAdapterManager.ManufacturaTableAdapter = Nothing
+        Me.TableAdapterManager.MATERIALESTableAdapter = Nothing
         Me.TableAdapterManager.tblAdministradorTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuarioActivoTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuariosPermisosTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuariosTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosPermisosTableAdapter = Nothing
         Me.TableAdapterManager.VentasTableAdapter = Nothing
         '
         'BindingNavigatorMoveFirstItem
@@ -1707,19 +2050,41 @@ Partial Class Cotizaciones
         '
         Me.VentasTableAdapter.ClearBeforeFill = True
         '
-        'AgregarClaveFTM
-        '
-        Me.AgregarClaveFTM.DataSetName = "AgregarClaveFTM"
-        Me.AgregarClaveFTM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CostosBindingSource1
-        '
-        Me.CostosBindingSource1.DataMember = "Costos"
-        Me.CostosBindingSource1.DataSource = Me.AgregarClaveFTM
-        '
         'CostosTableAdapter1
         '
         Me.CostosTableAdapter1.ClearBeforeFill = True
+        '
+        'MATERIALESTableAdapter
+        '
+        Me.MATERIALESTableAdapter.ClearBeforeFill = True
+        '
+        'Label38
+        '
+        Label38.AutoSize = True
+        Label38.Location = New System.Drawing.Point(730, 506)
+        Label38.Name = "Label38"
+        Label38.Size = New System.Drawing.Size(47, 13)
+        Label38.TabIndex = 163
+        Label38.Text = "Material:"
+        Label38.Visible = False
+        '
+        'herramientaTXT
+        '
+        Me.herramientaTXT.BackColor = System.Drawing.SystemColors.Control
+        Me.herramientaTXT.Location = New System.Drawing.Point(129, 425)
+        Me.herramientaTXT.Name = "herramientaTXT"
+        Me.herramientaTXT.Size = New System.Drawing.Size(76, 20)
+        Me.herramientaTXT.TabIndex = 164
+        Me.herramientaTXT.Text = "0"
+        '
+        'Label39
+        '
+        Label39.AutoSize = True
+        Label39.Location = New System.Drawing.Point(7, 428)
+        Label39.Name = "Label39"
+        Label39.Size = New System.Drawing.Size(84, 13)
+        Label39.TabIndex = 165
+        Label39.Text = "Herramienta (%):"
         '
         'Cotizaciones
         '
@@ -1727,7 +2092,7 @@ Partial Class Cotizaciones
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(887, 515)
+        Me.ClientSize = New System.Drawing.Size(958, 703)
         Me.Controls.Add(Me.Tabla)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(903, 553)
@@ -1737,14 +2102,17 @@ Partial Class Cotizaciones
         Me.Tabla.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.MATERIALESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._Cotizaciones_1_4DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CostosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AgregarClaveFTM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CostosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CotizacionesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Costos_VentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AgregarClaveFTM, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CostosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1862,4 +2230,30 @@ Partial Class Cotizaciones
     Friend WithEvents CostosBindingSource1 As BindingSource
     Friend WithEvents AgregarClaveFTM As AgregarClaveFTM
     Friend WithEvents CostosTableAdapter1 As AgregarClaveFTMTableAdapters.CostosTableAdapter
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents PorcientoEMB As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents UtilidadTXT As TextBox
+    Friend WithEvents CIENTXT As TextBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Porciento As TextBox
+    Friend WithEvents SEGUNDOTXT As TextBox
+    Friend WithEvents MINUTOTXT As TextBox
+    Friend WithEvents HORATXT As TextBox
+    Friend WithEvents TT As TextBox
+    Friend WithEvents CONV As TextBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents MaterialCBX As ComboBox
+    Friend WithEvents MATERIALESBindingSource As BindingSource
+    Friend WithEvents MATERIALESTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.MATERIALESTableAdapter
+    Friend WithEvents herramientaTXT As TextBox
 End Class

@@ -43,6 +43,8 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
     
     Private tableUsuariosPermisos As UsuariosPermisosDataTable
     
+    Private tableMATERIALES As MATERIALESDataTable
+    
     Private _relation_90781D7E_DD83_45FB_83BF_A632291C82DC_ As Global.System.Data.DataRelation
     
     Private _relation_C3B5D12F_3BFD_4627_9703_A701F2D0BF31_ As Global.System.Data.DataRelation
@@ -104,6 +106,9 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             End If
             If (Not (ds.Tables("UsuariosPermisos")) Is Nothing) Then
                 MyBase.Tables.Add(New UsuariosPermisosDataTable(ds.Tables("UsuariosPermisos")))
+            End If
+            If (Not (ds.Tables("MATERIALES")) Is Nothing) Then
+                MyBase.Tables.Add(New MATERIALESDataTable(ds.Tables("MATERIALES")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -214,6 +219,16 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property MATERIALES() As MATERIALESDataTable
+        Get
+            Return Me.tableMATERIALES
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -306,6 +321,9 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             If (Not (ds.Tables("UsuariosPermisos")) Is Nothing) Then
                 MyBase.Tables.Add(New UsuariosPermisosDataTable(ds.Tables("UsuariosPermisos")))
             End If
+            If (Not (ds.Tables("MATERIALES")) Is Nothing) Then
+                MyBase.Tables.Add(New MATERIALESDataTable(ds.Tables("MATERIALES")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -392,6 +410,12 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
                 Me.tableUsuariosPermisos.InitVars
             End If
         End If
+        Me.tableMATERIALES = CType(MyBase.Tables("MATERIALES"),MATERIALESDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableMATERIALES) Is Nothing) Then
+                Me.tableMATERIALES.InitVars
+            End If
+        End If
         Me._relation_90781D7E_DD83_45FB_83BF_A632291C82DC_ = Me.Relations("{90781D7E-DD83-45FB-83BF-A632291C82DC}")
         Me._relation_C3B5D12F_3BFD_4627_9703_A701F2D0BF31_ = Me.Relations("{C3B5D12F-3BFD-4627-9703-A701F2D0BF31}")
         Me._relation_51232C8F_7B9F_4518_BFAF_95DB260E2AD7_ = Me.Relations("{51232C8F-7B9F-4518-BFAF-95DB260E2AD7}")
@@ -423,6 +447,8 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         MyBase.Tables.Add(Me.tabletblUsuarioActivo)
         Me.tableUsuariosPermisos = New UsuariosPermisosDataTable()
         MyBase.Tables.Add(Me.tableUsuariosPermisos)
+        Me.tableMATERIALES = New MATERIALESDataTable()
+        MyBase.Tables.Add(Me.tableMATERIALES)
         Me._relation_90781D7E_DD83_45FB_83BF_A632291C82DC_ = New Global.System.Data.DataRelation("{90781D7E-DD83-45FB-83BF-A632291C82DC}", New Global.System.Data.DataColumn() {Me.tableVentas.ClienteColumn}, New Global.System.Data.DataColumn() {Me.tableManufactura.ClienteColumn}, false)
         Me.Relations.Add(Me._relation_90781D7E_DD83_45FB_83BF_A632291C82DC_)
         Me._relation_C3B5D12F_3BFD_4627_9703_A701F2D0BF31_ = New Global.System.Data.DataRelation("{C3B5D12F-3BFD-4627-9703-A701F2D0BF31}", New Global.System.Data.DataColumn() {Me.tabletblUsuarios.IdUsuarioColumn}, New Global.System.Data.DataColumn() {Me.tabletblUsuariosPermisos.IdUsuarioColumn}, false)
@@ -482,6 +508,12 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializeUsuariosPermisos() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeMATERIALES() As Boolean
         Return false
     End Function
     
@@ -569,6 +601,9 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub UsuariosPermisosRowChangeEventHandler(ByVal sender As Object, ByVal e As UsuariosPermisosRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub MATERIALESRowChangeEventHandler(ByVal sender As Object, ByVal e As MATERIALESRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -2568,8 +2603,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         Private columnCorreo_electrónico As Global.System.Data.DataColumn
         
-        Private columnFecha_solicitud As Global.System.Data.DataColumn
-        
         Private columnFecha_entrega_cot As Global.System.Data.DataColumn
         
         Private columnOrden_ganada As Global.System.Data.DataColumn
@@ -2581,8 +2614,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         Private columnOrden_compra As Global.System.Data.DataColumn
         
         Private columnFecha_OC As Global.System.Data.DataColumn
-        
-        Private columnFecha_requerida As Global.System.Data.DataColumn
         
         Private columnSuministro_material As Global.System.Data.DataColumn
         
@@ -2609,6 +2640,10 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         Private columnOtro_proceso As Global.System.Data.DataColumn
         
         Private columnLlave As Global.System.Data.DataColumn
+        
+        Private columnFecha_requerida As Global.System.Data.DataColumn
+        
+        Private columnFecha_solicitud As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2759,14 +2794,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Fecha_solicitudColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFecha_solicitud
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Fecha_entrega_cotColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnFecha_entrega_cot
@@ -2810,14 +2837,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         Public ReadOnly Property Fecha_OCColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnFecha_OC
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Fecha_requeridaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFecha_requerida
             End Get
         End Property
         
@@ -2926,6 +2945,22 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Fecha_requeridaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFecha_requerida
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Fecha_solicitudColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFecha_solicitud
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2976,14 +3011,12 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
                     ByVal no_cliente As String,  _
                     ByVal Nombre_contacto As String,  _
                     ByVal Correo_electrónico As String,  _
-                    ByVal Fecha_solicitud As Date,  _
                     ByVal Fecha_entrega_cot As Date,  _
                     ByVal Orden_ganada As Boolean,  _
                     ByVal Forma_pago As String,  _
                     ByVal Tipo_empaque As String,  _
                     ByVal Orden_compra As String,  _
                     ByVal Fecha_OC As Date,  _
-                    ByVal Fecha_requerida As Date,  _
                     ByVal Suministro_material As Boolean,  _
                     ByVal Espesor1 As String,  _
                     ByVal Material2 As String,  _
@@ -2995,9 +3028,11 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
                     ByVal Corte_WJ As Boolean,  _
                     ByVal Corte_Sierra As Boolean,  _
                     ByVal Item_soldado As Boolean,  _
-                    ByVal Otro_proceso As String) As VentasRow
+                    ByVal Otro_proceso As String,  _
+                    ByVal Fecha_requerida As String,  _
+                    ByVal Fecha_solicitud As String) As VentasRow
             Dim rowVentasRow As VentasRow = CType(Me.NewRow,VentasRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Mes, Observaciones, Moneda, Acabado, Incotems, Doblez, Maquinado, Rolado, Soldar, Nothing, no_cliente, Nombre_contacto, Correo_electrónico, Fecha_solicitud, Fecha_entrega_cot, Orden_ganada, Forma_pago, Tipo_empaque, Orden_compra, Fecha_OC, Fecha_requerida, Suministro_material, Espesor1, Material2, Espesor2, Material1, Material3, Espesor3, Corte_Láser, Corte_WJ, Corte_Sierra, Item_soldado, Otro_proceso, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Mes, Observaciones, Moneda, Acabado, Incotems, Doblez, Maquinado, Rolado, Soldar, Nothing, no_cliente, Nombre_contacto, Correo_electrónico, Fecha_entrega_cot, Orden_ganada, Forma_pago, Tipo_empaque, Orden_compra, Fecha_OC, Suministro_material, Espesor1, Material2, Espesor2, Material1, Material3, Espesor3, Corte_Láser, Corte_WJ, Corte_Sierra, Item_soldado, Otro_proceso, Nothing, Fecha_requerida, Fecha_solicitud}
             If (Not (_parentClientesRowBy_51232C8F_7B9F_4518_BFAF_95DB260E2AD7_) Is Nothing) Then
                 columnValuesArray(0) = _parentClientesRowBy_51232C8F_7B9F_4518_BFAF_95DB260E2AD7_(0)
             End If
@@ -3043,14 +3078,12 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             Me.columnno_cliente = MyBase.Columns("no_cliente")
             Me.columnNombre_contacto = MyBase.Columns("Nombre_contacto")
             Me.columnCorreo_electrónico = MyBase.Columns("Correo_electrónico")
-            Me.columnFecha_solicitud = MyBase.Columns("Fecha_solicitud")
             Me.columnFecha_entrega_cot = MyBase.Columns("Fecha_entrega_cot")
             Me.columnOrden_ganada = MyBase.Columns("Orden_ganada")
             Me.columnForma_pago = MyBase.Columns("Forma_pago")
             Me.columnTipo_empaque = MyBase.Columns("Tipo_empaque")
             Me.columnOrden_compra = MyBase.Columns("Orden_compra")
             Me.columnFecha_OC = MyBase.Columns("Fecha_OC")
-            Me.columnFecha_requerida = MyBase.Columns("Fecha_requerida")
             Me.columnSuministro_material = MyBase.Columns("Suministro_material")
             Me.columnEspesor1 = MyBase.Columns("Espesor1")
             Me.columnMaterial2 = MyBase.Columns("Material2")
@@ -3064,6 +3097,8 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             Me.columnItem_soldado = MyBase.Columns("Item_soldado")
             Me.columnOtro_proceso = MyBase.Columns("Otro_proceso")
             Me.columnLlave = MyBase.Columns("Llave")
+            Me.columnFecha_requerida = MyBase.Columns("Fecha_requerida")
+            Me.columnFecha_solicitud = MyBase.Columns("Fecha_solicitud")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3101,8 +3136,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             Me.columnCorreo_electrónico.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnCorreo_electrónico")
             Me.columnCorreo_electrónico.ExtendedProperties.Add("Generator_UserColumnName", "Correo_electrónico")
             MyBase.Columns.Add(Me.columnCorreo_electrónico)
-            Me.columnFecha_solicitud = New Global.System.Data.DataColumn("Fecha_solicitud", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFecha_solicitud)
             Me.columnFecha_entrega_cot = New Global.System.Data.DataColumn("Fecha_entrega_cot", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFecha_entrega_cot)
             Me.columnOrden_ganada = New Global.System.Data.DataColumn("Orden_ganada", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
@@ -3115,8 +3148,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             MyBase.Columns.Add(Me.columnOrden_compra)
             Me.columnFecha_OC = New Global.System.Data.DataColumn("Fecha_OC", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFecha_OC)
-            Me.columnFecha_requerida = New Global.System.Data.DataColumn("Fecha_requerida", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFecha_requerida)
             Me.columnSuministro_material = New Global.System.Data.DataColumn("Suministro_material", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSuministro_material)
             Me.columnEspesor1 = New Global.System.Data.DataColumn("Espesor1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3143,6 +3174,10 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             MyBase.Columns.Add(Me.columnOtro_proceso)
             Me.columnLlave = New Global.System.Data.DataColumn("Llave", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLlave)
+            Me.columnFecha_requerida = New Global.System.Data.DataColumn("Fecha_requerida", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFecha_requerida)
+            Me.columnFecha_solicitud = New Global.System.Data.DataColumn("Fecha_solicitud", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFecha_solicitud)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnLlave}, true))
             Me.columnCliente.MaxLength = 255
             Me.columnMes.MaxLength = 255
@@ -3171,6 +3206,8 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             Me.columnLlave.AutoIncrementStep = -1
             Me.columnLlave.AllowDBNull = false
             Me.columnLlave.Unique = true
+            Me.columnFecha_requerida.MaxLength = 536870910
+            Me.columnFecha_solicitud.MaxLength = 536870910
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3921,6 +3958,259 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "UsuariosPermisosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class MATERIALESDataTable
+        Inherits Global.System.Data.TypedTableBase(Of MATERIALESRow)
+        
+        Private columnMATERIAL As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "MATERIALES"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MATERIALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMATERIAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As MATERIALESRow
+            Get
+                Return CType(Me.Rows(index),MATERIALESRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event MATERIALESRowChanging As MATERIALESRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event MATERIALESRowChanged As MATERIALESRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event MATERIALESRowDeleting As MATERIALESRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event MATERIALESRowDeleted As MATERIALESRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddMATERIALESRow(ByVal row As MATERIALESRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddMATERIALESRow(ByVal MATERIAL As String) As MATERIALESRow
+            Dim rowMATERIALESRow As MATERIALESRow = CType(Me.NewRow,MATERIALESRow)
+            Dim columnValuesArray() As Object = New Object() {MATERIAL}
+            rowMATERIALESRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowMATERIALESRow)
+            Return rowMATERIALESRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As MATERIALESDataTable = CType(MyBase.Clone,MATERIALESDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New MATERIALESDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnMATERIAL = MyBase.Columns("MATERIAL")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnMATERIAL = New Global.System.Data.DataColumn("MATERIAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMATERIAL)
+            Me.columnMATERIAL.MaxLength = 536870910
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewMATERIALESRow() As MATERIALESRow
+            Return CType(Me.NewRow,MATERIALESRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New MATERIALESRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(MATERIALESRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.MATERIALESRowChangedEvent) Is Nothing) Then
+                RaiseEvent MATERIALESRowChanged(Me, New MATERIALESRowChangeEvent(CType(e.Row,MATERIALESRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.MATERIALESRowChangingEvent) Is Nothing) Then
+                RaiseEvent MATERIALESRowChanging(Me, New MATERIALESRowChangeEvent(CType(e.Row,MATERIALESRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.MATERIALESRowDeletedEvent) Is Nothing) Then
+                RaiseEvent MATERIALESRowDeleted(Me, New MATERIALESRowChangeEvent(CType(e.Row,MATERIALESRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.MATERIALESRowDeletingEvent) Is Nothing) Then
+                RaiseEvent MATERIALESRowDeleting(Me, New MATERIALESRowChangeEvent(CType(e.Row,MATERIALESRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveMATERIALESRow(ByVal row As MATERIALESRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As _Base_de_datos_1_4_beDataSet = New _Base_de_datos_1_4_beDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "MATERIALESDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -5213,21 +5503,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Fecha_solicitud() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableVentas.Fecha_solicitudColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Fecha_solicitud' de la tabla 'Ventas' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVentas.Fecha_solicitudColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Fecha_entrega_cot() As Date
             Get
                 Try 
@@ -5313,21 +5588,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
             End Get
             Set
                 Me(Me.tableVentas.Fecha_OCColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Fecha_requerida() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableVentas.Fecha_requeridaColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Fecha_requerida' de la tabla 'Ventas' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableVentas.Fecha_requeridaColumn) = value
             End Set
         End Property
         
@@ -5524,6 +5784,36 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Fecha_requerida() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVentas.Fecha_requeridaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Fecha_requerida' de la tabla 'Ventas' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVentas.Fecha_requeridaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Fecha_solicitud() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVentas.Fecha_solicitudColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Fecha_solicitud' de la tabla 'Ventas' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVentas.Fecha_solicitudColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ClientesRow() As ClientesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("{51232C8F-7B9F-4518-BFAF-95DB260E2AD7}")),ClientesRow)
@@ -5703,18 +5993,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsFecha_solicitudNull() As Boolean
-            Return Me.IsNull(Me.tableVentas.Fecha_solicitudColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetFecha_solicitudNull()
-            Me(Me.tableVentas.Fecha_solicitudColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFecha_entrega_cotNull() As Boolean
             Return Me.IsNull(Me.tableVentas.Fecha_entrega_cotColumn)
         End Function
@@ -5783,18 +6061,6 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetFecha_OCNull()
             Me(Me.tableVentas.Fecha_OCColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsFecha_requeridaNull() As Boolean
-            Return Me.IsNull(Me.tableVentas.Fecha_requeridaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetFecha_requeridaNull()
-            Me(Me.tableVentas.Fecha_requeridaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5939,6 +6205,30 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetOtro_procesoNull()
             Me(Me.tableVentas.Otro_procesoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFecha_requeridaNull() As Boolean
+            Return Me.IsNull(Me.tableVentas.Fecha_requeridaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFecha_requeridaNull()
+            Me(Me.tableVentas.Fecha_requeridaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFecha_solicitudNull() As Boolean
+            Return Me.IsNull(Me.tableVentas.Fecha_solicitudColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFecha_solicitudNull()
+            Me(Me.tableVentas.Fecha_solicitudColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6320,6 +6610,49 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class MATERIALESRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableMATERIALES As MATERIALESDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableMATERIALES = CType(Me.Table,MATERIALESDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MATERIAL() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableMATERIALES.MATERIALColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MATERIAL' de la tabla 'MATERIALES' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableMATERIALES.MATERIALColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMATERIALNull() As Boolean
+            Return Me.IsNull(Me.tableMATERIALES.MATERIALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMATERIALNull()
+            Me(Me.tableMATERIALES.MATERIALColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -6629,6 +6962,42 @@ Partial Public Class _Base_de_datos_1_4_beDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As UsuariosPermisosRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class MATERIALESRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As MATERIALESRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As MATERIALESRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As MATERIALESRow
             Get
                 Return Me.eventRow
             End Get
@@ -9006,14 +9375,12 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             tableMapping.ColumnMappings.Add("no_cliente", "no_cliente")
             tableMapping.ColumnMappings.Add("Nombre_contacto", "Nombre_contacto")
             tableMapping.ColumnMappings.Add("Correo_electrónico", "Correo_electrónico")
-            tableMapping.ColumnMappings.Add("Fecha_solicitud", "Fecha_solicitud")
             tableMapping.ColumnMappings.Add("Fecha_entrega_cot", "Fecha_entrega_cot")
             tableMapping.ColumnMappings.Add("Orden_ganada", "Orden_ganada")
             tableMapping.ColumnMappings.Add("Forma_pago", "Forma_pago")
             tableMapping.ColumnMappings.Add("Tipo_empaque", "Tipo_empaque")
             tableMapping.ColumnMappings.Add("Orden_compra", "Orden_compra")
             tableMapping.ColumnMappings.Add("Fecha_OC", "Fecha_OC")
-            tableMapping.ColumnMappings.Add("Fecha_requerida", "Fecha_requerida")
             tableMapping.ColumnMappings.Add("Suministro_material", "Suministro_material")
             tableMapping.ColumnMappings.Add("Espesor1", "Espesor1")
             tableMapping.ColumnMappings.Add("Material2", "Material2")
@@ -9027,29 +9394,29 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Item_soldado", "Item_soldado")
             tableMapping.ColumnMappings.Add("Otro_proceso", "Otro_proceso")
             tableMapping.ColumnMappings.Add("Llave", "Llave")
+            tableMapping.ColumnMappings.Add("Fecha_requerida", "Fecha_requerida")
+            tableMapping.ColumnMappings.Add("Fecha_solicitud", "Fecha_solicitud")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Ventas` WHERE (((? = 1 AND `Cliente` IS NULL) OR (`Cliente` = ?)) AN"& _ 
                 "D ((? = 1 AND `no_orden` IS NULL) OR (`no_orden` = ?)) AND ((? = 1 AND `no_clien"& _ 
-                "te` IS NULL) OR (`no_cliente` = ?)) AND ((? = 1 AND `Fecha_solicitud` IS NULL) O"& _ 
-                "R (`Fecha_solicitud` = ?)) AND ((? = 1 AND `Mes` IS NULL) OR (`Mes` = ?)) AND (("& _ 
-                "? = 1 AND `Fecha_entrega_cot` IS NULL) OR (`Fecha_entrega_cot` = ?)) AND ((? = 1"& _ 
-                " AND `Orden_ganada` IS NULL) OR (`Orden_ganada` = ?)) AND ((? = 1 AND `Fecha_OC`"& _ 
-                " IS NULL) OR (`Fecha_OC` = ?)) AND ((? = 1 AND `Fecha_requerida` IS NULL) OR (`F"& _ 
-                "echa_requerida` = ?)) AND ((? = 1 AND `Moneda` IS NULL) OR (`Moneda` = ?)) AND ("& _ 
-                "(? = 1 AND `Acabado` IS NULL) OR (`Acabado` = ?)) AND ((? = 1 AND `Suministro_ma"& _ 
-                "terial` IS NULL) OR (`Suministro_material` = ?)) AND ((? = 1 AND `Espesor1` IS N"& _ 
-                "ULL) OR (`Espesor1` = ?)) AND ((? = 1 AND `Material2` IS NULL) OR (`Material2` ="& _ 
-                " ?)) AND ((? = 1 AND `Espesor2` IS NULL) OR (`Espesor2` = ?)) AND ((? = 1 AND `M"& _ 
-                "aterial3` IS NULL) OR (`Material3` = ?)) AND ((? = 1 AND `Espesor3` IS NULL) OR "& _ 
-                "(`Espesor3` = ?)) AND ((? = 1 AND `Corte_Láser` IS NULL) OR (`Corte_Láser` = ?))"& _ 
-                " AND ((? = 1 AND `Doblez` IS NULL) OR (`Doblez` = ?)) AND ((? = 1 AND `Maquinado"& _ 
-                "` IS NULL) OR (`Maquinado` = ?)) AND ((? = 1 AND `Corte_WJ` IS NULL) OR (`Corte_"& _ 
-                "WJ` = ?)) AND ((? = 1 AND `Corte_Sierra` IS NULL) OR (`Corte_Sierra` = ?)) AND ("& _ 
-                "(? = 1 AND `Rolado` IS NULL) OR (`Rolado` = ?)) AND ((? = 1 AND `Soldar` IS NULL"& _ 
-                ") OR (`Soldar` = ?)) AND ((? = 1 AND `Item_soldado` IS NULL) OR (`Item_soldado` "& _ 
-                "= ?)) AND (`Llave` = ?))"
+                "te` IS NULL) OR (`no_cliente` = ?)) AND ((? = 1 AND `Mes` IS NULL) OR (`Mes` = ?"& _ 
+                ")) AND ((? = 1 AND `Fecha_entrega_cot` IS NULL) OR (`Fecha_entrega_cot` = ?)) AN"& _ 
+                "D ((? = 1 AND `Orden_ganada` IS NULL) OR (`Orden_ganada` = ?)) AND ((? = 1 AND `"& _ 
+                "Fecha_OC` IS NULL) OR (`Fecha_OC` = ?)) AND ((? = 1 AND `Moneda` IS NULL) OR (`M"& _ 
+                "oneda` = ?)) AND ((? = 1 AND `Acabado` IS NULL) OR (`Acabado` = ?)) AND ((? = 1 "& _ 
+                "AND `Suministro_material` IS NULL) OR (`Suministro_material` = ?)) AND ((? = 1 A"& _ 
+                "ND `Espesor1` IS NULL) OR (`Espesor1` = ?)) AND ((? = 1 AND `Material2` IS NULL)"& _ 
+                " OR (`Material2` = ?)) AND ((? = 1 AND `Espesor2` IS NULL) OR (`Espesor2` = ?)) "& _ 
+                "AND ((? = 1 AND `Material3` IS NULL) OR (`Material3` = ?)) AND ((? = 1 AND `Espe"& _ 
+                "sor3` IS NULL) OR (`Espesor3` = ?)) AND ((? = 1 AND `Corte_Láser` IS NULL) OR (`"& _ 
+                "Corte_Láser` = ?)) AND ((? = 1 AND `Doblez` IS NULL) OR (`Doblez` = ?)) AND ((? "& _ 
+                "= 1 AND `Maquinado` IS NULL) OR (`Maquinado` = ?)) AND ((? = 1 AND `Corte_WJ` IS"& _ 
+                " NULL) OR (`Corte_WJ` = ?)) AND ((? = 1 AND `Corte_Sierra` IS NULL) OR (`Corte_S"& _ 
+                "ierra` = ?)) AND ((? = 1 AND `Rolado` IS NULL) OR (`Rolado` = ?)) AND ((? = 1 AN"& _ 
+                "D `Soldar` IS NULL) OR (`Soldar` = ?)) AND ((? = 1 AND `Item_soldado` IS NULL) O"& _ 
+                "R (`Item_soldado` = ?)) AND (`Llave` = ?))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cliente", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cliente", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cliente", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -9057,8 +9424,6 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_no_cliente", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_cliente", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_cliente", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_solicitud", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fecha_solicitud", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Mes", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Mes", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Mes", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Mes", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_entrega_cot", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_entrega_cot", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -9067,8 +9432,6 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Orden_ganada", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden_ganada", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_OC", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_OC", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fecha_OC", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_OC", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_requerida", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_requerida", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fecha_requerida", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_requerida", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Moneda", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Moneda", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Moneda", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Moneda", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Acabado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Acabado", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -9105,20 +9468,19 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Ventas` (`Cliente`, `no_orden`, `no_cliente`, `Nombre_contacto`, `Co"& _ 
-                "rreo_electrónico`, `Fecha_solicitud`, `Mes`, `Fecha_entrega_cot`, `Orden_ganada`"& _ 
-                ", `Forma_pago`, `Tipo_empaque`, `Observaciones`, `Orden_compra`, `Fecha_OC`, `Fe"& _ 
-                "cha_requerida`, `Moneda`, `Acabado`, `Incotems`, `Suministro_material`, `Espesor"& _ 
-                "1`, `Material2`, `Espesor2`, `Material1`, `Material3`, `Espesor3`, `Corte_Láser`"& _ 
-                ", `Doblez`, `Maquinado`, `Corte_WJ`, `Corte_Sierra`, `Rolado`, `Soldar`, `Item_s"& _ 
-                "oldado`, `Otro_proceso`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "rreo_electrónico`, `Mes`, `Fecha_entrega_cot`, `Orden_ganada`, `Forma_pago`, `Ti"& _ 
+                "po_empaque`, `Observaciones`, `Orden_compra`, `Fecha_OC`, `Moneda`, `Acabado`, `"& _ 
+                "Incotems`, `Suministro_material`, `Espesor1`, `Material2`, `Espesor2`, `Material"& _ 
+                "1`, `Material3`, `Espesor3`, `Corte_Láser`, `Doblez`, `Maquinado`, `Corte_WJ`, `"& _ 
+                "Corte_Sierra`, `Rolado`, `Soldar`, `Item_soldado`, `Otro_proceso`, `Fecha_solici"& _ 
+                "tud`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_cliente", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre_contacto", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre_contacto", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Correo_electrónico", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Correo_electrónico", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_solicitud", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Mes", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Mes", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_entrega_cot", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_entrega_cot", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Orden_ganada", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden_ganada", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9127,7 +9489,6 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Observaciones", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Observaciones", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Orden_compra", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden_compra", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_OC", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_OC", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_requerida", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_requerida", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Moneda", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Moneda", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Acabado", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Acabado", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Incotems", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incotems", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9147,43 +9508,40 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Soldar", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Soldar", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Item_soldado", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Item_soldado", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Otro_proceso", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Otro_proceso", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_solicitud", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Ventas` SET `Cliente` = ?, `no_orden` = ?, `no_cliente` = ?, `Nombre_cont"& _ 
-                "acto` = ?, `Correo_electrónico` = ?, `Fecha_solicitud` = ?, `Mes` = ?, `Fecha_en"& _ 
-                "trega_cot` = ?, `Orden_ganada` = ?, `Forma_pago` = ?, `Tipo_empaque` = ?, `Obser"& _ 
-                "vaciones` = ?, `Orden_compra` = ?, `Fecha_OC` = ?, `Fecha_requerida` = ?, `Moned"& _ 
-                "a` = ?, `Acabado` = ?, `Incotems` = ?, `Suministro_material` = ?, `Espesor1` = ?"& _ 
-                ", `Material2` = ?, `Espesor2` = ?, `Material1` = ?, `Material3` = ?, `Espesor3` "& _ 
-                "= ?, `Corte_Láser` = ?, `Doblez` = ?, `Maquinado` = ?, `Corte_WJ` = ?, `Corte_Si"& _ 
-                "erra` = ?, `Rolado` = ?, `Soldar` = ?, `Item_soldado` = ?, `Otro_proceso` = ? WH"& _ 
-                "ERE (((? = 1 AND `Cliente` IS NULL) OR (`Cliente` = ?)) AND ((? = 1 AND `no_orde"& _ 
-                "n` IS NULL) OR (`no_orden` = ?)) AND ((? = 1 AND `no_cliente` IS NULL) OR (`no_c"& _ 
-                "liente` = ?)) AND ((? = 1 AND `Fecha_solicitud` IS NULL) OR (`Fecha_solicitud` ="& _ 
-                " ?)) AND ((? = 1 AND `Mes` IS NULL) OR (`Mes` = ?)) AND ((? = 1 AND `Fecha_entre"& _ 
-                "ga_cot` IS NULL) OR (`Fecha_entrega_cot` = ?)) AND ((? = 1 AND `Orden_ganada` IS"& _ 
-                " NULL) OR (`Orden_ganada` = ?)) AND ((? = 1 AND `Fecha_OC` IS NULL) OR (`Fecha_O"& _ 
-                "C` = ?)) AND ((? = 1 AND `Fecha_requerida` IS NULL) OR (`Fecha_requerida` = ?)) "& _ 
-                "AND ((? = 1 AND `Moneda` IS NULL) OR (`Moneda` = ?)) AND ((? = 1 AND `Acabado` I"& _ 
-                "S NULL) OR (`Acabado` = ?)) AND ((? = 1 AND `Suministro_material` IS NULL) OR (`"& _ 
-                "Suministro_material` = ?)) AND ((? = 1 AND `Espesor1` IS NULL) OR (`Espesor1` = "& _ 
-                "?)) AND ((? = 1 AND `Material2` IS NULL) OR (`Material2` = ?)) AND ((? = 1 AND `"& _ 
-                "Espesor2` IS NULL) OR (`Espesor2` = ?)) AND ((? = 1 AND `Material3` IS NULL) OR "& _ 
-                "(`Material3` = ?)) AND ((? = 1 AND `Espesor3` IS NULL) OR (`Espesor3` = ?)) AND "& _ 
-                "((? = 1 AND `Corte_Láser` IS NULL) OR (`Corte_Láser` = ?)) AND ((? = 1 AND `Dobl"& _ 
-                "ez` IS NULL) OR (`Doblez` = ?)) AND ((? = 1 AND `Maquinado` IS NULL) OR (`Maquin"& _ 
-                "ado` = ?)) AND ((? = 1 AND `Corte_WJ` IS NULL) OR (`Corte_WJ` = ?)) AND ((? = 1 "& _ 
-                "AND `Corte_Sierra` IS NULL) OR (`Corte_Sierra` = ?)) AND ((? = 1 AND `Rolado` IS"& _ 
-                " NULL) OR (`Rolado` = ?)) AND ((? = 1 AND `Soldar` IS NULL) OR (`Soldar` = ?)) A"& _ 
-                "ND ((? = 1 AND `Item_soldado` IS NULL) OR (`Item_soldado` = ?)) AND (`Llave` = ?"& _ 
-                "))"
+                "acto` = ?, `Correo_electrónico` = ?, `Mes` = ?, `Fecha_entrega_cot` = ?, `Orden_"& _ 
+                "ganada` = ?, `Forma_pago` = ?, `Tipo_empaque` = ?, `Observaciones` = ?, `Orden_c"& _ 
+                "ompra` = ?, `Fecha_OC` = ?, `Moneda` = ?, `Acabado` = ?, `Incotems` = ?, `Sumini"& _ 
+                "stro_material` = ?, `Espesor1` = ?, `Material2` = ?, `Espesor2` = ?, `Material1`"& _ 
+                " = ?, `Material3` = ?, `Espesor3` = ?, `Corte_Láser` = ?, `Doblez` = ?, `Maquina"& _ 
+                "do` = ?, `Corte_WJ` = ?, `Corte_Sierra` = ?, `Rolado` = ?, `Soldar` = ?, `Item_s"& _ 
+                "oldado` = ?, `Otro_proceso` = ?, `Fecha_solicitud` = ? WHERE (((? = 1 AND `Clien"& _ 
+                "te` IS NULL) OR (`Cliente` = ?)) AND ((? = 1 AND `no_orden` IS NULL) OR (`no_ord"& _ 
+                "en` = ?)) AND ((? = 1 AND `no_cliente` IS NULL) OR (`no_cliente` = ?)) AND ((? ="& _ 
+                " 1 AND `Mes` IS NULL) OR (`Mes` = ?)) AND ((? = 1 AND `Fecha_entrega_cot` IS NUL"& _ 
+                "L) OR (`Fecha_entrega_cot` = ?)) AND ((? = 1 AND `Orden_ganada` IS NULL) OR (`Or"& _ 
+                "den_ganada` = ?)) AND ((? = 1 AND `Fecha_OC` IS NULL) OR (`Fecha_OC` = ?)) AND ("& _ 
+                "(? = 1 AND `Moneda` IS NULL) OR (`Moneda` = ?)) AND ((? = 1 AND `Acabado` IS NUL"& _ 
+                "L) OR (`Acabado` = ?)) AND ((? = 1 AND `Suministro_material` IS NULL) OR (`Sumin"& _ 
+                "istro_material` = ?)) AND ((? = 1 AND `Espesor1` IS NULL) OR (`Espesor1` = ?)) A"& _ 
+                "ND ((? = 1 AND `Material2` IS NULL) OR (`Material2` = ?)) AND ((? = 1 AND `Espes"& _ 
+                "or2` IS NULL) OR (`Espesor2` = ?)) AND ((? = 1 AND `Material3` IS NULL) OR (`Mat"& _ 
+                "erial3` = ?)) AND ((? = 1 AND `Espesor3` IS NULL) OR (`Espesor3` = ?)) AND ((? ="& _ 
+                " 1 AND `Corte_Láser` IS NULL) OR (`Corte_Láser` = ?)) AND ((? = 1 AND `Doblez` I"& _ 
+                "S NULL) OR (`Doblez` = ?)) AND ((? = 1 AND `Maquinado` IS NULL) OR (`Maquinado` "& _ 
+                "= ?)) AND ((? = 1 AND `Corte_WJ` IS NULL) OR (`Corte_WJ` = ?)) AND ((? = 1 AND `"& _ 
+                "Corte_Sierra` IS NULL) OR (`Corte_Sierra` = ?)) AND ((? = 1 AND `Rolado` IS NULL"& _ 
+                ") OR (`Rolado` = ?)) AND ((? = 1 AND `Soldar` IS NULL) OR (`Soldar` = ?)) AND (("& _ 
+                "? = 1 AND `Item_soldado` IS NULL) OR (`Item_soldado` = ?)) AND (`Llave` = ?))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_cliente", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nombre_contacto", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nombre_contacto", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Correo_electrónico", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Correo_electrónico", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_solicitud", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Mes", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Mes", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_entrega_cot", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_entrega_cot", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Orden_ganada", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden_ganada", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9192,7 +9550,6 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Observaciones", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Observaciones", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Orden_compra", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden_compra", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_OC", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_OC", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_requerida", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_requerida", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Moneda", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Moneda", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Acabado", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Acabado", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Incotems", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Incotems", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -9212,14 +9569,13 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Soldar", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Soldar", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Item_soldado", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Item_soldado", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Otro_proceso", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Otro_proceso", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_solicitud", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cliente", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cliente", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cliente", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_no_cliente", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_cliente", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_no_cliente", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_cliente", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_solicitud", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fecha_solicitud", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_solicitud", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Mes", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Mes", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Mes", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Mes", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_entrega_cot", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_entrega_cot", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -9228,8 +9584,6 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Orden_ganada", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Orden_ganada", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_OC", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_OC", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fecha_OC", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_OC", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Fecha_requerida", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_requerida", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Fecha_requerida", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha_requerida", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Moneda", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Moneda", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Moneda", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Moneda", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Acabado", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Acabado", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -9278,13 +9632,12 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        Cliente, no_orden, no_cliente, Nombre_contacto, [Correo_electrónico"& _ 
-                "], Fecha_solicitud, Mes, Fecha_entrega_cot, Orden_ganada, Forma_pago, Tipo_empaq"& _ 
-                "ue, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Observaciones, Orden_compra, Fecha_OC, Fecha_requ"& _ 
-                "erida, Moneda, Acabado, Incotems, Suministro_material, Espesor1, Material2, Espe"& _ 
-                "sor2, Material1, Material3,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          Espesor3, [Corte_Láser], "& _ 
-                "Doblez, Maquinado, Corte_WJ, Corte_Sierra, Rolado, Soldar, Item_soldado, Otro_pr"& _ 
-                "oceso, Llave"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Ventas"
+            Me._commandCollection(0).CommandText = "SELECT Cliente, no_orden, no_cliente, Nombre_contacto, [Correo_electrónico], Mes,"& _ 
+                " Fecha_entrega_cot, Orden_ganada, Forma_pago, Tipo_empaque, Observaciones, Orden"& _ 
+                "_compra, Fecha_OC, Moneda, Acabado, Incotems, Suministro_material, Espesor1, Mat"& _ 
+                "erial2, Espesor2, Material1, Material3, Espesor3, [Corte_Láser], Doblez, Maquina"& _ 
+                "do, Corte_WJ, Corte_Sierra, Rolado, Soldar, Item_soldado, Otro_proceso, Llave, F"& _ 
+                "echa_solicitud FROM Ventas"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10055,6 +10408,237 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
     End Class
     
     '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class MATERIALESTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
+        
+        Private _connection As Global.System.Data.OleDb.OleDbConnection
+        
+        Private _transaction As Global.System.Data.OleDb.OleDbTransaction
+        
+        Private _commandCollection() As Global.System.Data.OleDb.OleDbCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.OleDb.OleDbDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.OleDb.OleDbConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.OleDb.OleDbCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.OleDb.OleDbTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.OleDb.OleDbCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "MATERIALES"
+            tableMapping.ColumnMappings.Add("MATERIAL", "MATERIAL")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `MATERIALES` (`MATERIAL`) VALUES (?)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("MATERIAL", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MATERIAL", Global.System.Data.DataRowVersion.Current, false, Nothing))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.OleDb.OleDbConnection()
+            Me._connection.ConnectionString = Global.FTM_Registros.My.MySettings.Default.Base_de_datos_1_4_beConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        MATERIAL"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            MATERIALES"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Base_de_datos_1_4_beDataSet.MATERIALESDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As _Base_de_datos_1_4_beDataSet.MATERIALESDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As _Base_de_datos_1_4_beDataSet.MATERIALESDataTable = New _Base_de_datos_1_4_beDataSet.MATERIALESDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As _Base_de_datos_1_4_beDataSet.MATERIALESDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As _Base_de_datos_1_4_beDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "MATERIALES")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal MATERIAL As String) As Integer
+            If (MATERIAL Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(MATERIAL,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+    End Class
+    
+    '''<summary>
     '''TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     '''</summary>
     <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
@@ -10084,6 +10668,8 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
         Private _tblUsuarioActivoTableAdapter As tblUsuarioActivoTableAdapter
         
         Private _usuariosPermisosTableAdapter As UsuariosPermisosTableAdapter
+        
+        Private _mATERIALESTableAdapter As MATERIALESTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -10227,6 +10813,20 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property MATERIALESTableAdapter() As MATERIALESTableAdapter
+            Get
+                Return Me._mATERIALESTableAdapter
+            End Get
+            Set
+                Me._mATERIALESTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property BackupDataSetBeforeUpdate() As Boolean
             Get
@@ -10281,6 +10881,10 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                             AndAlso (Not (Me._usuariosPermisosTableAdapter.Connection) Is Nothing)) Then
                     Return Me._usuariosPermisosTableAdapter.Connection
                 End If
+                If ((Not (Me._mATERIALESTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._mATERIALESTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._mATERIALESTableAdapter.Connection
+                End If
                 Return Nothing
             End Get
             Set
@@ -10319,6 +10923,9 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                     count = (count + 1)
                 End If
                 If (Not (Me._usuariosPermisosTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._mATERIALESTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -10413,6 +11020,15 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
+            If (Not (Me._mATERIALESTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.MATERIALES.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._mATERIALESTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -10495,6 +11111,14 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
+            If (Not (Me._mATERIALESTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.MATERIALES.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._mATERIALESTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -10505,6 +11129,14 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As _Base_de_datos_1_4_beDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._mATERIALESTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.MATERIALES.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._mATERIALESTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._usuariosPermisosTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.UsuariosPermisos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -10663,6 +11295,11 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
+            If ((Not (Me._mATERIALESTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._mATERIALESTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
+                        "sma cadena de conexión.")
+            End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
             If (workConnection Is Nothing) Then
                 Throw New Global.System.ApplicationException("TableAdapterManager no contiene información de conexión. Establezca cada propieda"& _ 
@@ -10776,6 +11413,15 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._usuariosPermisosTableAdapter.Adapter)
                     End If
                 End If
+                If (Not (Me._mATERIALESTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._mATERIALESTableAdapter, Me._mATERIALESTableAdapter.Connection)
+                    Me._mATERIALESTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._mATERIALESTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._mATERIALESTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._mATERIALESTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._mATERIALESTableAdapter.Adapter)
+                    End If
+                End If
                 '
                 '---- Perform updates -----------
                 '
@@ -10871,6 +11517,10 @@ Namespace _Base_de_datos_1_4_beDataSetTableAdapters
                 If (Not (Me._usuariosPermisosTableAdapter) Is Nothing) Then
                     Me._usuariosPermisosTableAdapter.Connection = CType(revertConnections(Me._usuariosPermisosTableAdapter),Global.System.Data.OleDb.OleDbConnection)
                     Me._usuariosPermisosTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._mATERIALESTableAdapter) Is Nothing) Then
+                    Me._mATERIALESTableAdapter.Connection = CType(revertConnections(Me._mATERIALESTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._mATERIALESTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

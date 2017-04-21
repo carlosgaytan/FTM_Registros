@@ -58,6 +58,24 @@ Partial Class Reg_NoCot
         Me.CotizacionesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CotizacionesTableAdapter1 = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.CotizacionesTableAdapter()
         Me.VentasTableAdapter1 = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.PorcientoEMB = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CotizacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +84,8 @@ Partial Class Reg_NoCot
         CType(Me.CotizacionesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CotizacionesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         '_Base_de_datos_1_4_beDataSet
@@ -88,11 +108,13 @@ Partial Class Reg_NoCot
         Me.TableAdapterManager.ClientesTableAdapter = Nothing
         Me.TableAdapterManager.CotizacionesTableAdapter = Me.CotizacionesTableAdapter
         Me.TableAdapterManager.ManufacturaTableAdapter = Nothing
+        Me.TableAdapterManager.MATERIALESTableAdapter = Nothing
         Me.TableAdapterManager.tblAdministradorTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuarioActivoTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuariosPermisosTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuariosTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosPermisosTableAdapter = Nothing
         Me.TableAdapterManager.VentasTableAdapter = Nothing
         '
         'Label1
@@ -321,11 +343,183 @@ Partial Class Reg_NoCot
         '
         Me.VentasTableAdapter1.ClearBeforeFill = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label31)
+        Me.GroupBox1.Controls.Add(Me.Label30)
+        Me.GroupBox1.Controls.Add(Me.Label29)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.Label26)
+        Me.GroupBox1.Controls.Add(Me.Label20)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.PorcientoEMB)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 289)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(207, 152)
+        Me.GroupBox1.TabIndex = 147
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Embalaje"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(12, 126)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(34, 13)
+        Me.Label31.TabIndex = 9
+        Me.Label31.Text = "Total:"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(12, 22)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(61, 13)
+        Me.Label30.TabIndex = 7
+        Me.Label30.Text = "Porcentaje:"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(12, 100)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(68, 13)
+        Me.Label29.TabIndex = 6
+        Me.Label29.Text = "Costo tarima:"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.Color.White
+        Me.TextBox6.Location = New System.Drawing.Point(89, 123)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox6.TabIndex = 8
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(12, 74)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(73, 13)
+        Me.Label26.TabIndex = 5
+        Me.Label26.Text = "Pzas./Tarima:"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(12, 48)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(76, 13)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Estiba max kg:"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.White
+        Me.TextBox5.Location = New System.Drawing.Point(89, 97)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 3
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.White
+        Me.TextBox4.Location = New System.Drawing.Point(89, 71)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 2
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.White
+        Me.TextBox3.Location = New System.Drawing.Point(89, 45)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 1
+        '
+        'PorcientoEMB
+        '
+        Me.PorcientoEMB.BackColor = System.Drawing.Color.White
+        Me.PorcientoEMB.Location = New System.Drawing.Point(89, 19)
+        Me.PorcientoEMB.Name = "PorcientoEMB"
+        Me.PorcientoEMB.Size = New System.Drawing.Size(100, 20)
+        Me.PorcientoEMB.TabIndex = 0
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label12)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.TextBox7)
+        Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.TextBox9)
+        Me.GroupBox2.Location = New System.Drawing.Point(244, 289)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(207, 152)
+        Me.GroupBox2.TabIndex = 148
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Herramentales"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(12, 22)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(66, 13)
+        Me.Label12.TabIndex = 7
+        Me.Label12.Text = "Costo inicial:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(12, 74)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(34, 13)
+        Me.Label14.TabIndex = 5
+        Me.Label14.Text = "Total:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(12, 48)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(76, 13)
+        Me.Label15.TabIndex = 4
+        Me.Label15.Text = "% herramienta:"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.White
+        Me.TextBox7.Location = New System.Drawing.Point(89, 71)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox7.TabIndex = 2
+        '
+        'TextBox8
+        '
+        Me.TextBox8.BackColor = System.Drawing.Color.White
+        Me.TextBox8.Location = New System.Drawing.Point(89, 45)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.TabIndex = 1
+        '
+        'TextBox9
+        '
+        Me.TextBox9.BackColor = System.Drawing.Color.White
+        Me.TextBox9.Location = New System.Drawing.Point(89, 19)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 0
+        '
         'Reg_NoCot
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(558, 245)
+        Me.ClientSize = New System.Drawing.Size(1145, 453)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CancelarBTN)
         Me.Controls.Add(Me.GuardarBTN)
         Me.Controls.Add(Me.Otro_procTXT)
@@ -359,6 +553,10 @@ Partial Class Reg_NoCot
         CType(Me.CotizacionesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CotizacionesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -398,4 +596,22 @@ Partial Class Reg_NoCot
     Friend WithEvents CotizacionesTableAdapter1 As _Cotizaciones_1_4DataSetTableAdapters.CotizacionesTableAdapter
     Friend WithEvents VentasBindingSource1 As BindingSource
     Friend WithEvents VentasTableAdapter1 As _Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents PorcientoEMB As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox9 As TextBox
 End Class

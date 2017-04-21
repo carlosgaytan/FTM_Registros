@@ -24,7 +24,12 @@
 
         Me.Días_MESTableAdapter.RegHR(Me.ProduccionBD.Días_MES)
         Me.Días_MESTableAdapter.MesRegistro(Me.ProduccionBD.Días_MES, DateAndTime.Now.Year, MonthName(DateAndTime.Now.Month))
-        RegIndicadadores.Show()
+        If MesTST.Text = "" Then
+            MessageBox.Show("Inicio de mes, registrar horas hábiles del mes", "Nuevo Mes", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Registro_MESvb.Show()
+        ElseIf MesTST.Text <> "" Then
+            RegIndicadadores.Show()
+        End If
     End Sub
 
     Private Sub MesBTN_Click(sender As Object, e As EventArgs) Handles MesBTN.Click
@@ -57,7 +62,4 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Registro_MESvb.Show()
-    End Sub
 End Class

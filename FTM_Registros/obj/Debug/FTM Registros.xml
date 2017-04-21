@@ -1782,6 +1782,251 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.MATERIALESDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.MATERIALESRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.MATERIALESRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.VentasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.CotizacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ManufacturaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblAdministradorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuariosPermisosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.MATERIALESTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Base_de_datos_1_4_beDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:FTM_Registros.ProgresoVentas">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -3658,231 +3903,6 @@ Update Order Option
 </summary>
 </member>
 <member name="T:FTM_Registros.ReporteCotizar2TableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ClientesRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.CotizacionesRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.ManufacturaRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblAdministradorRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuariosPermisosRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.VentasRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.tblUsuarioActivoRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSet.UsuariosPermisosRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ClientesTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.CotizacionesTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.ManufacturaTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblAdministradorTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuariosTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuariosPermisosTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.VentasTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.tblUsuarioActivoTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.UsuariosPermisosTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Update rows in top-down order.
-</summary>
-</member>
-<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Insert rows in top-down order.
-</summary>
-</member>
-<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(FTM_Registros._Base_de_datos_1_4_beDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Delete rows in bottom-up order.
-</summary>
-</member>
-<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member>
-<member name="M:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateAll(FTM_Registros._Base_de_datos_1_4_beDataSet)">
-<summary>
-Update all changes to the dataset.
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
-Update Order Option
-</summary>
-</member>
-<member name="T:FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

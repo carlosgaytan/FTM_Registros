@@ -35,6 +35,7 @@ Partial Class Registros
         Me.PlaneacionBTN = New System.Windows.Forms.Button()
         Me.ContProyectBTN = New System.Windows.Forms.Button()
         Me.AlmacenBTN = New System.Windows.Forms.Button()
+        Me.ProducBTN = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -64,17 +65,25 @@ Partial Class Registros
         Me.AlmacenCBX = New System.Windows.Forms.CheckBox()
         Me.InfoPorduc = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ProducBTN = New System.Windows.Forms.Button()
         Me.ProduccionCHBX = New System.Windows.Forms.CheckBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.UsuariosPermisosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.baseFSW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CotizacionesFSW, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(716, 81)
+        Me.RichTextBox1.Location = New System.Drawing.Point(681, 79)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(687, 53)
         Me.RichTextBox1.TabIndex = 5
@@ -84,7 +93,7 @@ Partial Class Registros
         '
         Me.ListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(716, 171)
+        Me.ListBox1.Location = New System.Drawing.Point(681, 169)
         Me.ListBox1.MultiColumn = True
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(687, 316)
@@ -92,7 +101,7 @@ Partial Class Registros
         '
         'Publicar
         '
-        Me.Publicar.Location = New System.Drawing.Point(1324, 140)
+        Me.Publicar.Location = New System.Drawing.Point(1289, 138)
         Me.Publicar.Name = "Publicar"
         Me.Publicar.Size = New System.Drawing.Size(79, 25)
         Me.Publicar.TabIndex = 7
@@ -191,6 +200,19 @@ Partial Class Registros
         Me.AlmacenBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.AlmacenBTN, "Almacén")
         Me.AlmacenBTN.UseVisualStyleBackColor = True
+        '
+        'ProducBTN
+        '
+        Me.ProducBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.production_22132
+        Me.ProducBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ProducBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProducBTN.Location = New System.Drawing.Point(359, 43)
+        Me.ProducBTN.Name = "ProducBTN"
+        Me.ProducBTN.Size = New System.Drawing.Size(90, 90)
+        Me.ProducBTN.TabIndex = 34
+        Me.ProducBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.ProducBTN, "Producción")
+        Me.ProducBTN.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -537,19 +559,6 @@ Partial Class Registros
         Me.Label7.TabIndex = 35
         Me.Label7.Text = "Producción"
         '
-        'ProducBTN
-        '
-        Me.ProducBTN.BackgroundImage = Global.FTM_Registros.My.Resources.Resources.production_22132
-        Me.ProducBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ProducBTN.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProducBTN.Location = New System.Drawing.Point(359, 43)
-        Me.ProducBTN.Name = "ProducBTN"
-        Me.ProducBTN.Size = New System.Drawing.Size(90, 90)
-        Me.ProducBTN.TabIndex = 34
-        Me.ProducBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.ProducBTN, "Producción")
-        Me.ProducBTN.UseVisualStyleBackColor = True
-        '
         'ProduccionCHBX
         '
         Me.ProduccionCHBX.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.UsuariosPermisosBindingSource, "Almacen", True))
@@ -560,6 +569,84 @@ Partial Class Registros
         Me.ProduccionCHBX.Text = "Producción"
         Me.ProduccionCHBX.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Location = New System.Drawing.Point(1416, 106)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(176, 119)
+        Me.Panel1.TabIndex = 38
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(16, 3)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(146, 23)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Tipo de cambio"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(17, 44)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 13)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "Dolar (USD):"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(17, 67)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 13)
+        Me.Label10.TabIndex = 2
+        Me.Label10.Text = "Euro (EUR):"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(17, 93)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(60, 13)
+        Me.Label11.TabIndex = 3
+        Me.Label11.Text = "Yen (YPN):"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(90, 44)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.TabIndex = 5
+        Me.Label13.Text = "Label13"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(90, 67)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(45, 13)
+        Me.Label14.TabIndex = 6
+        Me.Label14.Text = "Label14"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(90, 93)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(45, 13)
+        Me.Label15.TabIndex = 7
+        Me.Label15.Text = "Label15"
+        '
         'Registros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -569,6 +656,7 @@ Partial Class Registros
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1604, 882)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.ProduccionCHBX)
         Me.Controls.Add(Me.InfoPorduc)
@@ -614,6 +702,8 @@ Partial Class Registros
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.baseFSW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CotizacionesFSW, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -660,4 +750,12 @@ Partial Class Registros
     Friend WithEvents Label7 As Label
     Friend WithEvents ProducBTN As Button
     Friend WithEvents ProduccionCHBX As CheckBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
 End Class

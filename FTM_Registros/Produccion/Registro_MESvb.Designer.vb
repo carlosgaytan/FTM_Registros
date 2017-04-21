@@ -64,12 +64,25 @@ Partial Class Registro_MESvb
         Me.Días_MESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Días_MESTableAdapter = New FTM_Registros.ProduccionBDTableAdapters.Días_MESTableAdapter()
         Me.TableAdapterManager = New FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager()
+        Me.TerminarBTN = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Días_MESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -111,11 +124,11 @@ Partial Class Registro_MESvb
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(114, 16)
+        Me.Label5.Location = New System.Drawing.Point(95, 16)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(30, 13)
+        Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Días"
+        Me.Label5.Text = "Días Hábiles"
         '
         'dlText
         '
@@ -204,7 +217,7 @@ Partial Class Registro_MESvb
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(206, 16)
+        Me.Label6.Location = New System.Drawing.Point(204, 16)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(62, 13)
         Me.Label6.TabIndex = 21
@@ -213,7 +226,7 @@ Partial Class Registro_MESvb
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(307, 16)
+        Me.Label7.Location = New System.Drawing.Point(305, 16)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 13)
         Me.Label7.TabIndex = 22
@@ -222,7 +235,7 @@ Partial Class Registro_MESvb
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(403, 16)
+        Me.Label8.Location = New System.Drawing.Point(398, 16)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(97, 13)
         Me.Label8.TabIndex = 23
@@ -404,11 +417,117 @@ Partial Class Registro_MESvb
         Me.TableAdapterManager.RegistrosTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = FTM_Registros.ProduccionBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'TerminarBTN
+        '
+        Me.TerminarBTN.Location = New System.Drawing.Point(616, 145)
+        Me.TerminarBTN.Name = "TerminarBTN"
+        Me.TerminarBTN.Size = New System.Drawing.Size(75, 23)
+        Me.TerminarBTN.TabIndex = 41
+        Me.TerminarBTN.Text = "Terminar"
+        Me.TerminarBTN.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(602, 35)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(85, 13)
+        Me.Label9.TabIndex = 42
+        Me.Label9.Text = "¡Campos vacios!"
+        Me.Label9.Visible = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Delete
+        Me.PictureBox5.Location = New System.Drawing.Point(587, 35)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 43
+        Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Visible = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Delete
+        Me.PictureBox6.Location = New System.Drawing.Point(587, 61)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 45
+        Me.PictureBox6.TabStop = False
+        Me.PictureBox6.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(602, 61)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(85, 13)
+        Me.Label10.TabIndex = 44
+        Me.Label10.Text = "¡Campos vacios!"
+        Me.Label10.Visible = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Delete
+        Me.PictureBox7.Location = New System.Drawing.Point(587, 87)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 47
+        Me.PictureBox7.TabStop = False
+        Me.PictureBox7.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(602, 87)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(85, 13)
+        Me.Label11.TabIndex = 46
+        Me.Label11.Text = "¡Campos vacios!"
+        Me.Label11.Visible = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.FTM_Registros.My.Resources.Resources.Pixelmixer_Basic_Delete
+        Me.PictureBox8.Location = New System.Drawing.Point(587, 113)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(15, 15)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 49
+        Me.PictureBox8.TabStop = False
+        Me.PictureBox8.Visible = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(602, 113)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(85, 13)
+        Me.Label12.TabIndex = 48
+        Me.Label12.Text = "¡Campos vacios!"
+        Me.Label12.Visible = False
+        '
         'Registro_MESvb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(669, 148)
+        Me.ClientSize = New System.Drawing.Size(703, 180)
+        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.PictureBox7)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TerminarBTN)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -454,6 +573,10 @@ Partial Class Registro_MESvb
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProduccionBD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Días_MESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -499,4 +622,13 @@ Partial Class Registro_MESvb
     Friend WithEvents hpText As TextBox
     Friend WithEvents npText As TextBox
     Friend WithEvents tpText As TextBox
+    Friend WithEvents TerminarBTN As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents Label12 As Label
 End Class

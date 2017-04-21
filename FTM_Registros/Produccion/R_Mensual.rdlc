@@ -588,7 +588,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Laser</DataSetName>
-        <Top>6.46036cm</Top>
+        <Top>4.79348cm</Top>
         <Left>0.64766cm</Left>
         <Height>3cm</Height>
         <Width>7.5cm</Width>
@@ -904,7 +904,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Laser</DataSetName>
-        <Top>2.66036cm</Top>
+        <Top>0.99349cm</Top>
         <Left>8.63776cm</Left>
         <Height>5cm</Height>
         <Width>10cm</Width>
@@ -1223,7 +1223,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Doblez</DataSetName>
-        <Top>2.66036cm</Top>
+        <Top>0.99349cm</Top>
         <Left>19.39959cm</Left>
         <Height>5cm</Height>
         <Width>10cm</Width>
@@ -1542,7 +1542,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Maquinados</DataSetName>
-        <Top>8.26036cm</Top>
+        <Top>6.59348cm</Top>
         <Left>8.63776cm</Left>
         <Height>5cm</Height>
         <Width>10cm</Width>
@@ -1860,7 +1860,7 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Punzonado</DataSetName>
-        <Top>8.26036cm</Top>
+        <Top>6.59348cm</Top>
         <Left>19.38193cm</Left>
         <Height>5cm</Height>
         <Width>10cm</Width>
@@ -2794,8 +2794,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Laser</DataSetName>
-        <Top>15.36911cm</Top>
-        <Left>0.64766cm</Left>
+        <Top>12.98786cm</Top>
+        <Left>0.67412cm</Left>
         <Height>7.8cm</Height>
         <Width>6.13771cm</Width>
         <ZIndex>6</ZIndex>
@@ -4215,8 +4215,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Laser</DataSetName>
-        <Top>15.36911cm</Top>
-        <Left>8.5587cm</Left>
+        <Top>12.98786cm</Top>
+        <Left>8.58516cm</Left>
         <Height>8.4cm</Height>
         <Width>9.61666cm</Width>
         <ZIndex>7</ZIndex>
@@ -5276,8 +5276,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Laser</DataSetName>
-        <Top>28.67765cm</Top>
-        <Left>0.64766cm</Left>
+        <Top>12.98786cm</Top>
+        <Left>19.27433cm</Left>
         <Height>9cm</Height>
         <Width>6.34937cm</Width>
         <ZIndex>8</ZIndex>
@@ -6619,9 +6619,10 @@
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>Laser</DataSetName>
-        <Top>38.45091cm</Top>
-        <Left>0.62416cm</Left>
+        <Top>23.73258cm</Top>
+        <Left>0.65062cm</Left>
         <Height>7.8cm</Height>
         <Width>8.69062cm</Width>
         <ZIndex>9</ZIndex>
@@ -7963,9 +7964,10 @@
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>Laser</DataSetName>
-        <Top>38.45091cm</Top>
-        <Left>10.71802cm</Left>
+        <Top>23.73258cm</Top>
+        <Left>10.74448cm</Left>
         <Height>7.8cm</Height>
         <Width>8.74354cm</Width>
         <ZIndex>10</ZIndex>
@@ -7976,7 +7978,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>18.44524in</Height>
+    <Height>19.75774in</Height>
     <Style>
       <Border>
         <Style>Solid</Style>

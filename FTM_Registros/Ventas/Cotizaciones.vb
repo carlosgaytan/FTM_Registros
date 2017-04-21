@@ -1,15 +1,64 @@
 ﻿Public Class Cotizaciones
-    Dim X1, X2, Pbruto, PMP, PDoblez, Ppintura, Pgalv, Ptrop, Pcorte, Pfinal, Ptotal, ESPIN As Object
+    Dim X1, X2, Pbruto, PMP, PDoblez, Ppintura, Pgalv, Ptrop, Pcorte, Pfinal, Ptotal, ESPIN, Pporciento, THORA, TMIN, TSEG, Ttotal As Object
+
+    Private Sub HORATXT_TextChanged(sender As Object, e As EventArgs) Handles HORATXT.TextChanged, MINUTOTXT.TextChanged, SEGUNDOTXT.TextChanged
+
+
+        'Convierte las horas, minutos y segundos a números decimales.
+        If HORATXT.Text = "" Then
+            HORATXT.Text = 0
+        ElseIf HORATXT.Text > 0 Then
+            THORA = Val(HORATXT.Text)
+        End If
+
+        If MINUTOTXT.Text = "" Then
+            MINUTOTXT.Text = 0
+        ElseIf MINUTOTXT.Text > 0 Then
+            TMIN = Val(MINUTOTXT.Text) / Val(CONV.Text)
+        End If
+
+        If SEGUNDOTXT.Text = "" Then
+            SEGUNDOTXT.Text = 0
+        ElseIf SEGUNDOTXT.Text > 0 Then
+            TSEG = ((Val(SEGUNDOTXT.Text) / Val(CONV.Text)) / Val(Prueba.Text))
+        End If
+
+        If THORA = 0 And TMIN = 0 Then
+            TT.Clear()
+            Ttotal = TSEG
+        ElseIf THORA = 0 Then
+            TT.Clear()
+            Ttotal = TMIN + TSEG
+        ElseIf THORA > 0 Then
+            TT.Clear()
+            Ttotal = THORA + TMIN + TSEG
+        ElseIf THORA = 0 And TSEG = 0 Then
+            TT.Clear()
+            Ttotal = TMIN
+        ElseIf TMIN = 0 And TSEG = 0 Then
+            TT.Clear()
+            Ttotal = THORA
+        ElseIf TMIN = 0 Then
+            TT.Clear()
+            Ttotal = THORA + TSEG
+        End If
+
+
+        TT.Text = Ttotal
+
+    End Sub
+
     Private Sub ClienteTextBox1_TextChanged(sender As Object, e As EventArgs) Handles ClienteTextBox1.TextChanged
         'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Costos' Puede moverla o quitarla según sea necesario.
         Me.CostosTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Costos)
 
         'Busca las piezas según cliente
         Me.CostosTableAdapter1.BuscaClaveFTM(Me.AgregarClaveFTM.Costos, ClienteTextBox1.Text)
-
     End Sub
 
     Private Sub Cotizaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla '_Base_de_datos_1_4_beDataSet.MATERIALES' Puede moverla o quitarla según sea necesario.
+        Me.MATERIALESTableAdapter.Fill(Me._Base_de_datos_1_4_beDataSet.MATERIALES)
         'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Ventas' Puede moverla o quitarla según sea necesario.
         Me.VentasTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Ventas)
 
@@ -63,7 +112,7 @@
         PesoBruto.Clear()
         CostoMP.Clear()
         PrecioMPTextBox.Clear()
-        MaterialTextBox.Clear()
+        ' MaterialTextBox.Clear()
         EspesorTextBox.Clear()
         DoblezTextBox.Clear()
         CostoDoblez.Clear()
@@ -76,7 +125,10 @@
         GalvanizadoTextBox.Clear()
         CostoTropicalizado.Clear()
         TropicalizadoTextBox.Clear()
-        TiempoCorte.Clear()
+        'TiempoCorte.Clear()
+        HORATXT.Clear()
+        MINUTOTXT.Clear()
+        SEGUNDOTXT.Clear()
         CostoHR.Clear()
         PrecioCorteTextBox.Clear()
         CantidadesTextBox.Clear()
@@ -114,7 +166,8 @@
             NuevaPieza.Factor = FactorComboBox.Text
             NuevaPieza.Costo_MP = CostoMP.Text
             NuevaPieza.Precio_MP = PrecioMPTextBox.Text
-            NuevaPieza.Material = MaterialTextBox.Text
+            'NuevaPieza.Material = MaterialTextBox.Text
+            NuevaPieza.Material = MaterialCBX.Text
             NuevaPieza.Esp_1 = Esp1TXT.Text
             NuevaPieza.Esp_2 = Esp2TXT.Text
             NuevaPieza.Esp_cal = CalibreCBX.Text
@@ -133,7 +186,8 @@
             NuevaPieza.Galvanizado = GalvanizadoTextBox.Text
             NuevaPieza.Costo_Tropicalizado = CostoTropicalizado.Text
             NuevaPieza.Tropicalizado = TropicalizadoTextBox.Text
-            NuevaPieza.Tiempo_corte = TiempoCorte.Text
+            ' NuevaPieza.Tiempo_corte = TiempoCorte.Text
+            NuevaPieza.Tiempo_corte = TT.Text
             NuevaPieza.Costo_hr_corte = CostoHR.Text
             NuevaPieza.Precio_corte = PrecioCorteTextBox.Text
             NuevaPieza.Cantidades = CantidadesTextBox.Text
@@ -179,7 +233,10 @@
             CostoPintura.Text = CERO.Text
             CostoGalvanizado.Text = CERO.Text
             CostoTropicalizado.Text = CERO.Text
-            TiempoCorte.Text = CERO.Text
+            ' TiempoCorte.Text = CERO.Text
+            HORATXT.Text = CERO.Text
+            MINUTOTXT.Text = CERO.Text
+            SEGUNDOTXT.Text = CERO.Text
             CostoHR.Text = CERO.Text
             X1TextBox.Text = CERO.Text
             Y1TextBox.Text = CERO.Text
@@ -209,7 +266,7 @@
         End If
 
         'Copia precio de Maquinado
-        MaquinadoTextBox.Text = Maquina.Text
+        MaquinadoTextBox.Text = Val(Maquina.Text) * ((Val(herramientaTXT.Text) / 100) + 1)
         If Maquina.Text > CERO.Text Then
             MaquinadoCheckBox.CheckState = CheckState.Checked
         ElseIf Maquina.Text <= CERO.Text Or Maquina.Text <= CERO2.Text Then
@@ -244,7 +301,8 @@
         End If
 
         'Calcula precio Corte
-        Pcorte = Val(TiempoCorte.Text) * Val(CostoHR.Text)
+        Pcorte = Val(TT.Text) * Val(CostoHR.Text)
+        'Pcorte = Val(TiempoCorte.Text) * Val(CostoHR.Text)
         PrecioCorteTextBox.Text = Pcorte
 
     End Sub
@@ -261,13 +319,14 @@
         PrecioDoblezTextBox.Text = PDoblez
 
     End Sub
-    Private Sub PrecioMPTextBox_TextChanged(sender As Object, e As EventArgs) Handles PrecioMPTextBox.TextChanged, PrecioDoblezTextBox.TextChanged, PinturaTextBox.TextChanged, SoldaduraTextBox.TextChanged, MaquinadoTextBox.TextChanged, GalvanizadoTextBox.TextChanged, TropicalizadoTextBox.TextChanged, PrecioCorteTextBox.TextChanged, PrecioFinalTextBox.TextChanged, CantidadesTextBox.TextChanged, PrecioFinalTextBox.TextChanged
+    Private Sub PrecioMPTextBox_TextChanged(sender As Object, e As EventArgs) Handles PrecioMPTextBox.TextChanged, PrecioDoblezTextBox.TextChanged, PinturaTextBox.TextChanged, SoldaduraTextBox.TextChanged, MaquinadoTextBox.TextChanged, GalvanizadoTextBox.TextChanged, TropicalizadoTextBox.TextChanged, PrecioCorteTextBox.TextChanged, PrecioFinalTextBox.TextChanged, CantidadesTextBox.TextChanged, PrecioFinalTextBox.TextChanged, UtilidadTXT.TextChanged
 
-        'Calcula precio Final
+        'Calcula precio Final por pieza
         Pfinal = Val(PrecioMPTextBox.Text) + Val(PrecioDoblezTextBox.Text) + Val(PinturaTextBox.Text) + Val(SoldaduraTextBox.Text) + Val(MaquinadoTextBox.Text) + Val(GalvanizadoTextBox.Text) + Val(TropicalizadoTextBox.Text) + Val(PrecioCorteTextBox.Text)
         PrecioFinalTextBox.Text = Pfinal
 
         'Calcula precio Total
+        Porciento.Text = (Val(UtilidadTXT.Text) / Val(CIENTXT.Text) * (Val(PrecioFinalTextBox.Text) * Val(CantidadesTextBox.Text))) + (Val(PrecioFinalTextBox.Text) * Val(CantidadesTextBox.Text))
         Ptotal = Val(PrecioFinalTextBox.Text) * Val(CantidadesTextBox.Text)
         PrecioTotalTextBox.Text = Ptotal
 

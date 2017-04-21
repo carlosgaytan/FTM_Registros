@@ -27,8 +27,8 @@
     <UpdateUrl>\\SERVER\2012 LASER\Base de datos\Base\FTM_Registros\Actualizaciones\</UpdateUrl>
     <MinimumRequiredVersion>1.4.0.1</MinimumRequiredVersion>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.5.5.%2a</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.6.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -186,10 +186,14 @@
     <Compile Include="Almacen\SalidaMP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Bases_Datos\AgregarClaveFTM.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bases_Datos\_Base_de_datos_1_4_beDataSet.vb">
+      <DependentUpon>_Base_de_datos_1_4_beDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Chat\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -293,9 +297,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProduccionBD.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Produccion\PrubMoneda.Designer.vb">
+      <DependentUpon>PrubMoneda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\PrubMoneda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Produccion\Prueba.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Prueba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\Prueba.vb">
       <DependentUpon>Prueba.xsd</DependentUpon>
     </Compile>
     <Compile Include="Produccion\RegIndicadadores.Designer.vb">
@@ -513,6 +526,9 @@
     <EmbeddedResource Include="Ingeniería\Reporte_ControlPlanos.rdlc" />
     <EmbeddedResource Include="Produccion\Produccion.resx">
       <DependentUpon>Produccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\PrubMoneda.resx">
+      <DependentUpon>PrubMoneda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produccion\RegIndicadadores.resx">
       <DependentUpon>RegIndicadadores.vb</DependentUpon>

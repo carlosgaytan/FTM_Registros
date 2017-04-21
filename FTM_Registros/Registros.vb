@@ -1,12 +1,31 @@
 ﻿Imports System.IO
 
 Public Class Registros
+    Dim WebBrowser1 As New WebBrowser
+
+
     Private Sub Registros_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.VisibleChanged
         'TODO: esta línea de código carga datos en la tabla '_Base_de_datos_1_4_beDataSet.UsuariosPermisos' Puede moverla o quitarla según sea necesario.
         Me.UsuariosPermisosTableAdapter.PermisosUser(Me._Base_de_datos_1_4_beDataSet.UsuariosPermisos)
         'Registra al usuario Logueado
         ComboBox1.Text = Control_Accesos.Usuario
 
+        'Carga la página del Banco de México
+        WebBrowser1.Navigate("http://www.banxico.org.mx/tipcamb/llenarTiposCambioAction.do?idioma=sp")
+        ESPERA(3000)
+
+        Label13.Text = "$ " & WebBrowser1.Document.GetElementById("FIX_DATO").InnerText
+        Label14.Text = "$ " & WebBrowser1.Document.GetElementById("EURO_DATO").InnerText
+        Label15.Text = "$ " & WebBrowser1.Document.GetElementById("YEN_DATO").InnerText
+
+    End Sub
+    Public Sub ESPERA(ByVal INTERVALO As Integer)
+        Dim PARADA As New Stopwatch
+        PARADA.Start()
+        Do While PARADA.ElapsedMilliseconds < INTERVALO
+            Application.DoEvents()
+        Loop
+        PARADA.Stop()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GerenciaBTN.Click
 
