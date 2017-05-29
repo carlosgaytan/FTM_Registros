@@ -1,6 +1,7 @@
 ﻿Public Class Cotizaciones
     Dim X1, X2, Pbruto, PMP, PDoblez, Ppintura, Pgalv, Ptrop, Pcorte, Pfinal, Ptotal, ESPIN, Pporciento, THORA, TMIN, TSEG, Ttotal As Object
 
+
     Private Sub HORATXT_TextChanged(sender As Object, e As EventArgs) Handles HORATXT.TextChanged, MINUTOTXT.TextChanged, SEGUNDOTXT.TextChanged
 
 
@@ -65,6 +66,7 @@
     End Sub
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
 
+        'Control_Accesos.NO_ORDEN = CopiaOrden.Text
         'Confirma proceso para generación de cotización
         Dim msg As String
         Dim title As String
@@ -76,15 +78,24 @@
             MsgBoxStyle.Question Or MsgBoxStyle.YesNoCancel
         title = "Aviso"
         respuesta = MsgBox(msg, style, title)
+        Control_Accesos.NO_ORDEN = CopiaOrden.Text
 
         If respuesta = MsgBoxResult.Yes Then
             Reg_NoCot.Show()
+            'Control_Accesos.NO_ORDEN = CopiaOrden.Text
         ElseIf respuesta = MsgBoxResult.No Then
             Reporte_Cotizar.Show()
+            'Control_Accesos.NO_ORDEN = CopiaOrden.Text
 
         End If
 
     End Sub
+    Private Sub ordenComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ordenComboBox1.SelectedIndexChanged
+        CopiaOrden.Text = ordenComboBox1.Text
+        ' Control_Accesos.NO_ORDEN = CopiaOrden.Text
+
+    End Sub
+
     Private Sub Siguientebtn_Click_1(sender As Object, e As EventArgs) Handles Siguientebtn.Click
 
         'Anade un nuevo registro

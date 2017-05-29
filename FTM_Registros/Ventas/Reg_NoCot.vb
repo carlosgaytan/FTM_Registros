@@ -1,10 +1,19 @@
 ﻿Public Class Reg_NoCot
 
     Private Sub Reg_NoCot_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Costos' Puede moverla o quitarla según sea necesario.
+        Me.CostosTableAdapter.Fill(Me._Cotizaciones_1_4DataSet.Costos)
         'TODO: esta línea de código carga datos en la tabla '_Cotizaciones_1_4DataSet.Ventas' Puede moverla o quitarla según sea necesario.
         Me.VentasTableAdapter1.Fill(Me._Cotizaciones_1_4DataSet.Ventas)
         'TODO: esta línea de código carga datos en la tabla '_Base_de_datos_1_4_beDataSet.Cotizaciones' Puede moverla o quitarla según sea necesario.
         Me.CotizacionesTableAdapter.Fill(Me._Base_de_datos_1_4_beDataSet.Cotizaciones)
+
+        PRUB.Text = Control_Accesos.NO_ORDEN
+        'Try
+        '    Me.CostosTableAdapter.FillBy1(Me._Cotizaciones_1_4DataSet.Costos, New System.Nullable(Of Integer)(CType(No_ordenToolStripTextBox.Text, Integer)))
+        'Catch ex As System.Exception
+        '    System.Windows.Forms.MessageBox.Show(ex.Message)
+        'End Try
 
     End Sub
 
@@ -55,5 +64,23 @@
             = DialogResult.Yes Then
             Me.Close()
         End If
+    End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByToolStripButton.Click
+        Try
+            Me.CostosTableAdapter.FillBy(Me._Cotizaciones_1_4DataSet.Costos)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub FillBy1ToolStripButton_Click(sender As Object, e As EventArgs) Handles FillBy1ToolStripButton.Click
+        Try
+            Me.CostosTableAdapter.FillBy1(Me._Cotizaciones_1_4DataSet.Costos, New System.Nullable(Of Integer)(CType(No_ordenToolStripTextBox.Text, Integer)))
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class

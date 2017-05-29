@@ -69,11 +69,13 @@ Partial Class Cotizaciones
         Dim Label32 As System.Windows.Forms.Label
         Dim Label34 As System.Windows.Forms.Label
         Dim Label35 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cotizaciones))
         Dim Label38 As System.Windows.Forms.Label
         Dim Label39 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cotizaciones))
         Me.Tabla = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.CopiaOrden = New System.Windows.Forms.TextBox()
+        Me.herramientaTXT = New System.Windows.Forms.TextBox()
         Me.MaterialCBX = New System.Windows.Forms.ComboBox()
         Me.MATERIALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me._Base_de_datos_1_4_beDataSet = New FTM_Registros._Base_de_datos_1_4_beDataSet()
@@ -210,7 +212,6 @@ Partial Class Cotizaciones
         Me.VentasTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.VentasTableAdapter()
         Me.CostosTableAdapter1 = New FTM_Registros.AgregarClaveFTMTableAdapters.CostosTableAdapter()
         Me.MATERIALESTableAdapter = New FTM_Registros._Base_de_datos_1_4_beDataSetTableAdapters.MATERIALESTableAdapter()
-        Me.herramientaTXT = New System.Windows.Forms.TextBox()
         __de_orden_a_cotizarLabel1 = New System.Windows.Forms.Label()
         ClienteLabel1 = New System.Windows.Forms.Label()
         Clave_FTMLabel = New System.Windows.Forms.Label()
@@ -704,6 +705,25 @@ Partial Class Cotizaciones
         Label35.Text = "Tiempo de corte:"
         Label35.Visible = False
         '
+        'Label38
+        '
+        Label38.AutoSize = True
+        Label38.Location = New System.Drawing.Point(730, 506)
+        Label38.Name = "Label38"
+        Label38.Size = New System.Drawing.Size(47, 13)
+        Label38.TabIndex = 163
+        Label38.Text = "Material:"
+        Label38.Visible = False
+        '
+        'Label39
+        '
+        Label39.AutoSize = True
+        Label39.Location = New System.Drawing.Point(7, 428)
+        Label39.Name = "Label39"
+        Label39.Size = New System.Drawing.Size(84, 13)
+        Label39.TabIndex = 165
+        Label39.Text = "Herramienta (%):"
+        '
         'Tabla
         '
         Me.Tabla.Controls.Add(Me.TabPage2)
@@ -716,6 +736,7 @@ Partial Class Cotizaciones
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.CopiaOrden)
         Me.TabPage2.Controls.Add(Label39)
         Me.TabPage2.Controls.Add(Me.herramientaTXT)
         Me.TabPage2.Controls.Add(Label38)
@@ -868,6 +889,22 @@ Partial Class Cotizaciones
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Cotizador"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'CopiaOrden
+        '
+        Me.CopiaOrden.Location = New System.Drawing.Point(497, 232)
+        Me.CopiaOrden.Name = "CopiaOrden"
+        Me.CopiaOrden.Size = New System.Drawing.Size(100, 20)
+        Me.CopiaOrden.TabIndex = 166
+        '
+        'herramientaTXT
+        '
+        Me.herramientaTXT.BackColor = System.Drawing.SystemColors.Control
+        Me.herramientaTXT.Location = New System.Drawing.Point(129, 425)
+        Me.herramientaTXT.Name = "herramientaTXT"
+        Me.herramientaTXT.Size = New System.Drawing.Size(76, 20)
+        Me.herramientaTXT.TabIndex = 164
+        Me.herramientaTXT.Text = "0"
         '
         'MaterialCBX
         '
@@ -2058,34 +2095,6 @@ Partial Class Cotizaciones
         '
         Me.MATERIALESTableAdapter.ClearBeforeFill = True
         '
-        'Label38
-        '
-        Label38.AutoSize = True
-        Label38.Location = New System.Drawing.Point(730, 506)
-        Label38.Name = "Label38"
-        Label38.Size = New System.Drawing.Size(47, 13)
-        Label38.TabIndex = 163
-        Label38.Text = "Material:"
-        Label38.Visible = False
-        '
-        'herramientaTXT
-        '
-        Me.herramientaTXT.BackColor = System.Drawing.SystemColors.Control
-        Me.herramientaTXT.Location = New System.Drawing.Point(129, 425)
-        Me.herramientaTXT.Name = "herramientaTXT"
-        Me.herramientaTXT.Size = New System.Drawing.Size(76, 20)
-        Me.herramientaTXT.TabIndex = 164
-        Me.herramientaTXT.Text = "0"
-        '
-        'Label39
-        '
-        Label39.AutoSize = True
-        Label39.Location = New System.Drawing.Point(7, 428)
-        Label39.Name = "Label39"
-        Label39.Size = New System.Drawing.Size(84, 13)
-        Label39.TabIndex = 165
-        Label39.Text = "Herramienta (%):"
-        '
         'Cotizaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2256,4 +2265,5 @@ Partial Class Cotizaciones
     Friend WithEvents MATERIALESBindingSource As BindingSource
     Friend WithEvents MATERIALESTableAdapter As _Base_de_datos_1_4_beDataSetTableAdapters.MATERIALESTableAdapter
     Friend WithEvents herramientaTXT As TextBox
+    Friend WithEvents CopiaOrden As TextBox
 End Class

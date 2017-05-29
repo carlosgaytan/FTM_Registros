@@ -76,6 +76,72 @@ Partial Class Reg_NoCot
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.NoordenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClaveFTMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.P1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.XDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.YDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.P2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.X1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Y1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValormaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PesoBrutoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FactorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoMPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioMPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EspesorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DoblezDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostodoblezDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PreciodoblezDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostopinturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PinturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoldaduraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaquinadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostogalvanizadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GalvanizadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoTropicalizadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TropicalizadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TiempocorteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostohrcorteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PreciocorteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UmDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PreciofinalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CotizadorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DibujoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripciónDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EspesorINDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Esp1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Esp2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EspesorCalibreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MilímetrosDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PulgadaDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CalibreDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Espesor1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EspcalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LlaveDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoldaduraCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.MaquinadoCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PinturaCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.GalvanizadoCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.TropicalizadoCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.LaserCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.WJCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.SierraCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PunzonadoCHBXDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CostosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CostosTableAdapter = New FTM_Registros._Cotizaciones_1_4DataSetTableAdapters.CostosTableAdapter()
+        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.FillBy1ToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.No_ordenToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.No_ordenToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.FillBy1ToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PRUB = New System.Windows.Forms.TextBox()
         CType(Me._Base_de_datos_1_4_beDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CotizacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +152,10 @@ Partial Class Reg_NoCot
         CType(Me.CotizacionesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CostosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillByToolStrip.SuspendLayout()
+        Me.FillBy1ToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         '_Base_de_datos_1_4_beDataSet
@@ -513,11 +583,424 @@ Partial Class Reg_NoCot
         Me.TextBox9.Size = New System.Drawing.Size(100, 20)
         Me.TextBox9.TabIndex = 0
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoordenDataGridViewTextBoxColumn, Me.ClienteDataGridViewTextBoxColumn, Me.ClaveFTMDataGridViewTextBoxColumn, Me.P1DataGridViewTextBoxColumn, Me.XDataGridViewTextBoxColumn, Me.YDataGridViewTextBoxColumn, Me.P2DataGridViewTextBoxColumn, Me.X1DataGridViewTextBoxColumn, Me.Y1DataGridViewTextBoxColumn, Me.ValormaterialDataGridViewTextBoxColumn, Me.PesoBrutoDataGridViewTextBoxColumn, Me.FactorDataGridViewTextBoxColumn, Me.CostoMPDataGridViewTextBoxColumn, Me.PrecioMPDataGridViewTextBoxColumn, Me.MaterialDataGridViewTextBoxColumn, Me.EspesorDataGridViewTextBoxColumn, Me.DoblezDataGridViewTextBoxColumn, Me.CostodoblezDataGridViewTextBoxColumn, Me.PreciodoblezDataGridViewTextBoxColumn, Me.CostopinturaDataGridViewTextBoxColumn, Me.PinturaDataGridViewTextBoxColumn, Me.SoldaduraDataGridViewTextBoxColumn, Me.MaquinadoDataGridViewTextBoxColumn, Me.CostogalvanizadoDataGridViewTextBoxColumn, Me.GalvanizadoDataGridViewTextBoxColumn, Me.CostoTropicalizadoDataGridViewTextBoxColumn, Me.TropicalizadoDataGridViewTextBoxColumn, Me.TiempocorteDataGridViewTextBoxColumn, Me.CostohrcorteDataGridViewTextBoxColumn, Me.PreciocorteDataGridViewTextBoxColumn, Me.CantidadesDataGridViewTextBoxColumn, Me.UmDataGridViewTextBoxColumn, Me.PreciofinalDataGridViewTextBoxColumn, Me.PrecioTotalDataGridViewTextBoxColumn, Me.CotizadorDataGridViewTextBoxColumn, Me.DibujoDataGridViewTextBoxColumn, Me.DescripciónDataGridViewTextBoxColumn, Me.EspesorINDataGridViewTextBoxColumn, Me.Esp1DataGridViewTextBoxColumn, Me.Esp2DataGridViewTextBoxColumn, Me.EspesorCalibreDataGridViewTextBoxColumn, Me.MilímetrosDataGridViewCheckBoxColumn, Me.PulgadaDataGridViewCheckBoxColumn, Me.CalibreDataGridViewCheckBoxColumn, Me.Espesor1DataGridViewTextBoxColumn, Me.EspcalDataGridViewTextBoxColumn, Me.LlaveDataGridViewTextBoxColumn, Me.SoldaduraCHBXDataGridViewCheckBoxColumn, Me.MaquinadoCHBXDataGridViewCheckBoxColumn, Me.PinturaCHBXDataGridViewCheckBoxColumn, Me.GalvanizadoCHBXDataGridViewCheckBoxColumn, Me.TropicalizadoCHBXDataGridViewCheckBoxColumn, Me.LaserCHBXDataGridViewCheckBoxColumn, Me.WJCHBXDataGridViewCheckBoxColumn, Me.SierraCHBXDataGridViewCheckBoxColumn, Me.PunzonadoCHBXDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.CostosBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(579, 34)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(574, 406)
+        Me.DataGridView1.TabIndex = 149
+        '
+        'NoordenDataGridViewTextBoxColumn
+        '
+        Me.NoordenDataGridViewTextBoxColumn.DataPropertyName = "no_orden"
+        Me.NoordenDataGridViewTextBoxColumn.HeaderText = "no_orden"
+        Me.NoordenDataGridViewTextBoxColumn.Name = "NoordenDataGridViewTextBoxColumn"
+        '
+        'ClienteDataGridViewTextBoxColumn
+        '
+        Me.ClienteDataGridViewTextBoxColumn.DataPropertyName = "Cliente"
+        Me.ClienteDataGridViewTextBoxColumn.HeaderText = "Cliente"
+        Me.ClienteDataGridViewTextBoxColumn.Name = "ClienteDataGridViewTextBoxColumn"
+        '
+        'ClaveFTMDataGridViewTextBoxColumn
+        '
+        Me.ClaveFTMDataGridViewTextBoxColumn.DataPropertyName = "Clave_FTM"
+        Me.ClaveFTMDataGridViewTextBoxColumn.HeaderText = "Clave_FTM"
+        Me.ClaveFTMDataGridViewTextBoxColumn.Name = "ClaveFTMDataGridViewTextBoxColumn"
+        '
+        'P1DataGridViewTextBoxColumn
+        '
+        Me.P1DataGridViewTextBoxColumn.DataPropertyName = "P1"
+        Me.P1DataGridViewTextBoxColumn.HeaderText = "P1"
+        Me.P1DataGridViewTextBoxColumn.Name = "P1DataGridViewTextBoxColumn"
+        '
+        'XDataGridViewTextBoxColumn
+        '
+        Me.XDataGridViewTextBoxColumn.DataPropertyName = "X"
+        Me.XDataGridViewTextBoxColumn.HeaderText = "X"
+        Me.XDataGridViewTextBoxColumn.Name = "XDataGridViewTextBoxColumn"
+        '
+        'YDataGridViewTextBoxColumn
+        '
+        Me.YDataGridViewTextBoxColumn.DataPropertyName = "Y"
+        Me.YDataGridViewTextBoxColumn.HeaderText = "Y"
+        Me.YDataGridViewTextBoxColumn.Name = "YDataGridViewTextBoxColumn"
+        '
+        'P2DataGridViewTextBoxColumn
+        '
+        Me.P2DataGridViewTextBoxColumn.DataPropertyName = "P2"
+        Me.P2DataGridViewTextBoxColumn.HeaderText = "P2"
+        Me.P2DataGridViewTextBoxColumn.Name = "P2DataGridViewTextBoxColumn"
+        '
+        'X1DataGridViewTextBoxColumn
+        '
+        Me.X1DataGridViewTextBoxColumn.DataPropertyName = "X1"
+        Me.X1DataGridViewTextBoxColumn.HeaderText = "X1"
+        Me.X1DataGridViewTextBoxColumn.Name = "X1DataGridViewTextBoxColumn"
+        '
+        'Y1DataGridViewTextBoxColumn
+        '
+        Me.Y1DataGridViewTextBoxColumn.DataPropertyName = "Y1"
+        Me.Y1DataGridViewTextBoxColumn.HeaderText = "Y1"
+        Me.Y1DataGridViewTextBoxColumn.Name = "Y1DataGridViewTextBoxColumn"
+        '
+        'ValormaterialDataGridViewTextBoxColumn
+        '
+        Me.ValormaterialDataGridViewTextBoxColumn.DataPropertyName = "Valor_material"
+        Me.ValormaterialDataGridViewTextBoxColumn.HeaderText = "Valor_material"
+        Me.ValormaterialDataGridViewTextBoxColumn.Name = "ValormaterialDataGridViewTextBoxColumn"
+        '
+        'PesoBrutoDataGridViewTextBoxColumn
+        '
+        Me.PesoBrutoDataGridViewTextBoxColumn.DataPropertyName = "Peso_Bruto"
+        Me.PesoBrutoDataGridViewTextBoxColumn.HeaderText = "Peso_Bruto"
+        Me.PesoBrutoDataGridViewTextBoxColumn.Name = "PesoBrutoDataGridViewTextBoxColumn"
+        '
+        'FactorDataGridViewTextBoxColumn
+        '
+        Me.FactorDataGridViewTextBoxColumn.DataPropertyName = "Factor"
+        Me.FactorDataGridViewTextBoxColumn.HeaderText = "Factor"
+        Me.FactorDataGridViewTextBoxColumn.Name = "FactorDataGridViewTextBoxColumn"
+        '
+        'CostoMPDataGridViewTextBoxColumn
+        '
+        Me.CostoMPDataGridViewTextBoxColumn.DataPropertyName = "Costo_MP"
+        Me.CostoMPDataGridViewTextBoxColumn.HeaderText = "Costo_MP"
+        Me.CostoMPDataGridViewTextBoxColumn.Name = "CostoMPDataGridViewTextBoxColumn"
+        '
+        'PrecioMPDataGridViewTextBoxColumn
+        '
+        Me.PrecioMPDataGridViewTextBoxColumn.DataPropertyName = "Precio_MP"
+        Me.PrecioMPDataGridViewTextBoxColumn.HeaderText = "Precio_MP"
+        Me.PrecioMPDataGridViewTextBoxColumn.Name = "PrecioMPDataGridViewTextBoxColumn"
+        '
+        'MaterialDataGridViewTextBoxColumn
+        '
+        Me.MaterialDataGridViewTextBoxColumn.DataPropertyName = "Material"
+        Me.MaterialDataGridViewTextBoxColumn.HeaderText = "Material"
+        Me.MaterialDataGridViewTextBoxColumn.Name = "MaterialDataGridViewTextBoxColumn"
+        '
+        'EspesorDataGridViewTextBoxColumn
+        '
+        Me.EspesorDataGridViewTextBoxColumn.DataPropertyName = "Espesor"
+        Me.EspesorDataGridViewTextBoxColumn.HeaderText = "Espesor"
+        Me.EspesorDataGridViewTextBoxColumn.Name = "EspesorDataGridViewTextBoxColumn"
+        '
+        'DoblezDataGridViewTextBoxColumn
+        '
+        Me.DoblezDataGridViewTextBoxColumn.DataPropertyName = "Doblez"
+        Me.DoblezDataGridViewTextBoxColumn.HeaderText = "Doblez"
+        Me.DoblezDataGridViewTextBoxColumn.Name = "DoblezDataGridViewTextBoxColumn"
+        '
+        'CostodoblezDataGridViewTextBoxColumn
+        '
+        Me.CostodoblezDataGridViewTextBoxColumn.DataPropertyName = "Costo_doblez"
+        Me.CostodoblezDataGridViewTextBoxColumn.HeaderText = "Costo_doblez"
+        Me.CostodoblezDataGridViewTextBoxColumn.Name = "CostodoblezDataGridViewTextBoxColumn"
+        '
+        'PreciodoblezDataGridViewTextBoxColumn
+        '
+        Me.PreciodoblezDataGridViewTextBoxColumn.DataPropertyName = "Precio_doblez"
+        Me.PreciodoblezDataGridViewTextBoxColumn.HeaderText = "Precio_doblez"
+        Me.PreciodoblezDataGridViewTextBoxColumn.Name = "PreciodoblezDataGridViewTextBoxColumn"
+        '
+        'CostopinturaDataGridViewTextBoxColumn
+        '
+        Me.CostopinturaDataGridViewTextBoxColumn.DataPropertyName = "Costo_pintura"
+        Me.CostopinturaDataGridViewTextBoxColumn.HeaderText = "Costo_pintura"
+        Me.CostopinturaDataGridViewTextBoxColumn.Name = "CostopinturaDataGridViewTextBoxColumn"
+        '
+        'PinturaDataGridViewTextBoxColumn
+        '
+        Me.PinturaDataGridViewTextBoxColumn.DataPropertyName = "Pintura"
+        Me.PinturaDataGridViewTextBoxColumn.HeaderText = "Pintura"
+        Me.PinturaDataGridViewTextBoxColumn.Name = "PinturaDataGridViewTextBoxColumn"
+        '
+        'SoldaduraDataGridViewTextBoxColumn
+        '
+        Me.SoldaduraDataGridViewTextBoxColumn.DataPropertyName = "Soldadura"
+        Me.SoldaduraDataGridViewTextBoxColumn.HeaderText = "Soldadura"
+        Me.SoldaduraDataGridViewTextBoxColumn.Name = "SoldaduraDataGridViewTextBoxColumn"
+        '
+        'MaquinadoDataGridViewTextBoxColumn
+        '
+        Me.MaquinadoDataGridViewTextBoxColumn.DataPropertyName = "Maquinado"
+        Me.MaquinadoDataGridViewTextBoxColumn.HeaderText = "Maquinado"
+        Me.MaquinadoDataGridViewTextBoxColumn.Name = "MaquinadoDataGridViewTextBoxColumn"
+        '
+        'CostogalvanizadoDataGridViewTextBoxColumn
+        '
+        Me.CostogalvanizadoDataGridViewTextBoxColumn.DataPropertyName = "Costo_galvanizado"
+        Me.CostogalvanizadoDataGridViewTextBoxColumn.HeaderText = "Costo_galvanizado"
+        Me.CostogalvanizadoDataGridViewTextBoxColumn.Name = "CostogalvanizadoDataGridViewTextBoxColumn"
+        '
+        'GalvanizadoDataGridViewTextBoxColumn
+        '
+        Me.GalvanizadoDataGridViewTextBoxColumn.DataPropertyName = "Galvanizado"
+        Me.GalvanizadoDataGridViewTextBoxColumn.HeaderText = "Galvanizado"
+        Me.GalvanizadoDataGridViewTextBoxColumn.Name = "GalvanizadoDataGridViewTextBoxColumn"
+        '
+        'CostoTropicalizadoDataGridViewTextBoxColumn
+        '
+        Me.CostoTropicalizadoDataGridViewTextBoxColumn.DataPropertyName = "Costo_Tropicalizado"
+        Me.CostoTropicalizadoDataGridViewTextBoxColumn.HeaderText = "Costo_Tropicalizado"
+        Me.CostoTropicalizadoDataGridViewTextBoxColumn.Name = "CostoTropicalizadoDataGridViewTextBoxColumn"
+        '
+        'TropicalizadoDataGridViewTextBoxColumn
+        '
+        Me.TropicalizadoDataGridViewTextBoxColumn.DataPropertyName = "Tropicalizado"
+        Me.TropicalizadoDataGridViewTextBoxColumn.HeaderText = "Tropicalizado"
+        Me.TropicalizadoDataGridViewTextBoxColumn.Name = "TropicalizadoDataGridViewTextBoxColumn"
+        '
+        'TiempocorteDataGridViewTextBoxColumn
+        '
+        Me.TiempocorteDataGridViewTextBoxColumn.DataPropertyName = "Tiempo_corte"
+        Me.TiempocorteDataGridViewTextBoxColumn.HeaderText = "Tiempo_corte"
+        Me.TiempocorteDataGridViewTextBoxColumn.Name = "TiempocorteDataGridViewTextBoxColumn"
+        '
+        'CostohrcorteDataGridViewTextBoxColumn
+        '
+        Me.CostohrcorteDataGridViewTextBoxColumn.DataPropertyName = "Costo_hr_corte"
+        Me.CostohrcorteDataGridViewTextBoxColumn.HeaderText = "Costo_hr_corte"
+        Me.CostohrcorteDataGridViewTextBoxColumn.Name = "CostohrcorteDataGridViewTextBoxColumn"
+        '
+        'PreciocorteDataGridViewTextBoxColumn
+        '
+        Me.PreciocorteDataGridViewTextBoxColumn.DataPropertyName = "Precio_corte"
+        Me.PreciocorteDataGridViewTextBoxColumn.HeaderText = "Precio_corte"
+        Me.PreciocorteDataGridViewTextBoxColumn.Name = "PreciocorteDataGridViewTextBoxColumn"
+        '
+        'CantidadesDataGridViewTextBoxColumn
+        '
+        Me.CantidadesDataGridViewTextBoxColumn.DataPropertyName = "Cantidades"
+        Me.CantidadesDataGridViewTextBoxColumn.HeaderText = "Cantidades"
+        Me.CantidadesDataGridViewTextBoxColumn.Name = "CantidadesDataGridViewTextBoxColumn"
+        '
+        'UmDataGridViewTextBoxColumn
+        '
+        Me.UmDataGridViewTextBoxColumn.DataPropertyName = "um"
+        Me.UmDataGridViewTextBoxColumn.HeaderText = "um"
+        Me.UmDataGridViewTextBoxColumn.Name = "UmDataGridViewTextBoxColumn"
+        '
+        'PreciofinalDataGridViewTextBoxColumn
+        '
+        Me.PreciofinalDataGridViewTextBoxColumn.DataPropertyName = "Precio_final"
+        Me.PreciofinalDataGridViewTextBoxColumn.HeaderText = "Precio_final"
+        Me.PreciofinalDataGridViewTextBoxColumn.Name = "PreciofinalDataGridViewTextBoxColumn"
+        '
+        'PrecioTotalDataGridViewTextBoxColumn
+        '
+        Me.PrecioTotalDataGridViewTextBoxColumn.DataPropertyName = "Precio_Total"
+        Me.PrecioTotalDataGridViewTextBoxColumn.HeaderText = "Precio_Total"
+        Me.PrecioTotalDataGridViewTextBoxColumn.Name = "PrecioTotalDataGridViewTextBoxColumn"
+        '
+        'CotizadorDataGridViewTextBoxColumn
+        '
+        Me.CotizadorDataGridViewTextBoxColumn.DataPropertyName = "Cotizador"
+        Me.CotizadorDataGridViewTextBoxColumn.HeaderText = "Cotizador"
+        Me.CotizadorDataGridViewTextBoxColumn.Name = "CotizadorDataGridViewTextBoxColumn"
+        '
+        'DibujoDataGridViewTextBoxColumn
+        '
+        Me.DibujoDataGridViewTextBoxColumn.DataPropertyName = "Dibujo"
+        Me.DibujoDataGridViewTextBoxColumn.HeaderText = "Dibujo"
+        Me.DibujoDataGridViewTextBoxColumn.Name = "DibujoDataGridViewTextBoxColumn"
+        '
+        'DescripciónDataGridViewTextBoxColumn
+        '
+        Me.DescripciónDataGridViewTextBoxColumn.DataPropertyName = "Descripción"
+        Me.DescripciónDataGridViewTextBoxColumn.HeaderText = "Descripción"
+        Me.DescripciónDataGridViewTextBoxColumn.Name = "DescripciónDataGridViewTextBoxColumn"
+        '
+        'EspesorINDataGridViewTextBoxColumn
+        '
+        Me.EspesorINDataGridViewTextBoxColumn.DataPropertyName = "Espesor_IN"
+        Me.EspesorINDataGridViewTextBoxColumn.HeaderText = "Espesor_IN"
+        Me.EspesorINDataGridViewTextBoxColumn.Name = "EspesorINDataGridViewTextBoxColumn"
+        '
+        'Esp1DataGridViewTextBoxColumn
+        '
+        Me.Esp1DataGridViewTextBoxColumn.DataPropertyName = "Esp_1"
+        Me.Esp1DataGridViewTextBoxColumn.HeaderText = "Esp_1"
+        Me.Esp1DataGridViewTextBoxColumn.Name = "Esp1DataGridViewTextBoxColumn"
+        '
+        'Esp2DataGridViewTextBoxColumn
+        '
+        Me.Esp2DataGridViewTextBoxColumn.DataPropertyName = "Esp_2"
+        Me.Esp2DataGridViewTextBoxColumn.HeaderText = "Esp_2"
+        Me.Esp2DataGridViewTextBoxColumn.Name = "Esp2DataGridViewTextBoxColumn"
+        '
+        'EspesorCalibreDataGridViewTextBoxColumn
+        '
+        Me.EspesorCalibreDataGridViewTextBoxColumn.DataPropertyName = "Espesor_Calibre"
+        Me.EspesorCalibreDataGridViewTextBoxColumn.HeaderText = "Espesor_Calibre"
+        Me.EspesorCalibreDataGridViewTextBoxColumn.Name = "EspesorCalibreDataGridViewTextBoxColumn"
+        '
+        'MilímetrosDataGridViewCheckBoxColumn
+        '
+        Me.MilímetrosDataGridViewCheckBoxColumn.DataPropertyName = "Milímetros"
+        Me.MilímetrosDataGridViewCheckBoxColumn.HeaderText = "Milímetros"
+        Me.MilímetrosDataGridViewCheckBoxColumn.Name = "MilímetrosDataGridViewCheckBoxColumn"
+        '
+        'PulgadaDataGridViewCheckBoxColumn
+        '
+        Me.PulgadaDataGridViewCheckBoxColumn.DataPropertyName = "Pulgada"
+        Me.PulgadaDataGridViewCheckBoxColumn.HeaderText = "Pulgada"
+        Me.PulgadaDataGridViewCheckBoxColumn.Name = "PulgadaDataGridViewCheckBoxColumn"
+        '
+        'CalibreDataGridViewCheckBoxColumn
+        '
+        Me.CalibreDataGridViewCheckBoxColumn.DataPropertyName = "Calibre"
+        Me.CalibreDataGridViewCheckBoxColumn.HeaderText = "Calibre"
+        Me.CalibreDataGridViewCheckBoxColumn.Name = "CalibreDataGridViewCheckBoxColumn"
+        '
+        'Espesor1DataGridViewTextBoxColumn
+        '
+        Me.Espesor1DataGridViewTextBoxColumn.DataPropertyName = "Espesor1"
+        Me.Espesor1DataGridViewTextBoxColumn.HeaderText = "Espesor1"
+        Me.Espesor1DataGridViewTextBoxColumn.Name = "Espesor1DataGridViewTextBoxColumn"
+        '
+        'EspcalDataGridViewTextBoxColumn
+        '
+        Me.EspcalDataGridViewTextBoxColumn.DataPropertyName = "Esp_cal"
+        Me.EspcalDataGridViewTextBoxColumn.HeaderText = "Esp_cal"
+        Me.EspcalDataGridViewTextBoxColumn.Name = "EspcalDataGridViewTextBoxColumn"
+        '
+        'LlaveDataGridViewTextBoxColumn
+        '
+        Me.LlaveDataGridViewTextBoxColumn.DataPropertyName = "Llave"
+        Me.LlaveDataGridViewTextBoxColumn.HeaderText = "Llave"
+        Me.LlaveDataGridViewTextBoxColumn.Name = "LlaveDataGridViewTextBoxColumn"
+        '
+        'SoldaduraCHBXDataGridViewCheckBoxColumn
+        '
+        Me.SoldaduraCHBXDataGridViewCheckBoxColumn.DataPropertyName = "SoldaduraCHBX"
+        Me.SoldaduraCHBXDataGridViewCheckBoxColumn.HeaderText = "SoldaduraCHBX"
+        Me.SoldaduraCHBXDataGridViewCheckBoxColumn.Name = "SoldaduraCHBXDataGridViewCheckBoxColumn"
+        '
+        'MaquinadoCHBXDataGridViewCheckBoxColumn
+        '
+        Me.MaquinadoCHBXDataGridViewCheckBoxColumn.DataPropertyName = "MaquinadoCHBX"
+        Me.MaquinadoCHBXDataGridViewCheckBoxColumn.HeaderText = "MaquinadoCHBX"
+        Me.MaquinadoCHBXDataGridViewCheckBoxColumn.Name = "MaquinadoCHBXDataGridViewCheckBoxColumn"
+        '
+        'PinturaCHBXDataGridViewCheckBoxColumn
+        '
+        Me.PinturaCHBXDataGridViewCheckBoxColumn.DataPropertyName = "PinturaCHBX"
+        Me.PinturaCHBXDataGridViewCheckBoxColumn.HeaderText = "PinturaCHBX"
+        Me.PinturaCHBXDataGridViewCheckBoxColumn.Name = "PinturaCHBXDataGridViewCheckBoxColumn"
+        '
+        'GalvanizadoCHBXDataGridViewCheckBoxColumn
+        '
+        Me.GalvanizadoCHBXDataGridViewCheckBoxColumn.DataPropertyName = "GalvanizadoCHBX"
+        Me.GalvanizadoCHBXDataGridViewCheckBoxColumn.HeaderText = "GalvanizadoCHBX"
+        Me.GalvanizadoCHBXDataGridViewCheckBoxColumn.Name = "GalvanizadoCHBXDataGridViewCheckBoxColumn"
+        '
+        'TropicalizadoCHBXDataGridViewCheckBoxColumn
+        '
+        Me.TropicalizadoCHBXDataGridViewCheckBoxColumn.DataPropertyName = "TropicalizadoCHBX"
+        Me.TropicalizadoCHBXDataGridViewCheckBoxColumn.HeaderText = "TropicalizadoCHBX"
+        Me.TropicalizadoCHBXDataGridViewCheckBoxColumn.Name = "TropicalizadoCHBXDataGridViewCheckBoxColumn"
+        '
+        'LaserCHBXDataGridViewCheckBoxColumn
+        '
+        Me.LaserCHBXDataGridViewCheckBoxColumn.DataPropertyName = "LaserCHBX"
+        Me.LaserCHBXDataGridViewCheckBoxColumn.HeaderText = "LaserCHBX"
+        Me.LaserCHBXDataGridViewCheckBoxColumn.Name = "LaserCHBXDataGridViewCheckBoxColumn"
+        '
+        'WJCHBXDataGridViewCheckBoxColumn
+        '
+        Me.WJCHBXDataGridViewCheckBoxColumn.DataPropertyName = "WJCHBX"
+        Me.WJCHBXDataGridViewCheckBoxColumn.HeaderText = "WJCHBX"
+        Me.WJCHBXDataGridViewCheckBoxColumn.Name = "WJCHBXDataGridViewCheckBoxColumn"
+        '
+        'SierraCHBXDataGridViewCheckBoxColumn
+        '
+        Me.SierraCHBXDataGridViewCheckBoxColumn.DataPropertyName = "SierraCHBX"
+        Me.SierraCHBXDataGridViewCheckBoxColumn.HeaderText = "SierraCHBX"
+        Me.SierraCHBXDataGridViewCheckBoxColumn.Name = "SierraCHBXDataGridViewCheckBoxColumn"
+        '
+        'PunzonadoCHBXDataGridViewCheckBoxColumn
+        '
+        Me.PunzonadoCHBXDataGridViewCheckBoxColumn.DataPropertyName = "PunzonadoCHBX"
+        Me.PunzonadoCHBXDataGridViewCheckBoxColumn.HeaderText = "PunzonadoCHBX"
+        Me.PunzonadoCHBXDataGridViewCheckBoxColumn.Name = "PunzonadoCHBXDataGridViewCheckBoxColumn"
+        '
+        'CostosBindingSource
+        '
+        Me.CostosBindingSource.DataMember = "Costos"
+        Me.CostosBindingSource.DataSource = Me._Cotizaciones_1_4DataSet
+        '
+        'CostosTableAdapter
+        '
+        Me.CostosTableAdapter.ClearBeforeFill = True
+        '
+        'FillByToolStrip
+        '
+        Me.FillByToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
+        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.FillByToolStrip.Name = "FillByToolStrip"
+        Me.FillByToolStrip.Size = New System.Drawing.Size(1173, 25)
+        Me.FillByToolStrip.TabIndex = 150
+        Me.FillByToolStrip.Text = "FillByToolStrip"
+        '
+        'FillByToolStripButton
+        '
+        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton.Name = "FillByToolStripButton"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 22)
+        Me.FillByToolStripButton.Text = "FillBy"
+        '
+        'FillBy1ToolStrip
+        '
+        Me.FillBy1ToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.FillBy1ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.No_ordenToolStripLabel, Me.No_ordenToolStripTextBox, Me.FillBy1ToolStripButton})
+        Me.FillBy1ToolStrip.Location = New System.Drawing.Point(579, 6)
+        Me.FillBy1ToolStrip.Name = "FillBy1ToolStrip"
+        Me.FillBy1ToolStrip.Size = New System.Drawing.Size(219, 25)
+        Me.FillBy1ToolStrip.TabIndex = 151
+        Me.FillBy1ToolStrip.Text = "FillBy1ToolStrip"
+        '
+        'No_ordenToolStripLabel
+        '
+        Me.No_ordenToolStripLabel.Name = "No_ordenToolStripLabel"
+        Me.No_ordenToolStripLabel.Size = New System.Drawing.Size(60, 22)
+        Me.No_ordenToolStripLabel.Text = "no_orden:"
+        '
+        'No_ordenToolStripTextBox
+        '
+        Me.No_ordenToolStripTextBox.Name = "No_ordenToolStripTextBox"
+        Me.No_ordenToolStripTextBox.Size = New System.Drawing.Size(100, 25)
+        '
+        'FillBy1ToolStripButton
+        '
+        Me.FillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillBy1ToolStripButton.Name = "FillBy1ToolStripButton"
+        Me.FillBy1ToolStripButton.Size = New System.Drawing.Size(45, 22)
+        Me.FillBy1ToolStripButton.Text = "FillBy1"
+        '
+        'PRUB
+        '
+        Me.PRUB.Location = New System.Drawing.Point(368, 257)
+        Me.PRUB.Name = "PRUB"
+        Me.PRUB.Size = New System.Drawing.Size(100, 20)
+        Me.PRUB.TabIndex = 152
+        '
         'Reg_NoCot
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1145, 453)
+        Me.ClientSize = New System.Drawing.Size(1173, 461)
+        Me.Controls.Add(Me.PRUB)
+        Me.Controls.Add(Me.FillBy1ToolStrip)
+        Me.Controls.Add(Me.FillByToolStrip)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CancelarBTN)
@@ -557,6 +1040,12 @@ Partial Class Reg_NoCot
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CostosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FillByToolStrip.ResumeLayout(False)
+        Me.FillByToolStrip.PerformLayout()
+        Me.FillBy1ToolStrip.ResumeLayout(False)
+        Me.FillBy1ToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -614,4 +1103,70 @@ Partial Class Reg_NoCot
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents CostosBindingSource As BindingSource
+    Friend WithEvents CostosTableAdapter As _Cotizaciones_1_4DataSetTableAdapters.CostosTableAdapter
+    Friend WithEvents NoordenDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ClienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ClaveFTMDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents P1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents XDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents YDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents P2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents X1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Y1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ValormaterialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PesoBrutoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FactorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostoMPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioMPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MaterialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EspesorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DoblezDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostodoblezDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PreciodoblezDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostopinturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PinturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SoldaduraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MaquinadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostogalvanizadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GalvanizadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostoTropicalizadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TropicalizadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TiempocorteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostohrcorteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PreciocorteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CantidadesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UmDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PreciofinalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CotizadorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DibujoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripciónDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EspesorINDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Esp1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Esp2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EspesorCalibreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MilímetrosDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents PulgadaDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents CalibreDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents Espesor1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EspcalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LlaveDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SoldaduraCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents MaquinadoCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents PinturaCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents GalvanizadoCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents TropicalizadoCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents LaserCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents WJCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents SierraCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents PunzonadoCHBXDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents FillByToolStrip As ToolStrip
+    Friend WithEvents FillByToolStripButton As ToolStripButton
+    Friend WithEvents FillBy1ToolStrip As ToolStrip
+    Friend WithEvents No_ordenToolStripLabel As ToolStripLabel
+    Friend WithEvents No_ordenToolStripTextBox As ToolStripTextBox
+    Friend WithEvents FillBy1ToolStripButton As ToolStripButton
+    Friend WithEvents PRUB As TextBox
 End Class

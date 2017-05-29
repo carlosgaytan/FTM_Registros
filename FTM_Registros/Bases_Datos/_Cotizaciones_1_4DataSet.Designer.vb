@@ -15768,7 +15768,7 @@ Namespace _Cotizaciones_1_4DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        no_orden, Cliente, Clave_FTM, P1, X, Y, P2, X1, Y1, Valor_material,"& _ 
@@ -15818,6 +15818,32 @@ Namespace _Cotizaciones_1_4DataSetTableAdapters
                 "(Costos.no_orden = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT        no_orden, Cliente, Clave_FTM, P1, X, Y, P2, X1, Y1, Valor_material,"& _ 
+                " Peso_Bruto, Factor, Costo_MP, Precio_MP, Material, Espesor, Doblez, Costo_doble"& _ 
+                "z, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Precio_doblez, Costo_pintura, Pintura, Soldadura, "& _ 
+                "Maquinado, Costo_galvanizado, Galvanizado, Costo_Tropicalizado, Tropicalizado, T"& _ 
+                "iempo_corte, Costo_hr_corte, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Precio_corte, Cantidades"& _ 
+                ", um, Precio_final, Precio_Total, Cotizador, Dibujo, Descripción, Esp_1, Esp_2, "& _ 
+                "Milímetros, Pulgada, Calibre, Esp_cal, Llave, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Soldadu"& _ 
+                "raCHBX, MaquinadoCHBX, PinturaCHBX, GalvanizadoCHBX, TropicalizadoCHBX, LaserCHB"& _ 
+                "X, WJCHBX, SierraCHBX, PunzonadoCHBX"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Costos"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT        no_orden, Cliente, Clave_FTM, P1, X, Y, P2, X1, Y1, Valor_material,"& _ 
+                " Peso_Bruto, Factor, Costo_MP, Precio_MP, Material, Espesor, Doblez, Costo_doble"& _ 
+                "z, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Precio_doblez, Costo_pintura, Pintura, Soldadura, "& _ 
+                "Maquinado, Costo_galvanizado, Galvanizado, Costo_Tropicalizado, Tropicalizado, T"& _ 
+                "iempo_corte, Costo_hr_corte, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Precio_corte, Cantidades"& _ 
+                ", um, Precio_final, Precio_Total, Cotizador, Dibujo, Descripción, Esp_1, Esp_2, "& _ 
+                "Milímetros, Pulgada, Calibre, Esp_cal, Llave, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Soldadu"& _ 
+                "raCHBX, MaquinadoCHBX, PinturaCHBX, GalvanizadoCHBX, TropicalizadoCHBX, LaserCHB"& _ 
+                "X, WJCHBX, SierraCHBX, PunzonadoCHBX"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Costos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (no_o"& _ 
+                "rden = ?)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no_orden", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no_orden", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15876,6 +15902,37 @@ Namespace _Cotizaciones_1_4DataSetTableAdapters
             Dim dataTable As _Cotizaciones_1_4DataSet.CostosDataTable = New _Cotizaciones_1_4DataSet.CostosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As _Cotizaciones_1_4DataSet.CostosDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy1(ByVal dataTable As _Cotizaciones_1_4DataSet.CostosDataTable, ByVal no_orden As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (no_orden.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(no_orden.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

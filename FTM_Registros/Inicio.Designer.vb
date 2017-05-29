@@ -114,7 +114,7 @@ Partial Class Inicio
         Me.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtContraseña.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContraseña.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtContraseña.Location = New System.Drawing.Point(130, 270)
+        Me.txtContraseña.Location = New System.Drawing.Point(131, 269)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(196, 20)
         Me.txtContraseña.TabIndex = 2
@@ -166,6 +166,7 @@ Partial Class Inicio
         Me.TableAdapterManager.ClientesTableAdapter = Nothing
         Me.TableAdapterManager.CotizacionesTableAdapter = Nothing
         Me.TableAdapterManager.ManufacturaTableAdapter = Nothing
+        Me.TableAdapterManager.MATERIALESTableAdapter = Nothing
         Me.TableAdapterManager.tblAdministradorTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuarioActivoTableAdapter = Nothing
         Me.TableAdapterManager.tblUsuariosPermisosTableAdapter = Nothing
@@ -495,7 +496,7 @@ Partial Class Inicio
         'PasswordTXT
         '
         Me.PasswordTXT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblUsuariosBindingSource3, "Contraseña", True))
-        Me.PasswordTXT.Location = New System.Drawing.Point(139, 270)
+        Me.PasswordTXT.Location = New System.Drawing.Point(12, 331)
         Me.PasswordTXT.Name = "PasswordTXT"
         Me.PasswordTXT.Size = New System.Drawing.Size(88, 20)
         Me.PasswordTXT.TabIndex = 24

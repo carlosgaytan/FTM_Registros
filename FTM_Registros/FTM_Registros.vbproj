@@ -253,6 +253,17 @@
     <Compile Include="Ingeniería\Ingenieria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Planeacion\MPCliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MPCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planeacion\Vale_almacen.Designer.vb">
+      <DependentUpon>Vale_almacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Planeacion\Vale_almacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Produccion\Areas.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -524,6 +535,10 @@
       <DependentUpon>Ingenieria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingeniería\Reporte_ControlPlanos.rdlc" />
+    <EmbeddedResource Include="Planeacion\Rep_Vale.rdlc" />
+    <EmbeddedResource Include="Planeacion\Vale_almacen.resx">
+      <DependentUpon>Vale_almacen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Produccion\Produccion.resx">
       <DependentUpon>Produccion.vb</DependentUpon>
     </EmbeddedResource>
@@ -600,6 +615,7 @@
     <None Include="Bases_Datos\AgregarClaveFTM.xss">
       <DependentUpon>AgregarClaveFTM.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Gerencia\ProgresoVentas.xsc">
       <DependentUpon>ProgresoVentas.xsd</DependentUpon>
     </None>
@@ -640,6 +656,17 @@
     <None Include="My Project\DataSources\FTM_Registros.ReporteLaserTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
     <None Include="My Project\DataSources\FTM_Registros.ReporteLaserTableAdapters.TableAdapterManager.datasource" />
     <None Include="packages.config" />
+    <None Include="Planeacion\MPCliente.xsc">
+      <DependentUpon>MPCliente.xsd</DependentUpon>
+    </None>
+    <None Include="Planeacion\MPCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MPCliente.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Planeacion\MPCliente.xss">
+      <DependentUpon>MPCliente.xsd</DependentUpon>
+    </None>
     <None Include="Produccion\Areas.xsc">
       <DependentUpon>Areas.xsd</DependentUpon>
     </None>
